@@ -12,18 +12,18 @@
         <meta name="author" content="NebulaGraph">
       
       
-        <link rel="canonical" href="https://docs.nebula-graph.io/master/nebula-dashboard-ent/4.cluster-operator/8.backup-and-restore/">
+        <link rel="canonical" href="https://docs.nebula-graph.io/master/nebula-dashboard-ent/system-settings/notification-endpoint/">
       
       <link rel="icon" href="../../../assets/images/favicon.ico">
-      <meta name="generator" content="mkdocs-1.3.0, mkdocs-material-8.4.2">
+      <meta name="generator" content="mkdocs-1.3.0, mkdocs-material-8.4.3">
     
     
       
-        <title>Backup and restore - NebulaGraph Database Manual</title>
+        <title>Notification endpoint - NebulaGraph Database Manual</title>
       
     
     
-      <link rel="stylesheet" href="../../../assets/stylesheets/main.69437709.min.css">
+      <link rel="stylesheet" href="../../../assets/stylesheets/main.6b80c2a2.min.css">
       
         
         <link rel="stylesheet" href="../../../assets/stylesheets/palette.cbb835fc.min.css">
@@ -90,7 +90,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#back_up_and_restore_nebulagraph_data" class="md-skip">
+        <a href="#notification_endpoint" class="md-skip">
           Skip to content
         </a>
       
@@ -126,7 +126,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Backup and restore
+              Notification endpoint
             
           </span>
         </div>
@@ -215,7 +215,7 @@
         <a href="https://github.com/vesoft-inc/nebula-docs" title="Go to repository" class="md-source" data-md-component="source">
   <div class="md-source__icon md-icon">
     
-    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.1.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc.--><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81z"/></svg>
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.2.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc.--><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81z"/></svg>
   </div>
   <div class="md-source__repository">
     vesoft-inc/nebula-docs
@@ -259,7 +259,7 @@
       <a href="https://github.com/vesoft-inc/nebula-docs" title="Go to repository" class="md-source" data-md-component="source">
   <div class="md-source__icon md-icon">
     
-    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.1.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc.--><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81z"/></svg>
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.2.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc.--><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81z"/></svg>
   </div>
   <div class="md-source__repository">
     vesoft-inc/nebula-docs
@@ -4578,14 +4578,12 @@
               
   
   
-    
-  
   
     
-    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--nested">
       
       
-        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_15_5" type="checkbox" id="__nav_15_5" checked>
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_15_5" type="checkbox" id="__nav_15_5" >
       
       
       
@@ -4608,7 +4606,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../1.overview/" class="md-nav__link">
+      <a href="../../4.cluster-operator/1.overview/" class="md-nav__link">
         Cluster overview
       </a>
     </li>
@@ -4622,7 +4620,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../2.monitor/" class="md-nav__link">
+      <a href="../../4.cluster-operator/2.monitor/" class="md-nav__link">
         Cluster monitoring
       </a>
     </li>
@@ -4636,8 +4634,8 @@
   
   
     <li class="md-nav__item">
-      <a href="../../9.alerts/" class="md-nav__link">
-        Alerts
+      <a href="../../4.cluster-operator/9.notification/" class="md-nav__link">
+        Notification
       </a>
     </li>
   
@@ -4647,140 +4645,103 @@
             
               
   
-  
-  
-    <li class="md-nav__item">
-      <a href="../3.cluster-information/" class="md-nav__link">
-        Cluster information
-      </a>
-    </li>
-  
-
-            
-          
-            
-              
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../7.cluster-diagnosis/" class="md-nav__link">
-        Cluster Diagnostics
-      </a>
-    </li>
-  
-
-            
-          
-            
-              
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../4.manage/" class="md-nav__link">
-        Cluster operations
-      </a>
-    </li>
-  
-
-            
-          
-            
-              
   
   
     
-  
-  
-    <li class="md-nav__item md-nav__item--active">
-      
-      <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+    <li class="md-nav__item md-nav__item--nested">
       
       
-        
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_15_5_4" type="checkbox" id="__nav_15_5_4" >
       
       
-        <label class="md-nav__link md-nav__link--active" for="__toc">
-          Backup and restore
+      
+      
+        <label class="md-nav__link" for="__nav_15_5_4">
+          Information
           <span class="md-nav__icon md-icon"></span>
         </label>
       
-      <a href="./" class="md-nav__link md-nav__link--active">
+      <nav class="md-nav" aria-label="Information" data-md-level="3">
+        <label class="md-nav__title" for="__nav_15_5_4">
+          <span class="md-nav__icon md-icon"></span>
+          Information
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../4.cluster-operator/cluster-information/overview-info/" class="md-nav__link">
+        Information overview
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../4.cluster-operator/cluster-information/cluster-diagnosis/" class="md-nav__link">
+        Cluster diagnostics
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../4.cluster-operator/cluster-information/backup-and-restore/" class="md-nav__link">
         Backup and restore
       </a>
-      
-        
+    </li>
+  
 
-<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
   
   
   
     
-  
-  
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      Table of contents
-    </label>
-    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+    <li class="md-nav__item md-nav__item--nested">
       
-        <li class="md-nav__item">
-  <a href="#limits" class="md-nav__link">
-    Limits
-  </a>
-  
-</li>
       
-        <li class="md-nav__item">
-  <a href="#prerequisites" class="md-nav__link">
-    Prerequisites
-  </a>
-  
-</li>
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_15_5_5" type="checkbox" id="__nav_15_5_5" >
       
-        <li class="md-nav__item">
-  <a href="#steps" class="md-nav__link">
-    Steps
-  </a>
-  
-    <nav class="md-nav" aria-label="Steps">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#entry" class="md-nav__link">
-    Entry
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#back_up_data" class="md-nav__link">
-    Back up data
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#restore_data" class="md-nav__link">
-    Restore data
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
       
-    </ul>
-  
-</nav>
       
-    </li>
-  
-
-            
+      
+        <label class="md-nav__link" for="__nav_15_5_5">
+          Operation
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Operation" data-md-level="3">
+        <label class="md-nav__title" for="__nav_15_5_5">
+          <span class="md-nav__icon md-icon"></span>
+          Operation
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
           
             
               
@@ -4788,8 +4749,8 @@
   
   
     <li class="md-nav__item">
-      <a href="../5.operation-record/" class="md-nav__link">
-        Operation records
+      <a href="../../4.cluster-operator/operator/node/" class="md-nav__link">
+        Node
       </a>
     </li>
   
@@ -4802,8 +4763,64 @@
   
   
     <li class="md-nav__item">
-      <a href="../6.settings/" class="md-nav__link">
-        Other settings
+      <a href="../../4.cluster-operator/operator/scale/" class="md-nav__link">
+        Scale
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../4.cluster-operator/operator/service/" class="md-nav__link">
+        Service
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../4.cluster-operator/operator/update-config/" class="md-nav__link">
+        Update config
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../4.cluster-operator/operator/member-management/" class="md-nav__link">
+        Member management
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../4.cluster-operator/operator/version-upgrade/" class="md-nav__link">
+        Version upgrade
       </a>
     </li>
   
@@ -4823,9 +4840,30 @@
   
   
     <li class="md-nav__item">
-      <a href="../../10.tasks/" class="md-nav__link">
-        Task Center
+      <a href="../../4.cluster-operator/5.operation-record/" class="md-nav__link">
+        Operation records
       </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../4.cluster-operator/6.settings/" class="md-nav__link">
+        Other settings
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
     </li>
   
 
@@ -4851,7 +4889,159 @@
   
   
     <li class="md-nav__item">
-      <a href="../../11.manage-package/" class="md-nav__link">
+      <a href="../../10.tasks/" class="md-nav__link">
+        Task center
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+    
+  
+  
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_15_8" type="checkbox" id="__nav_15_8" checked>
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_15_8">
+          System settings
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="System settings" data-md-level="2">
+        <label class="md-nav__title" for="__nav_15_8">
+          <span class="md-nav__icon md-icon"></span>
+          System settings
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../system-settings/" class="md-nav__link">
+        System settings
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+    
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          Notification endpoint
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        Notification endpoint
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#entry" class="md-nav__link">
+    Entry
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#steps" class="md-nav__link">
+    Steps
+  </a>
+  
+    <nav class="md-nav" aria-label="Steps">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#mail" class="md-nav__link">
+    Mail
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#webhook" class="md-nav__link">
+    Webhook
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../single-sign-on/" class="md-nav__link">
+        Single sign-on
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../manage-package/" class="md-nav__link">
         Package management
       </a>
     </li>
@@ -4865,9 +5055,16 @@
   
   
     <li class="md-nav__item">
-      <a href="../../6.global-config/" class="md-nav__link">
-        Global settings
+      <a href="../other-settings/" class="md-nav__link">
+        Other settings
       </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
     </li>
   
 
@@ -5915,6 +6112,20 @@
   
   
     <li class="md-nav__item">
+      <a href="../../../nebula-exchange/use-exchange/ex-ug-import-from-oracle/" class="md-nav__link">
+        Import data from Oracle
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
       <a href="../../../nebula-exchange/use-exchange/ex-ug-import-from-clickhouse/" class="md-nav__link">
         Import data from ClickHouse
       </a>
@@ -6742,15 +6953,8 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#limits" class="md-nav__link">
-    Limits
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#prerequisites" class="md-nav__link">
-    Prerequisites
+  <a href="#entry" class="md-nav__link">
+    Entry
   </a>
   
 </li>
@@ -6764,22 +6968,15 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#entry" class="md-nav__link">
-    Entry
+  <a href="#mail" class="md-nav__link">
+    Mail
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#back_up_data" class="md-nav__link">
-    Back up data
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#restore_data" class="md-nav__link">
-    Restore data
+  <a href="#webhook" class="md-nav__link">
+    Webhook
   </a>
   
 </li>
@@ -6801,50 +6998,26 @@
             <article class="md-content__inner md-typeset">
               
                 
-  <a href="https://github.com/vesoft-inc/nebula-docs/edit/master/docs-2.0/nebula-dashboard-ent/4.cluster-operator/8.backup-and-restore.md" title="Edit this page" class="md-content__button md-icon">
+
+  <a href="https://github.com/vesoft-inc/nebula-docs/edit/master/docs-2.0/nebula-dashboard-ent/system-settings/notification-endpoint.md" title="Edit this page" class="md-content__button md-icon">
+    
     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20.71 7.04c.39-.39.39-1.04 0-1.41l-2.34-2.34c-.37-.39-1.02-.39-1.41 0l-1.84 1.83 3.75 3.75M3 17.25V21h3.75L17.81 9.93l-3.75-3.75L3 17.25Z"/></svg>
   </a>
 
 
-
-<h1 id="back_up_and_restore_nebulagraph_data">Back up and restore NebulaGraph data<a class="headerlink" href="#back_up_and_restore_nebulagraph_data" title="Permanent link">&para;</a></h1>
-<p>To prevent data loss due to operational errors or system failures, NebulaGraph offers the Backup &amp; Restore (BR) tool to help users back up and restore graph data. Dashboard Enterprise Edition integrates BR capabilities and offers simple UIs that allow users to perform data backup and restore operations in just a few steps. This document describes how to use Dashboard Enterprise Edition to backup and restore NebulaGraph data.</p>
-<h2 id="limits">Limits<a class="headerlink" href="#limits" title="Permanent link">&para;</a></h2>
-<ul>
-<li>
-<p>Currently, Dashboard only supports backup data to cloud storage services compatible with the S3 protocol (e.g. OSS, MinIO, Ceph RGW, etc.) and does not support local backups.</p>
-<div class="admonition note">
-<p class="admonition-title">Note</p>
-<p>To back up data to a local device, see <a href="../../../backup-and-restore/nebula-br/1.what-is-br/">What is Backup &amp; Restore</a>.</p>
-</div>
-</li>
-</ul>
-<ul>
-<li>Currently, only full backup and full restore of data are supported, and incremental backup and incremental restore are not supported.</li>
-<li>Backup and restoration of space-level data are not supported.</li>
-<li>Backup data can only be restored to the original cluster, and cannot be restored across clusters.</li>
-<li>Breakpoint moving of backup and restore data is not supported.</li>
-<li>Currently, only the logs generated by backup and restore operations are supported.</li>
-</ul>
-<h2 id="prerequisites">Prerequisites<a class="headerlink" href="#prerequisites" title="Permanent link">&para;</a></h2>
-<ul>
-<li><a href="../../3.create-import-dashboard/1.create-cluster/">A cluster is created with Dashboard</a>.</li>
-<li>A cloud storage service that is compatible with the S3 protocol is activated and a storage bucket is created. For details, see the documentation for the corresponding cloud storage service.</li>
-</ul>
-<h2 id="steps">Steps<a class="headerlink" href="#steps" title="Permanent link">&para;</a></h2>
-<h3 id="entry">Entry<a class="headerlink" href="#entry" title="Permanent link">&para;</a></h3>
+<h1 id="notification_endpoint">Notification endpoint<a class="headerlink" href="#notification_endpoint" title="Permanent link">&para;</a></h1>
+<p>On <strong>Notification Endpoint</strong> page, you can set the notification mail and webhook.</p>
+<h2 id="entry">Entry<a class="headerlink" href="#entry" title="Permanent link">&para;</a></h2>
 <ol>
-<li>In the top navigation bar, click <strong>Cluster Management</strong>.</li>
-<li>On the right side of the target cluster, click <strong>Detail</strong>. </li>
-<li>In the left navigation bar, click <strong>Information</strong>-&gt;<strong>Backup&amp;Restore</strong>.</li>
+<li>At the top navigation bar of the Dashboard Enterprise Edition page, click <strong>System Settings</strong>.</li>
+<li>On the left-side navigation bar of the page, click <strong>Notification Endpoint</strong>.</li>
 </ol>
-<h3 id="back_up_data">Back up data<a class="headerlink" href="#back_up_data" title="Permanent link">&para;</a></h3>
-<p>Data is backed up to the cloud storage service by creating a backup file as follows.</p>
-<ol>
-<li>On the <strong>Backup&amp;Restore</strong> page, click the <strong>Backup List</strong> tab. </li>
-<li>In the upper right corner of the page, click <strong>S3 Service Settings</strong>. </li>
+<h2 id="steps">Steps<a class="headerlink" href="#steps" title="Permanent link">&para;</a></h2>
+<h3 id="mail">Mail<a class="headerlink" href="#mail" title="Permanent link">&para;</a></h3>
+<p>Dashboard supports sending and receiving alert messages for all clusters via E-mail.</p>
+<ul>
 <li>
-<p>Fill in the configuration information for the corresponding cloud storage service and click <strong>Submit</strong>.</p>
+<p>You need to set the following parameters to send alert messages.</p>
 <table>
 <thead>
 <tr>
@@ -6854,142 +7027,62 @@
 </thead>
 <tbody>
 <tr>
-<td>s3.access_key</td>
-<td>The Access Key ID that is used to identify a user. For example, <code>AKIAI44QH8DHBxxxx</code>.</td>
+<td>SMTP Server Address</td>
+<td>The SMTP server address corresponding to yourmailbox.</td>
 </tr>
 <tr>
-<td>s3.endpoint</td>
-<td>The domain URL of the entry point for the cloud storage service. For example, <code>https://s3.us-east-2.amazonaws.com</code>. The URL containing <code>bucket_name</code> is not supported, such as <code>https://{bucket_name}.s3.us-west-2.amazonaws.com</code>.</td>
+<td>Port</td>
+<td>The port number of the SMTP server corresponding to yourmailbox.</td>
 </tr>
 <tr>
-<td>s3.region</td>
-<td>The physical location of a data center. For example, <code>us-east-1</code>.</td>
+<td>Use SSL</td>
+<td>Check the box to enable SSL for encrypted datatransmission.</td>
 </tr>
 <tr>
-<td>s3.secret_key</td>
-<td>The Access Key Secret that is used to verify the identity of the user. For example, <code>je7MtGbClwBF/2Zp9Utk/h3yCoxxxx</code>.</td>
+<td>SMTP User Name</td>
+<td>The SMTP server account name.</td>
 </tr>
 <tr>
-<td>storage path</td>
-<td>The data storage path which <strong>must start with <code>s3</code></strong>. For example, <code>s3://br-test/backup/</code>.</td>
+<td>SMTP Password</td>
+<td>The SMTP server password.</td>
+</tr>
+<tr>
+<td>Sender Email</td>
+<td>The email address of the one who sent you the email.</td>
 </tr>
 </tbody>
 </table>
-<p>The following configurations are examples for Alibaba Cloud Object Storage Service and Amazon S3:</p>
-<ul>
-<li>
-<p>For Amazon S3:</p>
-<p><img alt="amazon_s3" src="https://docs-cdn.nebula-graph.com.cn/figures/amazon_s3_2022-06-20_14-29-11.png" /></p>
 </li>
 </ul>
 <ul>
 <li>
-<p>For Alibaba Cloud Object Storage Service:</p>
-<p><img alt="aliyun_oss" src="https://docs-cdn.nebula-graph.com.cn/figures/br_s3_aliyun_2022-06-20_12-07-37.png" /></p>
+<p>You need to set a receiver to receive alert messages.</p>
+<table>
+<thead>
+<tr>
+<th>Parameter</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Receiver</td>
+<td>Set the email address to receive alert messages. This email address will receive alert messages for all clusters created on Dashboard.</td>
+</tr>
+</tbody>
+</table>
 </li>
 </ul>
-<div class="admonition caution">
-<p class="admonition-title">Caution</p>
-<p>To back up data to OSS, you need to replace <code>oss</code> with <code>s3</code> for the OSS storage path. For example, change the original OSS path <code>oss://nebula-br-test/</code> to <code>s3://nebula-br-test/</code>.</p>
-</div>
-</li>
-<li>
-<p>In the upper right corner of the page, click <strong>Create New Backup</strong>.</p>
-</li>
-<li>
-<p>On the <strong>Create New Backup</strong> page, click <strong>Environment check</strong> to check whether the relevant configurations are working properly, and then click <strong>Submit</strong>.</p>
-<p>Environment check includes:</p>
-<ul>
-<li>Your NebulaGraph cluster is running.</li>
-<li>The access key to log onto the storage service has not expired.</li>
-<li>The status of business traffic. It only checks if the QPS of your business is 0. When QPS is not 0, you are prompted to back up data during off-peak hours.</li>
-</ul>
-<div class="admonition note">
-<p class="admonition-title">Note</p>
-<p>You are unable to submit the backup when your cluster works abnormally or the access key to the storage service has expired.</p>
-</div>
-</li>
-<li>
-<p>View the created backup file in the backup list.</p>
-<p><img alt="br_list" src="https://docs-cdn.nebula-graph.com.cn/figures/brlist_2022-06-27_14-23-24_en.png" /></p>
-<ul>
-<li>The backup list shows backups created within 30 days by default, showing backup name, time, status, backup spaces, backup type, storage path, and related operations.<ul>
-<li>The backup status includes <code>running</code>, <code>success</code>, and <code>failed</code>.</li>
-<li>Related operations include restoring the backup, viewing restoration records, viewing logs generated by the backup operation, and deleting the backup.</li>
-</ul>
-</li>
-<li>You can filter created backups by creation time and status) or search backup file names for backups.</li>
-</ul>
-<div class="admonition note">
-<p class="admonition-title">Note</p>
-<p>You are unable to perform a new backup until the previous backup is completed. </p>
-</div>
-</li>
-<li>
-<p>Check if the created backup file exists in the storage service.
-  Successfully created backup files are stored to the storage path set above, like <code>s3://nebula-br-test</code>.</p>
-<ul>
-<li>Amazon S3:
-<img alt="br_s3_path" src="https://docs-cdn.nebula-graph.com.cn/figures/br_s3_2022-06-20_12-07-37.png" /></li>
-<li>Alibaba Cloud Object Storage Service:
-<img alt="aliyun_oss_backup_cn" src="https://docs-cdn.nebula-graph.com.cn/figures/aliyun_oss_backup_2022-06-27_13-52-23_en.png" /></li>
-</ul>
-<div class="admonition danger">
-<p class="admonition-title">Danger</p>
-<p>Do not modify the file name and storage path of backup files, otherwise, the backup data cannot be restored to the cluster.</p>
-</div>
-</li>
-</ol>
-<h3 id="restore_data">Restore data<a class="headerlink" href="#restore_data" title="Permanent link">&para;</a></h3>
-<p>You can restore the backed-up data stored in the cloud storage service to the original cluster.</p>
-<div class="admonition caution">
-<p class="admonition-title">Caution</p>
-<ul>
-<li>Before restoring the data, please make sure that the name and storage path of the backup file stored in the cloud storage service are not changed, otherwise, the data restoration will fail.</li>
-<li>During the data restoration process, all data in the cluster is removed and replaced with the data in the backup file.</li>
-<li>The restoration process is executed offline, and you cannot perform other operations during the data restoration process.</li>
-</ul>
-</div>
-<p>Follow the steps below to restore data.</p>
-<ol>
-<li>On the <strong>Backup&amp;Restore</strong> page, click the <strong>Backup list</strong> tab.</li>
-<li>To the right of the target backup file, click <strong>Restore</strong>.</li>
-<li>
-<p>Click <strong>Environment check</strong>, and when the environment check is passed, click <strong>Submit</strong>.</p>
-<p>Environment check includes:</p>
-<ul>
-<li>Your NebulaGraph cluster is running.</li>
-<li>The access key to log onto the storage service has not expired.</li>
-<li>No business website traffic. </li>
-</ul>
-</li>
-<li>
-<p>On the <strong>Restore record list</strong> page, view restoration records.
-  <img alt="restore_list" src="https://docs-cdn.nebula-graph.com.cn/figures/restorelist_2022-06-27_14-23-24_en.png" /></p>
-<ul>
-<li>Restoration records cannot be deleted. </li>
-<li>The list page displays restoration records created within 30 days.</li>
-<li>The list page displays the restoration ID, backup file name, status, time, graph space, storage path, operator, and the log generated by the restoration operation.</li>
-<li>
-<p>The restoration status includes <code>running</code>, <code>success</code>, and <code>failed</code>.</p>
-<div class="admonition note">
-<p class="admonition-title">Note</p>
-<p>You're unable to restore the backup data until the previous restoration is complete.</p>
-</div>
-</li>
-</ul>
-<ul>
-<li>You can filter restoration records by creation time and status, or search backup file names for restoration records.</li>
-</ul>
-</li>
-</ol>
+<h3 id="webhook">Webhook<a class="headerlink" href="#webhook" title="Permanent link">&para;</a></h3>
+<p>Dashboard supports configuring Webhook to bring all cluster alert messages into third-party projects.</p>
+<p>On the left-side navigation bar of the <strong>Interface Settings</strong> page, click <strong>Notification Endpoints</strong>-&gt;<strong>Webhook</strong> to input the <strong>Webhook URL</strong> used to receive alert messages. You can turn on or off the Webhook feature at the top right of the page.</p>
 
   <hr>
 <div class="md-source-file">
   <small>
     
       Last update:
-      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">August 11, 2022</span>
+      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">September 7, 2022</span>
       
     
   </small>
@@ -7021,7 +7114,7 @@
     <nav class="md-footer__inner md-grid" aria-label="Footer" >
       
         
-        <a href="../4.manage/" class="md-footer__link md-footer__link--prev" aria-label="Previous: Cluster operations" rel="prev">
+        <a href="../system-settings/" class="md-footer__link md-footer__link--prev" aria-label="Previous: System settings" rel="prev">
           <div class="md-footer__button md-icon">
             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
           </div>
@@ -7030,20 +7123,20 @@
               <span class="md-footer__direction">
                 Previous
               </span>
-              Cluster operations
+              System settings
             </div>
           </div>
         </a>
       
       
         
-        <a href="../5.operation-record/" class="md-footer__link md-footer__link--next" aria-label="Next: Operation records" rel="next">
+        <a href="../single-sign-on/" class="md-footer__link md-footer__link--next" aria-label="Next: Single sign-on" rel="next">
           <div class="md-footer__title">
             <div class="md-ellipsis">
               <span class="md-footer__direction">
                 Next
               </span>
-              Operation records
+              Single sign-on
             </div>
           </div>
           <div class="md-footer__button md-icon">
@@ -7077,7 +7170,7 @@
       
     
     <a href="https://github.com/vesoft-inc/nebula-docs" target="_blank" rel="noopener" title="github.com" class="md-social__link">
-      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 496 512"><!--! Font Awesome Free 6.1.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc.--><path d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6zm-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3zm44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9zM244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8zM97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1zm-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7zm32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1zm-11.4-14.7c-1.6 1-1.6 3.6 0 5.9 1.6 2.3 4.3 3.3 5.6 2.3 1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2z"/></svg>
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 496 512"><!--! Font Awesome Free 6.2.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc.--><path d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6zm-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3zm44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9zM244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8zM97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1zm-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7zm32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1zm-11.4-14.7c-1.6 1-1.6 3.6 0 5.9 1.6 2.3 4.3 3.3 5.6 2.3 1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2z"/></svg>
     </a>
   
 </div>
@@ -7094,7 +7187,7 @@
     <script id="__config" type="application/json">{"base": "../../..", "features": ["navigation.top", "header.autohide", "content.tabs.link"], "search": "../../../assets/javascripts/workers/search.ecf98df9.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Search", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version.title": "Select version"}, "version": {"method": "mike"}}</script>
     
     
-      <script src="../../../assets/javascripts/bundle.9c69f0bc.min.js"></script>
+      <script src="../../../assets/javascripts/bundle.2ab50757.min.js"></script>
       
         <script src="../../../js/jquery.js"></script>
       
