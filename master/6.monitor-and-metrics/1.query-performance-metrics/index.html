@@ -5485,6 +5485,20 @@
   
   
     <li class="md-nav__item">
+      <a href="../../nebula-explorer/db-management/draft/" class="md-nav__link">
+        Schema drafting
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
       <a href="../../nebula-explorer/db-management/10.create-schema/" class="md-nav__link">
         Schema management
       </a>
@@ -5529,6 +5543,20 @@
     <li class="md-nav__item">
       <a href="../../nebula-explorer/db-management/ngql-template/" class="md-nav__link">
         nGQL template
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../nebula-explorer/db-management/dbuser_management/" class="md-nav__link">
+        Database user management
       </a>
     </li>
   
@@ -5988,8 +6016,36 @@
   
   
     <li class="md-nav__item">
+      <a href="../../nebula-explorer/iframe/" class="md-nav__link">
+        Inline frame
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
       <a href="../../nebula-explorer/ex-ug-shortcuts/" class="md-nav__link">
         Basic operations and shortcuts
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../nebula-explorer/faq/" class="md-nav__link">
+        FAQ
       </a>
     </li>
   
@@ -6843,20 +6899,6 @@
 
             
           
-            
-              
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../graph-computing/0.deploy-controller-analytics/" class="md-nav__link">
-        Dag Controller
-      </a>
-    </li>
-  
-
-            
-          
         </ul>
       </nav>
     </li>
@@ -7671,12 +7713,20 @@ num_heartbeats.sum.3600<span class="o">=</span><span class="m">2364</span>
 <td>The latency of querying neighbor vertices.</td>
 </tr>
 <tr>
+<td><code>get_dst_by_src_latency_us</code></td>
+<td>The latency of querying get the destination vertex from the source vertex.</td>
+</tr>
+<tr>
 <td><code>num_get_prop</code></td>
 <td>The number of executions for the GetPropProcessor.</td>
 </tr>
 <tr>
 <td><code>num_get_neighbors_errors</code></td>
 <td>The number of execution errors for the GetNeighborsProcessor.</td>
+</tr>
+<tr>
+<td><code>num_get_dst_by_src_errors</code></td>
+<td>The number of execution errors for the GetDstBySrcProcessor.</td>
 </tr>
 <tr>
 <td><code>get_prop_latency_us</code></td>
@@ -7881,6 +7931,10 @@ num_heartbeats.sum.3600<span class="o">=</span><span class="m">2364</span>
 <tr>
 <td><code>num_get_neighbors</code></td>
 <td>The number of executions for the GetNeighborsProcessor.</td>
+</tr>
+<tr>
+<td><code>num_get_dst_by_src</code></td>
+<td>The number of executions for the GetDstBySrcProcessor.</td>
 </tr>
 <tr>
 <td><code>num_get_prop_errors</code></td>
