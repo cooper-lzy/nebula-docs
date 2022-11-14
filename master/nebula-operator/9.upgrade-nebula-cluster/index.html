@@ -4859,20 +4859,6 @@
   
   
     <li class="md-nav__item">
-      <a href="../../nebula-dashboard-ent/4.cluster-operator/cluster-information/job-management/" class="md-nav__link">
-        Job management
-      </a>
-    </li>
-  
-
-            
-          
-            
-              
-  
-  
-  
-    <li class="md-nav__item">
       <a href="../../nebula-dashboard-ent/4.cluster-operator/cluster-information/backup-and-restore/" class="md-nav__link">
         Backup and restore
       </a>
@@ -6395,6 +6381,20 @@
   
   
     <li class="md-nav__item">
+      <a href="../../nebula-exchange/use-exchange/ex-ug-import-from-jdbc/" class="md-nav__link">
+        Import data from JDBC
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
       <a href="../../nebula-exchange/use-exchange/ex-ug-import-from-sst/" class="md-nav__link">
         Import data from SST files
       </a>
@@ -6871,6 +6871,20 @@
   
   
     <li class="md-nav__item">
+      <a href="../../graph-computing/analytics-ent-license/" class="md-nav__link">
+        NebulaGraph Analytics License
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
       <a href="../../graph-computing/use-explorer/" class="md-nav__link">
         NebulaGraph Explorer workflow
       </a>
@@ -7309,11 +7323,17 @@
 </div>
 <h2 id="limits">Limits<a class="headerlink" href="#limits" title="Permanent link">&para;</a></h2>
 <ul>
-<li>Only for NebulaGraph clusters that have been created with NebulaGraph Operator.</li>
+<li>Only for upgrading the NebulaGraph clusters created with NebulaGraph Operator.</li>
 </ul>
 <ul>
 <li>Only support upgrading the NebulaGraph version from 3.0.0 to 3.3.x.</li>
 </ul>
+<!--
+
+- For upgrading NebulaGraph Enterprise Edition clusters, [contact us](https://www.nebula-graph.com.cn/contact).
+
+-->
+
 <h2 id="upgrade_a_nebulagraph_cluster_with_kubectl">Upgrade a NebulaGraph cluster with Kubectl<a class="headerlink" href="#upgrade_a_nebulagraph_cluster_with_kubectl" title="Permanent link">&para;</a></h2>
 <h3 id="prerequisites">Prerequisites<a class="headerlink" href="#prerequisites" title="Permanent link">&para;</a></h3>
 <p>You have created a NebulaGraph cluster with Kubectl. For details, see <a href="../3.deploy-nebula-graph-cluster/3.1create-cluster-with-kubectl/">Create a NebulaGraph cluster with Kubectl</a>.</p>
@@ -7331,7 +7351,7 @@
 </code></pre></div>
 </li>
 <li>
-<p>Edit the <code>apps_v1alpha1_nebulacluster.yaml</code> file by changing the values of all the <code>version</code> parameters from 3.0.0 to V3.3.0.</p>
+<p>Edit the <code>apps_v1alpha1_nebulacluster.yaml</code> file by changing the values of all the <code>version</code> parameters from 3.0.0 to v3.3.0.</p>
 <p>The modified YAML file reads as follows:</p>
 <div class="highlight"><pre><span></span><code><span class="nt">apiVersion</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">apps.nebula-graph.io/v1alpha1</span><span class="w"></span>
 <span class="nt">kind</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">NebulaCluster</span><span class="w"></span>
@@ -7348,7 +7368,7 @@
 <span class="w">        </span><span class="nt">memory</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;1Gi&quot;</span><span class="w"></span>
 <span class="w">    </span><span class="nt">replicas</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">1</span><span class="w"></span>
 <span class="w">    </span><span class="nt">image</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">vesoft/nebula-graphd</span><span class="w"></span>
-<span class="w">    </span><span class="nt">version</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">V3.3.0 //Change the value from 3.0.0 to V3.3.0.</span><span class="w"></span>
+<span class="w">    </span><span class="nt">version</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">v3.3.0 //Change the value from 3.0.0 to v3.3.0.</span><span class="w"></span>
 <span class="w">    </span><span class="nt">service</span><span class="p">:</span><span class="w"></span>
 <span class="w">      </span><span class="nt">type</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">NodePort</span><span class="w"></span>
 <span class="w">      </span><span class="nt">externalTrafficPolicy</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Local</span><span class="w"></span>
@@ -7356,7 +7376,7 @@
 <span class="w">      </span><span class="nt">resources</span><span class="p">:</span><span class="w"></span>
 <span class="w">        </span><span class="nt">requests</span><span class="p">:</span><span class="w"></span>
 <span class="w">          </span><span class="nt">storage</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">2Gi</span><span class="w"></span>
-<span class="w">      </span><span class="nt">storageClassName</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">gp2</span><span class="w"></span>
+<span class="w">      </span><span class="nt">storageClassName</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">fast-disks</span><span class="w"></span>
 <span class="w">  </span><span class="nt">metad</span><span class="p">:</span><span class="w"></span>
 <span class="w">    </span><span class="nt">resources</span><span class="p">:</span><span class="w"></span>
 <span class="w">      </span><span class="nt">requests</span><span class="p">:</span><span class="w"></span>
@@ -7367,17 +7387,17 @@
 <span class="w">        </span><span class="nt">memory</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;1Gi&quot;</span><span class="w"></span>
 <span class="w">    </span><span class="nt">replicas</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">1</span><span class="w"></span>
 <span class="w">    </span><span class="nt">image</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">vesoft/nebula-metad</span><span class="w"></span>
-<span class="w">    </span><span class="nt">version</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">V3.3.0 //Change the value from 3.0.0 to V3.3.0.</span><span class="w"></span>
+<span class="w">    </span><span class="nt">version</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">v3.3.0 //Change the value from 3.0.0 to v3.3.0.</span><span class="w"></span>
 <span class="w">    </span><span class="nt">dataVolumeClaim</span><span class="p">:</span><span class="w"></span>
 <span class="w">      </span><span class="nt">resources</span><span class="p">:</span><span class="w"></span>
 <span class="w">        </span><span class="nt">requests</span><span class="p">:</span><span class="w"></span>
 <span class="w">          </span><span class="nt">storage</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">2Gi</span><span class="w"></span>
-<span class="w">      </span><span class="nt">storageClassName</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">gp2</span><span class="w"></span>
+<span class="w">      </span><span class="nt">storageClassName</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">fast-disks</span><span class="w"></span>
 <span class="w">    </span><span class="nt">logVolumeClaim</span><span class="p">:</span><span class="w"></span>
 <span class="w">      </span><span class="nt">resources</span><span class="p">:</span><span class="w"></span>
 <span class="w">        </span><span class="nt">requests</span><span class="p">:</span><span class="w"></span>
 <span class="w">          </span><span class="nt">storage</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">2Gi</span><span class="w"></span>
-<span class="w">      </span><span class="nt">storageClassName</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">gp2</span><span class="w"></span>
+<span class="w">      </span><span class="nt">storageClassName</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">fast-disks</span><span class="w"></span>
 <span class="w">  </span><span class="nt">storaged</span><span class="p">:</span><span class="w"></span>
 <span class="w">    </span><span class="nt">resources</span><span class="p">:</span><span class="w"></span>
 <span class="w">      </span><span class="nt">requests</span><span class="p">:</span><span class="w"></span>
@@ -7388,17 +7408,19 @@
 <span class="w">        </span><span class="nt">memory</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;1Gi&quot;</span><span class="w"></span>
 <span class="w">    </span><span class="nt">replicas</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">3</span><span class="w"></span>
 <span class="w">    </span><span class="nt">image</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">vesoft/nebula-storaged</span><span class="w"></span>
-<span class="w">    </span><span class="nt">version</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">V3.3.0 //Change the value from 3.0.0 to V3.3.0.</span><span class="w"></span>
-<span class="w">    </span><span class="nt">dataVolumeClaim</span><span class="p">:</span><span class="w"></span>
-<span class="w">      </span><span class="nt">resources</span><span class="p">:</span><span class="w"></span>
+<span class="w">    </span><span class="nt">version</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">v3.3.0 //Change the value from 3.0.0 to v3.3.0.</span><span class="w"></span>
+<span class="w">    </span><span class="nt">dataVolumeClaims</span><span class="p">:</span><span class="w"></span>
+<span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">resources</span><span class="p">:</span><span class="w"></span>
 <span class="w">        </span><span class="nt">requests</span><span class="p">:</span><span class="w"></span>
 <span class="w">          </span><span class="nt">storage</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">2Gi</span><span class="w"></span>
-<span class="w">      </span><span class="nt">storageClassName</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">gp2</span><span class="w"></span>
+<span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">resources</span><span class="p">:</span><span class="w"></span>
+<span class="w">        </span><span class="nt">requests</span><span class="p">:</span><span class="w"></span>
+<span class="w">          </span><span class="nt">storage</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">2Gi</span><span class="w"></span>
 <span class="w">    </span><span class="nt">logVolumeClaim</span><span class="p">:</span><span class="w"></span>
 <span class="w">      </span><span class="nt">resources</span><span class="p">:</span><span class="w"></span>
 <span class="w">        </span><span class="nt">requests</span><span class="p">:</span><span class="w"></span>
 <span class="w">          </span><span class="nt">storage</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">2Gi</span><span class="w"></span>
-<span class="w">      </span><span class="nt">storageClassName</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">gp2</span><span class="w"></span>
+<span class="w">      </span><span class="nt">storageClassName</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">fast-disks</span><span class="w"></span>
 <span class="w">  </span><span class="nt">reference</span><span class="p">:</span><span class="w"></span>
 <span class="w">    </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">statefulsets.apps</span><span class="w"></span>
 <span class="w">    </span><span class="nt">version</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">v1</span><span class="w"></span>
@@ -7412,13 +7434,13 @@
 </code></pre></div>
 </li>
 <li>
-<p>After waiting for about 2 minutes, run the following command to see if the image versions of the services in the cluster have been changed to V3.3.0.</p>
+<p>After waiting for about 2 minutes, run the following command to see if the image versions of the services in the cluster have been changed to v3.3.0.</p>
 <div class="highlight"><pre><span></span><code>kubectl get pods -l app.kubernetes.io/cluster<span class="o">=</span>nebula  -o <span class="nv">jsonpath</span><span class="o">=</span><span class="s2">&quot;{.items[*].spec.containers[*].image}&quot;</span> <span class="p">|</span>tr -s <span class="s1">&#39;[[:space:]]&#39;</span> <span class="s1">&#39;\n&#39;</span> <span class="p">|</span>sort <span class="p">|</span>uniq -c
 </code></pre></div>
 <p>Output:</p>
-<div class="highlight"><pre><span></span><code>      <span class="m">1</span> vesoft/nebula-graphd:V3.3.0
-      <span class="m">1</span> vesoft/nebula-metad:V3.3.0
-      <span class="m">3</span> vesoft/nebula-storaged:V3.3.0 
+<div class="highlight"><pre><span></span><code>      <span class="m">1</span> vesoft/nebula-graphd:v3.3.0
+      <span class="m">1</span> vesoft/nebula-metad:v3.3.0
+      <span class="m">3</span> vesoft/nebula-storaged:v3.3.0 
 </code></pre></div>
 </li>
 </ol>
@@ -7440,11 +7462,11 @@
 </li>
 <li>
 <p>Upgrade a NebulaGraph cluster.</p>
-<p>For example, upgrade a cluster to V3.3.0.</p>
+<p>For example, upgrade a cluster to v3.3.0.</p>
 <div class="highlight"><pre><span></span><code>helm upgrade <span class="s2">&quot;</span><span class="si">${</span><span class="nv">NEBULA_CLUSTER_NAME</span><span class="si">}</span><span class="s2">&quot;</span> nebula-operator/nebula-cluster <span class="se">\</span>
     --namespace<span class="o">=</span><span class="s2">&quot;</span><span class="si">${</span><span class="nv">NEBULA_CLUSTER_NAMESPACE</span><span class="si">}</span><span class="s2">&quot;</span> <span class="se">\</span>
     --set <span class="nv">nameOverride</span><span class="o">=</span><span class="si">${</span><span class="nv">NEBULA_CLUSTER_NAME</span><span class="si">}</span> <span class="se">\</span>
-    --set nebula.version<span class="o">=</span>V3.3.0
+    --set nebula.version<span class="o">=</span>v3.3.0
 </code></pre></div>
 <p>The value of <code>--set nebula.version</code> specifies the version of the cluster you want to upgrade to.</p>
 </li>
@@ -7464,9 +7486,9 @@ nebula-storaged-2   <span class="m">1</span>/1     Running   <span class="m">0</
 </code></pre></div>
 <p>Check cluster version:</p>
 <div class="highlight"><pre><span></span><code>$ kubectl get pods -l app.kubernetes.io/cluster<span class="o">=</span>nebula  -o <span class="nv">jsonpath</span><span class="o">=</span><span class="s2">&quot;{.items[*].spec.containers[*].image}&quot;</span> <span class="p">|</span>tr -s <span class="s1">&#39;[[:space:]]&#39;</span> <span class="s1">&#39;\n&#39;</span> <span class="p">|</span>sort <span class="p">|</span>uniq -c
-      <span class="m">1</span> vesoft/nebula-graphd:V3.3.0
-      <span class="m">1</span> vesoft/nebula-metad:V3.3.0
-      <span class="m">3</span> vesoft/nebula-storaged:V3.3.0
+      <span class="m">1</span> vesoft/nebula-graphd:v3.3.0
+      <span class="m">1</span> vesoft/nebula-metad:v3.3.0
+      <span class="m">3</span> vesoft/nebula-storaged:v3.3.0
 </code></pre></div>
 </li>
 </ol>
@@ -7476,7 +7498,7 @@ nebula-storaged-2   <span class="m">1</span>/1     Running   <span class="m">0</
   <small>
     
       Last update:
-      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">August 11, 2022</span>
+      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">November 2, 2022</span>
       
     
   </small>

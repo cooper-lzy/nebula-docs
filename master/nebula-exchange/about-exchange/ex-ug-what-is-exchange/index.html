@@ -4859,20 +4859,6 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../nebula-dashboard-ent/4.cluster-operator/cluster-information/job-management/" class="md-nav__link">
-        Job management
-      </a>
-    </li>
-  
-
-            
-          
-            
-              
-  
-  
-  
-    <li class="md-nav__item">
       <a href="../../../nebula-dashboard-ent/4.cluster-operator/cluster-information/backup-and-restore/" class="md-nav__link">
         Backup and restore
       </a>
@@ -6136,6 +6122,13 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#version_compatibility" class="md-nav__link">
+    Version compatibility
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#data_source" class="md-nav__link">
     Data source
   </a>
@@ -6456,6 +6449,20 @@
     <li class="md-nav__item">
       <a href="../../use-exchange/ex-ug-import-from-kafka/" class="md-nav__link">
         Import data from Kafka
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../use-exchange/ex-ug-import-from-jdbc/" class="md-nav__link">
+        Import data from JDBC
       </a>
     </li>
   
@@ -6847,6 +6854,20 @@
   
   
     <li class="md-nav__item">
+      <a href="../../../graph-computing/analytics-ent-license/" class="md-nav__link">
+        NebulaGraph Analytics License
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
       <a href="../../../graph-computing/use-explorer/" class="md-nav__link">
         NebulaGraph Explorer workflow
       </a>
@@ -7218,6 +7239,13 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#version_compatibility" class="md-nav__link">
+    Version compatibility
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#data_source" class="md-nav__link">
     Data source
   </a>
@@ -7309,6 +7337,42 @@
 <ul>
 <li>Easy to use: It adopts the Human-Optimized Config Object Notation (HOCON) configuration file format and has an object-oriented style, which is easy to understand and operate.</li>
 </ul>
+<h2 id="version_compatibility">Version compatibility<a class="headerlink" href="#version_compatibility" title="Permanent link">&para;</a></h2>
+<p>The correspondence between the NebulaGraph Exchange release (the JAR version) and the NebulaGraph core release is as follows.</p>
+<table>
+<thead>
+<tr>
+<th align="left">NebulaGraph</th>
+<th align="left">Exchange client</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="left">nightly</td>
+<td align="left">3.0-SNAPSHOT</td>
+</tr>
+<tr>
+<td align="left">3.3.0</td>
+<td align="left">3.3.0</td>
+</tr>
+<tr>
+<td align="left">3.0.0 ~ 3.2.x</td>
+<td align="left">3.0.0</td>
+</tr>
+<tr>
+<td align="left">2.6.x</td>
+<td align="left">2.6.x</td>
+</tr>
+<tr>
+<td align="left">2.5.x</td>
+<td align="left">2.5.x</td>
+</tr>
+<tr>
+<td align="left">2.0.0、2.0.1</td>
+<td align="left">2.1.0、2.0.1、2.0.0</td>
+</tr>
+</tbody>
+</table>
 <h2 id="data_source">Data source<a class="headerlink" href="#data_source" title="Permanent link">&para;</a></h2>
 <p>Exchange 3.3.0 supports converting data from the following formats or sources into vertexes and edges that NebulaGraph can recognize, and then importing them into NebulaGraph in the form of nGQL statements:</p>
 <ul>
@@ -7352,6 +7416,9 @@
 <ul>
 <li>Publish/Subscribe messaging platform: <a href="../../use-exchange/ex-ug-import-from-pulsar/">Apache Pulsar 2.4.5</a></li>
 </ul>
+<ul>
+<li><a href="../../use-exchange/ex-ug-import-from-jdbc/">JDBC</a></li>
+</ul>
 <p>In addition to importing data as nGQL statements, Exchange supports generating SST files for data sources and then <a href="../../use-exchange/ex-ug-import-from-sst/">importing SST</a> files via Console.</p>
 <p>In addition, Exchange Enterprise Edition also supports <a href="../../use-exchange/ex-ug-export-from-nebula/">exporting data to a CSV file</a> using NebulaGraph as data sources.</p>
 <h2 id="release_note">Release note<a class="headerlink" href="#release_note" title="Permanent link">&para;</a></h2>
@@ -7362,7 +7429,7 @@
   <small>
     
       Last update:
-      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">September 7, 2022</span>
+      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">November 1, 2022</span>
       
     
   </small>

@@ -4859,20 +4859,6 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../nebula-dashboard-ent/4.cluster-operator/cluster-information/job-management/" class="md-nav__link">
-        Job management
-      </a>
-    </li>
-  
-
-            
-          
-            
-              
-  
-  
-  
-    <li class="md-nav__item">
       <a href="../../../nebula-dashboard-ent/4.cluster-operator/cluster-information/backup-and-restore/" class="md-nav__link">
         Backup and restore
       </a>
@@ -6395,6 +6381,20 @@
   
   
     <li class="md-nav__item">
+      <a href="../../../nebula-exchange/use-exchange/ex-ug-import-from-jdbc/" class="md-nav__link">
+        Import data from JDBC
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
       <a href="../../../nebula-exchange/use-exchange/ex-ug-import-from-sst/" class="md-nav__link">
         Import data from SST files
       </a>
@@ -6814,6 +6814,20 @@
     <li class="md-nav__item">
       <a href="../../../graph-computing/nebula-analytics/" class="md-nav__link">
         NebulaGraph Analytics
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../graph-computing/analytics-ent-license/" class="md-nav__link">
+        NebulaGraph Analytics License
       </a>
     </li>
   
@@ -7246,7 +7260,7 @@
 <span class="w">      </span><span class="nt">requests</span><span class="p">:</span><span class="w"></span>
 <span class="w">        </span><span class="nt">cpu</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">500m</span><span class="w"></span>
 <span class="w">        </span><span class="nt">memory</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">500Mi</span><span class="w"></span>
-<span class="w">    </span><span class="nt">version</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">V3.3.0</span><span class="w"></span>
+<span class="w">    </span><span class="nt">version</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">v3.3.0</span><span class="w"></span>
 <span class="w">  </span><span class="nt">imagePullPolicy</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">IfNotPresent</span><span class="w"></span>
 <span class="w">  </span><span class="nt">metad</span><span class="p">:</span><span class="w"></span>
 <span class="w">    </span><span class="nt">dataVolumeClaim</span><span class="p">:</span><span class="w"></span>
@@ -7268,7 +7282,7 @@
 <span class="w">      </span><span class="nt">requests</span><span class="p">:</span><span class="w"></span>
 <span class="w">        </span><span class="nt">cpu</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">500m</span><span class="w"></span>
 <span class="w">        </span><span class="nt">memory</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">500Mi</span><span class="w"></span>
-<span class="w">    </span><span class="nt">version</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">V3.3.0</span><span class="w"></span>
+<span class="w">    </span><span class="nt">version</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">v3.3.0</span><span class="w"></span>
 <span class="w">  </span><span class="nt">nodeSelector</span><span class="p">:</span><span class="w"></span>
 <span class="w">    </span><span class="nt">nebula</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">cloud</span><span class="w"></span>
 <span class="w">  </span><span class="nt">reference</span><span class="p">:</span><span class="w"></span>
@@ -7276,11 +7290,13 @@
 <span class="w">    </span><span class="nt">version</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">v1</span><span class="w"></span>
 <span class="w">  </span><span class="nt">schedulerName</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">default-scheduler</span><span class="w"></span>
 <span class="w">  </span><span class="nt">storaged</span><span class="p">:</span><span class="w"></span>
-<span class="w">    </span><span class="nt">dataVolumeClaim</span><span class="p">:</span><span class="w"></span>
-<span class="w">      </span><span class="nt">resources</span><span class="p">:</span><span class="w"></span>
+<span class="w">    </span><span class="nt">dataVolumeClaims</span><span class="p">:</span><span class="w"></span>
+<span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">resources</span><span class="p">:</span><span class="w"></span>
 <span class="w">        </span><span class="nt">requests</span><span class="p">:</span><span class="w"></span>
 <span class="w">          </span><span class="nt">storage</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">2Gi</span><span class="w"></span>
-<span class="w">      </span><span class="nt">storageClassName</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">fast-disks</span><span class="w"></span>
+<span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">resources</span><span class="p">:</span><span class="w"></span>
+<span class="w">        </span><span class="nt">requests</span><span class="p">:</span><span class="w"></span>
+<span class="w">          </span><span class="nt">storage</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">2Gi</span><span class="w"></span>
 <span class="w">    </span><span class="nt">image</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">vesoft/nebula-storaged</span><span class="w"></span>
 <span class="w">    </span><span class="nt">logVolumeClaim</span><span class="p">:</span><span class="w"></span>
 <span class="w">      </span><span class="nt">resources</span><span class="p">:</span><span class="w"></span>
@@ -7295,12 +7311,12 @@
 <span class="w">      </span><span class="nt">requests</span><span class="p">:</span><span class="w"></span>
 <span class="w">        </span><span class="nt">cpu</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">500m</span><span class="w"></span>
 <span class="w">        </span><span class="nt">memory</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">500Mi</span><span class="w"></span>
-<span class="w">    </span><span class="nt">version</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">V3.3.0</span><span class="w"></span>
+<span class="w">    </span><span class="nt">version</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">v3.3.0</span><span class="w"></span>
 <span class="nn">...</span><span class="w">    </span>
 </code></pre></div>
-<ol>
-<li>Run <code>kubectl apply -f nebula_cluster.yaml</code> to push your configuration changes to the cluster.</li>
-</ol>
+</li>
+<li>
+<p>Run <code>kubectl apply -f nebula_cluster.yaml</code> to push your configuration changes to the cluster.</p>
 </li>
 </ol>
 
@@ -7309,7 +7325,7 @@
   <small>
     
       Last update:
-      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">August 11, 2022</span>
+      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">November 2, 2022</span>
       
     
   </small>
