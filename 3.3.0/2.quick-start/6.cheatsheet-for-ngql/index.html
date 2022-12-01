@@ -1352,7 +1352,7 @@
   
     <li class="md-nav__item">
       <a href="../../3.ngql-guide/6.functions-and-expressions/4.schema/" class="md-nav__link">
-        Schema functions
+        Schema-related functions
       </a>
     </li>
   
@@ -3438,67 +3438,6 @@
 
             
           
-            
-              
-  
-  
-  
-    
-    <li class="md-nav__item md-nav__item--nested">
-      
-      
-        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_7_3" type="checkbox" id="__nav_7_3" >
-      
-      
-      
-      
-        <label class="md-nav__link" for="__nav_7_3">
-          Black-box monitoring
-          <span class="md-nav__icon md-icon"></span>
-        </label>
-      
-      <nav class="md-nav" aria-label="Black-box monitoring" data-md-level="2">
-        <label class="md-nav__title" for="__nav_7_3">
-          <span class="md-nav__icon md-icon"></span>
-          Black-box monitoring
-        </label>
-        <ul class="md-nav__list" data-md-scrollfix>
-          
-            
-              
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../6.monitor-and-metrics/3.bbox/3.1.bbox/" class="md-nav__link">
-        What is black-box monitoring
-      </a>
-    </li>
-  
-
-            
-          
-            
-              
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../6.monitor-and-metrics/3.bbox/3.2.bbox-reviewer/" class="md-nav__link">
-        Black-box monitoring tool
-      </a>
-    </li>
-  
-
-            
-          
-        </ul>
-      </nav>
-    </li>
-  
-
-            
-          
         </ul>
       </nav>
     </li>
@@ -3703,7 +3642,7 @@
   
     <li class="md-nav__item">
       <a href="../../backup-and-restore/nebula-br/2.compile-br/" class="md-nav__link">
-        Compile BR
+        Install BR
       </a>
     </li>
   
@@ -3740,109 +3679,6 @@
           
         </ul>
       </nav>
-    </li>
-  
-
-            
-          
-            
-              
-  
-  
-  
-    
-    <li class="md-nav__item md-nav__item--nested">
-      
-      
-        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_9_2" type="checkbox" id="__nav_9_2" >
-      
-      
-      
-      
-        <label class="md-nav__link" for="__nav_9_2">
-          NebulaGraph BR (Enterprise Edition)
-          <span class="md-nav__icon md-icon"></span>
-        </label>
-      
-      <nav class="md-nav" aria-label="NebulaGraph BR (Enterprise Edition)" data-md-level="2">
-        <label class="md-nav__title" for="__nav_9_2">
-          <span class="md-nav__icon md-icon"></span>
-          NebulaGraph BR (Enterprise Edition)
-        </label>
-        <ul class="md-nav__list" data-md-scrollfix>
-          
-            
-              
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../backup-and-restore/nebula-br-ent/1.br-ent-overview/" class="md-nav__link">
-        What is Backup & Restore (Enterprise Edition)
-      </a>
-    </li>
-  
-
-            
-          
-            
-              
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../backup-and-restore/nebula-br-ent/2.install-tools/" class="md-nav__link">
-        Install BR
-      </a>
-    </li>
-  
-
-            
-          
-            
-              
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../backup-and-restore/nebula-br-ent/3.backup-data/" class="md-nav__link">
-        Back up data with BR
-      </a>
-    </li>
-  
-
-            
-          
-            
-              
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../backup-and-restore/nebula-br-ent/4.restore-data/" class="md-nav__link">
-        Restore data with BR
-      </a>
-    </li>
-  
-
-            
-          
-        </ul>
-      </nav>
-    </li>
-  
-
-            
-          
-            
-              
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../backup-and-restore/3.manage-snapshot/" class="md-nav__link">
-        Manage snapshots
-      </a>
     </li>
   
 
@@ -4275,20 +4111,6 @@
     <li class="md-nav__item">
       <a href="../../nebula-studio/deploy-connect/st-ug-deploy/" class="md-nav__link">
         Deploy Studio
-      </a>
-    </li>
-  
-
-            
-          
-            
-              
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../nebula-studio/deploy-connect/st-ug-deploy-by-helm/" class="md-nav__link">
-        Deploy Studio with Helm
       </a>
     </li>
   
@@ -4987,20 +4809,6 @@
     <li class="md-nav__item">
       <a href="../../nebula-dashboard-ent/4.cluster-operator/operator/node/" class="md-nav__link">
         Node
-      </a>
-    </li>
-  
-
-            
-          
-            
-              
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../nebula-dashboard-ent/4.cluster-operator/operator/scale/" class="md-nav__link">
-        Scale
       </a>
     </li>
   
@@ -7634,11 +7442,11 @@
 <tbody>
 <tr>
 <td>int now()</td>
-<td>Returns the current date and time of the system timezone.</td>
+<td>Returns the current timestamp of the system.</td>
 </tr>
 <tr>
 <td>timestamp timestamp()</td>
-<td>Returns the current date and time of the system timezone.</td>
+<td>Returns the current timestamp of the system.</td>
 </tr>
 <tr>
 <td>date date()</td>
@@ -7658,7 +7466,7 @@
 </ul>
 <ul>
 <li>
-<p><a href="../../3.ngql-guide/6.functions-and-expressions/4.schema/">Schema functions</a></p>
+<p><a href="../../3.ngql-guide/6.functions-and-expressions/4.schema/">Schema-related functions</a></p>
 <ul>
 <li>
 <p>For nGQL statements</p>
@@ -7966,8 +7774,8 @@
 </tr>
 <tr>
 <td>Match vertex properties</td>
-<td><code>MATCH (v:player{name:"Tim Duncan"}) RETURN v</code></td>
-<td>You can specify a vertex property with <code>{&lt;prop_name&gt;: &lt;prop_value&gt;}</code> after the tag in a pattern.</td>
+<td><code>MATCH (v:player{name:"Tim Duncan"}) RETURN v</code>  <br><br><code>MATCH (v) WITH v, properties(v) as props, keys(properties(v)) as kk LIMIT 10000 WHERE [i in kk where props[i] == "Tim Duncan"] RETURN v</code></td>
+<td>You can specify a vertex property with <code>{&lt;prop_name&gt;: &lt;prop_value&gt;}</code> after the tag in a pattern; or use a vertex property value to get vertices directly.</td>
 </tr>
 <tr>
 <td>Match a VID.</td>
@@ -8001,8 +7809,8 @@
 </tr>
 <tr>
 <td>Match edge type properties</td>
-<td><code>MATCH (v:player{name:"Tim Duncan"})-[e:follow{degree:95}]-&gt;(v2) RETURN e</code></td>
-<td>You can specify edge type properties with <code>{&lt;prop_name&gt;: &lt;prop_value&gt;}</code> in a pattern. For example: <code>[e:follow{likeness:95}]</code>.</td>
+<td><code>MATCH (v:player{name:"Tim Duncan"})-[e:follow{degree:95}]-&gt;(v2) RETURN e</code> <br><br><code>MATCH ()-[e]-&gt;() WITH e, properties(e) as props, keys(properties(e)) as kk LIMIT 10000 WHERE [i in kk where props[i] == 90] RETURN e</code></td>
+<td>You can specify edge type properties with <code>{&lt;prop_name&gt;: &lt;prop_value&gt;}</code> in a pattern. For example: <code>[e:follow{likeness:95}]</code>; or use an edge type property value to get edges directly.</td>
 </tr>
 <tr>
 <td>Match multiple edge types</td>
@@ -8990,7 +8798,7 @@ YIELD &lt;output&gt;;
   <small>
     
       Last update:
-      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">November 18, 2022</span>
+      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">November 30, 2022</span>
       
     
   </small>
