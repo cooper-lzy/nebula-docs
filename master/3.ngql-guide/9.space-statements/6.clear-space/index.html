@@ -14,7 +14,7 @@
       
         <link rel="canonical" href="https://docs.nebula-graph.io/master/3.ngql-guide/9.space-statements/6.clear-space/">
       
-      <link rel="icon" href="../../../assets/images/favicon.ico">
+      <link rel="icon" href="https://docs-cdn.nebula-graph.com.cn/figures/favicon.ico">
       <meta name="generator" content="mkdocs-1.3.0, mkdocs-material-8.5.4">
     
     
@@ -110,7 +110,7 @@
   <nav class="md-header__inner md-grid" aria-label="Header">
     <a href="../../.." title="NebulaGraph Database Manual" class="md-header__button md-logo" aria-label="NebulaGraph Database Manual" data-md-component="logo">
       
-  <img src="https://cloud-cdn.nebula-graph.com.cn/vesoft-nebula-logo-white.png" alt="logo">
+  <img src="https://docs-cdn.nebula-graph.com.cn/figures/vesoft-nebula-logo-white22-12-21.png" alt="logo">
 
     </a>
     <label class="md-header__button md-icon" for="__drawer">
@@ -244,7 +244,7 @@
   <label class="md-nav__title" for="__drawer">
     <a href="../../.." title="NebulaGraph Database Manual" class="md-nav__button md-logo" aria-label="NebulaGraph Database Manual" data-md-component="logo">
       
-  <img src="https://cloud-cdn.nebula-graph.com.cn/vesoft-nebula-logo-white.png" alt="logo">
+  <img src="https://docs-cdn.nebula-graph.com.cn/figures/vesoft-nebula-logo-white22-12-21.png" alt="logo">
 
     </a>
     NebulaGraph Database Manual
@@ -3443,7 +3443,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../6.monitor-and-metrics/3.bbox/3.1.bbox/" class="md-nav__link">
+      <a href="../../../6.monitor-and-metrics/3.bbox/3.1.bbox.md" class="md-nav__link">
         What is black-box monitoring
       </a>
     </li>
@@ -3457,7 +3457,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../6.monitor-and-metrics/3.bbox/3.2.bbox-reviewer/" class="md-nav__link">
+      <a href="../../../6.monitor-and-metrics/3.bbox/3.2.bbox-reviewer.md" class="md-nav__link">
         Black-box monitoring tool
       </a>
     </li>
@@ -3750,7 +3750,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../backup-and-restore/nebula-br-ent/1.br-ent-overview/" class="md-nav__link">
+      <a href="../../../backup-and-restore/nebula-br-ent/1.br-ent-overview.md" class="md-nav__link">
         What is Backup & Restore (Enterprise Edition)
       </a>
     </li>
@@ -3764,7 +3764,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../backup-and-restore/nebula-br-ent/2.install-tools/" class="md-nav__link">
+      <a href="../../../backup-and-restore/nebula-br-ent/2.install-tools.md" class="md-nav__link">
         Install BR
       </a>
     </li>
@@ -3778,7 +3778,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../backup-and-restore/nebula-br-ent/3.backup-data/" class="md-nav__link">
+      <a href="../../../backup-and-restore/nebula-br-ent/3.backup-data.md" class="md-nav__link">
         Back up data with BR
       </a>
     </li>
@@ -3792,7 +3792,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../backup-and-restore/nebula-br-ent/4.restore-data/" class="md-nav__link">
+      <a href="../../../backup-and-restore/nebula-br-ent/4.restore-data.md" class="md-nav__link">
         Restore data with BR
       </a>
     </li>
@@ -4260,7 +4260,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../nebula-studio/deploy-connect/st-ug-deploy-by-helm/" class="md-nav__link">
+      <a href="../../../nebula-studio/deploy-connect/st-ug-deploy-by-helm.md" class="md-nav__link">
         Deploy Studio with Helm
       </a>
     </li>
@@ -4925,7 +4925,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../nebula-dashboard-ent/4.cluster-operator/cluster-information/backup-and-restore/" class="md-nav__link">
+      <a href="../../../nebula-dashboard-ent/4.cluster-operator/cluster-information/backup-and-restore.md" class="md-nav__link">
         Backup and restore
       </a>
     </li>
@@ -4986,7 +4986,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../nebula-dashboard-ent/4.cluster-operator/operator/scale/" class="md-nav__link">
+      <a href="../../../nebula-dashboard-ent/4.cluster-operator/operator/scale.md" class="md-nav__link">
         Scale
       </a>
     </li>
@@ -7253,6 +7253,10 @@
 
 <h1 id="clear_space">CLEAR SPACE<a class="headerlink" href="#clear_space" title="Permanent link">&para;</a></h1>
 <p><code>CLEAR SPACE</code> deletes the vertices and edges in a graph space, but does not delete the graph space itself and the schema information.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>It is recommended to execute <a href="../../4.job-statements/#submit_job_compact"><code>SUBMIT JOB COMPACT</code></a> immediately after executing the <code>CLEAR SPACE</code> operation improve the query performance. Note that the COMPACT operation may affect query performance, and it is recommended to perform this operation during low business hours (e.g., early morning).</p>
+</div>
 <h2 id="permission_requirements">Permission requirements<a class="headerlink" href="#permission_requirements" title="Permanent link">&para;</a></h2>
 <p>Only the <a href="../../../7.data-security/1.authentication/3.role-list/">God role</a> has the permission to run <code>CLEAR SPACE</code>.</p>
 <h2 id="caution">Caution<a class="headerlink" href="#caution" title="Permanent link">&para;</a></h2>
@@ -7260,23 +7264,19 @@
 <li>Once cleared, the data <strong>CANNOT be recovered</strong>. Use <code>CLEAR SPACE</code> with caution.</li>
 <li><code>CLEAR SPACE</code> is not an atomic operation. If an error occurs, re-run <code>CLEAR SPACE</code> to avoid data remaining.</li>
 <li>The larger the amount of data in the graph space, the longer it takes to clear it. If the execution fails due to client connection timeout, increase the value of the <code>storage_client_timeout_ms</code> parameter in the <a href="../../../5.configurations-and-logs/1.configurations/3.graph-config/">Graph Service configuration</a>.</li>
-<li>
-<p>During the execution of <code>CLEAR SPACE</code>, writing data into the graph space is not automatically prohibited. Such write operations can result in incomplete data clearing, and the residual data can be damaged.</p>
+<li>During the execution of <code>CLEAR SPACE</code>, writing data into the graph space is not automatically prohibited. Such write operations can result in incomplete data clearing, and the residual data can be damaged.</li>
+</ul>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
-<ul>
-<li>The NebulaGraph Community Edition does not support blocking data writing while allowing <code>CLEAR SPACE</code>.</li>
-</ul>
+<p>The NebulaGraph Community Edition does not support blocking data writing while allowing <code>CLEAR SPACE</code>.</p>
 </div>
-</li>
-</ul>
-<!--
-  !!! enterpriseonly
+<!-- -->
 
-      - The NebulaGraph Community Edition does not support blocking data writing while allowing `CLEAR SPACE`.
-      - The NebulaGraph Enterprise Edition supports blocking data writing by setting `VARIABLE read_only=true` before running `CLEAR SPACE`. After the data are cleared successfully, run `SET VARIABLE read_only=false` to allow data writing again.
-
--->
+<div class="admonition enterpriseonly">
+<p class="admonition-title">Enterpriseonly</p>
+<p>The NebulaGraph Enterprise Edition supports blocking data writing by setting <code>VARIABLE read_only=true</code> before running <code>CLEAR SPACE</code>. After the data are cleared successfully, run <code>SET VARIABLE read_only=false</code> to allow data writing again.</p>
+</div>
+<!-- -->
 <h2 id="syntax">Syntax<a class="headerlink" href="#syntax" title="Permanent link">&para;</a></h2>
 <div class="highlight"><pre><span></span><code>CLEAR SPACE [IF EXISTS] &lt;space_name&gt;;
 </code></pre></div>
@@ -7409,7 +7409,7 @@ Got 2 rows (time spent 523/978 us)
   <small>
     
       Last update:
-      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">August 11, 2022</span>
+      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">December 23, 2022</span>
       
     
   </small>
