@@ -4369,20 +4369,6 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../nebula-studio/deploy-connect/st-ug-deploy-by-helm.md" class="md-nav__link">
-        Deploy Studio with Helm
-      </a>
-    </li>
-  
-
-            
-          
-            
-              
-  
-  
-  
-    <li class="md-nav__item">
       <a href="../../../nebula-studio/deploy-connect/st-ug-connect/" class="md-nav__link">
         Connect to NebulaGraph
       </a>
@@ -5028,20 +5014,6 @@
 
             
           
-            
-              
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../../nebula-dashboard-ent/4.cluster-operator/cluster-information/backup-and-restore.md" class="md-nav__link">
-        Backup and restore
-      </a>
-    </li>
-  
-
-            
-          
         </ul>
       </nav>
     </li>
@@ -5153,6 +5125,20 @@
     <li class="md-nav__item">
       <a href="../../../nebula-dashboard-ent/4.cluster-operator/operator/version-upgrade/" class="md-nav__link">
         Version upgrade
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../nebula-dashboard-ent/4.cluster-operator/operator/backup-and-restore/" class="md-nav__link">
+        Backup and restore
       </a>
     </li>
   
@@ -5305,20 +5291,6 @@
     <li class="md-nav__item">
       <a href="../../../nebula-dashboard-ent/system-settings/manage-package/" class="md-nav__link">
         Package management
-      </a>
-    </li>
-  
-
-            
-          
-            
-              
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../../nebula-dashboard-ent/system-settings/other-settings/" class="md-nav__link">
-        Other settings
       </a>
     </li>
   
@@ -7658,8 +7630,8 @@
 </ul>
 <p>EdgeA_Out and EdgeA_In are stored in storage layer with opposite directions, constituting EdgeA logically. EdgeA_Out is used for traversal requests starting from SrcVertex, such as <code>(a)-[]-&gt;()</code>; EdgeA_In is used for traversal requests starting from DstVertex, such as <code>()-[]-&gt;(a)</code>.</p>
 <p>Like EdgeA_Out and EdgeA_In, NebulaGraph redundantly stores the information of each edge, which doubles the actual capacities needed for edge storage. The key corresponding to the edge occupies a small hard disk space, but the space occupied by Value is proportional to the length and amount of the property value. Therefore, it will occupy a relatively large hard disk space if the property value of the edge is large or there are many edge property values.</p>
-<p>To ensure the final consistency of the two key-value pairs when operating on edges, enable the <a href="../../../5.configurations-and-logs/1.configurations/3.graph-config/">TOSS function</a>. After that, the operation will be performed in Partition x first where the out-edge is located, and then in Partition y where the in-edge is located. Finally, the result is returned.
---&gt;</p>
+<!-- To ensure the final consistency of the two key-value pairs when operating on edges, enable the [TOSS function](../../5.configurations-and-logs/1.configurations/3.graph-config.md ). After that, the operation will be performed in Partition x first where the out-edge is located, and then in Partition y where the in-edge is located. Finally, the result is returned. -->
+
 <h3 id="partition_algorithm">Partition algorithm<a class="headerlink" href="#partition_algorithm" title="Permanent link">&para;</a></h3>
 <p>NebulaGraph uses a <strong>static Hash</strong> strategy to shard data through a modulo operation on vertex ID. All the out-keys, in-keys, and tag data will be placed in the same partition. In this way, query efficiency is increased dramatically.</p>
 <div class="admonition note">
@@ -7680,7 +7652,7 @@ if (id.size() == 8) {
 PartitionID pId = vid % numParts + 1;
 </code></pre></div>
 <p>Roughly speaking, after hashing a fixed string to int64, (the hashing of int64 is the number itself), do modulo, and then plus one, namely:</p>
-<div class="highlight"><pre><span></span><code><span class="n">pId</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">vid</span><span class="w"> </span><span class="o">%</span><span class="w"> </span><span class="n">numParts</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="mi">1</span><span class="p">;</span><span class="w"></span>
+<div class="highlight"><pre><span></span><code><span class="n">pId</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">vid</span><span class="w"> </span><span class="o">%</span><span class="w"> </span><span class="n">numParts</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="mi">1</span><span class="p">;</span>
 </code></pre></div>
 <p>Parameters and descriptions of the preceding formula are as follows:</p>
 <table>
@@ -7781,7 +7753,7 @@ Raft listener can write the data into Elasticsearch cluster after receiving them
   <small>
     
       Last update:
-      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">August 11, 2022</span>
+      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">December 27, 2022</span>
       
     
   </small>

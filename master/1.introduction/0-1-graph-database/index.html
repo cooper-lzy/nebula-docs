@@ -4366,20 +4366,6 @@
   
   
     <li class="md-nav__item">
-      <a href="../../nebula-studio/deploy-connect/st-ug-deploy-by-helm.md" class="md-nav__link">
-        Deploy Studio with Helm
-      </a>
-    </li>
-  
-
-            
-          
-            
-              
-  
-  
-  
-    <li class="md-nav__item">
       <a href="../../nebula-studio/deploy-connect/st-ug-connect/" class="md-nav__link">
         Connect to NebulaGraph
       </a>
@@ -5025,20 +5011,6 @@
 
             
           
-            
-              
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../nebula-dashboard-ent/4.cluster-operator/cluster-information/backup-and-restore.md" class="md-nav__link">
-        Backup and restore
-      </a>
-    </li>
-  
-
-            
-          
         </ul>
       </nav>
     </li>
@@ -5150,6 +5122,20 @@
     <li class="md-nav__item">
       <a href="../../nebula-dashboard-ent/4.cluster-operator/operator/version-upgrade/" class="md-nav__link">
         Version upgrade
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../nebula-dashboard-ent/4.cluster-operator/operator/backup-and-restore/" class="md-nav__link">
+        Backup and restore
       </a>
     </li>
   
@@ -5302,20 +5288,6 @@
     <li class="md-nav__item">
       <a href="../../nebula-dashboard-ent/system-settings/manage-package/" class="md-nav__link">
         Package management
-      </a>
-    </li>
-  
-
-            
-          
-            
-              
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../nebula-dashboard-ent/system-settings/other-settings/" class="md-nav__link">
-        Other settings
       </a>
     </li>
   
@@ -7564,12 +7536,12 @@
 <p><img alt="" src="https://dist.neo4j.com/wp-content/uploads/20200131191103/Neo4j-Fabric-LDBC-sharding-scheme.jpg" /></p>
 <p>The style of its syntax is as follows:</p>
 <div class="highlight"><pre><span></span><code><span class="n">USE</span><span class="w"> </span><span class="n">graphA</span><span class="w">  </span>
-<span class="k">MATCH</span><span class="w"> </span><span class="p">(</span><span class="n">movie</span><span class="p">:</span><span class="n">Movie</span><span class="p">)</span><span class="w"></span>
-<span class="k">Return</span><span class="w"> </span><span class="n">movie</span><span class="p">.</span><span class="n">title</span><span class="w"> </span><span class="k">AS</span><span class="w"> </span><span class="n">title</span><span class="w"></span>
+<span class="k">MATCH</span><span class="w"> </span><span class="p">(</span><span class="n">movie</span><span class="p">:</span><span class="n">Movie</span><span class="p">)</span>
+<span class="k">Return</span><span class="w"> </span><span class="n">movie</span><span class="p">.</span><span class="n">title</span><span class="w"> </span><span class="k">AS</span><span class="w"> </span><span class="n">title</span>
 <span class="w">    </span><span class="k">UNION</span><span class="w">   </span>
 <span class="n">USE</span><span class="w"> </span><span class="n">graphB</span><span class="w">  </span>
-<span class="k">MATCH</span><span class="w"> </span><span class="p">(</span><span class="n">move</span><span class="p">:</span><span class="n">Movie</span><span class="p">)</span><span class="w"></span>
-<span class="k">RETURN</span><span class="w"> </span><span class="n">movie</span><span class="p">.</span><span class="n">title</span><span class="w"> </span><span class="k">AS</span><span class="w"> </span><span class="n">title</span><span class="w"></span>
+<span class="k">MATCH</span><span class="w"> </span><span class="p">(</span><span class="n">move</span><span class="p">:</span><span class="n">Movie</span><span class="p">)</span>
+<span class="k">RETURN</span><span class="w"> </span><span class="n">movie</span><span class="p">.</span><span class="n">title</span><span class="w"> </span><span class="k">AS</span><span class="w"> </span><span class="n">title</span>
 </code></pre></div>
 <p><img alt="" src="https://docs-cdn.nebula-graph.com.cn/books/images/fabric.png" /></p>
 </li>

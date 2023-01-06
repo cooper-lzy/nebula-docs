@@ -3319,19 +3319,6 @@
     Experimental configurations
   </a>
   
-    <nav class="md-nav" aria-label="Experimental configurations">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#experimental_features" class="md-nav__link">
-    Experimental features
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
 </li>
       
         <li class="md-nav__item">
@@ -4343,20 +4330,6 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../nebula-studio/deploy-connect/st-ug-deploy-by-helm.md" class="md-nav__link">
-        Deploy Studio with Helm
-      </a>
-    </li>
-  
-
-            
-          
-            
-              
-  
-  
-  
-    <li class="md-nav__item">
       <a href="../../../nebula-studio/deploy-connect/st-ug-connect/" class="md-nav__link">
         Connect to NebulaGraph
       </a>
@@ -5002,20 +4975,6 @@
 
             
           
-            
-              
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../../nebula-dashboard-ent/4.cluster-operator/cluster-information/backup-and-restore.md" class="md-nav__link">
-        Backup and restore
-      </a>
-    </li>
-  
-
-            
-          
         </ul>
       </nav>
     </li>
@@ -5127,6 +5086,20 @@
     <li class="md-nav__item">
       <a href="../../../nebula-dashboard-ent/4.cluster-operator/operator/version-upgrade/" class="md-nav__link">
         Version upgrade
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../nebula-dashboard-ent/4.cluster-operator/operator/backup-and-restore/" class="md-nav__link">
+        Backup and restore
       </a>
     </li>
   
@@ -5279,20 +5252,6 @@
     <li class="md-nav__item">
       <a href="../../../nebula-dashboard-ent/system-settings/manage-package/" class="md-nav__link">
         Package management
-      </a>
-    </li>
-  
-
-            
-          
-            
-              
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../../nebula-dashboard-ent/system-settings/other-settings/" class="md-nav__link">
-        Other settings
       </a>
     </li>
   
@@ -7375,19 +7334,6 @@
     Experimental configurations
   </a>
   
-    <nav class="md-nav" aria-label="Experimental configurations">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#experimental_features" class="md-nav__link">
-    Experimental features
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
 </li>
       
         <li class="md-nav__item">
@@ -7781,32 +7727,20 @@
 <td>Specifies the experimental feature. Optional values are <code>true</code> and <code>false</code>. For currently supported experimental features, see below.</td>
 </tr>
 <tr>
-<td><code>enable_toss</code></td>
-<td><code>false</code></td>
-<td>Whether to enable the TOSS feature. The TOSS (Transaction on Storage Side) feature is used to ensure the final consistency of the <code>INSERT</code>, <code>UPDATE</code>, <code>UPSERT</code>, or <code>DELETE</code> operations on edges (because one edge logically corresponds to two key-value pairs on the hard disk). After the TOSS function is enabled, the time delay of related operations will be increased by about one time.<br>Only works when <code>enable_experimental_feature</code> is <code>true</code>.</td>
-</tr>
-<tr>
 <td><code>enable_data_balance</code></td>
 <td><code>true</code></td>
 <td>Whether to enable the <a href="../../../8.service-tuning/load-balance/">BALANCE DATA</a> feature. Only works when <code>enable_experimental_feature</code> is <code>true</code>.</td>
 </tr>
 </tbody>
 </table>
-<h3 id="experimental_features">Experimental features<a class="headerlink" href="#experimental_features" title="Permanent link">&para;</a></h3>
-<table>
-<thead>
-<tr>
-<th>Name</th>
-<th>Description</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>TOSS</td>
-<td>The TOSS (Transaction on Storage Side) function is used to ensure the final consistency of the <code>INSERT</code>, <code>UPDATE</code>, <code>UPSERT</code>, or <code>DELETE</code> operations on edges (because one edge logically corresponds to two key-value pairs on the hard disk). After the TOSS function is enabled, the time delay of related operations will be increased by about one time.</td>
-</tr>
-</tbody>
-</table>
+<!-- |`enable_toss`|`false`|Whether to enable the TOSS feature. The TOSS (Transaction on Storage Side) feature is used to ensure the final consistency of the `INSERT`, `UPDATE`, `UPSERT`, or `DELETE` operations on edges (because one edge logically corresponds to two key-value pairs on the hard disk). After the TOSS function is enabled, the time delay of related operations will be increased by about one time.<br>Only works when `enable_experimental_feature` is `true`.| -->
+
+<!-- ### Experimental features
+
+| Name                 |  Description                             |
+| ------------------- | ------------------------------------------|
+| TOSS | The TOSS (Transaction on Storage Side) function is used to ensure the final consistency of the `INSERT`, `UPDATE`, `UPSERT`, or `DELETE` operations on edges (because one edge logically corresponds to two key-value pairs on the hard disk). After the TOSS function is enabled, the time delay of related operations will be increased by about one time. | -->
+
 <!-- -->
 <h2 id="black_box_configurations">Black box configurations<a class="headerlink" href="#black_box_configurations" title="Permanent link">&para;</a></h2>
 <div class="admonition enterpriseonly">
@@ -7851,7 +7785,7 @@
   <small>
     
       Last update:
-      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">October 24, 2022</span>
+      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">December 27, 2022</span>
       
     
   </small>

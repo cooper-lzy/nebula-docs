@@ -4299,20 +4299,6 @@
   
   
     <li class="md-nav__item">
-      <a href="../nebula-studio/deploy-connect/st-ug-deploy-by-helm.md" class="md-nav__link">
-        Deploy Studio with Helm
-      </a>
-    </li>
-  
-
-            
-          
-            
-              
-  
-  
-  
-    <li class="md-nav__item">
       <a href="../nebula-studio/deploy-connect/st-ug-connect/" class="md-nav__link">
         Connect to NebulaGraph
       </a>
@@ -4958,20 +4944,6 @@
 
             
           
-            
-              
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../nebula-dashboard-ent/4.cluster-operator/cluster-information/backup-and-restore.md" class="md-nav__link">
-        Backup and restore
-      </a>
-    </li>
-  
-
-            
-          
         </ul>
       </nav>
     </li>
@@ -5083,6 +5055,20 @@
     <li class="md-nav__item">
       <a href="../nebula-dashboard-ent/4.cluster-operator/operator/version-upgrade/" class="md-nav__link">
         Version upgrade
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../nebula-dashboard-ent/4.cluster-operator/operator/backup-and-restore/" class="md-nav__link">
+        Backup and restore
       </a>
     </li>
   
@@ -5235,20 +5221,6 @@
     <li class="md-nav__item">
       <a href="../nebula-dashboard-ent/system-settings/manage-package/" class="md-nav__link">
         Package management
-      </a>
-    </li>
-  
-
-            
-          
-            
-              
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../nebula-dashboard-ent/system-settings/other-settings/" class="md-nav__link">
-        Other settings
       </a>
     </li>
   
@@ -7346,7 +7318,7 @@
 <h2 id="nebulagraph_console_functions">NebulaGraph Console functions<a class="headerlink" href="#nebulagraph_console_functions" title="Permanent link">&para;</a></h2>
 <h3 id="connect_to_nebulagraph">Connect to NebulaGraph<a class="headerlink" href="#connect_to_nebulagraph" title="Permanent link">&para;</a></h3>
 <p>To connect to NebulaGraph with the <code>nebula-console</code> file, use the following syntax:</p>
-<div class="highlight"><pre><span></span><code>&lt;path_of_console&gt; -addr &lt;ip&gt; -port &lt;port&gt; -u &lt;username&gt; -p &lt;password&gt;
+<div class="highlight"><pre><span></span><code>&lt;path_of_console&gt;<span class="w"> </span>-addr<span class="w"> </span>&lt;ip&gt;<span class="w"> </span>-port<span class="w"> </span>&lt;port&gt;<span class="w"> </span>-u<span class="w"> </span>&lt;username&gt;<span class="w"> </span>-p<span class="w"> </span>&lt;password&gt;
 </code></pre></div>
 <p><code>path_of_console</code> indicates the storage path of the NebulaGraph Console binary file.</p>
 <p>Parameter descriptions are as follows:</p>
@@ -7410,7 +7382,7 @@
 </table>
 <p>For information on more parameters, see the <a href="https://github.com/vesoft-inc/nebula-console/tree/release-3.3">project repository</a>.</p>
 <p>For example, to connect to the Graph Service deployed on 192.168.10.8, run the following command:</p>
-<div class="highlight"><pre><span></span><code>./nebula-console -addr <span class="m">192</span>.168.10.8 -port <span class="m">9669</span> -u root -p thisisapassword
+<div class="highlight"><pre><span></span><code>./nebula-console<span class="w"> </span>-addr<span class="w"> </span><span class="m">192</span>.168.10.8<span class="w"> </span>-port<span class="w"> </span><span class="m">9669</span><span class="w"> </span>-u<span class="w"> </span>root<span class="w"> </span>-p<span class="w"> </span>thisisapassword
 </code></pre></div>
 <h3 id="manage_parameters">Manage parameters<a class="headerlink" href="#manage_parameters" title="Permanent link">&para;</a></h3>
 <p>You can save parameters for parameterized queries.</p>

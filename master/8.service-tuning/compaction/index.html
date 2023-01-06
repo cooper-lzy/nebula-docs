@@ -4299,20 +4299,6 @@
   
   
     <li class="md-nav__item">
-      <a href="../../nebula-studio/deploy-connect/st-ug-deploy-by-helm.md" class="md-nav__link">
-        Deploy Studio with Helm
-      </a>
-    </li>
-  
-
-            
-          
-            
-              
-  
-  
-  
-    <li class="md-nav__item">
       <a href="../../nebula-studio/deploy-connect/st-ug-connect/" class="md-nav__link">
         Connect to NebulaGraph
       </a>
@@ -4958,20 +4944,6 @@
 
             
           
-            
-              
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../nebula-dashboard-ent/4.cluster-operator/cluster-information/backup-and-restore.md" class="md-nav__link">
-        Backup and restore
-      </a>
-    </li>
-  
-
-            
-          
         </ul>
       </nav>
     </li>
@@ -5083,6 +5055,20 @@
     <li class="md-nav__item">
       <a href="../../nebula-dashboard-ent/4.cluster-operator/operator/version-upgrade/" class="md-nav__link">
         Version upgrade
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../nebula-dashboard-ent/4.cluster-operator/operator/backup-and-restore/" class="md-nav__link">
+        Backup and restore
       </a>
     </li>
   
@@ -5235,20 +5221,6 @@
     <li class="md-nav__item">
       <a href="../../nebula-dashboard-ent/system-settings/manage-package/" class="md-nav__link">
         Package management
-      </a>
-    </li>
-  
-
-            
-          
-            
-              
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../nebula-dashboard-ent/system-settings/other-settings/" class="md-nav__link">
-        Other settings
       </a>
     </li>
   
@@ -7414,7 +7386,7 @@ nebula&gt; SUBMIT JOB COMPACT;
 <p>This parameter limits the rate of all writes including normal writes and compaction writes. </p>
 </div>
 <div class="highlight"><pre><span></span><code><span class="c1"># Limit the write rate to 20MB/s.</span>
---rocksdb_rate_limit<span class="o">=</span><span class="m">20</span> <span class="o">(</span><span class="k">in</span> MB/s<span class="o">)</span>
+--rocksdb_rate_limit<span class="o">=</span><span class="m">20</span><span class="w"> </span><span class="o">(</span><span class="k">in</span><span class="w"> </span>MB/s<span class="o">)</span>
 </code></pre></div>
 </li>
 </ul>

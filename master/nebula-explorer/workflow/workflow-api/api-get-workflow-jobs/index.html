@@ -4194,20 +4194,6 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../nebula-studio/deploy-connect/st-ug-deploy-by-helm.md" class="md-nav__link">
-        Deploy Studio with Helm
-      </a>
-    </li>
-  
-
-            
-          
-            
-              
-  
-  
-  
-    <li class="md-nav__item">
       <a href="../../../../nebula-studio/deploy-connect/st-ug-connect/" class="md-nav__link">
         Connect to NebulaGraph
       </a>
@@ -4853,20 +4839,6 @@
 
             
           
-            
-              
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../../../nebula-dashboard-ent/4.cluster-operator/cluster-information/backup-and-restore.md" class="md-nav__link">
-        Backup and restore
-      </a>
-    </li>
-  
-
-            
-          
         </ul>
       </nav>
     </li>
@@ -4978,6 +4950,20 @@
     <li class="md-nav__item">
       <a href="../../../../nebula-dashboard-ent/4.cluster-operator/operator/version-upgrade/" class="md-nav__link">
         Version upgrade
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../nebula-dashboard-ent/4.cluster-operator/operator/backup-and-restore/" class="md-nav__link">
+        Backup and restore
       </a>
     </li>
   
@@ -5130,20 +5116,6 @@
     <li class="md-nav__item">
       <a href="../../../../nebula-dashboard-ent/system-settings/manage-package/" class="md-nav__link">
         Package management
-      </a>
-    </li>
-  
-
-            
-          
-            
-              
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../../../nebula-dashboard-ent/system-settings/other-settings/" class="md-nav__link">
-        Other settings
       </a>
     </li>
   
@@ -7477,7 +7449,7 @@
 <p class="admonition-title">Note</p>
 <p>The content after <code>jobs?</code> is the body parameter, and the content of <code>filter</code> is the result of URL encoding. The original content of <code>filter</code> was <code>{"status": 2, "fromCreateTime": 1657874100000}</code>.</p>
 </div>
-<div class="highlight"><pre><span></span><code>curl -i -X GET -H <span class="s2">&quot;Content-Type: application/json&quot;</span> -H <span class="s2">&quot;Cookie: &quot;</span><span class="nv">explorer_token</span><span class="o">=</span>eyJhbxxx<span class="s2">&quot;&quot;</span> http://192.168.8.145:7002/api-open/v1/workflows/4216617528/jobs?filter<span class="o">=</span>%7B%22status%22%3A%202%2C%20%20%22fromCreateTime%22%3A%201657874100000%7D<span class="p">&amp;</span><span class="nv">pageSize</span><span class="o">=</span><span class="m">10</span><span class="p">&amp;</span><span class="nv">page</span><span class="o">=</span><span class="m">1</span>
+<div class="highlight"><pre><span></span><code>curl<span class="w"> </span>-i<span class="w"> </span>-X<span class="w"> </span>GET<span class="w"> </span>-H<span class="w"> </span><span class="s2">&quot;Content-Type: application/json&quot;</span><span class="w"> </span>-H<span class="w"> </span><span class="s2">&quot;Cookie: &quot;</span><span class="nv">explorer_token</span><span class="o">=</span>eyJhbxxx<span class="s2">&quot;&quot;</span><span class="w"> </span>http://192.168.8.145:7002/api-open/v1/workflows/4216617528/jobs?filter<span class="o">=</span>%7B%22status%22%3A%202%2C%20%20%22fromCreateTime%22%3A%201657874100000%7D<span class="p">&amp;</span><span class="nv">pageSize</span><span class="o">=</span><span class="m">10</span><span class="p">&amp;</span><span class="nv">page</span><span class="o">=</span><span class="m">1</span>
 </code></pre></div>
 <h2 id="response_parameters">Response parameters<a class="headerlink" href="#response_parameters" title="Permanent link">&para;</a></h2>
 <table>

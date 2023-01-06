@@ -4274,20 +4274,6 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../nebula-studio/deploy-connect/st-ug-deploy-by-helm.md" class="md-nav__link">
-        Deploy Studio with Helm
-      </a>
-    </li>
-  
-
-            
-          
-            
-              
-  
-  
-  
-    <li class="md-nav__item">
       <a href="../../../nebula-studio/deploy-connect/st-ug-connect/" class="md-nav__link">
         Connect to NebulaGraph
       </a>
@@ -4933,20 +4919,6 @@
 
             
           
-            
-              
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../../nebula-dashboard-ent/4.cluster-operator/cluster-information/backup-and-restore.md" class="md-nav__link">
-        Backup and restore
-      </a>
-    </li>
-  
-
-            
-          
         </ul>
       </nav>
     </li>
@@ -5058,6 +5030,20 @@
     <li class="md-nav__item">
       <a href="../../../nebula-dashboard-ent/4.cluster-operator/operator/version-upgrade/" class="md-nav__link">
         Version upgrade
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../nebula-dashboard-ent/4.cluster-operator/operator/backup-and-restore/" class="md-nav__link">
+        Backup and restore
       </a>
     </li>
   
@@ -5210,20 +5196,6 @@
     <li class="md-nav__item">
       <a href="../../../nebula-dashboard-ent/system-settings/manage-package/" class="md-nav__link">
         Package management
-      </a>
-    </li>
-  
-
-            
-          
-            
-              
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../../nebula-dashboard-ent/system-settings/other-settings/" class="md-nav__link">
-        Other settings
       </a>
     </li>
   
@@ -7360,7 +7332,7 @@
 <p>hash() returns the hash value of the argument. The argument can be a number, a string, a list, a boolean, null, or an expression that evaluates to a value of the preceding data types.</p>
 <p>The source code of the <code>hash()</code> function (MurmurHash2), seed (<code>0xc70f6907UL</code>), and other parameters can be found in <a href="https://github.com/vesoft-inc/nebula/blob/master/src/common/base/MurmurHash2.h"><code>MurmurHash2.h</code></a>.</p>
 <p>For Java, the hash function operates as follows.</p>
-<div class="highlight"><pre><span></span><code><span class="n">MurmurHash2</span><span class="p">.</span><span class="na">hash64</span><span class="p">(</span><span class="s">&quot;to_be_hashed&quot;</span><span class="p">.</span><span class="na">getBytes</span><span class="p">(),</span><span class="s">&quot;to_be_hashed&quot;</span><span class="p">.</span><span class="na">getBytes</span><span class="p">().</span><span class="na">length</span><span class="p">,</span><span class="w"> </span><span class="mh">0xc70f6907</span><span class="p">)</span><span class="w"></span>
+<div class="highlight"><pre><span></span><code><span class="n">MurmurHash2</span><span class="p">.</span><span class="na">hash64</span><span class="p">(</span><span class="s">&quot;to_be_hashed&quot;</span><span class="p">.</span><span class="na">getBytes</span><span class="p">(),</span><span class="s">&quot;to_be_hashed&quot;</span><span class="p">.</span><span class="na">getBytes</span><span class="p">().</span><span class="na">length</span><span class="p">,</span><span class="w"> </span><span class="mh">0xc70f6907</span><span class="p">)</span>
 </code></pre></div>
 <p>Syntax: <code>hash(&lt;string&gt;)</code></p>
 <ul>
