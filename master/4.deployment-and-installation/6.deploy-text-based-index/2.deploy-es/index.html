@@ -176,7 +176,34 @@
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
     </label>
     
-      <div id="doc-search">
+      <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41Z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
 </div>
     
     
@@ -1305,20 +1332,6 @@
     <li class="md-nav__item">
       <a href="../../../3.ngql-guide/6.functions-and-expressions/14.geo/" class="md-nav__link">
         Geography functions
-      </a>
-    </li>
-  
-
-            
-          
-            
-              
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../../3.ngql-guide/6.functions-and-expressions/17.ES-function/" class="md-nav__link">
-        Elasticsearch functions
       </a>
     </li>
   
@@ -3205,7 +3218,7 @@
   
     <li class="md-nav__item">
       <a href="../../3.upgrade-nebula-graph/upgrade-nebula-graph-to-latest/" class="md-nav__link">
-        Upgrade NebulaGraph to the latest version
+        Upgrade NebulaGraph from v2.x to v3.4 (Community Edition)
       </a>
     </li>
   
@@ -3219,7 +3232,21 @@
   
     <li class="md-nav__item">
       <a href="../../3.upgrade-nebula-graph/upgrade-nebula-from-300-to-latest/" class="md-nav__link">
-        Upgrade NebulaGraph from v3.x to the current version
+        Upgrade NebulaGraph from v3.x to v3.4 (Community Edition)
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../3.upgrade-nebula-graph/upgrade-nebula-ent-from-3.x-3.4/" class="md-nav__link">
+        Upgrade NebulaGraph from v3.x to v3.4 (Enterprise Edition)
       </a>
     </li>
   
@@ -7518,57 +7545,14 @@
 <p>Before you start using the full-text index, please make sure that you know the <a href="../1.text-based-index-restrictions/">restrictions</a>.</p>
 <h2 id="deploy_elasticsearch_cluster">Deploy Elasticsearch cluster<a class="headerlink" href="#deploy_elasticsearch_cluster" title="Permanent link">&para;</a></h2>
 <p>To deploy an Elasticsearch cluster, see <a href="https://www.elastic.co/guide/en/cloud-on-k8s/current/k8s-deploy-elasticsearch.html">Kubernetes Elasticsearch deployment</a> or <a href="https://www.elastic.co/guide/en/elasticsearch/reference/7.15/targz.html">Elasticsearch installation</a>.</p>
-<p>When the Elasticsearch cluster is started, add the template file for the Nebula Graph full-text index. </p>
-<div class="admonition note">
-<p class="admonition-title">Note</p>
-<p>The following template works for ES 7.8. The template content may vary depending on different ES versions. Search <a href="https://www.elastic.co/guide/en/elasticsearch/reference/current/index-templates.html">Elasticsearch documents</a> for the template corresponding to your ES version. </p>
+<div class="admonition compatibility">
+<p class="admonition-title">Compatibility</p>
+<p>For NebulaGraph 3.4 and later versions, no additional templates need to be created.</p>
 </div>
-<div class="highlight"><pre><span></span><code><span class="p">{</span>
-<span class="w"> </span><span class="nt">&quot;template&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;nebula*&quot;</span><span class="p">,</span>
-<span class="w">  </span><span class="nt">&quot;settings&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
-<span class="w">    </span><span class="nt">&quot;index&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
-<span class="w">      </span><span class="nt">&quot;number_of_shards&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">3</span><span class="p">,</span>
-<span class="w">      </span><span class="nt">&quot;number_of_replicas&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span>
-<span class="w">    </span><span class="p">}</span>
-<span class="w">  </span><span class="p">},</span>
-<span class="w">  </span><span class="nt">&quot;mappings&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
-<span class="w">    </span><span class="nt">&quot;properties&quot;</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
-<span class="w">            </span><span class="nt">&quot;tag_id&quot;</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="nt">&quot;type&quot;</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;long&quot;</span><span class="w"> </span><span class="p">},</span>
-<span class="w">            </span><span class="nt">&quot;column_id&quot;</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="nt">&quot;type&quot;</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;text&quot;</span><span class="w"> </span><span class="p">},</span>
-<span class="w">            </span><span class="nt">&quot;value&quot;</span><span class="w"> </span><span class="p">:{</span><span class="w"> </span><span class="nt">&quot;type&quot;</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;keyword&quot;</span><span class="p">}</span>
-<span class="w">        </span><span class="p">}</span>
-<span class="w">  </span><span class="p">}</span>
-<span class="p">}</span>
-</code></pre></div>
-<p>Make sure that you specify the following fields in strict accordance with the preceding template format:</p>
-<div class="highlight"><pre><span></span><code><span class="nt">&quot;template&quot;</span><span class="p">:</span><span class="w"> </span><span class="nt">&quot;nebula*&quot;</span>
-<span class="nt">&quot;tag_id&quot;</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="nt">&quot;type&quot;</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;long&quot;</span><span class="w"> </span><span class="p">},</span>
-<span class="nt">&quot;column_id&quot;</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="nt">&quot;type&quot;</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;text&quot;</span><span class="w"> </span><span class="p">},</span>
-<span class="nt">&quot;value&quot;</span><span class="w"> </span><span class="p">:{</span><span class="w"> </span><span class="nt">&quot;type&quot;</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;keyword&quot;</span><span class="p">}</span>
-</code></pre></div>
 <div class="admonition caution">
 <p class="admonition-title">Caution</p>
-<p>When creating a full-text index, start the index name with <code>nebula</code>.</p>
+<p>The full-text index name must starts with <code>nebula_</code>.</p>
 </div>
-<p>For example:</p>
-<div class="highlight"><pre><span></span><code>curl<span class="w"> </span>-H<span class="w"> </span><span class="s2">&quot;Content-Type: application/json; charset=utf-8&quot;</span><span class="w"> </span>-XPUT<span class="w"> </span>http://127.0.0.1:9200/_template/nebula_index_template<span class="w"> </span>-d<span class="w"> </span><span class="s1">&#39;</span>
-<span class="s1">{</span>
-<span class="s1"> &quot;template&quot;: &quot;nebula*&quot;,</span>
-<span class="s1">  &quot;settings&quot;: {</span>
-<span class="s1">    &quot;index&quot;: {</span>
-<span class="s1">      &quot;number_of_shards&quot;: 3,</span>
-<span class="s1">      &quot;number_of_replicas&quot;: 1</span>
-<span class="s1">    }</span>
-<span class="s1">  },</span>
-<span class="s1">  &quot;mappings&quot;: {</span>
-<span class="s1">    &quot;properties&quot; : {</span>
-<span class="s1">            &quot;tag_id&quot; : { &quot;type&quot; : &quot;long&quot; },</span>
-<span class="s1">            &quot;column_id&quot; : { &quot;type&quot; : &quot;text&quot; },</span>
-<span class="s1">            &quot;value&quot; :{ &quot;type&quot; : &quot;keyword&quot;}</span>
-<span class="s1">        }</span>
-<span class="s1">  }</span>
-<span class="s1">}&#39;</span>
-</code></pre></div>
 <p>You can configure the Elasticsearch to meet your business needs. To customize the Elasticsearch, see <a href="https://www.elastic.co/guide/en/elasticsearch/reference/current/settings.html">Elasticsearch Document</a>.</p>
 <h2 id="sign_in_to_the_text_search_clients">Sign in to the text search clients<a class="headerlink" href="#sign_in_to_the_text_search_clients" title="Permanent link">&para;</a></h2>
 <p>When the Elasticsearch cluster is deployed, use the <code>SIGN IN</code> statement to sign in to the Elasticsearch clients. Multiple <code>elastic_ip:port</code> pairs are separated with commas. You must use the IPs and the port number in the configuration file for the Elasticsearch.</p>
@@ -7581,6 +7565,10 @@
 <div class="admonition note">
 <p class="admonition-title">Note</p>
 <p>Elasticsearch does not have a username or password by default. If you configured a username and password, you need to specify them in the <code>SIGN IN</code> statement.</p>
+</div>
+<div class="admonition caution">
+<p class="admonition-title">Caution</p>
+<p>The Elasticsearch client can only be logged in once, and if there are changes, you need to <code>SIGN OUT</code> and then <code>SIGN IN</code> again, and the client takes effect globally, and multiple graph spaces share the same Elasticsearch client.</p>
 </div>
 <h2 id="show_text_search_clients">Show text search clients<a class="headerlink" href="#show_text_search_clients" title="Permanent link">&para;</a></h2>
 <p>The <code>SHOW TEXT SEARCH CLIENTS</code> statement can list the text search clients.</p>
@@ -7611,7 +7599,7 @@
   <small>
     
       Last update:
-      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">August 9, 2022</span>
+      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">February 7, 2023</span>
       
     
   </small>
