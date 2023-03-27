@@ -19,7 +19,7 @@
     
     
       
-        <title>Enable AutoFDO for NebulaGraph - NebulaGraph Database Manual</title>
+        <title>Enable AutoFDO - NebulaGraph Database Manual</title>
       
     
     
@@ -61,7 +61,7 @@
   
 
 
-  <script id="__analytics">function __md_analytics(){window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)},ga.l=+new Date,ga("create","UA-60523578-16","auto"),ga("set","anonymizeIp",!0),ga("send","pageview"),document.addEventListener("DOMContentLoaded",function(){document.forms.search&&document.forms.search.query.addEventListener("blur",function(){var e;this.value&&(e=document.location.pathname,ga("send","pageview",e+"?q="+this.value))}),document$.subscribe(function(){var a=document.forms.feedback;if(void 0!==a)for(var e of a.querySelectorAll("[type=submit]"))e.addEventListener("click",function(e){e.preventDefault();var t=document.location.pathname,e=this.getAttribute("data-md-value");ga("send","event","feedback","click",t,e),a.firstElementChild.disabled=!0;e=a.querySelector(".md-feedback__note [data-md-value='"+e+"']");e&&(e.hidden=!1)}),a.hidden=!1}),location$.subscribe(function(e){ga("send","pageview",e.pathname)})});var e=document.createElement("script");e.async=!0,e.src="https://www.google-analytics.com/analytics.js",document.getElementById("__analytics").insertAdjacentElement("afterEnd",e)}</script>
+  <script id="__analytics">function __md_analytics(){window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)},ga.l=+new Date,ga("create","UA-60523578-5","auto"),ga("set","anonymizeIp",!0),ga("send","pageview"),document.addEventListener("DOMContentLoaded",function(){document.forms.search&&document.forms.search.query.addEventListener("blur",function(){var e;this.value&&(e=document.location.pathname,ga("send","pageview",e+"?q="+this.value))}),document$.subscribe(function(){var a=document.forms.feedback;if(void 0!==a)for(var e of a.querySelectorAll("[type=submit]"))e.addEventListener("click",function(e){e.preventDefault();var t=document.location.pathname,e=this.getAttribute("data-md-value");ga("send","event","feedback","click",t,e),a.firstElementChild.disabled=!0;e=a.querySelector(".md-feedback__note [data-md-value='"+e+"']");e&&(e.hidden=!1)}),a.hidden=!1}),location$.subscribe(function(e){ga("send","pageview",e.pathname)})});var e=document.createElement("script");e.async=!0,e.src="https://www.google-analytics.com/analytics.js",document.getElementById("__analytics").insertAdjacentElement("afterEnd",e)}</script>
 
   
     <script>"undefined"!=typeof __md_analytics&&__md_analytics()</script>
@@ -126,7 +126,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Enable AutoFDO for NebulaGraph
+              Enable AutoFDO
             
           </span>
         </div>
@@ -535,7 +535,7 @@
   
     <li class="md-nav__item">
       <a href="../../2.quick-start/1.quick-start-workflow/" class="md-nav__link">
-        Quick start workflow
+        Getting started with NebulaGraph
       </a>
     </li>
   
@@ -3899,12 +3899,14 @@
 
   
   
+    
+  
   
     
-    <li class="md-nav__item md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
       
       
-        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_11" type="checkbox" id="__nav_11" >
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_11" type="checkbox" id="__nav_11" checked>
       
       
       
@@ -4000,6 +4002,156 @@
       <a href="../super-node/" class="md-nav__link">
         Processing super vertices
       </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+    
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          Enable AutoFDO
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        Enable AutoFDO
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#resource_preparations" class="md-nav__link">
+    Resource Preparations
+  </a>
+  
+    <nav class="md-nav" aria-label="Resource Preparations">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#install_dependencies" class="md-nav__link">
+    Install Dependencies
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#nebulagraph_binary_with_debug_version" class="md-nav__link">
+    NebulaGraph Binary with Debug Version
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#prepare_test_data" class="md-nav__link">
+    Prepare Test Data
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#prepare_profile_data" class="md-nav__link">
+    Prepare Profile Data
+  </a>
+  
+    <nav class="md-nav" aria-label="Prepare Profile Data">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#collect_perf_data_for_autofdo_tool" class="md-nav__link">
+    Collect Perf Data For AutoFdo Tool
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#create_gcov_file" class="md-nav__link">
+    Create Gcov File
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#merge_the_profile_data" class="md-nav__link">
+    Merge the Profile Data
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#recompile_graphnebula_binary_with_the_merged_profile" class="md-nav__link">
+    Recompile GraphNebula Binary with the Merged Profile
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#performance_test_result" class="md-nav__link">
+    Performance Test Result
+  </a>
+  
+    <nav class="md-nav" aria-label="Performance Test Result">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#hardware_software_environment" class="md-nav__link">
+    Hardware &amp; Software Environment
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#test_results" class="md-nav__link">
+    Test Results
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
     </li>
   
 
@@ -6810,6 +6962,20 @@
   
   
     <li class="md-nav__item">
+      <a href="../../nebula-operator/10.backup-restore-using-operator/" class="md-nav__link">
+        Backup and restore
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
       <a href="../../nebula-operator/5.operator-failover/" class="md-nav__link">
         Self-healing
       </a>
@@ -7450,6 +7616,8 @@ In the configure step, replace <code>CMAKE_BUILD_TYPE=Release</code> with <code>
 </div>
 <h2 id="prepare_profile_data">Prepare Profile Data<a class="headerlink" href="#prepare_profile_data" title="Permanent link">&para;</a></h2>
 <h3 id="collect_perf_data_for_autofdo_tool">Collect Perf Data For AutoFdo Tool<a class="headerlink" href="#collect_perf_data_for_autofdo_tool" title="Permanent link">&para;</a></h3>
+<ol>
+<li>
 <p>After the test data preparation work done. Collect the perf data for different scenarios.
 Get the pid of <code>storaged</code>, <code>graphd</code>, <code>metad</code>.</p>
 <div class="highlight"><pre><span></span><code>$<span class="w"> </span>nebula.service<span class="w"> </span>status<span class="w"> </span>all
@@ -7457,6 +7625,8 @@ Get the pid of <code>storaged</code>, <code>graphd</code>, <code>metad</code>.</
 <span class="o">[</span>INFO<span class="o">]</span><span class="w"> </span>nebula-graphd:<span class="w"> </span>Running<span class="w"> </span>as<span class="w"> </span><span class="m">305516</span>,<span class="w"> </span>Listening<span class="w"> </span>on<span class="w"> </span><span class="m">9669</span>
 <span class="o">[</span>INFO<span class="o">]</span><span class="w"> </span>nebula-storaged:<span class="w"> </span>Running<span class="w"> </span>as<span class="w"> </span><span class="m">305707</span>,<span class="w"> </span>Listening<span class="w"> </span>on<span class="w"> </span><span class="m">9779</span>
 </code></pre></div>
+</li>
+<li>
 <p>Start the <strong><em>perf record</em></strong> for <em>nebula-graphd</em> and <em>nebula-storaged</em>. </p>
 <div class="highlight"><pre><span></span><code>perf<span class="w"> </span>record<span class="w"> </span>-p<span class="w"> </span><span class="m">305516</span>,305707<span class="w"> </span>-b<span class="w"> </span>-e<span class="w"> </span>br_inst_retired.near_taken:pp<span class="w"> </span>-o<span class="w"> </span>~/FindShortestPath.data
 </code></pre></div>
@@ -7464,12 +7634,20 @@ Get the pid of <code>storaged</code>, <code>graphd</code>, <code>metad</code>.</
 <p class="admonition-title">Note</p>
 <p>Because the <code>nebula-metad</code> service contribution percent is small compared with <code>nebula-graphd</code> and <code>nebula-storaged</code> services. To reduce effort, we didn't collect the perf data for <code>nebula-metad</code> service.</p>
 </div>
+</li>
+<li>
 <p>Start the benchmark test for <strong><em>FindShortestPath</em></strong> scenario.</p>
 <div class="highlight"><pre><span></span><code><span class="nb">cd</span><span class="w"> </span>NebulaGraph-Bench<span class="w"> </span>
 python3<span class="w"> </span>run.py<span class="w"> </span>stress<span class="w"> </span>run<span class="w"> </span>-s<span class="w"> </span>benchmark<span class="w"> </span>-scenario<span class="w"> </span>find_path.FindShortestPath<span class="w"> </span>-a<span class="w"> </span>localhost:9669<span class="w"> </span>--args<span class="o">=</span><span class="s1">&#39;-u 100 -i 100000&#39;</span>
 </code></pre></div>
+</li>
+<li>
 <p>After the benchmark finished, end the <strong><em>perf record</em></strong> by <strong><em>Ctrl + c</em></strong>.</p>
+</li>
+<li>
 <p>Repeat above steps to collect corresponding profile data for the rest  <strong><em>Go1Step</em></strong>, <strong><em>Go2Step</em></strong>, <strong><em>Go3Step</em></strong> and <strong><em>InsertPersonScenario</em></strong> scenarios.</p>
+</li>
+</ol>
 <h3 id="create_gcov_file">Create Gcov File<a class="headerlink" href="#create_gcov_file" title="Permanent link">&para;</a></h3>
 <div class="highlight"><pre><span></span><code>create_gcov<span class="w"> </span>--binary<span class="o">=</span><span class="nv">$NEBULA_HOME</span>/bin/nebula-storaged<span class="w"> </span><span class="se">\</span>
 --profile<span class="o">=</span>~/FindShortestPath.data<span class="w"> </span><span class="se">\</span>
@@ -7504,60 +7682,63 @@ create_gcov<span class="w"> </span>--binary<span class="o">=</span><span class="
 <span class="w"> </span>add_compile_options(-Wignored-qualifiers)
 <span class="gi">+add_compile_options(-fauto-profile=~/fbdata.afdo)</span>
 </code></pre></div>
-<p><strong><em>Note:</em></strong> When you use multiple fbdata.afdo to compile multiple times, please remember to <code>make clean</code> before re-compile, baucase only change the fbdata.afdo will not trigger re-compile.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>When you use multiple fbdata.afdo to compile multiple times, please remember to <code>make clean</code> before re-compile, baucase only change the fbdata.afdo will not trigger re-compile.</p>
+</div>
 <h2 id="performance_test_result">Performance Test Result<a class="headerlink" href="#performance_test_result" title="Permanent link">&para;</a></h2>
 <h3 id="hardware_software_environment">Hardware &amp; Software Environment<a class="headerlink" href="#hardware_software_environment" title="Permanent link">&para;</a></h3>
 <table>
 <thead>
 <tr>
 <th align="left">Key</th>
-<th align="right">Value</th>
+<th align="left">Value</th>
 </tr>
 </thead>
 <tbody>
 <tr>
 <td align="left">CPU Processor#</td>
-<td align="right">2</td>
+<td align="left">2</td>
 </tr>
 <tr>
 <td align="left">Sockets</td>
-<td align="right">2</td>
+<td align="left">2</td>
 </tr>
 <tr>
 <td align="left">NUMA</td>
-<td align="right">2</td>
+<td align="left">2</td>
 </tr>
 <tr>
 <td align="left">CPU Type</td>
-<td align="right">Intel(R) Xeon(R) Platinum 8380 CPU @ 2.30GHz</td>
+<td align="left">Intel(R) Xeon(R) Platinum 8380 CPU @ 2.30GHz</td>
 </tr>
 <tr>
 <td align="left">Cores per Processor</td>
-<td align="right">40C80T</td>
+<td align="left">40C80T</td>
 </tr>
 <tr>
 <td align="left">Cache</td>
-<td align="right">L1 data: 48KB L1 i: 32KB  L2: 1.25MB per physical core  L3: shared 60MB per processor</td>
+<td align="left">L1 data: 48KB L1 i: 32KB  L2: 1.25MB per physical core  L3: shared 60MB per processor</td>
 </tr>
 <tr>
 <td align="left">Memory</td>
-<td align="right">Micron DDR4 3200MT/s 16GB<em>16Micron DDR4 3200MT/s 16GB</em>16</td>
+<td align="left">Micron DDR4 3200MT/s 16GB<em>16Micron DDR4 3200MT/s 16GB</em>16</td>
 </tr>
 <tr>
 <td align="left">SSD Disk</td>
-<td align="right">INTEL SSDPE2KE016T8</td>
+<td align="left">INTEL SSDPE2KE016T8</td>
 </tr>
 <tr>
 <td align="left">SSD R/W Sequential</td>
-<td align="right">3200 MB/s (read) / 2100 MB/s(write)</td>
+<td align="left">3200 MB/s (read) / 2100 MB/s(write)</td>
 </tr>
 <tr>
 <td align="left">Nebula Version</td>
-<td align="right">master with commit id 51d84a4ed7d2a032a337e3b996c927e3bc5d1415</td>
+<td align="left">master with commit id 51d84a4ed7d2a032a337e3b996c927e3bc5d1415</td>
 </tr>
 <tr>
 <td align="left">Kernel</td>
-<td align="right">4.18.0-408.el8.x86_64</td>
+<td align="left">4.18.0-408.el8.x86_64</td>
 </tr>
 </tbody>
 </table>
@@ -7988,7 +8169,7 @@ create_gcov<span class="w"> </span>--binary<span class="o">=</span><span class="
   <small>
     
       Last update:
-      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">February 20, 2023</span>
+      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">March 13, 2023</span>
       
     
   </small>
@@ -8018,12 +8199,48 @@ create_gcov<span class="w"> </span>--binary<span class="o">=</span><span class="
       
         <footer class="md-footer">
   
+    
+    <nav class="md-footer__inner md-grid" aria-label="Footer" >
+      
+        
+        <a href="../super-node/" class="md-footer__link md-footer__link--prev" aria-label="Previous: Processing super vertices" rel="prev">
+          <div class="md-footer__button md-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
+          </div>
+          <div class="md-footer__title">
+            <div class="md-ellipsis">
+              <span class="md-footer__direction">
+                Previous
+              </span>
+              Processing super vertices
+            </div>
+          </div>
+        </a>
+      
+      
+        
+        <a href="../practice/" class="md-footer__link md-footer__link--next" aria-label="Next: Best practices" rel="next">
+          <div class="md-footer__title">
+            <div class="md-ellipsis">
+              <span class="md-footer__direction">
+                Next
+              </span>
+              Best practices
+            </div>
+          </div>
+          <div class="md-footer__button md-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11H4Z"/></svg>
+          </div>
+        </a>
+      
+    </nav>
+  
   <div class="md-footer-meta md-typeset">
     <div class="md-footer-meta__inner md-grid">
       <div class="md-copyright">
   
     <div class="md-copyright__highlight">
-      Copyright &copy; 2022 NebulaGraph
+      Copyright &copy; 2023 NebulaGraph
     </div>
   
   

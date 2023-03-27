@@ -61,7 +61,7 @@
   
 
 
-  <script id="__analytics">function __md_analytics(){window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)},ga.l=+new Date,ga("create","UA-60523578-16","auto"),ga("set","anonymizeIp",!0),ga("send","pageview"),document.addEventListener("DOMContentLoaded",function(){document.forms.search&&document.forms.search.query.addEventListener("blur",function(){var e;this.value&&(e=document.location.pathname,ga("send","pageview",e+"?q="+this.value))}),document$.subscribe(function(){var a=document.forms.feedback;if(void 0!==a)for(var e of a.querySelectorAll("[type=submit]"))e.addEventListener("click",function(e){e.preventDefault();var t=document.location.pathname,e=this.getAttribute("data-md-value");ga("send","event","feedback","click",t,e),a.firstElementChild.disabled=!0;e=a.querySelector(".md-feedback__note [data-md-value='"+e+"']");e&&(e.hidden=!1)}),a.hidden=!1}),location$.subscribe(function(e){ga("send","pageview",e.pathname)})});var e=document.createElement("script");e.async=!0,e.src="https://www.google-analytics.com/analytics.js",document.getElementById("__analytics").insertAdjacentElement("afterEnd",e)}</script>
+  <script id="__analytics">function __md_analytics(){window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)},ga.l=+new Date,ga("create","UA-60523578-5","auto"),ga("set","anonymizeIp",!0),ga("send","pageview"),document.addEventListener("DOMContentLoaded",function(){document.forms.search&&document.forms.search.query.addEventListener("blur",function(){var e;this.value&&(e=document.location.pathname,ga("send","pageview",e+"?q="+this.value))}),document$.subscribe(function(){var a=document.forms.feedback;if(void 0!==a)for(var e of a.querySelectorAll("[type=submit]"))e.addEventListener("click",function(e){e.preventDefault();var t=document.location.pathname,e=this.getAttribute("data-md-value");ga("send","event","feedback","click",t,e),a.firstElementChild.disabled=!0;e=a.querySelector(".md-feedback__note [data-md-value='"+e+"']");e&&(e.hidden=!1)}),a.hidden=!1}),location$.subscribe(function(e){ga("send","pageview",e.pathname)})});var e=document.createElement("script");e.async=!0,e.src="https://www.google-analytics.com/analytics.js",document.getElementById("__analytics").insertAdjacentElement("afterEnd",e)}</script>
 
   
     <script>"undefined"!=typeof __md_analytics&&__md_analytics()</script>
@@ -535,7 +535,7 @@
   
     <li class="md-nav__item">
       <a href="../../2.quick-start/1.quick-start-workflow/" class="md-nav__link">
-        Quick start workflow
+        Getting started with NebulaGraph
       </a>
     </li>
   
@@ -4011,6 +4011,20 @@
   
   
     <li class="md-nav__item">
+      <a href="../../8.service-tuning/enable_autofdo_for_nebulagraph/" class="md-nav__link">
+        Enable AutoFDO
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
       <a href="../../8.service-tuning/practice/" class="md-nav__link">
         Best practices
       </a>
@@ -6810,6 +6824,20 @@
   
   
     <li class="md-nav__item">
+      <a href="../../nebula-operator/10.backup-restore-using-operator/" class="md-nav__link">
+        Backup and restore
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
       <a href="../../nebula-operator/5.operator-failover/" class="md-nav__link">
         Self-healing
       </a>
@@ -6924,6 +6952,13 @@
         <li class="md-nav__item">
   <a href="#version_compatibility" class="md-nav__link">
     Version compatibility
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#prerequisites" class="md-nav__link">
+    Prerequisites
   </a>
   
 </li>
@@ -7417,6 +7452,13 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#prerequisites" class="md-nav__link">
+    Prerequisites
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#limitations" class="md-nav__link">
     Limitations
   </a>
@@ -7528,8 +7570,8 @@
 <td align="left">3.0-SNAPSHOT</td>
 </tr>
 <tr>
-<td align="left">3.0.0 ~ 3.3.x</td>
-<td align="left">3.0.0</td>
+<td align="left">3.0.0 ~ 3.4.x</td>
+<td align="left">3.x.0</td>
 </tr>
 <tr>
 <td align="left">2.6.x</td>
@@ -7543,12 +7585,9 @@
 <td align="left">2.0.0、2.0.1</td>
 <td align="left">2.1.0</td>
 </tr>
-<tr>
-<td align="left">## Prerequisites</td>
-<td align="left"></td>
-</tr>
 </tbody>
 </table>
+<h2 id="prerequisites">Prerequisites<a class="headerlink" href="#prerequisites" title="Permanent link">&para;</a></h2>
 <p>Before using the NebulaGraph Algorithm, users need to confirm the following information:</p>
 <ul>
 <li>The NebulaGraph services have been deployed and started. For details, see <a href="../../4.deployment-and-installation/1.resource-preparations/">NebulaGraph Installation</a>.</li>
@@ -7564,14 +7603,15 @@
 </ul>
 <h2 id="limitations">Limitations<a class="headerlink" href="#limitations" title="Permanent link">&para;</a></h2>
 <ul>
-<li>When submitting the algorithm package directly, the data of the vertex ID must be an integer. That is, the vertex ID can be INT or String, but the data itself is an integer.</li>
-</ul>
-<ul>
 <li>For non-integer String data, it is recommended to use the algorithm interface. You can use the <code>dense_rank</code> function of SparkSQL to encode the data as the Long type instead of the String type.</li>
 </ul>
 <ul>
 <li>Graph computing outputs vertex datasets, and the algorithm results are stored in DataFrames as the properties of vertices. You can do further operations such as statistics and filtering according to your business requirements.</li>
 </ul>
+<p>!!!</p>
+<div class="codehilite"><pre><span></span><code>Before Algorithm v3.1.0, when submitting the algorithm package directly, the data of the vertex ID must be an integer. That is, the vertex ID can be INT or String, but the data itself is an integer.
+</code></pre></div>
+
 <h2 id="supported_algorithms">Supported algorithms<a class="headerlink" href="#supported_algorithms" title="Permanent link">&para;</a></h2>
 <p>The graph computing algorithms supported by NebulaGraph Algorithm are as follows.</p>
 <table>
@@ -7695,6 +7735,13 @@
 <td align="left">Breadth-First Search</td>
 <td align="left">Sequence traversal, shortest path planning</td>
 <td align="left">bfs</td>
+<td align="left">string</td>
+</tr>
+<tr>
+<td align="left">DFS</td>
+<td align="left">Depth-First Search</td>
+<td align="left">Sequence traversal, shortest path planning</td>
+<td align="left">dfs</td>
 <td align="left">string</td>
 </tr>
 <tr>
@@ -7910,7 +7957,7 @@ val<span class="w"> </span><span class="nv">louvainResult</span><span class="w">
   <small>
     
       Last update:
-      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">December 21, 2022</span>
+      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">March 13, 2023</span>
       
     
   </small>
@@ -7981,7 +8028,7 @@ val<span class="w"> </span><span class="nv">louvainResult</span><span class="w">
       <div class="md-copyright">
   
     <div class="md-copyright__highlight">
-      Copyright &copy; 2022 NebulaGraph
+      Copyright &copy; 2023 NebulaGraph
     </div>
   
   

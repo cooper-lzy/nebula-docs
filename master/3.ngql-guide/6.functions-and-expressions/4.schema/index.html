@@ -61,7 +61,7 @@
   
 
 
-  <script id="__analytics">function __md_analytics(){window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)},ga.l=+new Date,ga("create","UA-60523578-16","auto"),ga("set","anonymizeIp",!0),ga("send","pageview"),document.addEventListener("DOMContentLoaded",function(){document.forms.search&&document.forms.search.query.addEventListener("blur",function(){var e;this.value&&(e=document.location.pathname,ga("send","pageview",e+"?q="+this.value))}),document$.subscribe(function(){var a=document.forms.feedback;if(void 0!==a)for(var e of a.querySelectorAll("[type=submit]"))e.addEventListener("click",function(e){e.preventDefault();var t=document.location.pathname,e=this.getAttribute("data-md-value");ga("send","event","feedback","click",t,e),a.firstElementChild.disabled=!0;e=a.querySelector(".md-feedback__note [data-md-value='"+e+"']");e&&(e.hidden=!1)}),a.hidden=!1}),location$.subscribe(function(e){ga("send","pageview",e.pathname)})});var e=document.createElement("script");e.async=!0,e.src="https://www.google-analytics.com/analytics.js",document.getElementById("__analytics").insertAdjacentElement("afterEnd",e)}</script>
+  <script id="__analytics">function __md_analytics(){window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)},ga.l=+new Date,ga("create","UA-60523578-5","auto"),ga("set","anonymizeIp",!0),ga("send","pageview"),document.addEventListener("DOMContentLoaded",function(){document.forms.search&&document.forms.search.query.addEventListener("blur",function(){var e;this.value&&(e=document.location.pathname,ga("send","pageview",e+"?q="+this.value))}),document$.subscribe(function(){var a=document.forms.feedback;if(void 0!==a)for(var e of a.querySelectorAll("[type=submit]"))e.addEventListener("click",function(e){e.preventDefault();var t=document.location.pathname,e=this.getAttribute("data-md-value");ga("send","event","feedback","click",t,e),a.firstElementChild.disabled=!0;e=a.querySelector(".md-feedback__note [data-md-value='"+e+"']");e&&(e.hidden=!1)}),a.hidden=!1}),location$.subscribe(function(e){ga("send","pageview",e.pathname)})});var e=document.createElement("script");e.async=!0,e.src="https://www.google-analytics.com/analytics.js",document.getElementById("__analytics").insertAdjacentElement("afterEnd",e)}</script>
 
   
     <script>"undefined"!=typeof __md_analytics&&__md_analytics()</script>
@@ -535,7 +535,7 @@
   
     <li class="md-nav__item">
       <a href="../../../2.quick-start/1.quick-start-workflow/" class="md-nav__link">
-        Quick start workflow
+        Getting started with NebulaGraph
       </a>
     </li>
   
@@ -4222,6 +4222,20 @@
   
   
     <li class="md-nav__item">
+      <a href="../../../8.service-tuning/enable_autofdo_for_nebulagraph/" class="md-nav__link">
+        Enable AutoFDO
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
       <a href="../../../8.service-tuning/practice/" class="md-nav__link">
         Best practices
       </a>
@@ -7021,6 +7035,20 @@
   
   
     <li class="md-nav__item">
+      <a href="../../../nebula-operator/10.backup-restore-using-operator/" class="md-nav__link">
+        Backup and restore
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
       <a href="../../../nebula-operator/5.operator-failover/" class="md-nav__link">
         Self-healing
       </a>
@@ -7734,6 +7762,18 @@
 | {age: 46, name: &quot;Grant Hill&quot;}       |
 +-------------------------------------+
 </code></pre></div>
+<p>You can also use the property reference symbols (<code>$^</code> and <code>$$</code>) instead of the <code>vertex</code> field in the <code>properties()</code> function to get all properties of a vertex.</p>
+<ul>
+<li><code>$^</code> represents the data of the starting vertex at the beginning of exploration. For example, in <code>GO FROM "player100" OVER follow reversely YIELD properties($^)</code>, <code>$^</code> refers to the vertex <code>player100</code>.</li>
+</ul>
+<ul>
+<li><code>$$</code> represents the data of the end vertex at the end of exploration.</li>
+</ul>
+<p><code>properties($^)</code> and <code>properties($$)</code> are generally used in <code>GO</code> statements. For more information, see <a href="../../5.operators/5.property-reference/">Property reference</a>.</p>
+<div class="admonition caution">
+<p class="admonition-title">Caution</p>
+<p>You can use <code>properties().&lt;property_name&gt;</code> to get a specific property of a vertex. However, it is not recommended to use this method to obtain specific properties because the <code>properties()</code> function returns all properties, which can decrease query performance.</p>
+</div>
 <h3 id="propertiesedge">properties(edge)<a class="headerlink" href="#propertiesedge" title="Permanent link">&para;</a></h3>
 <p>properties(edge) returns the properties of an edge.</p>
 <p>Syntax: <code>properties(edge)</code></p>
@@ -7750,6 +7790,10 @@
 | {degree: 95}     |
 +------------------+
 </code></pre></div>
+<div class="admonition caution">
+<p class="admonition-title">Caution</p>
+<p>You can use <code>properties(edge).&lt;property_name&gt;</code> to get a specific property of an edge. However, it is not recommended to use this method to obtain specific properties because the <code>properties(edge)</code> function returns all properties, which can decrease query performance.</p>
+</div>
 <h3 id="typeedge">type(edge)<a class="headerlink" href="#typeedge" title="Permanent link">&para;</a></h3>
 <p>type(edge) returns the edge type of an edge.</p>
 <p>Syntax: <code>type(edge)</code></p>
@@ -8000,7 +8044,7 @@
   <small>
     
       Last update:
-      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">December 21, 2022</span>
+      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">March 13, 2023</span>
       
     
   </small>
@@ -8071,7 +8115,7 @@
       <div class="md-copyright">
   
     <div class="md-copyright__highlight">
-      Copyright &copy; 2022 NebulaGraph
+      Copyright &copy; 2023 NebulaGraph
     </div>
   
   
