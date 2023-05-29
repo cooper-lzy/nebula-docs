@@ -4473,34 +4473,6 @@
 
             
           
-            
-              
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../../nebula-importer/config-with-header/" class="md-nav__link">
-        Configuration with Header
-      </a>
-    </li>
-  
-
-            
-          
-            
-              
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../../nebula-importer/config-without-header/" class="md-nav__link">
-        Configuration without Header
-      </a>
-    </li>
-  
-
-            
-          
         </ul>
       </nav>
     </li>
@@ -5155,6 +5127,20 @@
     <li class="md-nav__item">
       <a href="../../../nebula-operator/8.custom-cluster-configurations/8.4.manage-running-logs/" class="md-nav__link">
         Manage cluster logs
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../nebula-operator/8.custom-cluster-configurations/8.5.enable-ssl/" class="md-nav__link">
+        Enable SSL encryption
       </a>
     </li>
   
@@ -5962,6 +5948,11 @@
       nebula.fields: [target_nebula-field-0, target_nebula-field-1, target_nebula-field-2]
       limit:10000
       vertex: _vertexId  # must be `_vertexId`
+    # udf:{
+    #            separator:&quot;_&quot;
+    #            oldColNames:[field-0,field-1,field-2]
+    #            newColName:new-field
+    #        }
       batch: 2000
       partition: 60
     }
@@ -5983,7 +5974,17 @@
       nebula.fields: [target_nebula-field-0, target_nebula-field-1, target_nebula-field-2]
       limit:1000
       source: _srcId # must be `_srcId`
+    # udf:{
+    #            separator:&quot;_&quot;
+    #            oldColNames:[field-0,field-1,field-2]
+    #            newColName:new-field
+    #        }
       target: _dstId # must be `_dstId`
+    # udf:{
+    #            separator:&quot;_&quot;
+    #            oldColNames:[field-0,field-1,field-2]
+    #            newColName:new-field
+    #        }
       ranking: source_nebula-field-2
       batch: 2000
       partition: 60
@@ -6048,7 +6049,7 @@ Found<span class="w"> </span><span class="m">11</span><span class="w"> </span>it
   <small>
     
       Last update:
-      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">March 27, 2023</span>
+      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">May 22, 2023</span>
       
     
   </small>

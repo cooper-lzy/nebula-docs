@@ -12,21 +12,21 @@
         <meta name="author" content="NebulaGraph">
       
       
-        <link rel="canonical" href="https://docs.nebula-graph.io/3.5.0/nebula-importer/config-without-header/">
+        <link rel="canonical" href="https://docs.nebula-graph.io/3.5.0/nebula-operator/8.custom-cluster-configurations/8.5.enable-ssl/">
       
       <link rel="icon" href="https://docs-cdn.nebula-graph.com.cn/figures/favicon.ico">
       <meta name="generator" content="mkdocs-1.3.0, mkdocs-material-8.5.4">
     
     
       
-        <title>Configuration without Header - NebulaGraph Database Manual</title>
+        <title>Enable SSL encryption - NebulaGraph Database Manual</title>
       
     
     
-      <link rel="stylesheet" href="../../assets/stylesheets/main.80dcb947.min.css">
+      <link rel="stylesheet" href="../../../assets/stylesheets/main.80dcb947.min.css">
       
         
-        <link rel="stylesheet" href="../../assets/stylesheets/palette.cbb835fc.min.css">
+        <link rel="stylesheet" href="../../../assets/stylesheets/palette.cbb835fc.min.css">
         
       
       
@@ -43,15 +43,15 @@
       
     
     
-      <link rel="stylesheet" href="../../stylesheets/logo.css">
+      <link rel="stylesheet" href="../../../stylesheets/logo.css">
     
-      <link rel="stylesheet" href="../../stylesheets/note.css">
+      <link rel="stylesheet" href="../../../stylesheets/note.css">
     
-      <link rel="stylesheet" href="../../stylesheets/extra.css">
+      <link rel="stylesheet" href="../../../stylesheets/extra.css">
     
-      <link rel="stylesheet" href="../../css/version-select.css">
+      <link rel="stylesheet" href="../../../css/version-select.css">
     
-    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    <script>__md_scope=new URL("../../..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
     
       
   
@@ -92,7 +92,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#configuration_without_header" class="md-skip">
+        <a href="#enable_ssl_encryption_in_nebula_graph" class="md-skip">
           Skip to content
         </a>
       
@@ -108,7 +108,7 @@
     
       <header class="md-header" data-md-component="header">
   <nav class="md-header__inner md-grid" aria-label="Header">
-    <a href="../.." title="NebulaGraph Database Manual" class="md-header__button md-logo" aria-label="NebulaGraph Database Manual" data-md-component="logo">
+    <a href="../../.." title="NebulaGraph Database Manual" class="md-header__button md-logo" aria-label="NebulaGraph Database Manual" data-md-component="logo">
       
   <img src="https://docs-cdn.nebula-graph.com.cn/figures/vesoft-nebula-logo-white22-12-21.png" alt="logo">
 
@@ -126,7 +126,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Configuration without Header
+              Enable SSL encryption
             
           </span>
         </div>
@@ -195,7 +195,7 @@
 
 <nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
   <label class="md-nav__title" for="__drawer">
-    <a href="../.." title="NebulaGraph Database Manual" class="md-nav__button md-logo" aria-label="NebulaGraph Database Manual" data-md-component="logo">
+    <a href="../../.." title="NebulaGraph Database Manual" class="md-nav__button md-logo" aria-label="NebulaGraph Database Manual" data-md-component="logo">
       
   <img src="https://docs-cdn.nebula-graph.com.cn/figures/vesoft-nebula-logo-white22-12-21.png" alt="logo">
 
@@ -225,7 +225,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../.." class="md-nav__link">
+      <a href="../../.." class="md-nav__link">
         About
       </a>
     </li>
@@ -266,7 +266,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../1.introduction/0-0-graph/" class="md-nav__link">
+      <a href="../../../1.introduction/0-0-graph/" class="md-nav__link">
         Introduction to graphs
       </a>
     </li>
@@ -280,7 +280,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../1.introduction/0-1-graph-database/" class="md-nav__link">
+      <a href="../../../1.introduction/0-1-graph-database/" class="md-nav__link">
         Graph databases
       </a>
     </li>
@@ -294,7 +294,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../1.introduction/0-2.relates/" class="md-nav__link">
+      <a href="../../../1.introduction/0-2.relates/" class="md-nav__link">
         Related technologies
       </a>
     </li>
@@ -308,7 +308,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../1.introduction/1.what-is-nebula-graph/" class="md-nav__link">
+      <a href="../../../1.introduction/1.what-is-nebula-graph/" class="md-nav__link">
         What is NebulaGraph
       </a>
     </li>
@@ -322,7 +322,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../1.introduction/2.data-model/" class="md-nav__link">
+      <a href="../../../1.introduction/2.data-model/" class="md-nav__link">
         Data model
       </a>
     </li>
@@ -336,7 +336,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../1.introduction/2.1.path/" class="md-nav__link">
+      <a href="../../../1.introduction/2.1.path/" class="md-nav__link">
         Path
       </a>
     </li>
@@ -350,7 +350,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../1.introduction/3.vid/" class="md-nav__link">
+      <a href="../../../1.introduction/3.vid/" class="md-nav__link">
         VID
       </a>
     </li>
@@ -390,7 +390,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../1.introduction/3.nebula-graph-architecture/1.architecture-overview/" class="md-nav__link">
+      <a href="../../../1.introduction/3.nebula-graph-architecture/1.architecture-overview/" class="md-nav__link">
         Architecture overview
       </a>
     </li>
@@ -404,7 +404,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../1.introduction/3.nebula-graph-architecture/2.meta-service/" class="md-nav__link">
+      <a href="../../../1.introduction/3.nebula-graph-architecture/2.meta-service/" class="md-nav__link">
         Meta Service
       </a>
     </li>
@@ -418,7 +418,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../1.introduction/3.nebula-graph-architecture/3.graph-service/" class="md-nav__link">
+      <a href="../../../1.introduction/3.nebula-graph-architecture/3.graph-service/" class="md-nav__link">
         Graph Service
       </a>
     </li>
@@ -432,7 +432,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../1.introduction/3.nebula-graph-architecture/4.storage-service/" class="md-nav__link">
+      <a href="../../../1.introduction/3.nebula-graph-architecture/4.storage-service/" class="md-nav__link">
         Storage Service
       </a>
     </li>
@@ -487,7 +487,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../2.quick-start/1.quick-start-workflow/" class="md-nav__link">
+      <a href="../../../2.quick-start/1.quick-start-workflow/" class="md-nav__link">
         Getting started with NebulaGraph
       </a>
     </li>
@@ -501,7 +501,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../2.quick-start/2.install-nebula-graph/" class="md-nav__link">
+      <a href="../../../2.quick-start/2.install-nebula-graph/" class="md-nav__link">
         Step 1 Install NebulaGraph
       </a>
     </li>
@@ -515,7 +515,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../2.quick-start/5.start-stop-service/" class="md-nav__link">
+      <a href="../../../2.quick-start/5.start-stop-service/" class="md-nav__link">
         Step 2 Manage NebulaGraph Service
       </a>
     </li>
@@ -529,7 +529,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../2.quick-start/3.connect-to-nebula-graph/" class="md-nav__link">
+      <a href="../../../2.quick-start/3.connect-to-nebula-graph/" class="md-nav__link">
         Step 3 Connect to NebulaGraph
       </a>
     </li>
@@ -543,7 +543,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../2.quick-start/3.1add-storage-hosts/" class="md-nav__link">
+      <a href="../../../2.quick-start/3.1add-storage-hosts/" class="md-nav__link">
         Step 4 Register the Storage Service
       </a>
     </li>
@@ -557,7 +557,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../2.quick-start/4.nebula-graph-crud/" class="md-nav__link">
+      <a href="../../../2.quick-start/4.nebula-graph-crud/" class="md-nav__link">
         Step 5 Use nGQL (CRUD)
       </a>
     </li>
@@ -571,7 +571,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../2.quick-start/6.cheatsheet-for-ngql/" class="md-nav__link">
+      <a href="../../../2.quick-start/6.cheatsheet-for-ngql/" class="md-nav__link">
         nGQL cheatsheet
       </a>
     </li>
@@ -645,7 +645,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../3.ngql-guide/1.nGQL-overview/1.overview/" class="md-nav__link">
+      <a href="../../../3.ngql-guide/1.nGQL-overview/1.overview/" class="md-nav__link">
         Overview
       </a>
     </li>
@@ -659,7 +659,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../3.ngql-guide/1.nGQL-overview/3.graph-patterns/" class="md-nav__link">
+      <a href="../../../3.ngql-guide/1.nGQL-overview/3.graph-patterns/" class="md-nav__link">
         Graph patterns
       </a>
     </li>
@@ -673,7 +673,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../3.ngql-guide/1.nGQL-overview/comments/" class="md-nav__link">
+      <a href="../../../3.ngql-guide/1.nGQL-overview/comments/" class="md-nav__link">
         Comments
       </a>
     </li>
@@ -687,7 +687,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../3.ngql-guide/1.nGQL-overview/identifier-case-sensitivity/" class="md-nav__link">
+      <a href="../../../3.ngql-guide/1.nGQL-overview/identifier-case-sensitivity/" class="md-nav__link">
         Identifier case sensitivity
       </a>
     </li>
@@ -701,7 +701,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../3.ngql-guide/1.nGQL-overview/keywords-and-reserved-words/" class="md-nav__link">
+      <a href="../../../3.ngql-guide/1.nGQL-overview/keywords-and-reserved-words/" class="md-nav__link">
         Keywords
       </a>
     </li>
@@ -715,7 +715,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../3.ngql-guide/1.nGQL-overview/ngql-style-guide/" class="md-nav__link">
+      <a href="../../../3.ngql-guide/1.nGQL-overview/ngql-style-guide/" class="md-nav__link">
         nGQL style guide
       </a>
     </li>
@@ -762,7 +762,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../3.ngql-guide/3.data-types/1.numeric/" class="md-nav__link">
+      <a href="../../../3.ngql-guide/3.data-types/1.numeric/" class="md-nav__link">
         Numeric
       </a>
     </li>
@@ -776,7 +776,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../3.ngql-guide/3.data-types/2.boolean/" class="md-nav__link">
+      <a href="../../../3.ngql-guide/3.data-types/2.boolean/" class="md-nav__link">
         Boolean
       </a>
     </li>
@@ -790,7 +790,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../3.ngql-guide/3.data-types/3.string/" class="md-nav__link">
+      <a href="../../../3.ngql-guide/3.data-types/3.string/" class="md-nav__link">
         String
       </a>
     </li>
@@ -804,7 +804,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../3.ngql-guide/3.data-types/4.date-and-time/" class="md-nav__link">
+      <a href="../../../3.ngql-guide/3.data-types/4.date-and-time/" class="md-nav__link">
         Date and time
       </a>
     </li>
@@ -818,7 +818,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../3.ngql-guide/3.data-types/5.null/" class="md-nav__link">
+      <a href="../../../3.ngql-guide/3.data-types/5.null/" class="md-nav__link">
         NULL
       </a>
     </li>
@@ -832,7 +832,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../3.ngql-guide/3.data-types/6.list/" class="md-nav__link">
+      <a href="../../../3.ngql-guide/3.data-types/6.list/" class="md-nav__link">
         List
       </a>
     </li>
@@ -846,7 +846,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../3.ngql-guide/3.data-types/7.set/" class="md-nav__link">
+      <a href="../../../3.ngql-guide/3.data-types/7.set/" class="md-nav__link">
         Set
       </a>
     </li>
@@ -860,7 +860,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../3.ngql-guide/3.data-types/8.map/" class="md-nav__link">
+      <a href="../../../3.ngql-guide/3.data-types/8.map/" class="md-nav__link">
         Map
       </a>
     </li>
@@ -874,7 +874,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../3.ngql-guide/3.data-types/9.type-conversion/" class="md-nav__link">
+      <a href="../../../3.ngql-guide/3.data-types/9.type-conversion/" class="md-nav__link">
         Type conversion
       </a>
     </li>
@@ -888,7 +888,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../3.ngql-guide/3.data-types/10.geography/" class="md-nav__link">
+      <a href="../../../3.ngql-guide/3.data-types/10.geography/" class="md-nav__link">
         Geography
       </a>
     </li>
@@ -935,7 +935,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../3.ngql-guide/4.variable-and-composite-queries/1.composite-queries/" class="md-nav__link">
+      <a href="../../../3.ngql-guide/4.variable-and-composite-queries/1.composite-queries/" class="md-nav__link">
         Composite queries
       </a>
     </li>
@@ -949,7 +949,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../3.ngql-guide/4.variable-and-composite-queries/2.user-defined-variables/" class="md-nav__link">
+      <a href="../../../3.ngql-guide/4.variable-and-composite-queries/2.user-defined-variables/" class="md-nav__link">
         User-defined variables
       </a>
     </li>
@@ -963,7 +963,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../3.ngql-guide/4.variable-and-composite-queries/3.property-reference/" class="md-nav__link">
+      <a href="../../../3.ngql-guide/4.variable-and-composite-queries/3.property-reference/" class="md-nav__link">
         Property reference
       </a>
     </li>
@@ -1010,7 +1010,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../3.ngql-guide/5.operators/1.comparison/" class="md-nav__link">
+      <a href="../../../3.ngql-guide/5.operators/1.comparison/" class="md-nav__link">
         Comparison
       </a>
     </li>
@@ -1024,7 +1024,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../3.ngql-guide/5.operators/2.boolean/" class="md-nav__link">
+      <a href="../../../3.ngql-guide/5.operators/2.boolean/" class="md-nav__link">
         Boolean
       </a>
     </li>
@@ -1038,7 +1038,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../3.ngql-guide/5.operators/4.pipe/" class="md-nav__link">
+      <a href="../../../3.ngql-guide/5.operators/4.pipe/" class="md-nav__link">
         Pipe
       </a>
     </li>
@@ -1052,7 +1052,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../3.ngql-guide/5.operators/5.property-reference/" class="md-nav__link">
+      <a href="../../../3.ngql-guide/5.operators/5.property-reference/" class="md-nav__link">
         Property reference
       </a>
     </li>
@@ -1066,7 +1066,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../3.ngql-guide/5.operators/6.set/" class="md-nav__link">
+      <a href="../../../3.ngql-guide/5.operators/6.set/" class="md-nav__link">
         Set
       </a>
     </li>
@@ -1080,7 +1080,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../3.ngql-guide/5.operators/7.string/" class="md-nav__link">
+      <a href="../../../3.ngql-guide/5.operators/7.string/" class="md-nav__link">
         String
       </a>
     </li>
@@ -1094,7 +1094,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../3.ngql-guide/5.operators/8.list/" class="md-nav__link">
+      <a href="../../../3.ngql-guide/5.operators/8.list/" class="md-nav__link">
         List
       </a>
     </li>
@@ -1108,7 +1108,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../3.ngql-guide/5.operators/9.precedence/" class="md-nav__link">
+      <a href="../../../3.ngql-guide/5.operators/9.precedence/" class="md-nav__link">
         Precedence
       </a>
     </li>
@@ -1155,7 +1155,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../3.ngql-guide/6.functions-and-expressions/1.math/" class="md-nav__link">
+      <a href="../../../3.ngql-guide/6.functions-and-expressions/1.math/" class="md-nav__link">
         Math functions
       </a>
     </li>
@@ -1169,7 +1169,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../3.ngql-guide/6.functions-and-expressions/15.aggregating/" class="md-nav__link">
+      <a href="../../../3.ngql-guide/6.functions-and-expressions/15.aggregating/" class="md-nav__link">
         Aggregate functions
       </a>
     </li>
@@ -1183,7 +1183,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../3.ngql-guide/6.functions-and-expressions/2.string/" class="md-nav__link">
+      <a href="../../../3.ngql-guide/6.functions-and-expressions/2.string/" class="md-nav__link">
         String functions
       </a>
     </li>
@@ -1197,7 +1197,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../3.ngql-guide/6.functions-and-expressions/3.date-and-time/" class="md-nav__link">
+      <a href="../../../3.ngql-guide/6.functions-and-expressions/3.date-and-time/" class="md-nav__link">
         Date and time functions
       </a>
     </li>
@@ -1211,7 +1211,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../3.ngql-guide/6.functions-and-expressions/4.schema/" class="md-nav__link">
+      <a href="../../../3.ngql-guide/6.functions-and-expressions/4.schema/" class="md-nav__link">
         Schema functions
       </a>
     </li>
@@ -1225,7 +1225,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../3.ngql-guide/6.functions-and-expressions/6.list/" class="md-nav__link">
+      <a href="../../../3.ngql-guide/6.functions-and-expressions/6.list/" class="md-nav__link">
         List functions
       </a>
     </li>
@@ -1239,7 +1239,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../3.ngql-guide/6.functions-and-expressions/16.type-conversion/" class="md-nav__link">
+      <a href="../../../3.ngql-guide/6.functions-and-expressions/16.type-conversion/" class="md-nav__link">
         Type conversion functions
       </a>
     </li>
@@ -1253,7 +1253,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../3.ngql-guide/6.functions-and-expressions/5.conditional-expressions/" class="md-nav__link">
+      <a href="../../../3.ngql-guide/6.functions-and-expressions/5.conditional-expressions/" class="md-nav__link">
         Conditional expressions
       </a>
     </li>
@@ -1267,7 +1267,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../3.ngql-guide/6.functions-and-expressions/8.predicate/" class="md-nav__link">
+      <a href="../../../3.ngql-guide/6.functions-and-expressions/8.predicate/" class="md-nav__link">
         Predicate functions
       </a>
     </li>
@@ -1281,7 +1281,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../3.ngql-guide/6.functions-and-expressions/14.geo/" class="md-nav__link">
+      <a href="../../../3.ngql-guide/6.functions-and-expressions/14.geo/" class="md-nav__link">
         Geography functions
       </a>
     </li>
@@ -1295,7 +1295,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../3.ngql-guide/6.functions-and-expressions/9.user-defined-functions/" class="md-nav__link">
+      <a href="../../../3.ngql-guide/6.functions-and-expressions/9.user-defined-functions/" class="md-nav__link">
         User-defined functions
       </a>
     </li>
@@ -1342,7 +1342,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../3.ngql-guide/7.general-query-statements/2.match/" class="md-nav__link">
+      <a href="../../../3.ngql-guide/7.general-query-statements/2.match/" class="md-nav__link">
         MATCH
       </a>
     </li>
@@ -1356,7 +1356,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../3.ngql-guide/7.general-query-statements/optional-match/" class="md-nav__link">
+      <a href="../../../3.ngql-guide/7.general-query-statements/optional-match/" class="md-nav__link">
         OPTIONAL MATCH
       </a>
     </li>
@@ -1370,7 +1370,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../3.ngql-guide/7.general-query-statements/5.lookup/" class="md-nav__link">
+      <a href="../../../3.ngql-guide/7.general-query-statements/5.lookup/" class="md-nav__link">
         LOOKUP
       </a>
     </li>
@@ -1384,7 +1384,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../3.ngql-guide/7.general-query-statements/3.go/" class="md-nav__link">
+      <a href="../../../3.ngql-guide/7.general-query-statements/3.go/" class="md-nav__link">
         GO
       </a>
     </li>
@@ -1398,7 +1398,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../3.ngql-guide/7.general-query-statements/4.fetch/" class="md-nav__link">
+      <a href="../../../3.ngql-guide/7.general-query-statements/4.fetch/" class="md-nav__link">
         FETCH
       </a>
     </li>
@@ -1438,7 +1438,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../3.ngql-guide/7.general-query-statements/6.show/1.show-charset/" class="md-nav__link">
+      <a href="../../../3.ngql-guide/7.general-query-statements/6.show/1.show-charset/" class="md-nav__link">
         SHOW CHARSET
       </a>
     </li>
@@ -1452,7 +1452,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../3.ngql-guide/7.general-query-statements/6.show/2.show-collation/" class="md-nav__link">
+      <a href="../../../3.ngql-guide/7.general-query-statements/6.show/2.show-collation/" class="md-nav__link">
         SHOW COLLATION
       </a>
     </li>
@@ -1466,7 +1466,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../3.ngql-guide/7.general-query-statements/6.show/4.show-create-space/" class="md-nav__link">
+      <a href="../../../3.ngql-guide/7.general-query-statements/6.show/4.show-create-space/" class="md-nav__link">
         SHOW CREATE SPACE
       </a>
     </li>
@@ -1480,7 +1480,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../3.ngql-guide/7.general-query-statements/6.show/5.show-create-tag-edge/" class="md-nav__link">
+      <a href="../../../3.ngql-guide/7.general-query-statements/6.show/5.show-create-tag-edge/" class="md-nav__link">
         SHOW CREATE TAG/EDGE
       </a>
     </li>
@@ -1494,7 +1494,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../3.ngql-guide/7.general-query-statements/6.show/6.show-hosts/" class="md-nav__link">
+      <a href="../../../3.ngql-guide/7.general-query-statements/6.show/6.show-hosts/" class="md-nav__link">
         SHOW HOSTS
       </a>
     </li>
@@ -1508,7 +1508,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../3.ngql-guide/7.general-query-statements/6.show/7.show-index-status/" class="md-nav__link">
+      <a href="../../../3.ngql-guide/7.general-query-statements/6.show/7.show-index-status/" class="md-nav__link">
         SHOW INDEX STATUS
       </a>
     </li>
@@ -1522,7 +1522,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../3.ngql-guide/7.general-query-statements/6.show/8.show-indexes/" class="md-nav__link">
+      <a href="../../../3.ngql-guide/7.general-query-statements/6.show/8.show-indexes/" class="md-nav__link">
         SHOW INDEXES
       </a>
     </li>
@@ -1536,7 +1536,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../3.ngql-guide/7.general-query-statements/6.show/9.show-parts/" class="md-nav__link">
+      <a href="../../../3.ngql-guide/7.general-query-statements/6.show/9.show-parts/" class="md-nav__link">
         SHOW PARTS
       </a>
     </li>
@@ -1550,7 +1550,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../3.ngql-guide/7.general-query-statements/6.show/10.show-roles/" class="md-nav__link">
+      <a href="../../../3.ngql-guide/7.general-query-statements/6.show/10.show-roles/" class="md-nav__link">
         SHOW ROLES
       </a>
     </li>
@@ -1564,7 +1564,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../3.ngql-guide/7.general-query-statements/6.show/11.show-snapshots/" class="md-nav__link">
+      <a href="../../../3.ngql-guide/7.general-query-statements/6.show/11.show-snapshots/" class="md-nav__link">
         SHOW SNAPSHOTS
       </a>
     </li>
@@ -1578,7 +1578,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../3.ngql-guide/7.general-query-statements/6.show/12.show-spaces/" class="md-nav__link">
+      <a href="../../../3.ngql-guide/7.general-query-statements/6.show/12.show-spaces/" class="md-nav__link">
         SHOW SPACES
       </a>
     </li>
@@ -1592,7 +1592,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../3.ngql-guide/7.general-query-statements/6.show/14.show-stats/" class="md-nav__link">
+      <a href="../../../3.ngql-guide/7.general-query-statements/6.show/14.show-stats/" class="md-nav__link">
         SHOW STATS
       </a>
     </li>
@@ -1606,7 +1606,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../3.ngql-guide/7.general-query-statements/6.show/15.show-tags-edges/" class="md-nav__link">
+      <a href="../../../3.ngql-guide/7.general-query-statements/6.show/15.show-tags-edges/" class="md-nav__link">
         SHOW TAGS/EDGES
       </a>
     </li>
@@ -1620,7 +1620,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../3.ngql-guide/7.general-query-statements/6.show/16.show-users/" class="md-nav__link">
+      <a href="../../../3.ngql-guide/7.general-query-statements/6.show/16.show-users/" class="md-nav__link">
         SHOW USERS
       </a>
     </li>
@@ -1634,7 +1634,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../3.ngql-guide/7.general-query-statements/6.show/17.show-sessions/" class="md-nav__link">
+      <a href="../../../3.ngql-guide/7.general-query-statements/6.show/17.show-sessions/" class="md-nav__link">
         SHOW SESSIONS
       </a>
     </li>
@@ -1648,7 +1648,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../3.ngql-guide/7.general-query-statements/6.show/18.show-queries/" class="md-nav__link">
+      <a href="../../../3.ngql-guide/7.general-query-statements/6.show/18.show-queries/" class="md-nav__link">
         SHOW QUERIES
       </a>
     </li>
@@ -1662,7 +1662,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../3.ngql-guide/7.general-query-statements/6.show/19.show-meta-leader/" class="md-nav__link">
+      <a href="../../../3.ngql-guide/7.general-query-statements/6.show/19.show-meta-leader/" class="md-nav__link">
         SHOW META LEADER
       </a>
     </li>
@@ -1716,7 +1716,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../3.ngql-guide/8.clauses-and-options/group-by/" class="md-nav__link">
+      <a href="../../../3.ngql-guide/8.clauses-and-options/group-by/" class="md-nav__link">
         GROUP BY
       </a>
     </li>
@@ -1730,7 +1730,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../3.ngql-guide/8.clauses-and-options/limit/" class="md-nav__link">
+      <a href="../../../3.ngql-guide/8.clauses-and-options/limit/" class="md-nav__link">
         LIMIT and SKIP
       </a>
     </li>
@@ -1744,7 +1744,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../3.ngql-guide/8.clauses-and-options/sample/" class="md-nav__link">
+      <a href="../../../3.ngql-guide/8.clauses-and-options/sample/" class="md-nav__link">
         SAMPLE
       </a>
     </li>
@@ -1758,7 +1758,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../3.ngql-guide/8.clauses-and-options/order-by/" class="md-nav__link">
+      <a href="../../../3.ngql-guide/8.clauses-and-options/order-by/" class="md-nav__link">
         ORDER BY
       </a>
     </li>
@@ -1772,7 +1772,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../3.ngql-guide/8.clauses-and-options/return/" class="md-nav__link">
+      <a href="../../../3.ngql-guide/8.clauses-and-options/return/" class="md-nav__link">
         RETURN
       </a>
     </li>
@@ -1786,7 +1786,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../3.ngql-guide/8.clauses-and-options/ttl-options/" class="md-nav__link">
+      <a href="../../../3.ngql-guide/8.clauses-and-options/ttl-options/" class="md-nav__link">
         TTL
       </a>
     </li>
@@ -1800,7 +1800,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../3.ngql-guide/8.clauses-and-options/where/" class="md-nav__link">
+      <a href="../../../3.ngql-guide/8.clauses-and-options/where/" class="md-nav__link">
         WHERE
       </a>
     </li>
@@ -1814,7 +1814,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../3.ngql-guide/8.clauses-and-options/yield/" class="md-nav__link">
+      <a href="../../../3.ngql-guide/8.clauses-and-options/yield/" class="md-nav__link">
         YIELD
       </a>
     </li>
@@ -1828,7 +1828,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../3.ngql-guide/8.clauses-and-options/with/" class="md-nav__link">
+      <a href="../../../3.ngql-guide/8.clauses-and-options/with/" class="md-nav__link">
         WITH
       </a>
     </li>
@@ -1842,7 +1842,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../3.ngql-guide/8.clauses-and-options/unwind/" class="md-nav__link">
+      <a href="../../../3.ngql-guide/8.clauses-and-options/unwind/" class="md-nav__link">
         UNWIND
       </a>
     </li>
@@ -1889,7 +1889,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../3.ngql-guide/9.space-statements/1.create-space/" class="md-nav__link">
+      <a href="../../../3.ngql-guide/9.space-statements/1.create-space/" class="md-nav__link">
         CREATE SPACE
       </a>
     </li>
@@ -1903,7 +1903,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../3.ngql-guide/9.space-statements/2.use-space/" class="md-nav__link">
+      <a href="../../../3.ngql-guide/9.space-statements/2.use-space/" class="md-nav__link">
         USE SPACE
       </a>
     </li>
@@ -1917,7 +1917,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../3.ngql-guide/9.space-statements/3.show-spaces/" class="md-nav__link">
+      <a href="../../../3.ngql-guide/9.space-statements/3.show-spaces/" class="md-nav__link">
         SHOW SPACES
       </a>
     </li>
@@ -1931,7 +1931,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../3.ngql-guide/9.space-statements/4.describe-space/" class="md-nav__link">
+      <a href="../../../3.ngql-guide/9.space-statements/4.describe-space/" class="md-nav__link">
         DESCRIBE SPACE
       </a>
     </li>
@@ -1945,7 +1945,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../3.ngql-guide/9.space-statements/6.clear-space/" class="md-nav__link">
+      <a href="../../../3.ngql-guide/9.space-statements/6.clear-space/" class="md-nav__link">
         CLEAR SPACE
       </a>
     </li>
@@ -1959,7 +1959,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../3.ngql-guide/9.space-statements/5.drop-space/" class="md-nav__link">
+      <a href="../../../3.ngql-guide/9.space-statements/5.drop-space/" class="md-nav__link">
         DROP SPACE
       </a>
     </li>
@@ -2006,7 +2006,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../3.ngql-guide/10.tag-statements/1.create-tag/" class="md-nav__link">
+      <a href="../../../3.ngql-guide/10.tag-statements/1.create-tag/" class="md-nav__link">
         CREATE TAG
       </a>
     </li>
@@ -2020,7 +2020,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../3.ngql-guide/10.tag-statements/2.drop-tag/" class="md-nav__link">
+      <a href="../../../3.ngql-guide/10.tag-statements/2.drop-tag/" class="md-nav__link">
         DROP TAGS
       </a>
     </li>
@@ -2034,7 +2034,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../3.ngql-guide/10.tag-statements/3.alter-tag/" class="md-nav__link">
+      <a href="../../../3.ngql-guide/10.tag-statements/3.alter-tag/" class="md-nav__link">
         ALTER TAG
       </a>
     </li>
@@ -2048,7 +2048,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../3.ngql-guide/10.tag-statements/4.show-tags/" class="md-nav__link">
+      <a href="../../../3.ngql-guide/10.tag-statements/4.show-tags/" class="md-nav__link">
         SHOW TAGS
       </a>
     </li>
@@ -2062,7 +2062,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../3.ngql-guide/10.tag-statements/5.describe-tag/" class="md-nav__link">
+      <a href="../../../3.ngql-guide/10.tag-statements/5.describe-tag/" class="md-nav__link">
         DESCRIBE TAG
       </a>
     </li>
@@ -2076,7 +2076,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../3.ngql-guide/10.tag-statements/6.delete-tag/" class="md-nav__link">
+      <a href="../../../3.ngql-guide/10.tag-statements/6.delete-tag/" class="md-nav__link">
         DELETE TAG
       </a>
     </li>
@@ -2090,7 +2090,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../3.ngql-guide/10.tag-statements/improve-query-by-tag-index/" class="md-nav__link">
+      <a href="../../../3.ngql-guide/10.tag-statements/improve-query-by-tag-index/" class="md-nav__link">
         Add or delete tag
       </a>
     </li>
@@ -2137,7 +2137,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../3.ngql-guide/11.edge-type-statements/1.create-edge/" class="md-nav__link">
+      <a href="../../../3.ngql-guide/11.edge-type-statements/1.create-edge/" class="md-nav__link">
         CREATE EDGE
       </a>
     </li>
@@ -2151,7 +2151,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../3.ngql-guide/11.edge-type-statements/2.drop-edge/" class="md-nav__link">
+      <a href="../../../3.ngql-guide/11.edge-type-statements/2.drop-edge/" class="md-nav__link">
         DROP EDGE
       </a>
     </li>
@@ -2165,7 +2165,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../3.ngql-guide/11.edge-type-statements/3.alter-edge/" class="md-nav__link">
+      <a href="../../../3.ngql-guide/11.edge-type-statements/3.alter-edge/" class="md-nav__link">
         ALTER EDGE
       </a>
     </li>
@@ -2179,7 +2179,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../3.ngql-guide/11.edge-type-statements/4.show-edges/" class="md-nav__link">
+      <a href="../../../3.ngql-guide/11.edge-type-statements/4.show-edges/" class="md-nav__link">
         SHOW EDGES
       </a>
     </li>
@@ -2193,7 +2193,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../3.ngql-guide/11.edge-type-statements/5.describe-edge/" class="md-nav__link">
+      <a href="../../../3.ngql-guide/11.edge-type-statements/5.describe-edge/" class="md-nav__link">
         DESCRIBE EDGE
       </a>
     </li>
@@ -2240,7 +2240,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../3.ngql-guide/12.vertex-statements/1.insert-vertex/" class="md-nav__link">
+      <a href="../../../3.ngql-guide/12.vertex-statements/1.insert-vertex/" class="md-nav__link">
         INSERT VERTEX
       </a>
     </li>
@@ -2254,7 +2254,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../3.ngql-guide/12.vertex-statements/4.delete-vertex/" class="md-nav__link">
+      <a href="../../../3.ngql-guide/12.vertex-statements/4.delete-vertex/" class="md-nav__link">
         DELETE VERTEX
       </a>
     </li>
@@ -2268,7 +2268,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../3.ngql-guide/12.vertex-statements/2.update-vertex/" class="md-nav__link">
+      <a href="../../../3.ngql-guide/12.vertex-statements/2.update-vertex/" class="md-nav__link">
         UPDATE VERTEX
       </a>
     </li>
@@ -2282,7 +2282,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../3.ngql-guide/12.vertex-statements/3.upsert-vertex/" class="md-nav__link">
+      <a href="../../../3.ngql-guide/12.vertex-statements/3.upsert-vertex/" class="md-nav__link">
         UPSERT VERTEX
       </a>
     </li>
@@ -2329,7 +2329,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../3.ngql-guide/13.edge-statements/1.insert-edge/" class="md-nav__link">
+      <a href="../../../3.ngql-guide/13.edge-statements/1.insert-edge/" class="md-nav__link">
         INSERT EDGE
       </a>
     </li>
@@ -2343,7 +2343,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../3.ngql-guide/13.edge-statements/4.delete-edge/" class="md-nav__link">
+      <a href="../../../3.ngql-guide/13.edge-statements/4.delete-edge/" class="md-nav__link">
         DELETE EDGE
       </a>
     </li>
@@ -2357,7 +2357,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../3.ngql-guide/13.edge-statements/2.update-edge/" class="md-nav__link">
+      <a href="../../../3.ngql-guide/13.edge-statements/2.update-edge/" class="md-nav__link">
         UPDATE EDGE
       </a>
     </li>
@@ -2371,7 +2371,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../3.ngql-guide/13.edge-statements/3.upsert-edge/" class="md-nav__link">
+      <a href="../../../3.ngql-guide/13.edge-statements/3.upsert-edge/" class="md-nav__link">
         UPSERT EDGE
       </a>
     </li>
@@ -2418,7 +2418,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../3.ngql-guide/14.native-index-statements/" class="md-nav__link">
+      <a href="../../../3.ngql-guide/14.native-index-statements/" class="md-nav__link">
         Index overview
       </a>
     </li>
@@ -2432,7 +2432,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../3.ngql-guide/14.native-index-statements/1.create-native-index/" class="md-nav__link">
+      <a href="../../../3.ngql-guide/14.native-index-statements/1.create-native-index/" class="md-nav__link">
         CREATE INDEX
       </a>
     </li>
@@ -2446,7 +2446,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../3.ngql-guide/14.native-index-statements/2.show-native-indexes/" class="md-nav__link">
+      <a href="../../../3.ngql-guide/14.native-index-statements/2.show-native-indexes/" class="md-nav__link">
         SHOW INDEX
       </a>
     </li>
@@ -2460,7 +2460,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../3.ngql-guide/14.native-index-statements/2.1.show-create-index/" class="md-nav__link">
+      <a href="../../../3.ngql-guide/14.native-index-statements/2.1.show-create-index/" class="md-nav__link">
         SHOW CREATE INDEX
       </a>
     </li>
@@ -2474,7 +2474,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../3.ngql-guide/14.native-index-statements/3.describe-native-index/" class="md-nav__link">
+      <a href="../../../3.ngql-guide/14.native-index-statements/3.describe-native-index/" class="md-nav__link">
         DESCRIBE INDEX
       </a>
     </li>
@@ -2488,7 +2488,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../3.ngql-guide/14.native-index-statements/4.rebuild-native-index/" class="md-nav__link">
+      <a href="../../../3.ngql-guide/14.native-index-statements/4.rebuild-native-index/" class="md-nav__link">
         REBUILD INDEX
       </a>
     </li>
@@ -2502,7 +2502,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../3.ngql-guide/14.native-index-statements/5.show-native-index-status/" class="md-nav__link">
+      <a href="../../../3.ngql-guide/14.native-index-statements/5.show-native-index-status/" class="md-nav__link">
         SHOW INDEX STATUS
       </a>
     </li>
@@ -2516,7 +2516,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../3.ngql-guide/14.native-index-statements/6.drop-native-index/" class="md-nav__link">
+      <a href="../../../3.ngql-guide/14.native-index-statements/6.drop-native-index/" class="md-nav__link">
         DROP INDEX
       </a>
     </li>
@@ -2563,7 +2563,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../4.deployment-and-installation/6.deploy-text-based-index/1.text-based-index-restrictions/" class="md-nav__link">
+      <a href="../../../4.deployment-and-installation/6.deploy-text-based-index/1.text-based-index-restrictions/" class="md-nav__link">
         Full-text restrictions
       </a>
     </li>
@@ -2577,7 +2577,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../4.deployment-and-installation/6.deploy-text-based-index/2.deploy-es/" class="md-nav__link">
+      <a href="../../../4.deployment-and-installation/6.deploy-text-based-index/2.deploy-es/" class="md-nav__link">
         Deploy Elasticsearch cluster
       </a>
     </li>
@@ -2591,7 +2591,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../4.deployment-and-installation/6.deploy-text-based-index/3.deploy-listener/" class="md-nav__link">
+      <a href="../../../4.deployment-and-installation/6.deploy-text-based-index/3.deploy-listener/" class="md-nav__link">
         Deploy Raft Listener cluster
       </a>
     </li>
@@ -2605,7 +2605,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../3.ngql-guide/15.full-text-index-statements/1.search-with-text-based-index/" class="md-nav__link">
+      <a href="../../../3.ngql-guide/15.full-text-index-statements/1.search-with-text-based-index/" class="md-nav__link">
         Search with full-text index
       </a>
     </li>
@@ -2652,7 +2652,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../3.ngql-guide/16.subgraph-and-path/1.get-subgraph/" class="md-nav__link">
+      <a href="../../../3.ngql-guide/16.subgraph-and-path/1.get-subgraph/" class="md-nav__link">
         GET SUBGRAPH
       </a>
     </li>
@@ -2666,7 +2666,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../3.ngql-guide/16.subgraph-and-path/2.find-path/" class="md-nav__link">
+      <a href="../../../3.ngql-guide/16.subgraph-and-path/2.find-path/" class="md-nav__link">
         FIND PATH
       </a>
     </li>
@@ -2713,7 +2713,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../3.ngql-guide/17.query-tuning-statements/1.explain-and-profile/" class="md-nav__link">
+      <a href="../../../3.ngql-guide/17.query-tuning-statements/1.explain-and-profile/" class="md-nav__link">
         EXPLAIN and PROFILE
       </a>
     </li>
@@ -2727,7 +2727,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../3.ngql-guide/17.query-tuning-statements/6.kill-query/" class="md-nav__link">
+      <a href="../../../3.ngql-guide/17.query-tuning-statements/6.kill-query/" class="md-nav__link">
         Kill queries
       </a>
     </li>
@@ -2741,7 +2741,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../3.ngql-guide/17.query-tuning-statements/2.kill-session/" class="md-nav__link">
+      <a href="../../../3.ngql-guide/17.query-tuning-statements/2.kill-session/" class="md-nav__link">
         Kill sessions
       </a>
     </li>
@@ -2762,7 +2762,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../3.ngql-guide/4.job-statements/" class="md-nav__link">
+      <a href="../../../3.ngql-guide/4.job-statements/" class="md-nav__link">
         Job statements
       </a>
     </li>
@@ -2810,7 +2810,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../4.deployment-and-installation/1.resource-preparations/" class="md-nav__link">
+      <a href="../../../4.deployment-and-installation/1.resource-preparations/" class="md-nav__link">
         Resource preparations
       </a>
     </li>
@@ -2850,7 +2850,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../4.deployment-and-installation/2.compile-and-install-nebula-graph/1.install-nebula-graph-by-compiling-the-source-code/" class="md-nav__link">
+      <a href="../../../4.deployment-and-installation/2.compile-and-install-nebula-graph/1.install-nebula-graph-by-compiling-the-source-code/" class="md-nav__link">
         Install Nebula Graph by compiling the source code
       </a>
     </li>
@@ -2864,7 +2864,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../4.deployment-and-installation/2.compile-and-install-nebula-graph/2.install-nebula-graph-by-rpm-or-deb/" class="md-nav__link">
+      <a href="../../../4.deployment-and-installation/2.compile-and-install-nebula-graph/2.install-nebula-graph-by-rpm-or-deb/" class="md-nav__link">
         Install NebulaGraph with RPM or DEB package
       </a>
     </li>
@@ -2878,7 +2878,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../4.deployment-and-installation/2.compile-and-install-nebula-graph/4.install-nebula-graph-from-tar/" class="md-nav__link">
+      <a href="../../../4.deployment-and-installation/2.compile-and-install-nebula-graph/4.install-nebula-graph-from-tar/" class="md-nav__link">
         Install NebulaGraph with the tar.gz file
       </a>
     </li>
@@ -2892,7 +2892,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../4.deployment-and-installation/2.compile-and-install-nebula-graph/3.deploy-nebula-graph-with-docker-compose/" class="md-nav__link">
+      <a href="../../../4.deployment-and-installation/2.compile-and-install-nebula-graph/3.deploy-nebula-graph-with-docker-compose/" class="md-nav__link">
         Deploy NebulaGraph with Docker Compose
       </a>
     </li>
@@ -2906,7 +2906,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../4.deployment-and-installation/2.compile-and-install-nebula-graph/deploy-nebula-graph-cluster/" class="md-nav__link">
+      <a href="../../../4.deployment-and-installation/2.compile-and-install-nebula-graph/deploy-nebula-graph-cluster/" class="md-nav__link">
         Deploy a NebulaGraph cluster on multiple servers
       </a>
     </li>
@@ -2920,7 +2920,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../4.deployment-and-installation/2.compile-and-install-nebula-graph/6.deploy-nebula-graph-with-peripherals/" class="md-nav__link">
+      <a href="../../../4.deployment-and-installation/2.compile-and-install-nebula-graph/6.deploy-nebula-graph-with-peripherals/" class="md-nav__link">
         Deploy NebulaGraph Grpah with ecosystem tools
       </a>
     </li>
@@ -2941,7 +2941,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../4.deployment-and-installation/standalone-deployment/" class="md-nav__link">
+      <a href="../../../4.deployment-and-installation/standalone-deployment/" class="md-nav__link">
         Deploy standalone NebulaGraph
       </a>
     </li>
@@ -2955,7 +2955,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../4.deployment-and-installation/manage-service/" class="md-nav__link">
+      <a href="../../../4.deployment-and-installation/manage-service/" class="md-nav__link">
         Manage Service
       </a>
     </li>
@@ -2969,7 +2969,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../4.deployment-and-installation/connect-to-nebula-graph/" class="md-nav__link">
+      <a href="../../../4.deployment-and-installation/connect-to-nebula-graph/" class="md-nav__link">
         Connect to Service
       </a>
     </li>
@@ -2983,7 +2983,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../4.deployment-and-installation/manage-storage-host/" class="md-nav__link">
+      <a href="../../../4.deployment-and-installation/manage-storage-host/" class="md-nav__link">
         Manage Storage host
       </a>
     </li>
@@ -3023,7 +3023,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../4.deployment-and-installation/3.upgrade-nebula-graph/upgrade-nebula-graph-to-latest/" class="md-nav__link">
+      <a href="../../../4.deployment-and-installation/3.upgrade-nebula-graph/upgrade-nebula-graph-to-latest/" class="md-nav__link">
         Upgrade NebulaGraph to the latest version (Community Edition)
       </a>
     </li>
@@ -3037,7 +3037,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../4.deployment-and-installation/3.upgrade-nebula-graph/upgrade-nebula-ent-from-3.x-3.4/" class="md-nav__link">
+      <a href="../../../4.deployment-and-installation/3.upgrade-nebula-graph/upgrade-nebula-ent-from-3.x-3.4/" class="md-nav__link">
         Upgrade NebulaGraph to the latest version (Enterprise Edition)
       </a>
     </li>
@@ -3058,7 +3058,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../4.deployment-and-installation/4.uninstall-nebula-graph/" class="md-nav__link">
+      <a href="../../../4.deployment-and-installation/4.uninstall-nebula-graph/" class="md-nav__link">
         Uninstall NebulaGraph
       </a>
     </li>
@@ -3132,7 +3132,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../5.configurations-and-logs/1.configurations/1.configurations/" class="md-nav__link">
+      <a href="../../../5.configurations-and-logs/1.configurations/1.configurations/" class="md-nav__link">
         Configurations
       </a>
     </li>
@@ -3146,7 +3146,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../5.configurations-and-logs/1.configurations/2.meta-config/" class="md-nav__link">
+      <a href="../../../5.configurations-and-logs/1.configurations/2.meta-config/" class="md-nav__link">
         Meta Service configurations
       </a>
     </li>
@@ -3160,7 +3160,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../5.configurations-and-logs/1.configurations/3.graph-config/" class="md-nav__link">
+      <a href="../../../5.configurations-and-logs/1.configurations/3.graph-config/" class="md-nav__link">
         Graph Service configurations
       </a>
     </li>
@@ -3174,7 +3174,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../5.configurations-and-logs/1.configurations/4.storage-config/" class="md-nav__link">
+      <a href="../../../5.configurations-and-logs/1.configurations/4.storage-config/" class="md-nav__link">
         Storage Service configurations
       </a>
     </li>
@@ -3188,7 +3188,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../5.configurations-and-logs/1.configurations/6.kernel-config/" class="md-nav__link">
+      <a href="../../../5.configurations-and-logs/1.configurations/6.kernel-config/" class="md-nav__link">
         Kernel configurations
       </a>
     </li>
@@ -3235,7 +3235,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../5.configurations-and-logs/2.log-management/logs/" class="md-nav__link">
+      <a href="../../../5.configurations-and-logs/2.log-management/logs/" class="md-nav__link">
         Runtime logs
       </a>
     </li>
@@ -3290,7 +3290,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../6.monitor-and-metrics/1.query-performance-metrics/" class="md-nav__link">
+      <a href="../../../6.monitor-and-metrics/1.query-performance-metrics/" class="md-nav__link">
         Query NebulaGraph metrics
       </a>
     </li>
@@ -3304,7 +3304,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../6.monitor-and-metrics/2.rocksdb-statistics/" class="md-nav__link">
+      <a href="../../../6.monitor-and-metrics/2.rocksdb-statistics/" class="md-nav__link">
         RocksDB Statistics
       </a>
     </li>
@@ -3378,7 +3378,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../7.data-security/1.authentication/1.authentication/" class="md-nav__link">
+      <a href="../../../7.data-security/1.authentication/1.authentication/" class="md-nav__link">
         Authentication
       </a>
     </li>
@@ -3392,7 +3392,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../7.data-security/1.authentication/2.management-user/" class="md-nav__link">
+      <a href="../../../7.data-security/1.authentication/2.management-user/" class="md-nav__link">
         User management
       </a>
     </li>
@@ -3406,7 +3406,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../7.data-security/1.authentication/3.role-list/" class="md-nav__link">
+      <a href="../../../7.data-security/1.authentication/3.role-list/" class="md-nav__link">
         Roles and privileges
       </a>
     </li>
@@ -3427,7 +3427,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../7.data-security/4.ssl/" class="md-nav__link">
+      <a href="../../../7.data-security/4.ssl/" class="md-nav__link">
         SSL
       </a>
     </li>
@@ -3501,7 +3501,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../backup-and-restore/nebula-br/1.what-is-br/" class="md-nav__link">
+      <a href="../../../backup-and-restore/nebula-br/1.what-is-br/" class="md-nav__link">
         What is Backup & Restore (Community Edition)
       </a>
     </li>
@@ -3515,7 +3515,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../backup-and-restore/nebula-br/2.compile-br/" class="md-nav__link">
+      <a href="../../../backup-and-restore/nebula-br/2.compile-br/" class="md-nav__link">
         Install BR
       </a>
     </li>
@@ -3529,7 +3529,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../backup-and-restore/nebula-br/3.br-backup-data/" class="md-nav__link">
+      <a href="../../../backup-and-restore/nebula-br/3.br-backup-data/" class="md-nav__link">
         Use BR to back up data
       </a>
     </li>
@@ -3543,7 +3543,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../backup-and-restore/nebula-br/4.br-restore-data/" class="md-nav__link">
+      <a href="../../../backup-and-restore/nebula-br/4.br-restore-data/" class="md-nav__link">
         Use BR to restore data
       </a>
     </li>
@@ -3564,7 +3564,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../backup-and-restore/3.manage-snapshot/" class="md-nav__link">
+      <a href="../../../backup-and-restore/3.manage-snapshot/" class="md-nav__link">
         Manage snapshots
       </a>
     </li>
@@ -3612,7 +3612,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../synchronization-and-migration/2.balance-syntax/" class="md-nav__link">
+      <a href="../../../synchronization-and-migration/2.balance-syntax/" class="md-nav__link">
         Load balance
       </a>
     </li>
@@ -3660,7 +3660,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../8.service-tuning/compaction/" class="md-nav__link">
+      <a href="../../../8.service-tuning/compaction/" class="md-nav__link">
         Compaction
       </a>
     </li>
@@ -3674,7 +3674,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../8.service-tuning/load-balance/" class="md-nav__link">
+      <a href="../../../8.service-tuning/load-balance/" class="md-nav__link">
         Storage load balance
       </a>
     </li>
@@ -3688,7 +3688,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../8.service-tuning/2.graph-modeling/" class="md-nav__link">
+      <a href="../../../8.service-tuning/2.graph-modeling/" class="md-nav__link">
         Modeling suggestions
       </a>
     </li>
@@ -3702,7 +3702,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../8.service-tuning/3.system-design/" class="md-nav__link">
+      <a href="../../../8.service-tuning/3.system-design/" class="md-nav__link">
         System design suggestions
       </a>
     </li>
@@ -3716,7 +3716,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../8.service-tuning/4.plan/" class="md-nav__link">
+      <a href="../../../8.service-tuning/4.plan/" class="md-nav__link">
         Execution plan
       </a>
     </li>
@@ -3730,7 +3730,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../8.service-tuning/super-node/" class="md-nav__link">
+      <a href="../../../8.service-tuning/super-node/" class="md-nav__link">
         Processing super vertices
       </a>
     </li>
@@ -3744,7 +3744,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../8.service-tuning/enable_autofdo_for_nebulagraph/" class="md-nav__link">
+      <a href="../../../8.service-tuning/enable_autofdo_for_nebulagraph/" class="md-nav__link">
         Enable AutoFDO
       </a>
     </li>
@@ -3758,7 +3758,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../8.service-tuning/practice/" class="md-nav__link">
+      <a href="../../../8.service-tuning/practice/" class="md-nav__link">
         Best practices
       </a>
     </li>
@@ -3806,7 +3806,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../14.client/1.nebula-client/" class="md-nav__link">
+      <a href="../../../14.client/1.nebula-client/" class="md-nav__link">
         Clients overview
       </a>
     </li>
@@ -3820,7 +3820,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../nebula-console/" class="md-nav__link">
+      <a href="../../../nebula-console/" class="md-nav__link">
         NebulaGraph Console
       </a>
     </li>
@@ -3834,7 +3834,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../14.client/3.nebula-cpp-client/" class="md-nav__link">
+      <a href="../../../14.client/3.nebula-cpp-client/" class="md-nav__link">
         NebulaGraph CPP
       </a>
     </li>
@@ -3848,7 +3848,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../14.client/4.nebula-java-client/" class="md-nav__link">
+      <a href="../../../14.client/4.nebula-java-client/" class="md-nav__link">
         NebulaGraph Java
       </a>
     </li>
@@ -3862,7 +3862,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../14.client/5.nebula-python-client/" class="md-nav__link">
+      <a href="../../../14.client/5.nebula-python-client/" class="md-nav__link">
         NebulaGraph Python
       </a>
     </li>
@@ -3876,7 +3876,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../14.client/6.nebula-go-client/" class="md-nav__link">
+      <a href="../../../14.client/6.nebula-go-client/" class="md-nav__link">
         NebulaGraph Go
       </a>
     </li>
@@ -3950,7 +3950,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../nebula-studio/about-studio/st-ug-what-is-graph-studio/" class="md-nav__link">
+      <a href="../../../nebula-studio/about-studio/st-ug-what-is-graph-studio/" class="md-nav__link">
         What is NebulaGraph Studio
       </a>
     </li>
@@ -3964,7 +3964,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../nebula-studio/about-studio/st-ug-limitations/" class="md-nav__link">
+      <a href="../../../nebula-studio/about-studio/st-ug-limitations/" class="md-nav__link">
         Limitations
       </a>
     </li>
@@ -4011,7 +4011,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../nebula-studio/deploy-connect/st-ug-deploy/" class="md-nav__link">
+      <a href="../../../nebula-studio/deploy-connect/st-ug-deploy/" class="md-nav__link">
         Deploy Studio
       </a>
     </li>
@@ -4025,7 +4025,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../nebula-studio/deploy-connect/st-ug-connect/" class="md-nav__link">
+      <a href="../../../nebula-studio/deploy-connect/st-ug-connect/" class="md-nav__link">
         Connect to NebulaGraph
       </a>
     </li>
@@ -4072,7 +4072,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../nebula-studio/quick-start/st-ug-plan-schema/" class="md-nav__link">
+      <a href="../../../nebula-studio/quick-start/st-ug-plan-schema/" class="md-nav__link">
         Design a schema
       </a>
     </li>
@@ -4086,7 +4086,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../nebula-studio/quick-start/st-ug-create-schema/" class="md-nav__link">
+      <a href="../../../nebula-studio/quick-start/st-ug-create-schema/" class="md-nav__link">
         Create a schema
       </a>
     </li>
@@ -4100,7 +4100,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../nebula-studio/quick-start/st-ug-import-data/" class="md-nav__link">
+      <a href="../../../nebula-studio/quick-start/st-ug-import-data/" class="md-nav__link">
         Import data
       </a>
     </li>
@@ -4114,7 +4114,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../nebula-studio/quick-start/st-ug-console/" class="md-nav__link">
+      <a href="../../../nebula-studio/quick-start/st-ug-console/" class="md-nav__link">
         Use Console
       </a>
     </li>
@@ -4154,7 +4154,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../nebula-studio/manage-schema/st-ug-crud-space/" class="md-nav__link">
+      <a href="../../../nebula-studio/manage-schema/st-ug-crud-space/" class="md-nav__link">
         Operate graph spaces
       </a>
     </li>
@@ -4168,7 +4168,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../nebula-studio/manage-schema/st-ug-crud-tag/" class="md-nav__link">
+      <a href="../../../nebula-studio/manage-schema/st-ug-crud-tag/" class="md-nav__link">
         Operate Tags
       </a>
     </li>
@@ -4182,7 +4182,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../nebula-studio/manage-schema/st-ug-crud-edge-type/" class="md-nav__link">
+      <a href="../../../nebula-studio/manage-schema/st-ug-crud-edge-type/" class="md-nav__link">
         Operate Edge types
       </a>
     </li>
@@ -4196,7 +4196,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../nebula-studio/manage-schema/st-ug-crud-index/" class="md-nav__link">
+      <a href="../../../nebula-studio/manage-schema/st-ug-crud-index/" class="md-nav__link">
         Operate Indexes
       </a>
     </li>
@@ -4210,7 +4210,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../nebula-studio/manage-schema/st-ug-view-schema/" class="md-nav__link">
+      <a href="../../../nebula-studio/manage-schema/st-ug-view-schema/" class="md-nav__link">
         View Schema
       </a>
     </li>
@@ -4231,7 +4231,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../nebula-studio/quick-start/draft/" class="md-nav__link">
+      <a href="../../../nebula-studio/quick-start/draft/" class="md-nav__link">
         Schema drafting
       </a>
     </li>
@@ -4278,7 +4278,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../nebula-studio/troubleshooting/st-ug-config-server-errors/" class="md-nav__link">
+      <a href="../../../nebula-studio/troubleshooting/st-ug-config-server-errors/" class="md-nav__link">
         Database connection error
       </a>
     </li>
@@ -4292,7 +4292,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../nebula-studio/troubleshooting/st-ug-connection-errors/" class="md-nav__link">
+      <a href="../../../nebula-studio/troubleshooting/st-ug-connection-errors/" class="md-nav__link">
         Unable to access Studio
       </a>
     </li>
@@ -4306,7 +4306,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../nebula-studio/troubleshooting/st-ug-faq/" class="md-nav__link">
+      <a href="../../../nebula-studio/troubleshooting/st-ug-faq/" class="md-nav__link">
         FAQ
       </a>
     </li>
@@ -4361,7 +4361,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../nebula-dashboard/1.what-is-dashboard/" class="md-nav__link">
+      <a href="../../../nebula-dashboard/1.what-is-dashboard/" class="md-nav__link">
         What is NebulaGraph Dashboard
       </a>
     </li>
@@ -4375,7 +4375,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../nebula-dashboard/2.deploy-dashboard/" class="md-nav__link">
+      <a href="../../../nebula-dashboard/2.deploy-dashboard/" class="md-nav__link">
         Deploy Dashboard
       </a>
     </li>
@@ -4389,7 +4389,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../nebula-dashboard/3.connect-dashboard/" class="md-nav__link">
+      <a href="../../../nebula-dashboard/3.connect-dashboard/" class="md-nav__link">
         Connect to Dashboard
       </a>
     </li>
@@ -4403,7 +4403,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../nebula-dashboard/4.use-dashboard/" class="md-nav__link">
+      <a href="../../../nebula-dashboard/4.use-dashboard/" class="md-nav__link">
         Use Dashboard
       </a>
     </li>
@@ -4417,7 +4417,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../nebula-dashboard/6.monitor-parameter/" class="md-nav__link">
+      <a href="../../../nebula-dashboard/6.monitor-parameter/" class="md-nav__link">
         Monitoring metrics
       </a>
     </li>
@@ -4437,14 +4437,12 @@
 
   
   
-    
-  
   
     
-    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--nested">
       
       
-        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_15" type="checkbox" id="__nav_15" checked>
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_15" type="checkbox" id="__nav_15" >
       
       
       
@@ -4467,85 +4465,9 @@
   
   
     <li class="md-nav__item">
-      <a href="../use-importer/" class="md-nav__link">
+      <a href="../../../nebula-importer/use-importer/" class="md-nav__link">
         Use NebulaGraph Importer
       </a>
-    </li>
-  
-
-            
-          
-            
-              
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../config-with-header/" class="md-nav__link">
-        Configuration with Header
-      </a>
-    </li>
-  
-
-            
-          
-            
-              
-  
-  
-    
-  
-  
-    <li class="md-nav__item md-nav__item--active">
-      
-      <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
-      
-      
-        
-      
-      
-        <label class="md-nav__link md-nav__link--active" for="__toc">
-          Configuration without Header
-          <span class="md-nav__icon md-icon"></span>
-        </label>
-      
-      <a href="./" class="md-nav__link md-nav__link--active">
-        Configuration without Header
-      </a>
-      
-        
-
-<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
-  
-  
-  
-    
-  
-  
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      Table of contents
-    </label>
-    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#sample_files" class="md-nav__link">
-    Sample files
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#sample_configuration" class="md-nav__link">
-    Sample configuration
-  </a>
-  
-</li>
-      
-    </ul>
-  
-</nav>
-      
     </li>
   
 
@@ -4617,7 +4539,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../nebula-exchange/about-exchange/ex-ug-what-is-exchange/" class="md-nav__link">
+      <a href="../../../nebula-exchange/about-exchange/ex-ug-what-is-exchange/" class="md-nav__link">
         What is NebulaGraph Exchange
       </a>
     </li>
@@ -4631,7 +4553,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../nebula-exchange/about-exchange/ex-ug-limitations/" class="md-nav__link">
+      <a href="../../../nebula-exchange/about-exchange/ex-ug-limitations/" class="md-nav__link">
         Limitations
       </a>
     </li>
@@ -4652,7 +4574,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../nebula-exchange/ex-ug-compile/" class="md-nav__link">
+      <a href="../../../nebula-exchange/ex-ug-compile/" class="md-nav__link">
         Get Exchange
       </a>
     </li>
@@ -4692,7 +4614,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../nebula-exchange/parameter-reference/ex-ug-para-import-command/" class="md-nav__link">
+      <a href="../../../nebula-exchange/parameter-reference/ex-ug-para-import-command/" class="md-nav__link">
         Options for import
       </a>
     </li>
@@ -4706,7 +4628,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../nebula-exchange/parameter-reference/ex-ug-parameter/" class="md-nav__link">
+      <a href="../../../nebula-exchange/parameter-reference/ex-ug-parameter/" class="md-nav__link">
         Parameters in the configuration file
       </a>
     </li>
@@ -4753,7 +4675,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../nebula-exchange/use-exchange/ex-ug-import-from-csv/" class="md-nav__link">
+      <a href="../../../nebula-exchange/use-exchange/ex-ug-import-from-csv/" class="md-nav__link">
         Import data from CSV files
       </a>
     </li>
@@ -4767,7 +4689,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../nebula-exchange/use-exchange/ex-ug-import-from-json/" class="md-nav__link">
+      <a href="../../../nebula-exchange/use-exchange/ex-ug-import-from-json/" class="md-nav__link">
         Import data from JSON files
       </a>
     </li>
@@ -4781,7 +4703,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../nebula-exchange/use-exchange/ex-ug-import-from-orc/" class="md-nav__link">
+      <a href="../../../nebula-exchange/use-exchange/ex-ug-import-from-orc/" class="md-nav__link">
         Import data from ORC files
       </a>
     </li>
@@ -4795,7 +4717,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../nebula-exchange/use-exchange/ex-ug-import-from-parquet/" class="md-nav__link">
+      <a href="../../../nebula-exchange/use-exchange/ex-ug-import-from-parquet/" class="md-nav__link">
         Import data from Parquet files
       </a>
     </li>
@@ -4809,7 +4731,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../nebula-exchange/use-exchange/ex-ug-import-from-hbase/" class="md-nav__link">
+      <a href="../../../nebula-exchange/use-exchange/ex-ug-import-from-hbase/" class="md-nav__link">
         Import data from HBase
       </a>
     </li>
@@ -4823,7 +4745,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../nebula-exchange/use-exchange/ex-ug-import-from-mysql/" class="md-nav__link">
+      <a href="../../../nebula-exchange/use-exchange/ex-ug-import-from-mysql/" class="md-nav__link">
         Import data from MySQL/PostgreSQL
       </a>
     </li>
@@ -4837,7 +4759,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../nebula-exchange/use-exchange/ex-ug-import-from-oracle/" class="md-nav__link">
+      <a href="../../../nebula-exchange/use-exchange/ex-ug-import-from-oracle/" class="md-nav__link">
         Import data from Oracle
       </a>
     </li>
@@ -4851,7 +4773,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../nebula-exchange/use-exchange/ex-ug-import-from-clickhouse/" class="md-nav__link">
+      <a href="../../../nebula-exchange/use-exchange/ex-ug-import-from-clickhouse/" class="md-nav__link">
         Import data from ClickHouse
       </a>
     </li>
@@ -4865,7 +4787,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../nebula-exchange/use-exchange/ex-ug-import-from-neo4j/" class="md-nav__link">
+      <a href="../../../nebula-exchange/use-exchange/ex-ug-import-from-neo4j/" class="md-nav__link">
         Import data from Neo4j
       </a>
     </li>
@@ -4879,7 +4801,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../nebula-exchange/use-exchange/ex-ug-import-from-hive/" class="md-nav__link">
+      <a href="../../../nebula-exchange/use-exchange/ex-ug-import-from-hive/" class="md-nav__link">
         Import data from Hive
       </a>
     </li>
@@ -4893,7 +4815,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../nebula-exchange/use-exchange/ex-ug-import-from-maxcompute/" class="md-nav__link">
+      <a href="../../../nebula-exchange/use-exchange/ex-ug-import-from-maxcompute/" class="md-nav__link">
         Import data from MaxCompute
       </a>
     </li>
@@ -4907,7 +4829,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../nebula-exchange/use-exchange/ex-ug-import-from-pulsar/" class="md-nav__link">
+      <a href="../../../nebula-exchange/use-exchange/ex-ug-import-from-pulsar/" class="md-nav__link">
         Import data from Pulsar
       </a>
     </li>
@@ -4921,7 +4843,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../nebula-exchange/use-exchange/ex-ug-import-from-kafka/" class="md-nav__link">
+      <a href="../../../nebula-exchange/use-exchange/ex-ug-import-from-kafka/" class="md-nav__link">
         Import data from Kafka
       </a>
     </li>
@@ -4935,7 +4857,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../nebula-exchange/use-exchange/ex-ug-import-from-jdbc/" class="md-nav__link">
+      <a href="../../../nebula-exchange/use-exchange/ex-ug-import-from-jdbc/" class="md-nav__link">
         Import data from JDBC
       </a>
     </li>
@@ -4949,7 +4871,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../nebula-exchange/use-exchange/ex-ug-import-from-sst/" class="md-nav__link">
+      <a href="../../../nebula-exchange/use-exchange/ex-ug-import-from-sst/" class="md-nav__link">
         Import data from SST files
       </a>
     </li>
@@ -4970,7 +4892,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../nebula-exchange/ex-ug-FAQ/" class="md-nav__link">
+      <a href="../../../nebula-exchange/ex-ug-FAQ/" class="md-nav__link">
         Exchange FAQ
       </a>
     </li>
@@ -4990,12 +4912,14 @@
 
   
   
+    
+  
   
     
-    <li class="md-nav__item md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
       
       
-        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_17" type="checkbox" id="__nav_17" >
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_17" type="checkbox" id="__nav_17" checked>
       
       
       
@@ -5018,7 +4942,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../nebula-operator/1.introduction-to-nebula-operator/" class="md-nav__link">
+      <a href="../../1.introduction-to-nebula-operator/" class="md-nav__link">
         What is NebulaGraph Operator
       </a>
     </li>
@@ -5032,7 +4956,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../nebula-operator/6.get-started-with-operator/" class="md-nav__link">
+      <a href="../../6.get-started-with-operator/" class="md-nav__link">
         Overview of using NebulaGraph Operator
       </a>
     </li>
@@ -5046,7 +4970,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../nebula-operator/2.deploy-nebula-operator/" class="md-nav__link">
+      <a href="../../2.deploy-nebula-operator/" class="md-nav__link">
         Deploy NebulaGraph Operator
       </a>
     </li>
@@ -5086,7 +5010,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../nebula-operator/3.deploy-nebula-graph-cluster/3.1create-cluster-with-kubectl/" class="md-nav__link">
+      <a href="../../3.deploy-nebula-graph-cluster/3.1create-cluster-with-kubectl/" class="md-nav__link">
         Deploy clusters with Kubectl
       </a>
     </li>
@@ -5100,7 +5024,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../nebula-operator/3.deploy-nebula-graph-cluster/3.2create-cluster-with-helm/" class="md-nav__link">
+      <a href="../../3.deploy-nebula-graph-cluster/3.2create-cluster-with-helm/" class="md-nav__link">
         Deploy clusters with Helm
       </a>
     </li>
@@ -5121,7 +5045,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../nebula-operator/4.connect-to-nebula-graph-service/" class="md-nav__link">
+      <a href="../../4.connect-to-nebula-graph-service/" class="md-nav__link">
         Connect to NebulaGraph databases
       </a>
     </li>
@@ -5133,12 +5057,14 @@
               
   
   
+    
+  
   
     
-    <li class="md-nav__item md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
       
       
-        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_17_6" type="checkbox" id="__nav_17_6" >
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_17_6" type="checkbox" id="__nav_17_6" checked>
       
       
       
@@ -5161,7 +5087,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../nebula-operator/8.custom-cluster-configurations/8.1.custom-conf-parameter/" class="md-nav__link">
+      <a href="../8.1.custom-conf-parameter/" class="md-nav__link">
         Custom configuration parameters for a NebulaGraph cluster
       </a>
     </li>
@@ -5175,7 +5101,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../nebula-operator/8.custom-cluster-configurations/8.2.pv-reclaim/" class="md-nav__link">
+      <a href="../8.2.pv-reclaim/" class="md-nav__link">
         Reclaim PVs
       </a>
     </li>
@@ -5189,7 +5115,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../nebula-operator/8.custom-cluster-configurations/8.3.balance-data-when-scaling-storage/" class="md-nav__link">
+      <a href="../8.3.balance-data-when-scaling-storage/" class="md-nav__link">
         Balance storage data after scaling out
       </a>
     </li>
@@ -5203,9 +5129,85 @@
   
   
     <li class="md-nav__item">
-      <a href="../../nebula-operator/8.custom-cluster-configurations/8.4.manage-running-logs/" class="md-nav__link">
+      <a href="../8.4.manage-running-logs/" class="md-nav__link">
         Manage cluster logs
       </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+    
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          Enable SSL encryption
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        Enable SSL encryption
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#prerequisites" class="md-nav__link">
+    Prerequisites
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#configure_certifications" class="md-nav__link">
+    Configure certifications
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#encryption_strategies" class="md-nav__link">
+    Encryption strategies
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#steps" class="md-nav__link">
+    Steps
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
     </li>
   
 
@@ -5224,7 +5226,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../nebula-operator/9.upgrade-nebula-cluster/" class="md-nav__link">
+      <a href="../../9.upgrade-nebula-cluster/" class="md-nav__link">
         Upgrade NebulaGraph clusters
       </a>
     </li>
@@ -5238,7 +5240,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../nebula-operator/11.rolling-update-strategy/" class="md-nav__link">
+      <a href="../../11.rolling-update-strategy/" class="md-nav__link">
         Specify a rolling update strategy
       </a>
     </li>
@@ -5252,7 +5254,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../nebula-operator/10.backup-restore-using-operator/" class="md-nav__link">
+      <a href="../../10.backup-restore-using-operator/" class="md-nav__link">
         Backup and restore
       </a>
     </li>
@@ -5266,7 +5268,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../nebula-operator/5.operator-failover/" class="md-nav__link">
+      <a href="../../5.operator-failover/" class="md-nav__link">
         Self-healing
       </a>
     </li>
@@ -5280,7 +5282,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../nebula-operator/7.operator-faq/" class="md-nav__link">
+      <a href="../../7.operator-faq/" class="md-nav__link">
         FAQ
       </a>
     </li>
@@ -5328,7 +5330,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../graph-computing/algorithm-description/" class="md-nav__link">
+      <a href="../../../graph-computing/algorithm-description/" class="md-nav__link">
         Algorithm overview
       </a>
     </li>
@@ -5342,7 +5344,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../graph-computing/nebula-algorithm/" class="md-nav__link">
+      <a href="../../../graph-computing/nebula-algorithm/" class="md-nav__link">
         NebulaGraph Algorithm
       </a>
     </li>
@@ -5364,7 +5366,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../nebula-spark-connector/" class="md-nav__link">
+      <a href="../../../nebula-spark-connector/" class="md-nav__link">
         NebulaGraph Spark Connector
       </a>
     </li>
@@ -5379,7 +5381,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../nebula-flink-connector/" class="md-nav__link">
+      <a href="../../../nebula-flink-connector/" class="md-nav__link">
         NebulaGraph Flink Connector
       </a>
     </li>
@@ -5394,7 +5396,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../nebula-bench/" class="md-nav__link">
+      <a href="../../../nebula-bench/" class="md-nav__link">
         NebulaGraph Bench
       </a>
     </li>
@@ -5461,7 +5463,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../20.appendix/release-notes/nebula-comm-release-note/" class="md-nav__link">
+      <a href="../../../20.appendix/release-notes/nebula-comm-release-note/" class="md-nav__link">
         NebulaGraph Community Edition
       </a>
     </li>
@@ -5475,7 +5477,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../20.appendix/release-notes/studio-release-note/" class="md-nav__link">
+      <a href="../../../20.appendix/release-notes/studio-release-note/" class="md-nav__link">
         NebulaGraph Studio
       </a>
     </li>
@@ -5489,7 +5491,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../20.appendix/release-notes/dashboard-comm-release-note/" class="md-nav__link">
+      <a href="../../../20.appendix/release-notes/dashboard-comm-release-note/" class="md-nav__link">
         NebulaGraph Dashboard Community Edition
       </a>
     </li>
@@ -5510,7 +5512,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../20.appendix/learning-path/" class="md-nav__link">
+      <a href="../../../20.appendix/learning-path/" class="md-nav__link">
         Learning path
       </a>
     </li>
@@ -5524,7 +5526,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../20.appendix/8.about-license/" class="md-nav__link">
+      <a href="../../../20.appendix/8.about-license/" class="md-nav__link">
         About NebulaGraph licenses
       </a>
     </li>
@@ -5538,7 +5540,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../20.appendix/0.FAQ/" class="md-nav__link">
+      <a href="../../../20.appendix/0.FAQ/" class="md-nav__link">
         FAQ
       </a>
     </li>
@@ -5552,7 +5554,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../20.appendix/6.eco-tool-version/" class="md-nav__link">
+      <a href="../../../20.appendix/6.eco-tool-version/" class="md-nav__link">
         Ecosystem tools
       </a>
     </li>
@@ -5566,7 +5568,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../20.appendix/write-tools/" class="md-nav__link">
+      <a href="../../../20.appendix/write-tools/" class="md-nav__link">
         Write tools
       </a>
     </li>
@@ -5580,7 +5582,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../15.contribution/how-to-contribute/" class="md-nav__link">
+      <a href="../../../15.contribution/how-to-contribute/" class="md-nav__link">
         How to contribute
       </a>
     </li>
@@ -5594,7 +5596,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../20.appendix/history/" class="md-nav__link">
+      <a href="../../../20.appendix/history/" class="md-nav__link">
         History timeline
       </a>
     </li>
@@ -5608,7 +5610,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../20.appendix/error-code/" class="md-nav__link">
+      <a href="../../../20.appendix/error-code/" class="md-nav__link">
         Error code
       </a>
     </li>
@@ -5630,7 +5632,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../pdf/NebulaGraph-EN.pdf" class="md-nav__link">
+      <a href="../../../pdf/NebulaGraph-EN.pdf" class="md-nav__link">
         PDF
       </a>
     </li>
@@ -5664,15 +5666,29 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#sample_files" class="md-nav__link">
-    Sample files
+  <a href="#prerequisites" class="md-nav__link">
+    Prerequisites
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#sample_configuration" class="md-nav__link">
-    Sample configuration
+  <a href="#configure_certifications" class="md-nav__link">
+    Configure certifications
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#encryption_strategies" class="md-nav__link">
+    Encryption strategies
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#steps" class="md-nav__link">
+    Steps
   </a>
   
 </li>
@@ -5691,230 +5707,188 @@
                 
                   
 
-  <a href="https://github.com/vesoft-inc/nebula-docs/edit/master/docs-2.0/nebula-importer/config-without-header.md" title="Edit this page" class="md-content__button md-icon">
+  <a href="https://github.com/vesoft-inc/nebula-docs/edit/master/docs-2.0/nebula-operator/8.custom-cluster-configurations/8.5.enable-ssl.md" title="Edit this page" class="md-content__button md-icon">
     
     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20.71 7.04c.39-.39.39-1.04 0-1.41l-2.34-2.34c-.37-.39-1.02-.39-1.41 0l-1.84 1.83 3.75 3.75M3 17.25V21h3.75L17.81 9.93l-3.75-3.75L3 17.25Z"/></svg>
   </a>
 
 
-<h1 id="configuration_without_header">Configuration without Header<a class="headerlink" href="#configuration_without_header" title="Permanent link">&para;</a></h1>
-<p>For CSV files without header, you need to set <code>withHeader</code> to <code>false</code> in the configuration file, indicating that the CSV file contains only data (excluding the header of the first row). You may also need to set the data type and corresponding columns.</p>
-<h2 id="sample_files">Sample files<a class="headerlink" href="#sample_files" title="Permanent link">&para;</a></h2>
-<p>The following is an example of a CSV file without header:</p>
+<h1 id="enable_ssl_encryption_in_nebula_graph">Enable SSL Encryption in Nebula Graph<a class="headerlink" href="#enable_ssl_encryption_in_nebula_graph" title="Permanent link">&para;</a></h1>
+<p>SSL encryption is a commonly used network security technology that ensures secure communication between the client and server. Its working principle is mainly to protect data transmitted over the network by using encryption algorithms to prevent data interception or tampering during transmission. During the SSL connection establishment process, the server sends a digital certificate containing a public key and some identity information to the client. This certificate is issued by a trusted third-party Certification Authority (CA). The client verifies this digital certificate to confirm the identity of the server. In the NebulaGraph environment running in Kubernetes, you can enable SSL encryption, and both the client and server need to verify their identities to ensure secure communication between the client and server, and also between servers. This article explains how to enable SSL encryption in NebulaGraph running in K8s.</p>
+<h2 id="prerequisites">Prerequisites<a class="headerlink" href="#prerequisites" title="Permanent link">&para;</a></h2>
+<ul>
+<li>NebulaGraph Operator has been installed.</li>
+<li>A NebulaGraph cluster has been created. For details, see <a href="../../3.deploy-nebula-graph-cluster/3.1create-cluster-with-kubectl/"> Create a NebulaGraph cluster with kubectl</a> or <a href="../../3.deploy-nebula-graph-cluster/3.2create-cluster-with-helm/"> Create a NebulaGraph cluster with Helm</a>.</li>
+<li>Certificates and their corresponding private keys have been generated for the client and server, and the CA certificate has been generated. For details, see <a href="https://kubernetes.io/docs/tasks/administer-cluster/certificates/">Generate Certificates Manually</a>.</li>
+</ul>
+<h2 id="configure_certifications">Configure certifications<a class="headerlink" href="#configure_certifications" title="Permanent link">&para;</a></h2>
+<p>Operator provides the <code>sslCerts</code> field to specify the encrypted certificates. The <code>sslCerts</code> field contains three subfields: <code>serverSecret</code>, <code>clientSecret</code>, and <code>caSecret</code>. These three fields are used to specify the Secret names of the NebulaGraph server certificate, client certificate, and CA certificate, respectively. When the user specifies these three fields, Operator reads the certificate content from the corresponding Secret and mounts it into the cluster's Pod.</p>
+<p>In a K8s cluster, SSL type Secrets use <code>tls.crt</code>and <code>tls.key</code> as the default names for the server or client certificate file and private key file, and the default name for the CA certificate file is <code>ca.crt</code> (the CA certificate does not need to configure a private key). If you change the names of the certificate file and private key, you need to add corresponding subfields in the <code>sslCerts</code> field to specify the new certificate and private key names, and specify the new names when creating the Secret.</p>
+<div class="highlight"><pre><span></span><code><span class="nt">sslCerts</span><span class="p">:</span>
+<span class="w">  </span><span class="c1"># Name of the Secret containing the server certificate.</span>
+<span class="w">  </span><span class="nt">serverSecret</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;server-cert&quot;</span>
+<span class="w">  </span><span class="c1"># Name of the server certificate file. Defaults to tls.crt. No configuration is needed when using the default name.</span>
+<span class="w">  </span><span class="nt">serverPublicKey</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;&quot;</span>
+<span class="w">  </span><span class="c1"># Name of the server private key file. Defaults to tls.key. No configuration is needed when using the default name.</span>
+<span class="w">  </span><span class="nt">serverPrivateKey</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;&quot;</span>
+<span class="w">  </span><span class="c1"># Name of the Secret containing the client certificate.</span>
+<span class="w">  </span><span class="nt">clientSecret</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;client-cert&quot;</span>
+<span class="w">  </span><span class="c1"># Name of the client certificate file. Defaults to tls.crt. No configuration is needed when using the default name.</span>
+<span class="w">  </span><span class="nt">clientPublicKey</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;&quot;</span>
+<span class="w">  </span><span class="c1"># Name of the client private key file. Defaults to tls.key. No configuration is needed when using the default name.</span>
+<span class="w">  </span><span class="nt">clientPrivateKey</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;&quot;</span>
+<span class="w">  </span><span class="c1"># Name of the Secret containing the CA certificate.</span>
+<span class="w">  </span><span class="nt">caSecret</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;ca-cert&quot;</span>
+<span class="w">  </span><span class="c1"># Name of the CA certificate file. Defaults to ca.crt. No configuration is needed when using the default name.</span>
+<span class="w">  </span><span class="nt">caPublicKey</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;&quot;</span>
+</code></pre></div>
+<p>You can use the <code>insecureSkipVerify</code> field to decide whether the client will verify the server's certificate chain and hostname. In production environments, it is recommended to set this to <code>false</code> to ensure the security of communication. If set to <code>true</code>, the client will not verify the server's certificate chain and hostname.</p>
+<div class="highlight"><pre><span></span><code><span class="nt">sslCerts</span><span class="p">:</span>
+<span class="w">  </span><span class="c1"># Determines whether the client needs to verify the server&#39;s certificate when establishing an SSL connection.</span>
+<span class="w">  </span><span class="nt">insecureSkipVerify</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">false</span><span class="w"> </span>
+</code></pre></div>
+<p>When the certificates are approaching expiration, they can be automatically updated by installing <a href="https://cert-manager.io/docs/installation/supported-releases/">cert-manager</a>. NebulaGraph will monitor changes to the certificate directory files, and once a change is detected, it will load the new certificate content into memory. </p>
+<h2 id="encryption_strategies">Encryption strategies<a class="headerlink" href="#encryption_strategies" title="Permanent link">&para;</a></h2>
+<p>NebulaGraph offers three encryption strategies that you can choose and configure according to your needs.</p>
 <ul>
 <li>
-<p>sample of vertex</p>
-<p>Example data for <code>student_without_header.csv</code>:</p>
-<div class="highlight"><pre><span></span><code>student100,Monica,16,female
-student101,Mike,18,male
-student102,Jane,17,female
+<p>Encryption of all inter-service communication</p>
+<p>If you want to encrypt all data transmission between the client, Graph service, Meta service, and Storage service, you need to add the <code>enable_ssl = true</code> field to each service.</p>
+<p>Here is an example configuration:</p>
+<div class="highlight"><pre><span></span><code><span class="nt">apiVersion</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">apps.nebula-graph.io/v1alpha1</span>
+<span class="nt">kind</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">NebulaCluster</span>
+<span class="nt">metadata</span><span class="p">:</span>
+<span class="w">  </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">nebula</span>
+<span class="w">  </span><span class="nt">namespace</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">default</span>
+<span class="nt">spec</span><span class="p">:</span>
+<span class="w">  </span><span class="nt">sslCerts</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">serverSecret</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;server-cert&quot;</span>
+<span class="w">    </span><span class="nt">clientSecret</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;client-cert&quot;</span>
+<span class="w">    </span><span class="nt">caSecret</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;ca-cert&quot;</span>
+<span class="w">  </span><span class="nt">graphd</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">config</span><span class="p">:</span>
+<span class="w">      </span><span class="nt">enable_ssl</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;true&quot;</span>
+<span class="w">  </span><span class="nt">metad</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">config</span><span class="p">:</span>
+<span class="w">      </span><span class="nt">enable_ssl</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;true&quot;</span>
+<span class="w">  </span><span class="nt">storaged</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">config</span><span class="p">:</span>
+<span class="w">      </span><span class="nt">enable_ssl</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;true&quot;</span>
 </code></pre></div>
-<p>The first column is the vertex ID, followed by the properties <code>name</code>, <code>age</code>, and <code>gender</code>.</p>
 </li>
 </ul>
 <ul>
 <li>
-<p>sample of edge</p>
-<p>Example data for <code>follow_without_header.csv</code>:</p>
-<div class="highlight"><pre><span></span><code>student100,student101,0,92.5
-student101,student100,1,85.6
-student101,student102,2,93.2
-student100,student102,1,96.2
+<p>Encryption of only Graph service communication</p>
+<p>If the K8s cluster is deployed in the same data center and only the port of the Graph service is exposed externally, you can choose to encrypt only data transmission between the client and the Graph service. In this case, other services can communicate internally without encryption. Just add the <code>enable_graph_ssl = true</code> field to the Graph service.</p>
+<p>Here is an example configuration:</p>
+<div class="highlight"><pre><span></span><code><span class="nt">apiVersion</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">apps.nebula-graph.io/v1alpha1</span>
+<span class="nt">kind</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">NebulaCluster</span>
+<span class="nt">metadata</span><span class="p">:</span>
+<span class="w">  </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">nebula</span>
+<span class="w">  </span><span class="nt">namespace</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">default</span>
+<span class="nt">spec</span><span class="p">:</span>
+<span class="w">  </span><span class="nt">sslCerts</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">serverSecret</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;server-cert&quot;</span>
+<span class="w">    </span><span class="nt">caSecret</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;ca-cert&quot;</span>
+<span class="w">  </span><span class="nt">graphd</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">config</span><span class="p">:</span>
+<span class="w">      </span><span class="nt">enable_graph_ssl</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;true&quot;</span>
 </code></pre></div>
-<p>The first two columns are the start vertex ID and destination vertex ID, respectively. The third column is rank, and the fourth column is property <code>degree</code>.</p>
 </li>
-</ul>
-<h2 id="sample_configuration">Sample configuration<a class="headerlink" href="#sample_configuration" title="Permanent link">&para;</a></h2>
-<div class="highlight"><pre><span></span><code><span class="nt">version</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">v2</span>
-
-<span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">example</span>
-
-<span class="c1"># Whether to delete temporarily generated logs and error data files.</span>
-<span class="nt">removeTempFiles</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">false</span>
-
-<span class="nt">clientSettings</span><span class="p">:</span>
-
-<span class="w">  </span><span class="c1"># Retry times of nGQL statement execution failures.</span>
-<span class="w">  </span><span class="nt">retry</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">3</span>
-
-<span class="w">  </span><span class="c1"># Number of NebulaGraph client concurrency.</span>
-<span class="w">  </span><span class="nt">concurrency</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">10</span><span class="w"> </span>
-
-<span class="w">  </span><span class="c1"># Cache queue size per NebulaGraph client.</span>
-<span class="w">  </span><span class="nt">channelBufferSize</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">128</span>
-
-<span class="w">  </span><span class="c1"># Specifies the NebulaGraph space to import the data into.</span>
-<span class="w">  </span><span class="nt">space</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">student</span>
-
-<span class="w">  </span><span class="c1"># Connection information.</span>
-<span class="w">  </span><span class="nt">connection</span><span class="p">:</span>
-<span class="w">    </span><span class="nt">user</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">root</span>
-<span class="w">    </span><span class="nt">password</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">nebula</span>
-<span class="w">    </span><span class="nt">address</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">192.168.*.13:9669</span>
-
-<span class="w">  </span><span class="nt">postStart</span><span class="p">:</span>
-<span class="w">    </span><span class="c1"># Configure some of the operations to perform after connecting to the NebulaGraph server, and before inserting data.</span>
-<span class="w">    </span><span class="nt">commands</span><span class="p">:</span><span class="w"> </span><span class="p p-Indicator">|</span>
-<span class="w">      </span><span class="no">DROP SPACE IF EXISTS student;</span>
-<span class="w">      </span><span class="no">CREATE SPACE IF NOT EXISTS student(partition_num=5, replica_factor=1, vid_type=FIXED_STRING(20));</span>
-<span class="w">      </span><span class="no">USE student;</span>
-<span class="w">      </span><span class="no">CREATE TAG student(name string, age int,gender string);</span>
-<span class="w">      </span><span class="no">CREATE EDGE follow(degree int);</span>
-
-<span class="w">    </span><span class="c1"># The interval between the execution of the above command and the execution of the insert data command.</span>
-<span class="w">    </span><span class="nt">afterPeriod</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">15s</span>
-
-<span class="w">  </span><span class="nt">preStop</span><span class="p">:</span>
-<span class="w">    </span><span class="c1"># Configure some of the actions you performed before disconnecting from the NebulaGraph server.</span>
-<span class="w">    </span><span class="nt">commands</span><span class="p">:</span><span class="w"> </span><span class="p p-Indicator">|</span>
-
-<span class="c1"># Path of the error log file.</span>
-<span class="nt">logPath</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">./err/test.log</span>
-
-<span class="c1"># CSV file Settings.</span>
-<span class="nt">files</span><span class="p">:</span>
-
-<span class="w">    </span><span class="c1"># Path for storing data files. If a relative path is used, the path is merged with the current configuration file directory. The first data file in this example is vertex data.</span>
-<span class="w">  </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">path</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">./student_without_header.csv</span>
-
-<span class="w">    </span><span class="c1"># Insert the failed data file storage path, so that data can be written later.</span>
-<span class="w">    </span><span class="nt">failDataPath</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">./err/studenterr</span>
-
-<span class="w">    </span><span class="c1"># The number of statements inserting data in a batch.</span>
-<span class="w">    </span><span class="nt">batchSize</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">10</span>
-
-<span class="w">    </span><span class="c1"># Limit on the number of rows of read data.</span>
-<span class="w">    </span><span class="nt">limit</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">10</span>
-
-<span class="w">    </span><span class="c1"># Whether to insert rows in the file in order. If the value is set to false, the import rate decreases due to data skew.</span>
-<span class="w">    </span><span class="nt">inOrder</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">true</span>
-
-<span class="w">    </span><span class="c1"># File type. Currently, only CSV files are supported.</span>
-<span class="w">    </span><span class="nt">type</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">csv</span>
-
-<span class="w">    </span><span class="nt">csv</span><span class="p">:</span>
-<span class="w">      </span><span class="c1"># Whether there is a header.</span>
-<span class="w">      </span><span class="nt">withHeader</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">false</span>
-
-<span class="w">      </span><span class="c1"># Whether there is a LABEL.</span>
-<span class="w">      </span><span class="nt">withLabel</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">false</span>
-
-<span class="w">      </span><span class="c1"># Specifies the delimiter for the CSV file. A string delimiter that supports only one character.</span>
-<span class="w">      </span><span class="nt">delimiter</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;,&quot;</span>
-
-<span class="w">    </span><span class="nt">schema</span><span class="p">:</span>
-<span class="w">      </span><span class="c1"># Schema type. Possible values are vertex and edge.</span>
-<span class="w">      </span><span class="nt">type</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">vertex</span>
-
-<span class="w">      </span><span class="nt">vertex</span><span class="p">:</span>
-
-<span class="w">        </span><span class="c1"># Vertex ID Settings.</span>
-<span class="w">        </span><span class="nt">vid</span><span class="p">:</span>
-<span class="w">           </span><span class="c1"># The vertex ID corresponds to the column number in the CSV file. Columns in the CSV file are numbered from 0.</span>
-<span class="w">           </span><span class="nt">index</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">0</span>
-
-<span class="w">           </span><span class="c1"># The data type of the vertex ID. The optional values are int and string, corresponding to INT64 and FIXED_STRING in the NebulaGraph, respectively.</span>
-<span class="w">           </span><span class="nt">type</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">string</span>
-
-<span class="w">        </span><span class="c1"># Tag Settings.</span>
-<span class="w">        </span><span class="nt">tags</span><span class="p">:</span>
-<span class="w">            </span><span class="c1"># Tag name.</span>
-<span class="w">          </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">student</span>
-
-<span class="w">            </span><span class="c1"># property Settings in the Tag.</span>
-<span class="w">            </span><span class="nt">props</span><span class="p">:</span>
-<span class="w">                </span><span class="c1"># property name.</span>
-<span class="w">              </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">name</span>
-
-<span class="w">                </span><span class="c1"># Property data type.</span>
-<span class="w">                </span><span class="nt">type</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">string</span>
-
-<span class="w">                </span><span class="c1"># Property corresponds to the sequence number of the column in the CSV file.</span>
-<span class="w">                </span><span class="nt">index</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">1</span>
-
-<span class="w">              </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">age</span>
-<span class="w">                </span><span class="nt">type</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">int</span>
-<span class="w">                </span><span class="nt">index</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">2</span>
-<span class="w">              </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">gender</span>
-<span class="w">                </span><span class="nt">type</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">string</span>
-<span class="w">                </span><span class="nt">index</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">3</span>
-
-<span class="w">    </span><span class="c1"># The second data file in this example is edge data.</span>
-<span class="w">  </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">path</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">./follow_without_header.csv</span>
-<span class="w">    </span><span class="nt">failDataPath</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">./err/followerr</span>
-<span class="w">    </span><span class="nt">batchSize</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">10</span>
-<span class="w">    </span><span class="nt">limit</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">10</span>
-<span class="w">    </span><span class="nt">inOrder</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">true</span>
-<span class="w">    </span><span class="nt">type</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">csv</span>
-<span class="w">    </span><span class="nt">csv</span><span class="p">:</span>
-<span class="w">      </span><span class="nt">withHeader</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">false</span>
-<span class="w">      </span><span class="nt">withLabel</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">false</span>
-<span class="w">    </span><span class="nt">schema</span><span class="p">:</span>
-<span class="w">      </span><span class="c1"># The type of Schema is edge.</span>
-<span class="w">      </span><span class="nt">type</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">edge</span>
-<span class="w">      </span><span class="nt">edge</span><span class="p">:</span>
-<span class="w">        </span><span class="c1"># Edge type name.</span>
-<span class="w">        </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">follow</span>
-
-<span class="w">        </span><span class="c1"># Whether to include rank.</span>
-<span class="w">        </span><span class="nt">withRanking</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">true</span>
-
-<span class="w">        </span><span class="c1"># Start vertex ID setting.</span>
-<span class="w">        </span><span class="nt">srcVID</span><span class="p">:</span>
-<span class="w">           </span><span class="c1"># Data type.</span>
-<span class="w">           </span><span class="nt">type</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">string</span>
-
-<span class="w">           </span><span class="c1"># The start vertex ID corresponds to the sequence number of a column in the CSV file.</span>
-<span class="w">           </span><span class="nt">index</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">0</span>
-
-<span class="w">        </span><span class="c1"># Destination vertex ID.</span>
-<span class="w">        </span><span class="nt">dstVID</span><span class="p">:</span>
-<span class="w">           </span><span class="nt">type</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">string</span>
-<span class="w">           </span><span class="nt">index</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">1</span>
-
-<span class="w">        </span><span class="c1"># rank setting.</span>
-<span class="w">        </span><span class="nt">rank</span><span class="p">:</span>
-<span class="w">           </span><span class="c1"># Rank Indicates the rank number of a column in the CSV file. If index is not set, be sure to set the rank value in the third column. Subsequent columns set each property in turn.</span>
-<span class="w">           </span><span class="nt">index</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">2</span>
-
-<span class="w">        </span><span class="c1"># Edge Type property Settings.</span>
-<span class="w">        </span><span class="nt">props</span><span class="p">:</span>
-<span class="w">             </span><span class="c1"># property name.</span>
-<span class="w">           </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">degree</span>
-
-<span class="w">             </span><span class="c1"># Data type.</span>
-<span class="w">             </span><span class="nt">type</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">double</span>
-
-<span class="w">             </span><span class="c1"># Property corresponds to the sequence number of the column in the CSV file.</span>
-<span class="w">             </span><span class="nt">index</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">3</span>
-</code></pre></div>
-<div class="admonition note">
-<p class="admonition-title">Note</p>
-<ul>
-<li>The sequence numbers of the columns in the CSV file start from 0, that is, the sequence numbers of the first column are 0, and the sequence numbers of the second column are 1.</li>
-</ul>
-<ul>
-<li>The data type of the vertex ID must be the same as the data type of the statement in <code>clientSettings.postStart.commands</code> that creates the graph space.</li>
 </ul>
 <ul>
 <li>
-<p>If the index field is not specified, the CSV file must comply with the following rules:</p>
-<ul>
-<li>In the vertex data file, the first column must be the vertex ID, followed by the properties, and must correspond to the order in the configuration file.</li>
+<p>Encryption of only Meta service communication</p>
+<p>If you need to transmit confidential information to the Meta service, you can choose to encrypt data transmission related to the Meta service. In this case, you need to add the <code>enable_meta_ssl = true</code> configuration to each component.</p>
+<p>Here is an example configuration:</p>
+<div class="highlight"><pre><span></span><code><span class="nt">apiVersion</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">apps.nebula-graph.io/v1alpha1</span>
+<span class="nt">kind</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">NebulaCluster</span>
+<span class="nt">metadata</span><span class="p">:</span>
+<span class="w">  </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">nebula</span>
+<span class="w">  </span><span class="nt">namespace</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">default</span>
+<span class="nt">spec</span><span class="p">:</span>
+<span class="w">  </span><span class="nt">sslCerts</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">serverSecret</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;server-cert&quot;</span>
+<span class="w">    </span><span class="nt">clientSecret</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;client-cert&quot;</span>
+<span class="w">    </span><span class="nt">caSecret</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;ca-cert&quot;</span>
+<span class="w">  </span><span class="nt">graphd</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">config</span><span class="p">:</span>
+<span class="w">      </span><span class="nt">enable_meta_ssl</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;true&quot;</span>
+<span class="w">  </span><span class="nt">metad</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">config</span><span class="p">:</span>
+<span class="w">      </span><span class="nt">enable_meta_ssl</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;true&quot;</span>
+<span class="w">  </span><span class="nt">storaged</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">config</span><span class="p">:</span>
+<span class="w">      </span><span class="nt">enable_meta_ssl</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;true&quot;</span>
+</code></pre></div>
+</li>
 </ul>
+<h2 id="steps">Steps<a class="headerlink" href="#steps" title="Permanent link">&para;</a></h2>
+<ol>
+<li>
+<p>Use the pre-generated server and client certificates and private keys, and the CA certificate to create a Secret for each.</p>
 <ul>
-<li>In the side data file, the first column must be the start vertex ID, the second column must be the destination vertex ID, if <code>withRanking</code> is <code>true</code>, the third column must be the rank value, and the following columns must be properties, and must correspond to the order in the configuration file.</li>
+<li>
+<p>Examples to create an SSL type Secret for the server or client:</p>
+<div class="highlight"><pre><span></span><code><span class="l l-Scalar l-Scalar-Plain">kubectl create secret tls &lt;client/server-cert-secret&gt; --key=&lt;client/server.key&gt; --cert=&lt;client/server.crt&gt;</span>
+</code></pre></div>
+<ul>
+<li><code>tls</code>: Indicates that the type of secret being created is TLS, which is used to store SSL/TLS certificates.</li>
+<li><code>&lt;client/server-cert-secret&gt;</code>: Specifies the name of the new secret being created, which can be customized.</li>
+<li><code>--key=&lt;client/server.key&gt;</code>: Specifies the path to the private key file of the SSL/TLS certificate to be stored in the secret.</li>
+<li><code>--cert=&lt;client/server.crt&gt;</code>: Specifies the path to the public key certificate file of the SSL/TLS certificate to be stored in the secret.</li>
 </ul>
 </li>
 </ul>
-</div>
+<ul>
+<li>
+<p>Create an encrypted CA certificate secret without specifying the private key of the CA.</p>
+<div class="highlight"><pre><span></span><code><span class="l l-Scalar l-Scalar-Plain">kubectl create secret tls &lt;ca-cert-secret&gt; --key --cert=&lt;ca.crt&gt;</span>
+</code></pre></div>
+<ul>
+<li><code>&lt;ca-cert-secret&gt;</code>: The name of the Secret to be created.</li>
+<li><code>&lt;ca.crt&gt;</code>: The path to the CA certificate file stored in the Secret. </li>
+</ul>
+</li>
+</ul>
+</li>
+<li>
+<p>Add server certificate, client certificate, CA certificate configuration, and encryption policy configuration in the corresponding cluster instance YAML file.</p>
+<p>For example, add encryption configuration for transmission data between client, Graph service, Meta service, and Storage service.</p>
+<div class="highlight"><pre><span></span><code><span class="nt">apiVersion</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">apps.nebula-graph.io/v1alpha1</span>
+<span class="nt">kind</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">NebulaCluster</span>
+<span class="nt">metadata</span><span class="p">:</span>
+<span class="w">  </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">nebula</span>
+<span class="w">  </span><span class="nt">namespace</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">default</span>
+<span class="nt">spec</span><span class="p">:</span>
+<span class="w">  </span><span class="nt">sslCerts</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">serverSecret</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;server-cert&quot;</span><span class="w">  </span><span class="l l-Scalar l-Scalar-Plain">// The name of the server Certificate Secret.</span>
+<span class="w">    </span><span class="nt">clientSecret</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;client-cert&quot;</span><span class="w">  </span><span class="l l-Scalar l-Scalar-Plain">// The name of the client Certificate Secret.</span>
+<span class="w">    </span><span class="nt">caSecret</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;ca-cert&quot;</span><span class="w">          </span><span class="l l-Scalar l-Scalar-Plain">// The name of the CA Certificate Secret.</span>
+<span class="w">  </span><span class="nt">graphd</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">config</span><span class="p">:</span>
+<span class="w">      </span><span class="nt">enable_ssl</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;true&quot;</span>
+<span class="w">  </span><span class="nt">metad</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">config</span><span class="p">:</span>
+<span class="w">      </span><span class="nt">enable_ssl</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;true&quot;</span>
+<span class="w">  </span><span class="nt">storaged</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">config</span><span class="p">:</span>
+<span class="w">      </span><span class="nt">enable_ssl</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;true&quot;</span>
+</code></pre></div>
+</li>
+<li>
+<p>Use <code>kubectl apply -f</code> to apply the file to the Kubernetes cluster.</p>
+</li>
+</ol>
+<p>This will enable SSL encryption in NebulaGraph and enhance the security of the data.</p>
 
   <hr>
 <div class="md-source-file">
   <small>
     
       Last update:
-      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">March 13, 2023</span>
+      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">May 23, 2023</span>
       
     
   </small>
@@ -5948,7 +5922,7 @@ student100,student102,1,96.2
     <nav class="md-footer__inner md-grid" aria-label="Footer" >
       
         
-        <a href="../config-with-header/" class="md-footer__link md-footer__link--prev" aria-label="Previous: Configuration with Header" rel="prev">
+        <a href="../8.4.manage-running-logs/" class="md-footer__link md-footer__link--prev" aria-label="Previous: Manage cluster logs" rel="prev">
           <div class="md-footer__button md-icon">
             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
           </div>
@@ -5957,20 +5931,20 @@ student100,student102,1,96.2
               <span class="md-footer__direction">
                 Previous
               </span>
-              Configuration with Header
+              Manage cluster logs
             </div>
           </div>
         </a>
       
       
         
-        <a href="../../nebula-exchange/about-exchange/ex-ug-what-is-exchange/" class="md-footer__link md-footer__link--next" aria-label="Next: What is NebulaGraph Exchange" rel="next">
+        <a href="../../9.upgrade-nebula-cluster/" class="md-footer__link md-footer__link--next" aria-label="Next: Upgrade NebulaGraph clusters" rel="next">
           <div class="md-footer__title">
             <div class="md-ellipsis">
               <span class="md-footer__direction">
                 Next
               </span>
-              What is NebulaGraph Exchange
+              Upgrade NebulaGraph clusters
             </div>
           </div>
           <div class="md-footer__button md-icon">
@@ -6018,24 +5992,24 @@ student100,student102,1,96.2
       <div class="md-dialog__inner md-typeset"></div>
     </div>
     
-    <script id="__config" type="application/json">{"base": "../..", "features": ["navigation.top", "header.autohide", "content.tabs.link"], "search": "../../assets/javascripts/workers/search.5bf1dace.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Search", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version.title": "Select version"}, "version": {"method": "mike"}}</script>
+    <script id="__config" type="application/json">{"base": "../../..", "features": ["navigation.top", "header.autohide", "content.tabs.link"], "search": "../../../assets/javascripts/workers/search.5bf1dace.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Search", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version.title": "Select version"}, "version": {"method": "mike"}}</script>
     
     
-      <script src="../../assets/javascripts/bundle.078830c0.min.js"></script>
+      <script src="../../../assets/javascripts/bundle.078830c0.min.js"></script>
       
-        <script src="../../js/jquery.js"></script>
+        <script src="../../../js/jquery.js"></script>
       
-        <script src="../../js/search.js"></script>
+        <script src="../../../js/search.js"></script>
       
-        <script src="../../js/config.js"></script>
+        <script src="../../../js/config.js"></script>
       
-        <script src="../../js/version-select.js"></script>
+        <script src="../../../js/version-select.js"></script>
       
         <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
       
         <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
       
-        <script src="../../js/hotjar.js"></script>
+        <script src="../../../js/hotjar.js"></script>
       
         <script src="https://www-cdn.nebula-graph.io/nebula-docs/nebula-docs.7e772ed81c779cacbefc.js"></script>
       

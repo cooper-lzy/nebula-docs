@@ -4473,34 +4473,6 @@
 
             
           
-            
-              
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../../nebula-importer/config-with-header/" class="md-nav__link">
-        Configuration with Header
-      </a>
-    </li>
-  
-
-            
-          
-            
-              
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../../nebula-importer/config-without-header/" class="md-nav__link">
-        Configuration without Header
-      </a>
-    </li>
-  
-
-            
-          
         </ul>
       </nav>
     </li>
@@ -5261,6 +5233,20 @@
 
             
           
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../nebula-operator/8.custom-cluster-configurations/8.5.enable-ssl/" class="md-nav__link">
+        Enable SSL encryption
+      </a>
+    </li>
+  
+
+            
+          
         </ul>
       </nav>
     </li>
@@ -5983,6 +5969,11 @@ nebula&gt; CREATE EDGE serve(start_year int, end_year int);
       # The key is the same as the value above, indicating that key is used as both VID and property name.
       vertex:{
           field:key
+      # udf:{
+      #            separator:&quot;_&quot;
+      #            oldColNames:[field-0,field-1,field-2]
+      #            newColName:new-field
+      #        }
       }
 
 
@@ -6046,11 +6037,21 @@ nebula&gt; CREATE EDGE serve(start_year int, end_year int);
       # In target, use a column in the topic as the source of the edge&#39;s destination vertex.
       source:{
           field:timestamp
+      # udf:{
+      #            separator:&quot;_&quot;
+      #            oldColNames:[field-0,field-1,field-2]
+      #            newColName:new-field
+      #        }
       }
 
 
       target:{
           field:offset
+      # udf:{
+      #            separator:&quot;_&quot;
+      #            oldColNames:[field-0,field-1,field-2]
+      #            newColName:new-field
+      #        }
       }
 
       # (Optional) Specify a column as the source of the rank.
@@ -6121,7 +6122,7 @@ nebula&gt; CREATE EDGE serve(start_year int, end_year int);
   <small>
     
       Last update:
-      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">March 13, 2023</span>
+      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">May 22, 2023</span>
       
     
   </small>
