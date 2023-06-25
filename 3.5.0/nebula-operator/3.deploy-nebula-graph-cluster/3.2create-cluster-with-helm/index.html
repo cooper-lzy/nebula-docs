@@ -5760,11 +5760,9 @@
 <li><a href="https://kubernetes.io/docs/concepts/storage/storage-classes/">You have created StorageClass</a></li>
 </ul>
 <!--
-- You have prepared the license file for NebulaGraph Enterprise Edition clusters.
 
-  !!! enterpriseonly
+- [LM has been installed and the License Key has been successfully loaded](../../9.about-license/2.license-management-suite/3.license-manager.md)
 
-        The license file is required only when creating a NebulaGraph Enterprise Edition cluster.
 -->
 
 <h2 id="create_clusters">Create clusters<a class="headerlink" href="#create_clusters" title="Permanent link">&para;</a></h2>
@@ -5790,46 +5788,22 @@
 <p>Create a namespace for your NebulaGraph cluster (If you have created one, skip this step).</p>
 <div class="highlight"><pre><span></span><code>kubectl<span class="w"> </span>create<span class="w"> </span>namespace<span class="w"> </span><span class="s2">&quot;</span><span class="si">${</span><span class="nv">NEBULA_CLUSTER_NAMESPACE</span><span class="si">}</span><span class="s2">&quot;</span>
 </code></pre></div>
-<!--
-
-5. Configure the license for the Enterprise Edition cluster.
-
-  !!! enterpriseonly
-
-      - This step is required only for creating a NebulaGraph Grpah Enterprise Edition cluster.
-
-      - Ignore this step if you are creating a NebulaGraph Community Edition cluster.
-
-
-  <div class="highlight"><pre><span></span><code>kubectl<span class="w"> </span>create<span class="w"> </span>secret<span class="w"> </span>generic<span class="w"> </span>nebula-license<span class="w"> </span>--from-file<span class="o">=</span>nebula.license
-</code></pre></div>
-
-  To check the details of the license, run the following command:
-
-  <div class="highlight"><pre><span></span><code>kubectl<span class="w"> </span>get<span class="w"> </span>secrets<span class="w"> </span>nebula-license<span class="w"> </span>-o<span class="w"> </span>yaml
-</code></pre></div>
-  -->
-
 </li>
 <li>
 <p>Apply the variables to the Helm chart to create a NebulaGraph cluster.</p>
 <div class="highlight"><pre><span></span><code>helm<span class="w"> </span>install<span class="w"> </span><span class="s2">&quot;</span><span class="si">${</span><span class="nv">NEBULA_CLUSTER_NAME</span><span class="si">}</span><span class="s2">&quot;</span><span class="w"> </span>nebula-operator/nebula-cluster<span class="w"> </span><span class="se">\</span>
-<span class="w">    </span>--namespace<span class="o">=</span><span class="s2">&quot;</span><span class="si">${</span><span class="nv">NEBULA_CLUSTER_NAMESPACE</span><span class="si">}</span><span class="s2">&quot;</span><span class="w"> </span><span class="se">\</span>
+<span class="w">    </span>&lt;!--
+<span class="w">    </span><span class="c1"># Configure the access address and port (default port is &#39;9119&#39;) that points to the LM. You must configure this parameter in order to obtain the license information. Only for NebulaGraph Enterprise Edition clusters.</span>
+<span class="w">    </span>--set<span class="w"> </span>nebula.metad.licenseManagerURL<span class="o">=</span><span class="sb">`</span><span class="m">192</span>.168.8.XXX:9119<span class="sb">`</span><span class="w"> </span><span class="se">\</span>
+<span class="w">    </span>--&gt;
 <span class="w">    </span>--set<span class="w"> </span><span class="nv">nameOverride</span><span class="o">=</span><span class="si">${</span><span class="nv">NEBULA_CLUSTER_NAME</span><span class="si">}</span><span class="w"> </span><span class="se">\</span>
 <span class="w">    </span>--set<span class="w"> </span>nebula.storageClassName<span class="o">=</span><span class="s2">&quot;</span><span class="si">${</span><span class="nv">STORAGE_CLASS_NAME</span><span class="si">}</span><span class="s2">&quot;</span><span class="w"> </span><span class="se">\</span>
 <span class="w">    </span><span class="c1"># Specify the version of the NebulaGraph cluster. </span>
 <span class="w">    </span>--set<span class="w"> </span>nebula.version<span class="o">=</span>v3.5.0<span class="w"> </span><span class="se">\ </span><span class="w"> </span>
 <span class="w">    </span><span class="c1"># Specify the version of the nebula-cluster chart. If not specified, the latest version of the chart is installed by default.     </span>
 <span class="w">    </span>--version<span class="o">=</span><span class="m">1</span>.5.0<span class="w"> </span>
+<span class="w">    </span>--namespace<span class="o">=</span><span class="s2">&quot;</span><span class="si">${</span><span class="nv">NEBULA_CLUSTER_NAMESPACE</span><span class="si">}</span><span class="s2">&quot;</span><span class="w"> </span><span class="se">\</span>
 </code></pre></div>
-<!--
-
-  !!! enterpriseonly
-
-        You must add `--set nebula.metad.license.secretName=nebula-license` and `--set nebula.metad.license.licenseKey=nebula.license` when creating a NebulaGraph Enterprise Edition cluster. 
-
-  -->
-
 </li>
 <li>
 <p>Check the status of the NebulaGraph cluster you created.</p>
@@ -6022,9 +5996,9 @@ You can click on [nebula-cluster/values.yaml](https://github.com/vesoft-inc/nebu
 <td>The data disk capacity for the Metad service.</td>
 </tr>
 <tr>
-<td align="left"><code>nebula.metad.license</code></td>
+<td align="left"><code>nebula.metad.licenseManagerURL</code></td>
 <td align="left"><code>{}</code></td>
-<td>The license configurations for creating a NebulaGraph Enterprise Edition cluster.</td>
+<td>Configure the URL that points to the LM, which consists of the access address and port number (default port <code>9119</code>) of the LM. For example, <code>192.168.8.100:9119</code>. <strong>You must configure this parameter in order to obtain the license information; otherwise, the enterprise edition cluster cannot be used.</strong></td>
 </tr>
 <tr>
 <td align="left"><code>nebula.metad.podLabels</code></td>
@@ -6149,7 +6123,7 @@ You can click on [nebula-cluster/values.yaml](https://github.com/vesoft-inc/nebu
   <small>
     
       Last update:
-      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">April 19, 2023</span>
+      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">May 29, 2023</span>
       
     
   </small>
