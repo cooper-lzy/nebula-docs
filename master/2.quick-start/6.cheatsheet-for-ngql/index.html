@@ -517,14 +517,14 @@
       
       
         <label class="md-nav__link" for="__nav_3">
-          About Vesoft licenses
+          About NebulaGraph licenses
           <span class="md-nav__icon md-icon"></span>
         </label>
       
-      <nav class="md-nav" aria-label="About Vesoft licenses" data-md-level="1">
+      <nav class="md-nav" aria-label="About NebulaGraph licenses" data-md-level="1">
         <label class="md-nav__title" for="__nav_3">
           <span class="md-nav__icon md-icon"></span>
-          About Vesoft licenses
+          About NebulaGraph licenses
         </label>
         <ul class="md-nav__list" data-md-scrollfix>
           
@@ -7082,6 +7082,20 @@
 
             
           
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../nebula-operator/8.custom-cluster-configurations/8.5.enable-ssl/" class="md-nav__link">
+        Enable SSL encryption
+      </a>
+    </li>
+  
+
+            
+          
         </ul>
       </nav>
     </li>
@@ -8525,8 +8539,8 @@ YIELD &lt;return_list&gt; [AS &lt;alias&gt;]
 </tr>
 <tr>
 <td>List edges with an edge types</td>
-<td><code>LOOKUP ON like YIELD edge AS e</code></td>
-<td>Shows how to retrieve the source Vertex IDs, destination vertex IDs, and ranks of all edges of the <code>like</code> edge type.</td>
+<td><code>LOOKUP ON follow YIELD edge AS e</code></td>
+<td>Shows how to retrieve the source Vertex IDs, destination vertex IDs, and ranks of all edges of the <code>follow</code> edge type.</td>
 </tr>
 <tr>
 <td>Count the numbers of vertices or edges</td>
@@ -8535,8 +8549,8 @@ YIELD &lt;return_list&gt; [AS &lt;alias&gt;]
 </tr>
 <tr>
 <td>Count the numbers of edges</td>
-<td><code>LOOKUP ON like YIELD id(vertex)| YIELD COUNT(*) AS Like_Count</code></td>
-<td>Shows how to count the number of edges of the <code>like</code> edge type.</td>
+<td><code>LOOKUP ON follow YIELD edge as e| YIELD COUNT(*) AS Like_Count</code></td>
+<td>Shows how to count the number of edges of the <code>follow</code> edge type.</td>
 </tr>
 </tbody>
 </table>
@@ -9378,7 +9392,7 @@ YIELD &lt;output&gt;;
   <small>
     
       Last update:
-      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">April 25, 2023</span>
+      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">May 26, 2023</span>
       
     
   </small>
