@@ -70,7 +70,18 @@
     
     
     
-  </head>
+   <link href="../../../assets/stylesheets/glightbox.min.css" rel="stylesheet"/><style>
+        html.glightbox-open { overflow: initial; height: 100%; }
+        .gslide-title { margin-top: 0px; user-select: text; }
+        .gslide-desc { color: #666; user-select: text; }
+        .gslide-image img { background: white; }
+        
+            .gscrollbar-fixer { padding-right: 15px; }
+            .gdesc-inner { font-size: 0.75rem; }
+            body[data-md-color-scheme="slate"] .gdesc-inner { background: var(--md-default-bg-color);}
+            body[data-md-color-scheme="slate"] .gslide-title { color: var(--md-default-fg-color);}
+            body[data-md-color-scheme="slate"] .gslide-desc { color: var(--md-default-fg-color);}
+            </style> <script src="../../../assets/javascripts/glightbox.min.js"></script></head>
   
   
     
@@ -507,46 +518,6 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../2.quick-start/1.quick-start-workflow/" class="md-nav__link">
-        Deploy NebulaGraph using Docker
-      </a>
-    </li>
-  
-
-            
-          
-            
-              
-  
-  
-  
-    
-    <li class="md-nav__item md-nav__item--nested">
-      
-      
-        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_3_2" type="checkbox" id="__nav_3_2" >
-      
-      
-      
-      
-        <label class="md-nav__link" for="__nav_3_2">
-          Deploy NebulaGraph on-premise
-          <span class="md-nav__icon md-icon"></span>
-        </label>
-      
-      <nav class="md-nav" aria-label="Deploy NebulaGraph on-premise" data-md-level="2">
-        <label class="md-nav__title" for="__nav_3_2">
-          <span class="md-nav__icon md-icon"></span>
-          Deploy NebulaGraph on-premise
-        </label>
-        <ul class="md-nav__list" data-md-scrollfix>
-          
-            
-              
-  
-  
-  
-    <li class="md-nav__item">
       <a href="../../../2.quick-start/2.install-nebula-graph/" class="md-nav__link">
         Step 1 Install NebulaGraph
       </a>
@@ -606,13 +577,6 @@
       <a href="../../../2.quick-start/4.nebula-graph-crud/" class="md-nav__link">
         Step 5 Use nGQL (CRUD)
       </a>
-    </li>
-  
-
-            
-          
-        </ul>
-      </nav>
     </li>
   
 
@@ -3056,7 +3020,7 @@
   
     <li class="md-nav__item">
       <a href="../../../4.deployment-and-installation/manage-service/" class="md-nav__link">
-        Manage Service
+        Manage services
       </a>
     </li>
   
@@ -3070,7 +3034,7 @@
   
     <li class="md-nav__item">
       <a href="../../../4.deployment-and-installation/connect-to-nebula-graph/" class="md-nav__link">
-        Connect to Service
+        Connect to services
       </a>
     </li>
   
@@ -3084,7 +3048,7 @@
   
     <li class="md-nav__item">
       <a href="../../../4.deployment-and-installation/manage-storage-host/" class="md-nav__link">
-        Manage Storage host
+        Manage Storage hosts
       </a>
     </li>
   
@@ -3639,6 +3603,20 @@
           
         </ul>
       </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../backup-and-restore/3.manage-snapshot/" class="md-nav__link">
+        Manage snapshots
+      </a>
     </li>
   
 
@@ -4227,7 +4205,7 @@
   
     <li class="md-nav__item">
       <a href="../../../nebula-studio/manage-schema/st-ug-crud-space/" class="md-nav__link">
-        Operate graph spaces
+        Manage graph spaces
       </a>
     </li>
   
@@ -4241,7 +4219,7 @@
   
     <li class="md-nav__item">
       <a href="../../../nebula-studio/manage-schema/st-ug-crud-tag/" class="md-nav__link">
-        Operate Tags
+        Manage tags
       </a>
     </li>
   
@@ -4255,7 +4233,7 @@
   
     <li class="md-nav__item">
       <a href="../../../nebula-studio/manage-schema/st-ug-crud-edge-type/" class="md-nav__link">
-        Operate Edge types
+        Manage edge types
       </a>
     </li>
   
@@ -4269,7 +4247,7 @@
   
     <li class="md-nav__item">
       <a href="../../../nebula-studio/manage-schema/st-ug-crud-index/" class="md-nav__link">
-        Operate Indexes
+        Manage indexes
       </a>
     </li>
   
@@ -4283,7 +4261,7 @@
   
     <li class="md-nav__item">
       <a href="../../../nebula-studio/manage-schema/st-ug-view-schema/" class="md-nav__link">
-        View Schema
+        View schema
       </a>
     </li>
   
@@ -5305,6 +5283,20 @@
   
   
     <li class="md-nav__item">
+      <a href="../../10.backup-restore-using-operator/" class="md-nav__link">
+        Backup and restore
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
       <a href="../../5.operator-failover/" class="md-nav__link">
         Self-healing
       </a>
@@ -5769,7 +5761,9 @@ $<span class="w"> </span><span class="nb">cd</span><span class="w"> </span>/usr/
 <span class="nt">spec</span><span class="p">:</span>
 <span class="w">  </span><span class="nt">graphd</span><span class="p">:</span>
 <span class="w">    </span><span class="nt">config</span><span class="p">:</span>
-<span class="w">      </span><span class="c1"># Whether to include a timestamp in the log file name. You must set this parameter to false to enable log rotation. It is set to true by default.</span>
+<span class="w">      </span><span class="c1"># Whether to include a timestamp in the log file name. </span>
+<span class="w">      </span><span class="c1"># You must set this parameter to false to enable log rotation. </span>
+<span class="w">      </span><span class="c1"># It is set to true by default.</span>
 <span class="w">      </span><span class="s">&quot;timestamp_in_logfile_name&quot;</span><span class="p p-Indicator">:</span><span class="w"> </span><span class="s">&quot;false&quot;</span>
 <span class="w">  </span><span class="nt">metad</span><span class="p">:</span>
 <span class="w">    </span><span class="nt">config</span><span class="p">:</span>
@@ -5778,7 +5772,8 @@ $<span class="w"> </span><span class="nb">cd</span><span class="w"> </span>/usr/
 <span class="w">    </span><span class="nt">config</span><span class="p">:</span>
 <span class="w">      </span><span class="s">&quot;timestamp_in_logfile_name&quot;</span><span class="p p-Indicator">:</span><span class="w"> </span><span class="s">&quot;false&quot;</span>
 <span class="w">  </span><span class="nt">logRotate</span><span class="p">:</span><span class="w"> </span><span class="c1"># Log rotation configuration</span>
-<span class="w">    </span><span class="c1"># The number of times a log file is rotated before being deleted. The default value is 5, and 0 means the log file will not be rotated before being deleted.</span>
+<span class="w">    </span><span class="c1"># The number of times a log file is rotated before being deleted.</span>
+<span class="w">    </span><span class="c1"># The default value is 5, and 0 means the log file will not be rotated before being deleted.</span>
 <span class="w">    </span><span class="nt">rotate</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">5</span>
 <span class="w">    </span><span class="c1"># The log file is rotated only if it grows larger than the specified size. The default value is 200M.</span>
 <span class="w">    </span><span class="nt">size</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;200M&quot;</span>
@@ -5832,7 +5827,7 @@ $<span class="w"> </span><span class="nb">cd</span><span class="w"> </span>/usr/
   <small>
     
       Last update:
-      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">August 11, 2023</span>
+      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">August 24, 2023</span>
       
     
   </small>
@@ -5958,5 +5953,5 @@ $<span class="w"> </span><span class="nb">cd</span><span class="w"> </span>/usr/
         <script src="https://www-cdn.nebula-graph.io/nebula-docs/nebula-docs.7e772ed81c779cacbefc.js"></script>
       
     
-  </body>
+  <script>document$.subscribe(() => {const lightbox = GLightbox({"touchNavigation": true, "loop": false, "zoomable": true, "draggable": true, "openEffect": "zoom", "closeEffect": "zoom", "slideEffect": "slide"});})</script></body>
 </html>

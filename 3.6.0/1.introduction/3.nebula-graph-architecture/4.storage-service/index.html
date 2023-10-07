@@ -70,7 +70,18 @@
     
     
     
-  </head>
+   <link href="../../../assets/stylesheets/glightbox.min.css" rel="stylesheet"/><style>
+        html.glightbox-open { overflow: initial; height: 100%; }
+        .gslide-title { margin-top: 0px; user-select: text; }
+        .gslide-desc { color: #666; user-select: text; }
+        .gslide-image img { background: white; }
+        
+            .gscrollbar-fixer { padding-right: 15px; }
+            .gdesc-inner { font-size: 0.75rem; }
+            body[data-md-color-scheme="slate"] .gdesc-inner { background: var(--md-default-bg-color);}
+            body[data-md-color-scheme="slate"] .gslide-title { color: var(--md-default-fg-color);}
+            body[data-md-color-scheme="slate"] .gslide-desc { color: var(--md-default-fg-color);}
+            </style> <script src="../../../assets/javascripts/glightbox.min.js"></script></head>
   
   
     
@@ -675,46 +686,6 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../2.quick-start/1.quick-start-workflow/" class="md-nav__link">
-        Deploy NebulaGraph using Docker
-      </a>
-    </li>
-  
-
-            
-          
-            
-              
-  
-  
-  
-    
-    <li class="md-nav__item md-nav__item--nested">
-      
-      
-        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_3_2" type="checkbox" id="__nav_3_2" >
-      
-      
-      
-      
-        <label class="md-nav__link" for="__nav_3_2">
-          Deploy NebulaGraph on-premise
-          <span class="md-nav__icon md-icon"></span>
-        </label>
-      
-      <nav class="md-nav" aria-label="Deploy NebulaGraph on-premise" data-md-level="2">
-        <label class="md-nav__title" for="__nav_3_2">
-          <span class="md-nav__icon md-icon"></span>
-          Deploy NebulaGraph on-premise
-        </label>
-        <ul class="md-nav__list" data-md-scrollfix>
-          
-            
-              
-  
-  
-  
-    <li class="md-nav__item">
       <a href="../../../2.quick-start/2.install-nebula-graph/" class="md-nav__link">
         Step 1 Install NebulaGraph
       </a>
@@ -774,13 +745,6 @@
       <a href="../../../2.quick-start/4.nebula-graph-crud/" class="md-nav__link">
         Step 5 Use nGQL (CRUD)
       </a>
-    </li>
-  
-
-            
-          
-        </ul>
-      </nav>
     </li>
   
 
@@ -3224,7 +3188,7 @@
   
     <li class="md-nav__item">
       <a href="../../../4.deployment-and-installation/manage-service/" class="md-nav__link">
-        Manage Service
+        Manage services
       </a>
     </li>
   
@@ -3238,7 +3202,7 @@
   
     <li class="md-nav__item">
       <a href="../../../4.deployment-and-installation/connect-to-nebula-graph/" class="md-nav__link">
-        Connect to Service
+        Connect to services
       </a>
     </li>
   
@@ -3252,7 +3216,7 @@
   
     <li class="md-nav__item">
       <a href="../../../4.deployment-and-installation/manage-storage-host/" class="md-nav__link">
-        Manage Storage host
+        Manage Storage hosts
       </a>
     </li>
   
@@ -3807,6 +3771,20 @@
           
         </ul>
       </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../backup-and-restore/3.manage-snapshot/" class="md-nav__link">
+        Manage snapshots
+      </a>
     </li>
   
 
@@ -4395,7 +4373,7 @@
   
     <li class="md-nav__item">
       <a href="../../../nebula-studio/manage-schema/st-ug-crud-space/" class="md-nav__link">
-        Operate graph spaces
+        Manage graph spaces
       </a>
     </li>
   
@@ -4409,7 +4387,7 @@
   
     <li class="md-nav__item">
       <a href="../../../nebula-studio/manage-schema/st-ug-crud-tag/" class="md-nav__link">
-        Operate Tags
+        Manage tags
       </a>
     </li>
   
@@ -4423,7 +4401,7 @@
   
     <li class="md-nav__item">
       <a href="../../../nebula-studio/manage-schema/st-ug-crud-edge-type/" class="md-nav__link">
-        Operate Edge types
+        Manage edge types
       </a>
     </li>
   
@@ -4437,7 +4415,7 @@
   
     <li class="md-nav__item">
       <a href="../../../nebula-studio/manage-schema/st-ug-crud-index/" class="md-nav__link">
-        Operate Indexes
+        Manage indexes
       </a>
     </li>
   
@@ -4451,7 +4429,7 @@
   
     <li class="md-nav__item">
       <a href="../../../nebula-studio/manage-schema/st-ug-view-schema/" class="md-nav__link">
-        View Schema
+        View schema
       </a>
     </li>
   
@@ -5414,6 +5392,20 @@
   
   
     <li class="md-nav__item">
+      <a href="../../../nebula-operator/10.backup-restore-using-operator/" class="md-nav__link">
+        Backup and restore
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
       <a href="../../../nebula-operator/5.operator-failover/" class="md-nav__link">
         Self-healing
       </a>
@@ -5982,7 +5974,7 @@
 <li>Supports synchronizing with the third party systems, such as <a href="../../../4.deployment-and-installation/6.deploy-text-based-index/2.deploy-es/">Elasticsearch</a>.</li>
 </ul>
 <h2 id="the_architecture_of_the_storage_service">The architecture of the Storage Service<a class="headerlink" href="#the_architecture_of_the_storage_service" title="Permanent link">&para;</a></h2>
-<p><img alt="image" src="https://www-cdn.nebula-graph.com.cn/nebula-blog/nebula-reading-storage-architecture.png" /></p>
+<p><a class="glightbox" href="https://www-cdn.nebula-graph.com.cn/nebula-blog/nebula-reading-storage-architecture.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="image" src="https://www-cdn.nebula-graph.com.cn/nebula-blog/nebula-reading-storage-architecture.png" /></a></p>
 <p>The Storage Service is run by the nebula-storaged process. Users can deploy nebula-storaged processes on different occasions. For example, users can deploy 1 nebula-storaged process in a test environment and deploy 3 nebula-storaged processes in a production environment.</p>
 <p>All the nebula-storaged processes consist of a Raft-based cluster. There are three layers in the Storage Service:</p>
 <ul>
@@ -6015,7 +6007,7 @@
 </ul>
 <p>The following will describe some features of the Storage Service based on the above architecture.</p>
 <h2 id="storage_writing_process">Storage writing process<a class="headerlink" href="#storage_writing_process" title="Permanent link">&para;</a></h2>
-<p><img alt="image" src="https://docs-cdn.nebula-graph.com.cn/figures/storage_write_process.png" /></p>
+<p><a class="glightbox" href="https://docs-cdn.nebula-graph.com.cn/figures/storage_write_process.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="image" src="https://docs-cdn.nebula-graph.com.cn/figures/storage_write_process.png" /></a></p>
 <h2 id="kvstore">KVStore<a class="headerlink" href="#kvstore" title="Permanent link">&para;</a></h2>
 <p>NebulaGraph develops and customizes its built-in KVStore for the following reasons.</p>
 <ul>
@@ -6052,7 +6044,7 @@
 <li>
 <p>The storage structure of vertices</p>
 <p>Different from NebulaGraph version 2.x, version 3.x added a new key for each vertex. Compared to the old key that still exists, the new key has no <code>TagID</code> field and no value. Vertices in NebulaGraph can now live without tags owing to the new key.</p>
-<p><img alt="The vertex structure of NebulaGraph" src="https://docs-cdn.nebula-graph.com.cn/figures/3.0-vertex-key.png" /></p>
+<p><a class="glightbox" href="https://docs-cdn.nebula-graph.com.cn/figures/3.0-vertex-key.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="The vertex structure of NebulaGraph" src="https://docs-cdn.nebula-graph.com.cn/figures/3.0-vertex-key.png" /></a></p>
 <table>
 <thead>
 <tr>
@@ -6086,7 +6078,7 @@
 </li>
 </ul>
 <ul>
-<li>The storage structure of edges<p><img alt="The edge structure of NebulaGraph" src="https://docs-cdn.nebula-graph.com.cn/figures/3.0-edge-key.png" /></p>
+<li>The storage structure of edges<p><a class="glightbox" href="https://docs-cdn.nebula-graph.com.cn/figures/3.0-edge-key.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="The edge structure of NebulaGraph" src="https://docs-cdn.nebula-graph.com.cn/figures/3.0-edge-key.png" /></a></p>
 <table>
 <thead>
 <tr>
@@ -6132,10 +6124,10 @@
 <p>NebulaGraph will store the properties of vertex and edges in order after encoding them. Since the length of fixed-length properties is fixed, queries can be made in no time according to offset. Before decoding, NebulaGraph needs to get (and cache) the schema information in the Meta Service. In addition, when encoding properties, NebulaGraph will add the corresponding schema version to support online schema change.</p>
 <h2 id="data_partitioning">Data partitioning<a class="headerlink" href="#data_partitioning" title="Permanent link">&para;</a></h2>
 <p>Since in an ultra-large-scale relational network, vertices can be as many as tens to hundreds of billions, and edges are even more than trillions. Even if only vertices and edges are stored, the storage capacity of both exceeds that of ordinary servers. Therefore, NebulaGraph uses hash to shard the graph elements and store them in different partitions.</p>
-<p><img alt="data partitioning" src="https://www-cdn.nebula-graph.com.cn/nebula-blog/DataModel02.png" /></p>
+<p><a class="glightbox" href="https://www-cdn.nebula-graph.com.cn/nebula-blog/DataModel02.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="data partitioning" src="https://www-cdn.nebula-graph.com.cn/nebula-blog/DataModel02.png" /></a></p>
 <h3 id="edge_partitioning_and_storage_amplification">Edge partitioning and storage amplification<a class="headerlink" href="#edge_partitioning_and_storage_amplification" title="Permanent link">&para;</a></h3>
 <p>In NebulaGraph, an edge corresponds to two key-value pairs on the hard disk. When there are lots of edges and each has many properties, storage amplification will be obvious. The storage format of edges is shown in the figure below.</p>
-<p><img alt="partitioning by edge" src="https://docs-cdn.nebula-graph.com.cn/figures/edge-division.png" /></p>
+<p><a class="glightbox" href="https://docs-cdn.nebula-graph.com.cn/figures/edge-division.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="partitioning by edge" src="https://docs-cdn.nebula-graph.com.cn/figures/edge-division.png" /></a></p>
 <p>In this example, SrcVertex connects DstVertex via EdgeA, forming the path of <code>(SrcVertex)-[EdgeA]-&gt;(DstVertex)</code>. SrcVertex, DstVertex, and EdgeA will all be stored in Partition x and Partition y as four key-value pairs in the storage layer. Details are as follows:</p>
 <ul>
 <li>The key value of SrcVertex is stored in Partition x. Key fields include Type, PartID(x), VID(Src), and TagID. SerializedValue, namely Value, refers to serialized vertex properties.</li>
@@ -6331,13 +6323,13 @@ You can query the cache stats through the cURL command `curl "http://[storaged I
       
       
         
-        <a href="../../../2.quick-start/1.quick-start-workflow/" class="md-footer__link md-footer__link--next" aria-label="Next: Deploy NebulaGraph using Docker" rel="next">
+        <a href="../../../2.quick-start/2.install-nebula-graph/" class="md-footer__link md-footer__link--next" aria-label="Next: Step 1 Install NebulaGraph" rel="next">
           <div class="md-footer__title">
             <div class="md-ellipsis">
               <span class="md-footer__direction">
                 Next
               </span>
-              Deploy NebulaGraph using Docker
+              Step 1 Install NebulaGraph
             </div>
           </div>
           <div class="md-footer__button md-icon">
@@ -6407,5 +6399,5 @@ You can query the cache stats through the cURL command `curl "http://[storaged I
         <script src="https://www-cdn.nebula-graph.io/nebula-docs/nebula-docs.7e772ed81c779cacbefc.js"></script>
       
     
-  </body>
+  <script>document$.subscribe(() => {const lightbox = GLightbox({"touchNavigation": true, "loop": false, "zoomable": true, "draggable": true, "openEffect": "zoom", "closeEffect": "zoom", "slideEffect": "slide"});})</script></body>
 </html>

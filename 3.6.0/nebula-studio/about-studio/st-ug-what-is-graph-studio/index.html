@@ -70,7 +70,18 @@
     
     
     
-  </head>
+   <link href="../../../assets/stylesheets/glightbox.min.css" rel="stylesheet"/><style>
+        html.glightbox-open { overflow: initial; height: 100%; }
+        .gslide-title { margin-top: 0px; user-select: text; }
+        .gslide-desc { color: #666; user-select: text; }
+        .gslide-image img { background: white; }
+        
+            .gscrollbar-fixer { padding-right: 15px; }
+            .gdesc-inner { font-size: 0.75rem; }
+            body[data-md-color-scheme="slate"] .gdesc-inner { background: var(--md-default-bg-color);}
+            body[data-md-color-scheme="slate"] .gslide-title { color: var(--md-default-fg-color);}
+            body[data-md-color-scheme="slate"] .gslide-desc { color: var(--md-default-fg-color);}
+            </style> <script src="../../../assets/javascripts/glightbox.min.js"></script></head>
   
   
     
@@ -507,46 +518,6 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../2.quick-start/1.quick-start-workflow/" class="md-nav__link">
-        Deploy NebulaGraph using Docker
-      </a>
-    </li>
-  
-
-            
-          
-            
-              
-  
-  
-  
-    
-    <li class="md-nav__item md-nav__item--nested">
-      
-      
-        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_3_2" type="checkbox" id="__nav_3_2" >
-      
-      
-      
-      
-        <label class="md-nav__link" for="__nav_3_2">
-          Deploy NebulaGraph on-premise
-          <span class="md-nav__icon md-icon"></span>
-        </label>
-      
-      <nav class="md-nav" aria-label="Deploy NebulaGraph on-premise" data-md-level="2">
-        <label class="md-nav__title" for="__nav_3_2">
-          <span class="md-nav__icon md-icon"></span>
-          Deploy NebulaGraph on-premise
-        </label>
-        <ul class="md-nav__list" data-md-scrollfix>
-          
-            
-              
-  
-  
-  
-    <li class="md-nav__item">
       <a href="../../../2.quick-start/2.install-nebula-graph/" class="md-nav__link">
         Step 1 Install NebulaGraph
       </a>
@@ -606,13 +577,6 @@
       <a href="../../../2.quick-start/4.nebula-graph-crud/" class="md-nav__link">
         Step 5 Use nGQL (CRUD)
       </a>
-    </li>
-  
-
-            
-          
-        </ul>
-      </nav>
     </li>
   
 
@@ -3056,7 +3020,7 @@
   
     <li class="md-nav__item">
       <a href="../../../4.deployment-and-installation/manage-service/" class="md-nav__link">
-        Manage Service
+        Manage services
       </a>
     </li>
   
@@ -3070,7 +3034,7 @@
   
     <li class="md-nav__item">
       <a href="../../../4.deployment-and-installation/connect-to-nebula-graph/" class="md-nav__link">
-        Connect to Service
+        Connect to services
       </a>
     </li>
   
@@ -3084,7 +3048,7 @@
   
     <li class="md-nav__item">
       <a href="../../../4.deployment-and-installation/manage-storage-host/" class="md-nav__link">
-        Manage Storage host
+        Manage Storage hosts
       </a>
     </li>
   
@@ -3644,6 +3608,20 @@
 
             
           
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../backup-and-restore/3.manage-snapshot/" class="md-nav__link">
+        Manage snapshots
+      </a>
+    </li>
+  
+
+            
+          
         </ul>
       </nav>
     </li>
@@ -4060,8 +4038,8 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#released_versions" class="md-nav__link">
-    Released versions
+  <a href="#deployment" class="md-nav__link">
+    Deployment
   </a>
   
 </li>
@@ -4307,7 +4285,7 @@
   
     <li class="md-nav__item">
       <a href="../../manage-schema/st-ug-crud-space/" class="md-nav__link">
-        Operate graph spaces
+        Manage graph spaces
       </a>
     </li>
   
@@ -4321,7 +4299,7 @@
   
     <li class="md-nav__item">
       <a href="../../manage-schema/st-ug-crud-tag/" class="md-nav__link">
-        Operate Tags
+        Manage tags
       </a>
     </li>
   
@@ -4335,7 +4313,7 @@
   
     <li class="md-nav__item">
       <a href="../../manage-schema/st-ug-crud-edge-type/" class="md-nav__link">
-        Operate Edge types
+        Manage edge types
       </a>
     </li>
   
@@ -4349,7 +4327,7 @@
   
     <li class="md-nav__item">
       <a href="../../manage-schema/st-ug-crud-index/" class="md-nav__link">
-        Operate Indexes
+        Manage indexes
       </a>
     </li>
   
@@ -4363,7 +4341,7 @@
   
     <li class="md-nav__item">
       <a href="../../manage-schema/st-ug-view-schema/" class="md-nav__link">
-        View Schema
+        View schema
       </a>
     </li>
   
@@ -5326,6 +5304,20 @@
   
   
     <li class="md-nav__item">
+      <a href="../../../nebula-operator/10.backup-restore-using-operator/" class="md-nav__link">
+        Backup and restore
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
       <a href="../../../nebula-operator/5.operator-failover/" class="md-nav__link">
         Self-healing
       </a>
@@ -5725,8 +5717,8 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#released_versions" class="md-nav__link">
-    Released versions
+  <a href="#deployment" class="md-nav__link">
+    Deployment
   </a>
   
 </li>
@@ -5792,8 +5784,8 @@
 <p class="admonition-title">Note</p>
 <p>You can also try some functions <a href="https://playground.nebula-graph.io/explorer">online</a> in Studio.</p>
 </div>
-<h2 id="released_versions">Released versions<a class="headerlink" href="#released_versions" title="Permanent link">&para;</a></h2>
-<p>In addition to deploying Studio with RPM-based, DEB-based, or Tar-based package, or with Docker. You can also deploy Studio with Helm in the Kubernetes cluster. For more information, see <a href="../../deploy-connect/st-ug-deploy/">Deploy Studio</a>.</p>
+<h2 id="deployment">Deployment<a class="headerlink" href="#deployment" title="Permanent link">&para;</a></h2>
+<p>In addition to deploying Studio with RPM-based, DEB-based, or Tar-based packages, or with Docker, you can also deploy Studio with Helm in the Kubernetes cluster. For more information, see <a href="../../deploy-connect/st-ug-deploy/">Deploy Studio</a>.</p>
 <!--
 - Cloud Service: You can create NebulaGraph database instances in NebulaGraph Cloud Service and connect Cloud Service Studio with one click. For more information, see [NebulaGraph Cloud Service Manual](https://cloud-docs.nebula-graph.com.cn/cn/posts/manage-instances/dbaas-ug-connect-nebulastudio/ "Click to go to NebulaGraph Cloud Service Manual").
 -->
@@ -5883,14 +5875,14 @@ For Studio on Cloud, only the instance creator and the NebulaGraph Cloud Service
 <h2 id="check_updates">Check updates<a class="headerlink" href="#check_updates" title="Permanent link">&para;</a></h2>
 <p>Studio is in development. Users can view the latest releases features through <a href="../../../20.appendix/release-notes/studio-release-note/">Changelog</a>.</p>
 <p>To view the Changelog, on the upper-right corner of the page, click the version and then <strong>New version</strong>.</p>
-<p><img alt="On the upper right corner of the page, click Version and then New Version" src="https://docs-cdn.nebula-graph.com.cn/figures/st-ug-001-en.png" /></p>
+<p><a class="glightbox" href="https://docs-cdn.nebula-graph.com.cn/figures/st-ug-001-en.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="On the upper right corner of the page, click Version and then New Version" src="https://docs-cdn.nebula-graph.com.cn/figures/st-ug-001-en.png" /></a></p>
 
   <hr>
 <div class="md-source-file">
   <small>
     
       Last update:
-      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">July 18, 2023</span>
+      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">September 7, 2023</span>
       
     
   </small>
@@ -6016,5 +6008,5 @@ For Studio on Cloud, only the instance creator and the NebulaGraph Cloud Service
         <script src="https://www-cdn.nebula-graph.io/nebula-docs/nebula-docs.7e772ed81c779cacbefc.js"></script>
       
     
-  </body>
+  <script>document$.subscribe(() => {const lightbox = GLightbox({"touchNavigation": true, "loop": false, "zoomable": true, "draggable": true, "openEffect": "zoom", "closeEffect": "zoom", "slideEffect": "slide"});})</script></body>
 </html>

@@ -70,7 +70,18 @@
     
     
     
-  </head>
+   <link href="../../../assets/stylesheets/glightbox.min.css" rel="stylesheet"/><style>
+        html.glightbox-open { overflow: initial; height: 100%; }
+        .gslide-title { margin-top: 0px; user-select: text; }
+        .gslide-desc { color: #666; user-select: text; }
+        .gslide-image img { background: white; }
+        
+            .gscrollbar-fixer { padding-right: 15px; }
+            .gdesc-inner { font-size: 0.75rem; }
+            body[data-md-color-scheme="slate"] .gdesc-inner { background: var(--md-default-bg-color);}
+            body[data-md-color-scheme="slate"] .gslide-title { color: var(--md-default-fg-color);}
+            body[data-md-color-scheme="slate"] .gslide-desc { color: var(--md-default-fg-color);}
+            </style> <script src="../../../assets/javascripts/glightbox.min.js"></script></head>
   
   
     
@@ -507,46 +518,6 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../2.quick-start/1.quick-start-workflow/" class="md-nav__link">
-        Deploy NebulaGraph using Docker
-      </a>
-    </li>
-  
-
-            
-          
-            
-              
-  
-  
-  
-    
-    <li class="md-nav__item md-nav__item--nested">
-      
-      
-        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_3_2" type="checkbox" id="__nav_3_2" >
-      
-      
-      
-      
-        <label class="md-nav__link" for="__nav_3_2">
-          Deploy NebulaGraph on-premise
-          <span class="md-nav__icon md-icon"></span>
-        </label>
-      
-      <nav class="md-nav" aria-label="Deploy NebulaGraph on-premise" data-md-level="2">
-        <label class="md-nav__title" for="__nav_3_2">
-          <span class="md-nav__icon md-icon"></span>
-          Deploy NebulaGraph on-premise
-        </label>
-        <ul class="md-nav__list" data-md-scrollfix>
-          
-            
-              
-  
-  
-  
-    <li class="md-nav__item">
       <a href="../../../2.quick-start/2.install-nebula-graph/" class="md-nav__link">
         Step 1 Install NebulaGraph
       </a>
@@ -606,13 +577,6 @@
       <a href="../../../2.quick-start/4.nebula-graph-crud/" class="md-nav__link">
         Step 5 Use nGQL (CRUD)
       </a>
-    </li>
-  
-
-            
-          
-        </ul>
-      </nav>
     </li>
   
 
@@ -3056,7 +3020,7 @@
   
     <li class="md-nav__item">
       <a href="../../../4.deployment-and-installation/manage-service/" class="md-nav__link">
-        Manage Service
+        Manage services
       </a>
     </li>
   
@@ -3070,7 +3034,7 @@
   
     <li class="md-nav__item">
       <a href="../../../4.deployment-and-installation/connect-to-nebula-graph/" class="md-nav__link">
-        Connect to Service
+        Connect to services
       </a>
     </li>
   
@@ -3084,7 +3048,7 @@
   
     <li class="md-nav__item">
       <a href="../../../4.deployment-and-installation/manage-storage-host/" class="md-nav__link">
-        Manage Storage host
+        Manage Storage hosts
       </a>
     </li>
   
@@ -3780,6 +3744,20 @@
 
             
           
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../backup-and-restore/3.manage-snapshot/" class="md-nav__link">
+        Manage snapshots
+      </a>
+    </li>
+  
+
+            
+          
         </ul>
       </nav>
     </li>
@@ -4363,7 +4341,7 @@
   
     <li class="md-nav__item">
       <a href="../../../nebula-studio/manage-schema/st-ug-crud-space/" class="md-nav__link">
-        Operate graph spaces
+        Manage graph spaces
       </a>
     </li>
   
@@ -4377,7 +4355,7 @@
   
     <li class="md-nav__item">
       <a href="../../../nebula-studio/manage-schema/st-ug-crud-tag/" class="md-nav__link">
-        Operate Tags
+        Manage tags
       </a>
     </li>
   
@@ -4391,7 +4369,7 @@
   
     <li class="md-nav__item">
       <a href="../../../nebula-studio/manage-schema/st-ug-crud-edge-type/" class="md-nav__link">
-        Operate Edge types
+        Manage edge types
       </a>
     </li>
   
@@ -4405,7 +4383,7 @@
   
     <li class="md-nav__item">
       <a href="../../../nebula-studio/manage-schema/st-ug-crud-index/" class="md-nav__link">
-        Operate Indexes
+        Manage indexes
       </a>
     </li>
   
@@ -4419,7 +4397,7 @@
   
     <li class="md-nav__item">
       <a href="../../../nebula-studio/manage-schema/st-ug-view-schema/" class="md-nav__link">
-        View Schema
+        View schema
       </a>
     </li>
   
@@ -5382,6 +5360,20 @@
   
   
     <li class="md-nav__item">
+      <a href="../../../nebula-operator/10.backup-restore-using-operator/" class="md-nav__link">
+        Backup and restore
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
       <a href="../../../nebula-operator/5.operator-failover/" class="md-nav__link">
         Self-healing
       </a>
@@ -6306,8 +6298,8 @@ For more information about audit log, see [Audit log](../2.log-management/audit-
 </tbody>
 </table>
 <h2 id="experimental_configurations">Experimental configurations<a class="headerlink" href="#experimental_configurations" title="Permanent link">&para;</a></h2>
-<div class="admonition enterpriseonly">
-<p class="admonition-title">Enterpriseonly</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
 <p>The switch of the experimental feature is only available in the Community Edition.</p>
 </div>
 <table>
@@ -6365,7 +6357,7 @@ For more information about audit log, see [Audit log](../2.log-management/audit-
 <tr>
 <td align="left"><code>memory_tracker_limit_ratio</code></td>
 <td align="left"><code>0.8</code></td>
-<td align="left">The percentage of free memory. When the free memory is lower than this value, NebulaGraph stops accepting queries. <br/> Calculated as follows: <br/> <code>Free memory / (Total memory - Reserved memory)</code> <br/> <strong>Note</strong>: For clusters with a mixed-used environment, the value of <code>memory_tracker_limit_ratio</code> should be set to a <strong>lower</strong> value. For example, when Graphd is expected to occupy only 50% of memory, the value can be set to less than <code>0.5</code>.</td>
+<td align="left">The value of this parameter can be set to <code>(0, 1]</code>, <code>2</code>, and <code>3</code>.<br/><strong>Caution: When setting this parameter, ensure that the value of <code>system_memory_high_watermark_ratio</code> is not set to <code>1</code>, otherwise the value of this parameter will not take effect.</strong><br/><code>(0, 1]</code>: The percentage of free memory. When the free memory is lower than this value, NebulaGraph stops accepting queries. <br/> Calculated as follows: <br/> <code>Free memory / (Total memory - Reserved memory)</code> <br/> <strong>Note</strong>: For clusters with a mixed-used environment, the value of <code>memory_tracker_limit_ratio</code> should be set to a <strong>lower</strong> value. For example, when Graphd is expected to occupy only 50% of memory, the value can be set to less than <code>0.5</code>.<br/><code>2</code>: Dynamic Self Adaptive mode. MemoryTracker dynamically adjusts the available memory based on the system's current available memory. <br/><strong>Note</strong>: This feature is experimental. As memory usage cannot be monitored in real time in dynamic adaptive mode, an OOM error may still occur to handle large memory allocations. <br/><code>3</code>: Disable MemoryTracker. MemoryTracker only logs memory usage and does not interfere with executions even if the limit is exceeded.</td>
 <td align="left">Yes</td>
 </tr>
 <tr>
@@ -6437,13 +6429,32 @@ For more information about audit log, see [Audit log](../2.log-management/audit-
 </tr>
 </tbody>
 </table>
+<!--
+
+## http2 configurations
+
+| Name                 | Predefined value                   | Description                               |Whether supports runtime dynamic modifications|
+| :------------------- | :------------------------ | :------------------------------------------ |:------------------|
+|`enable_http2_routing`  |`false`   |Whether to enable HTTP2 for RPC communications. Enabling it will slightly affect performance.|Yes|
+|`stream_timeout_ms`    |`30000`  | The timeout for the HTTP stream. Unit: ms.|Yes|
+
+
+## Zone Configuration
+
+| Name                              | Default Value | Description                                                                                                                             | Runtime Dynamic Modification Supported |
+| :-------------------------------- | :------------ | :-------------------------------------------------------------------------------------------------------------------------------------- | :------------------------------------- |
+| `assigned_zone`                   | Empty         | When the Zone feature is enabled, set the Zone where the graphd to be located. See [Managing Zones](../../4.deployment-and-installation/5.zone.md) for details. | No                                    |
+| `prioritize_intra_zone_reading`   | `false`       | When set to `true`, prioritize to send queries to the Storage services in the same Zone. If reading fails, it depends on the value of `stick_to_intra_zone_on_failure` to determine whether to send requests to the leader partition replicas.<br/>When set to `false`, data is read from the leader partition replicas. | No                            |
+| `stick_to_intra_zone_on_failure`  | `false`       | When set to `true`, stick to intra-zone routing if unable to find the storaged hosting the requested partition replica in the same Zone. <br/>When set to `false`, sending requests to leader partition replicas. | No                            |                    
+
+-->
 
   <hr>
 <div class="md-source-file">
   <small>
     
       Last update:
-      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">July 18, 2023</span>
+      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">October 7, 2023</span>
       
     
   </small>
@@ -6569,5 +6580,5 @@ For more information about audit log, see [Audit log](../2.log-management/audit-
         <script src="https://www-cdn.nebula-graph.io/nebula-docs/nebula-docs.7e772ed81c779cacbefc.js"></script>
       
     
-  </body>
+  <script>document$.subscribe(() => {const lightbox = GLightbox({"touchNavigation": true, "loop": false, "zoomable": true, "draggable": true, "openEffect": "zoom", "closeEffect": "zoom", "slideEffect": "slide"});})</script></body>
 </html>

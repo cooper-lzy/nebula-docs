@@ -70,7 +70,18 @@
     
     
     
-  </head>
+   <link href="../../../assets/stylesheets/glightbox.min.css" rel="stylesheet"/><style>
+        html.glightbox-open { overflow: initial; height: 100%; }
+        .gslide-title { margin-top: 0px; user-select: text; }
+        .gslide-desc { color: #666; user-select: text; }
+        .gslide-image img { background: white; }
+        
+            .gscrollbar-fixer { padding-right: 15px; }
+            .gdesc-inner { font-size: 0.75rem; }
+            body[data-md-color-scheme="slate"] .gdesc-inner { background: var(--md-default-bg-color);}
+            body[data-md-color-scheme="slate"] .gslide-title { color: var(--md-default-fg-color);}
+            body[data-md-color-scheme="slate"] .gslide-desc { color: var(--md-default-fg-color);}
+            </style> <script src="../../../assets/javascripts/glightbox.min.js"></script></head>
   
   
     
@@ -507,46 +518,6 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../2.quick-start/1.quick-start-workflow/" class="md-nav__link">
-        Deploy NebulaGraph using Docker
-      </a>
-    </li>
-  
-
-            
-          
-            
-              
-  
-  
-  
-    
-    <li class="md-nav__item md-nav__item--nested">
-      
-      
-        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_3_2" type="checkbox" id="__nav_3_2" >
-      
-      
-      
-      
-        <label class="md-nav__link" for="__nav_3_2">
-          Deploy NebulaGraph on-premise
-          <span class="md-nav__icon md-icon"></span>
-        </label>
-      
-      <nav class="md-nav" aria-label="Deploy NebulaGraph on-premise" data-md-level="2">
-        <label class="md-nav__title" for="__nav_3_2">
-          <span class="md-nav__icon md-icon"></span>
-          Deploy NebulaGraph on-premise
-        </label>
-        <ul class="md-nav__list" data-md-scrollfix>
-          
-            
-              
-  
-  
-  
-    <li class="md-nav__item">
       <a href="../../../2.quick-start/2.install-nebula-graph/" class="md-nav__link">
         Step 1 Install NebulaGraph
       </a>
@@ -606,13 +577,6 @@
       <a href="../../../2.quick-start/4.nebula-graph-crud/" class="md-nav__link">
         Step 5 Use nGQL (CRUD)
       </a>
-    </li>
-  
-
-            
-          
-        </ul>
-      </nav>
     </li>
   
 
@@ -3056,7 +3020,7 @@
   
     <li class="md-nav__item">
       <a href="../../../4.deployment-and-installation/manage-service/" class="md-nav__link">
-        Manage Service
+        Manage services
       </a>
     </li>
   
@@ -3070,7 +3034,7 @@
   
     <li class="md-nav__item">
       <a href="../../../4.deployment-and-installation/connect-to-nebula-graph/" class="md-nav__link">
-        Connect to Service
+        Connect to services
       </a>
     </li>
   
@@ -3084,7 +3048,7 @@
   
     <li class="md-nav__item">
       <a href="../../../4.deployment-and-installation/manage-storage-host/" class="md-nav__link">
-        Manage Storage host
+        Manage Storage hosts
       </a>
     </li>
   
@@ -3639,6 +3603,20 @@
           
         </ul>
       </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../backup-and-restore/3.manage-snapshot/" class="md-nav__link">
+        Manage snapshots
+      </a>
     </li>
   
 
@@ -4227,7 +4205,7 @@
   
     <li class="md-nav__item">
       <a href="../../../nebula-studio/manage-schema/st-ug-crud-space/" class="md-nav__link">
-        Operate graph spaces
+        Manage graph spaces
       </a>
     </li>
   
@@ -4241,7 +4219,7 @@
   
     <li class="md-nav__item">
       <a href="../../../nebula-studio/manage-schema/st-ug-crud-tag/" class="md-nav__link">
-        Operate Tags
+        Manage tags
       </a>
     </li>
   
@@ -4255,7 +4233,7 @@
   
     <li class="md-nav__item">
       <a href="../../../nebula-studio/manage-schema/st-ug-crud-edge-type/" class="md-nav__link">
-        Operate Edge types
+        Manage edge types
       </a>
     </li>
   
@@ -4269,7 +4247,7 @@
   
     <li class="md-nav__item">
       <a href="../../../nebula-studio/manage-schema/st-ug-crud-index/" class="md-nav__link">
-        Operate Indexes
+        Manage indexes
       </a>
     </li>
   
@@ -4283,7 +4261,7 @@
   
     <li class="md-nav__item">
       <a href="../../../nebula-studio/manage-schema/st-ug-view-schema/" class="md-nav__link">
-        View Schema
+        View schema
       </a>
     </li>
   
@@ -5221,6 +5199,13 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
+  <a href="#notes" class="md-nav__link">
+    Notes
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#prerequisites" class="md-nav__link">
     Prerequisites
   </a>
@@ -5286,6 +5271,20 @@
     <li class="md-nav__item">
       <a href="../../11.rolling-update-strategy/" class="md-nav__link">
         Specify a rolling update strategy
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../10.backup-restore-using-operator/" class="md-nav__link">
+        Backup and restore
       </a>
     </li>
   
@@ -5697,6 +5696,13 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
+  <a href="#notes" class="md-nav__link">
+    Notes
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#prerequisites" class="md-nav__link">
     Prerequisites
   </a>
@@ -5733,13 +5739,15 @@
 <h1 id="reclaim_pvs">Reclaim PVs<a class="headerlink" href="#reclaim_pvs" title="Permanent link">&para;</a></h1>
 <p>NebulaGraph Operator uses PVs (Persistent Volumes) and PVCs (Persistent Volume Claims) to store persistent data. If you accidentally deletes a NebulaGraph cluster, by default, PV and PVC objects and the relevant data will be retained to ensure data security.</p>
 <p>You can also define the automatic deletion of PVCs to release data by setting the parameter <code>spec.enablePVReclaim</code> to <code>true</code> in the configuration file of the cluster instance. As for whether PV will be deleted automatically after PVC is deleted, you need to customize the PV reclaim policy. See <a href="https://kubernetes.io/docs/concepts/storage/storage-classes/#reclaim-policy">reclaimPolicy in StorageClass</a> and <a href="https://kubernetes.io/docs/concepts/storage/persistent-volumes/#reclaiming">PV Reclaiming</a> for details.</p>
+<h2 id="notes">Notes<a class="headerlink" href="#notes" title="Permanent link">&para;</a></h2>
+<p>The NebulaGraph Operator currently does not support the resizing of Persistent Volume Claims (PVCs), but this feature is expected to be supported in version 1.6.1. Additionally, the Operator does not support dynamically adding or mounting storage volumes to a running storaged instance.</p>
 <h2 id="prerequisites">Prerequisites<a class="headerlink" href="#prerequisites" title="Permanent link">&para;</a></h2>
 <p>You have created a cluster. For how to create a cluster with Kubectl, see <a href="../../3.deploy-nebula-graph-cluster/3.1create-cluster-with-kubectl/">Create a cluster with Kubectl</a>. </p>
 <h2 id="steps">Steps<a class="headerlink" href="#steps" title="Permanent link">&para;</a></h2>
 <p>The following example uses a cluster named <code>nebula</code> and the cluster's configuration file named <code>nebula_cluster.yaml</code> to show how to set <code>enablePVReclaim</code>:</p>
 <ol>
 <li>
-<p>Run the following command to access the edit page of the <code>nebula</code> cluster.</p>
+<p>Run the following command to edit the <code>nebula</code> cluster's configuration file.</p>
 <div class="highlight"><pre><span></span><code>kubectl<span class="w"> </span>edit<span class="w"> </span>nebulaclusters.apps.nebula-graph.io<span class="w"> </span>nebula
 </code></pre></div>
 </li>
@@ -5833,7 +5841,7 @@
   <small>
     
       Last update:
-      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">March 13, 2023</span>
+      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">September 20, 2023</span>
       
     
   </small>
@@ -5959,5 +5967,5 @@
         <script src="https://www-cdn.nebula-graph.io/nebula-docs/nebula-docs.7e772ed81c779cacbefc.js"></script>
       
     
-  </body>
+  <script>document$.subscribe(() => {const lightbox = GLightbox({"touchNavigation": true, "loop": false, "zoomable": true, "draggable": true, "openEffect": "zoom", "closeEffect": "zoom", "slideEffect": "slide"});})</script></body>
 </html>

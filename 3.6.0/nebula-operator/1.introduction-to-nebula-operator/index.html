@@ -70,7 +70,18 @@
     
     
     
-  </head>
+   <link href="../../assets/stylesheets/glightbox.min.css" rel="stylesheet"/><style>
+        html.glightbox-open { overflow: initial; height: 100%; }
+        .gslide-title { margin-top: 0px; user-select: text; }
+        .gslide-desc { color: #666; user-select: text; }
+        .gslide-image img { background: white; }
+        
+            .gscrollbar-fixer { padding-right: 15px; }
+            .gdesc-inner { font-size: 0.75rem; }
+            body[data-md-color-scheme="slate"] .gdesc-inner { background: var(--md-default-bg-color);}
+            body[data-md-color-scheme="slate"] .gslide-title { color: var(--md-default-fg-color);}
+            body[data-md-color-scheme="slate"] .gslide-desc { color: var(--md-default-fg-color);}
+            </style> <script src="../../assets/javascripts/glightbox.min.js"></script></head>
   
   
     
@@ -507,46 +518,6 @@
   
   
     <li class="md-nav__item">
-      <a href="../../2.quick-start/1.quick-start-workflow/" class="md-nav__link">
-        Deploy NebulaGraph using Docker
-      </a>
-    </li>
-  
-
-            
-          
-            
-              
-  
-  
-  
-    
-    <li class="md-nav__item md-nav__item--nested">
-      
-      
-        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_3_2" type="checkbox" id="__nav_3_2" >
-      
-      
-      
-      
-        <label class="md-nav__link" for="__nav_3_2">
-          Deploy NebulaGraph on-premise
-          <span class="md-nav__icon md-icon"></span>
-        </label>
-      
-      <nav class="md-nav" aria-label="Deploy NebulaGraph on-premise" data-md-level="2">
-        <label class="md-nav__title" for="__nav_3_2">
-          <span class="md-nav__icon md-icon"></span>
-          Deploy NebulaGraph on-premise
-        </label>
-        <ul class="md-nav__list" data-md-scrollfix>
-          
-            
-              
-  
-  
-  
-    <li class="md-nav__item">
       <a href="../../2.quick-start/2.install-nebula-graph/" class="md-nav__link">
         Step 1 Install NebulaGraph
       </a>
@@ -606,13 +577,6 @@
       <a href="../../2.quick-start/4.nebula-graph-crud/" class="md-nav__link">
         Step 5 Use nGQL (CRUD)
       </a>
-    </li>
-  
-
-            
-          
-        </ul>
-      </nav>
     </li>
   
 
@@ -3056,7 +3020,7 @@
   
     <li class="md-nav__item">
       <a href="../../4.deployment-and-installation/manage-service/" class="md-nav__link">
-        Manage Service
+        Manage services
       </a>
     </li>
   
@@ -3070,7 +3034,7 @@
   
     <li class="md-nav__item">
       <a href="../../4.deployment-and-installation/connect-to-nebula-graph/" class="md-nav__link">
-        Connect to Service
+        Connect to services
       </a>
     </li>
   
@@ -3084,7 +3048,7 @@
   
     <li class="md-nav__item">
       <a href="../../4.deployment-and-installation/manage-storage-host/" class="md-nav__link">
-        Manage Storage host
+        Manage Storage hosts
       </a>
     </li>
   
@@ -3639,6 +3603,20 @@
           
         </ul>
       </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../backup-and-restore/3.manage-snapshot/" class="md-nav__link">
+        Manage snapshots
+      </a>
     </li>
   
 
@@ -4227,7 +4205,7 @@
   
     <li class="md-nav__item">
       <a href="../../nebula-studio/manage-schema/st-ug-crud-space/" class="md-nav__link">
-        Operate graph spaces
+        Manage graph spaces
       </a>
     </li>
   
@@ -4241,7 +4219,7 @@
   
     <li class="md-nav__item">
       <a href="../../nebula-studio/manage-schema/st-ug-crud-tag/" class="md-nav__link">
-        Operate Tags
+        Manage tags
       </a>
     </li>
   
@@ -4255,7 +4233,7 @@
   
     <li class="md-nav__item">
       <a href="../../nebula-studio/manage-schema/st-ug-crud-edge-type/" class="md-nav__link">
-        Operate Edge types
+        Manage edge types
       </a>
     </li>
   
@@ -4269,7 +4247,7 @@
   
     <li class="md-nav__item">
       <a href="../../nebula-studio/manage-schema/st-ug-crud-index/" class="md-nav__link">
-        Operate Indexes
+        Manage indexes
       </a>
     </li>
   
@@ -4283,7 +4261,7 @@
   
     <li class="md-nav__item">
       <a href="../../nebula-studio/manage-schema/st-ug-view-schema/" class="md-nav__link">
-        View Schema
+        View schema
       </a>
     </li>
   
@@ -5337,6 +5315,20 @@
   
   
     <li class="md-nav__item">
+      <a href="../10.backup-restore-using-operator/" class="md-nav__link">
+        Backup and restore
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
       <a href="../5.operator-failover/" class="md-nav__link">
         Self-healing
       </a>
@@ -5812,19 +5804,20 @@
 
 <h1 id="what_is_nebulagraph_operator">What is NebulaGraph Operator<a class="headerlink" href="#what_is_nebulagraph_operator" title="Permanent link">&para;</a></h1>
 <h2 id="concept">Concept<a class="headerlink" href="#concept" title="Permanent link">&para;</a></h2>
-<p>NebulaGraph Operator is a tool to automate the deployment, operation, and maintenance of <a href="https://github.com/vesoft-inc/nebula">NebulaGraph</a> clusters on <a href="https://kubernetes.io">Kubernetes</a>. Building upon the excellent scalability mechanism of Kubernetes, NebulaGraph introduced its operation and maintenance knowledge into the Kubernetes system, which makes NebulaGraph a real <a href="https://www.nebula-cloud.io/">cloud-native graph database</a>.</p>
-<p><img alt="operator_map" src="https://docs-cdn.nebula-graph.com.cn/figures/operator_map_2022-09-08_18-55-18.png" /></p>
+<p>NebulaGraph Operator is a tool to automate the deployment, operation, and maintenance of <a href="https://github.com/vesoft-inc/nebula">NebulaGraph</a> clusters on <a href="https://kubernetes.io">Kubernetes</a>. Building upon the excellent scalability mechanism of Kubernetes, NebulaGraph introduced its operation and maintenance knowledge into the Kubernetes system, which makes NebulaGraph a real cloud-native graph database.</p>
+<p><a class="glightbox" href="https://docs-cdn.nebula-graph.com.cn/figures/operator_map_2022-09-08_18-55-18.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="operator_map" src="https://docs-cdn.nebula-graph.com.cn/figures/operator_map_2022-09-08_18-55-18.png" /></a></p>
 <h2 id="how_it_works">How it works<a class="headerlink" href="#how_it_works" title="Permanent link">&para;</a></h2>
 <p>For resource types that do not exist within Kubernetes, you can register them by adding custom API objects. The common way is to use the <a href="https://kubernetes.io/docs/concepts/extend-kubernetes/api-extension/custom-resources/#customresourcedefinitions">CustomResourceDefinition</a>.</p>
 <p>NebulaGraph Operator abstracts the deployment management of NebulaGraph clusters as a CRD. By combining multiple built-in API objects including StatefulSet, Service, and ConfigMap, the routine management and maintenance of a NebulaGraph cluster are coded as a control loop in the Kubernetes system. When a CR instance is submitted, NebulaGraph Operator drives database clusters to the final state according to the control process.</p>
 <h2 id="features">Features<a class="headerlink" href="#features" title="Permanent link">&para;</a></h2>
 <p>The following features are already available in NebulaGraph Operator:</p>
 <ul>
-<li><strong>Deploy and uninstall clusters</strong>: NebulaGraph Operator simplifies the process of deploying and uninstalling clusters for users. NebulaGraph Operator allows you to quickly create, update, or delete a NebulaGraph cluster by simply providing the corresponding CR file. For more information, see <a href="../3.deploy-nebula-graph-cluster/3.1create-cluster-with-kubectl/">Deploy NebulaGraph Clusters with Kubectl</a> or <a href="../3.deploy-nebula-graph-cluster/3.2create-cluster-with-helm/">Deploy NebulaGraph Clusters with Helm</a>.</li>
+<li><strong>Cluster deployment and deletion</strong>: NebulaGraph Operator simplifies the process of deploying and uninstalling clusters for users. NebulaGraph Operator allows you to quickly create, update, or delete a NebulaGraph cluster by simply providing the corresponding CR file. For more information, see <a href="../3.deploy-nebula-graph-cluster/3.1create-cluster-with-kubectl/">Deploy NebulaGraph Clusters with Kubectl</a> or <a href="../3.deploy-nebula-graph-cluster/3.2create-cluster-with-helm/">Deploy NebulaGraph Clusters with Helm</a>.</li>
 </ul>
 <!--
+- **Manage Zones**: Supports dividing multiple storage hosts into managed zones and creating graph spaces on specified storage hosts to achieve resource isolation. For more information, see [Create clusters using Zones with kubectl](3.deploy-nebula-graph-cluster/3.1create-cluster-with-kubectl.md#create_clusters) or [Create clusters using Zones with Helm](3.deploy-nebula-graph-cluster/3.2create-cluster-with-helm.md).
 
-- **Scale clusters**: NebulaGraph Operator calls NebulaGraph's native scaling interfaces in a control loop to implement the scaling logic. You can simply perform scaling operations with YAML configurations and ensure the stability of data. For more information, see [Scale clusters with Kubectl](3.deploy-nebula-graph-cluster/3.1create-cluster-with-kubectl.md) or [Scale clusters with Helm](3.deploy-nebula-graph-cluster/3.2create-cluster-with-helm.md).
+- **Cluster scaling**: NebulaGraph Operator calls NebulaGraph's native scaling interfaces in a control loop to implement the scaling logic. You can simply perform scaling operations with YAML configurations and ensure the stability of data. For more information, see [Scale clusters with Kubectl](3.deploy-nebula-graph-cluster/3.1create-cluster-with-kubectl.md) or [Scale clusters with Helm](3.deploy-nebula-graph-cluster/3.2create-cluster-with-helm.md).
 
 - **Backup and Recovery**：NebulaGraph supports data backup and recovery. Users can use NebulaGraph Operator to backup the data of the NebulaGraph cluster to storage services that are compatible with the S3 protocol, and can also restore data to the cluster from the storage service. For details, see [Backup and restore using NebulaGraph Operator](10.backup-restore-using-operator.md).
 
@@ -5852,7 +5845,7 @@
 <tbody>
 <tr>
 <td>3.5.x ~ 3.6.0</td>
-<td>1.5.0</td>
+<td>1.5.0, 1.6.x</td>
 </tr>
 <tr>
 <td>3.0.0 ~ 3.4.1</td>
@@ -5882,14 +5875,14 @@
 <h3 id="feature_limitations">Feature limitations<a class="headerlink" href="#feature_limitations" title="Permanent link">&para;</a></h3>
 <p>The NebulaGraph Operator scaling feature is only available for the Enterprise Edition of NebulaGraph clusters and does not support scaling the Community Edition version of NebulaGraph clusters.</p>
 <h2 id="release_note">Release note<a class="headerlink" href="#release_note" title="Permanent link">&para;</a></h2>
-<p><a href="https://github.com/vesoft-inc/nebula-operator/releases/tag/v1.5.0">Release</a></p>
+<p><a href="https://github.com/vesoft-inc/nebula-operator/releases/tag/v1.6.2">Release</a></p>
 
   <hr>
 <div class="md-source-file">
   <small>
     
       Last update:
-      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">August 14, 2023</span>
+      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">September 26, 2023</span>
       
     
   </small>
@@ -6015,5 +6008,5 @@
         <script src="https://www-cdn.nebula-graph.io/nebula-docs/nebula-docs.7e772ed81c779cacbefc.js"></script>
       
     
-  </body>
+  <script>document$.subscribe(() => {const lightbox = GLightbox({"touchNavigation": true, "loop": false, "zoomable": true, "draggable": true, "openEffect": "zoom", "closeEffect": "zoom", "slideEffect": "slide"});})</script></body>
 </html>

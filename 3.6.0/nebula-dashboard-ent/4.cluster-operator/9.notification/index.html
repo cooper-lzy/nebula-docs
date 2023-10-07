@@ -70,7 +70,18 @@
     
     
     
-  </head>
+   <link href="../../../assets/stylesheets/glightbox.min.css" rel="stylesheet"/><style>
+        html.glightbox-open { overflow: initial; height: 100%; }
+        .gslide-title { margin-top: 0px; user-select: text; }
+        .gslide-desc { color: #666; user-select: text; }
+        .gslide-image img { background: white; }
+        
+            .gscrollbar-fixer { padding-right: 15px; }
+            .gdesc-inner { font-size: 0.75rem; }
+            body[data-md-color-scheme="slate"] .gdesc-inner { background: var(--md-default-bg-color);}
+            body[data-md-color-scheme="slate"] .gslide-title { color: var(--md-default-fg-color);}
+            body[data-md-color-scheme="slate"] .gslide-desc { color: var(--md-default-fg-color);}
+            </style> <script src="../../../assets/javascripts/glightbox.min.js"></script></head>
   
   
     
@@ -507,46 +518,6 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../2.quick-start/1.quick-start-workflow/" class="md-nav__link">
-        Deploy NebulaGraph using Docker
-      </a>
-    </li>
-  
-
-            
-          
-            
-              
-  
-  
-  
-    
-    <li class="md-nav__item md-nav__item--nested">
-      
-      
-        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_3_2" type="checkbox" id="__nav_3_2" >
-      
-      
-      
-      
-        <label class="md-nav__link" for="__nav_3_2">
-          Deploy NebulaGraph on-premise
-          <span class="md-nav__icon md-icon"></span>
-        </label>
-      
-      <nav class="md-nav" aria-label="Deploy NebulaGraph on-premise" data-md-level="2">
-        <label class="md-nav__title" for="__nav_3_2">
-          <span class="md-nav__icon md-icon"></span>
-          Deploy NebulaGraph on-premise
-        </label>
-        <ul class="md-nav__list" data-md-scrollfix>
-          
-            
-              
-  
-  
-  
-    <li class="md-nav__item">
       <a href="../../../2.quick-start/2.install-nebula-graph/" class="md-nav__link">
         Step 1 Install NebulaGraph
       </a>
@@ -606,13 +577,6 @@
       <a href="../../../2.quick-start/4.nebula-graph-crud/" class="md-nav__link">
         Step 5 Use nGQL (CRUD)
       </a>
-    </li>
-  
-
-            
-          
-        </ul>
-      </nav>
     </li>
   
 
@@ -3056,7 +3020,7 @@
   
     <li class="md-nav__item">
       <a href="../../../4.deployment-and-installation/manage-service/" class="md-nav__link">
-        Manage Service
+        Manage services
       </a>
     </li>
   
@@ -3070,7 +3034,7 @@
   
     <li class="md-nav__item">
       <a href="../../../4.deployment-and-installation/connect-to-nebula-graph/" class="md-nav__link">
-        Connect to Service
+        Connect to services
       </a>
     </li>
   
@@ -3084,7 +3048,7 @@
   
     <li class="md-nav__item">
       <a href="../../../4.deployment-and-installation/manage-storage-host/" class="md-nav__link">
-        Manage Storage host
+        Manage Storage hosts
       </a>
     </li>
   
@@ -3639,6 +3603,20 @@
           
         </ul>
       </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../backup-and-restore/3.manage-snapshot/" class="md-nav__link">
+        Manage snapshots
+      </a>
     </li>
   
 
@@ -4227,7 +4205,7 @@
   
     <li class="md-nav__item">
       <a href="../../../nebula-studio/manage-schema/st-ug-crud-space/" class="md-nav__link">
-        Operate graph spaces
+        Manage graph spaces
       </a>
     </li>
   
@@ -4241,7 +4219,7 @@
   
     <li class="md-nav__item">
       <a href="../../../nebula-studio/manage-schema/st-ug-crud-tag/" class="md-nav__link">
-        Operate Tags
+        Manage tags
       </a>
     </li>
   
@@ -4255,7 +4233,7 @@
   
     <li class="md-nav__item">
       <a href="../../../nebula-studio/manage-schema/st-ug-crud-edge-type/" class="md-nav__link">
-        Operate Edge types
+        Manage edge types
       </a>
     </li>
   
@@ -4269,7 +4247,7 @@
   
     <li class="md-nav__item">
       <a href="../../../nebula-studio/manage-schema/st-ug-crud-index/" class="md-nav__link">
-        Operate Indexes
+        Manage indexes
       </a>
     </li>
   
@@ -4283,7 +4261,7 @@
   
     <li class="md-nav__item">
       <a href="../../../nebula-studio/manage-schema/st-ug-view-schema/" class="md-nav__link">
-        View Schema
+        View schema
       </a>
     </li>
   
@@ -5246,6 +5224,20 @@
   
   
     <li class="md-nav__item">
+      <a href="../../../nebula-operator/10.backup-restore-using-operator/" class="md-nav__link">
+        Backup and restore
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
       <a href="../../../nebula-operator/5.operator-failover/" class="md-nav__link">
         Self-healing
       </a>
@@ -5736,7 +5728,7 @@
 <h1 id="notification">Notification<a class="headerlink" href="#notification" title="Permanent link">&para;</a></h1>
 <p>NebulaGraph Dashboard Enterprise Edition notifies on monitoring metrics. You can view alert messages, set alert rules, and set alert receivers.</p>
 <p>At the top navigation bar of the Dashboard Enterprise Edition page, click <strong>Cluster Management</strong>, and click <strong>Detail</strong> at the right of the target cluster. <strong>Notification</strong> at the left navigation bar contains <strong>Alert Messages</strong>, <strong>Alert Rules</strong> and <strong>Receivers</strong>.</p>
-<p><img alt="Alerts" src="https://docs-cdn.nebula-graph.com.cn/figures/alerts.gif" /></p>
+<p><a class="glightbox" href="https://docs-cdn.nebula-graph.com.cn/figures/alerts.gif" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="Alerts" src="https://docs-cdn.nebula-graph.com.cn/figures/alerts.gif" /></a></p>
 <h2 id="alert_messages">Alert messages<a class="headerlink" href="#alert_messages" title="Permanent link">&para;</a></h2>
 <p>Alert messages will pop up in the upper right corner of the page, you can do the following operations:</p>
 <ul>
@@ -5780,7 +5772,7 @@
 </tr>
 <tr>
 <td>Severity</td>
-<td>Set a severity level for an alert rule. The severity level includes <code>emergency</code>, <code>critical</code>, and <code>warning</code>.</td>
+<td>Set a severity level for an alert rule. The severity level includes <code>emergency</code>, <code>critical</code>, <code>minor</code>, <code>warning</code>, and <code>info</code>.</td>
 </tr>
 <tr>
 <td>Alert Frequency</td>
@@ -5839,9 +5831,9 @@
 <li>Turn on or off the alert rule you set. The status of an alert rule that has been turned on is <strong>active</strong>. The status of an alert rule that has been turned off is <strong>disable</strong>.</li>
 </ul>
 <h3 id="edit_custom_rules">Edit custom rules<a class="headerlink" href="#edit_custom_rules" title="Permanent link">&para;</a></h3>
-<p>In the <strong>Custom Rules</strong> list, select the target rule, and then click the edit icon <img alt="edit" src="https://docs-cdn.nebula-graph.com.cn/figures/alert_edit.png" /> to edit the rule.</p>
+<p>In the <strong>Custom Rules</strong> list, select the target rule, and then click the edit icon <a class="glightbox" href="https://docs-cdn.nebula-graph.com.cn/figures/alert_edit.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="edit" src="https://docs-cdn.nebula-graph.com.cn/figures/alert_edit.png" /></a> to edit the rule.</p>
 <h3 id="delete_custom_rules">Delete custom rules<a class="headerlink" href="#delete_custom_rules" title="Permanent link">&para;</a></h3>
-<p>In the <strong>Custom Rules</strong> list, select the target rule, click the delete icon <img alt="delete" src="https://docs-cdn.nebula-graph.com.cn/figures/alert_delete.png" /> to delete the rule.</p>
+<p>In the <strong>Custom Rules</strong> list, select the target rule, click the delete icon <a class="glightbox" href="https://docs-cdn.nebula-graph.com.cn/figures/alert_delete.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="delete" src="https://docs-cdn.nebula-graph.com.cn/figures/alert_delete.png" /></a> to delete the rule.</p>
 <h3 id="built-in_rules">Built-in Rules<a class="headerlink" href="#built-in_rules" title="Permanent link">&para;</a></h3>
 <p>The built-in rules are the default rules in Dashboard Enterprise Edition. You can enable or disable the built-in rules. The status of a built-in rule that has been turned on is <strong>active</strong>. The status of a built-in rule that has been turned off is <strong>disable</strong>.</p>
 <div class="admonition note">
@@ -5849,7 +5841,7 @@
 <p>Built-in rules cannot be edited or deleted.</p>
 </div>
 <h3 id="mute_alert_rules">Mute alert rules<a class="headerlink" href="#mute_alert_rules" title="Permanent link">&para;</a></h3>
-<p>Click <img alt="silent" src="https://docs-cdn.nebula-graph.com.cn/figures/silent.png" /> to silence the alert rule for two hours. To cancel the silence midway, click <img alt="silent" src="https://docs-cdn.nebula-graph.com.cn/figures/refresh-220616.png" />.</p>
+<p>Click <a class="glightbox" href="https://docs-cdn.nebula-graph.com.cn/figures/silent.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="silent" src="https://docs-cdn.nebula-graph.com.cn/figures/silent.png" /></a> to silence the alert rule for two hours. To cancel the silence midway, click <a class="glightbox" href="https://docs-cdn.nebula-graph.com.cn/figures/refresh-220616.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="silent" src="https://docs-cdn.nebula-graph.com.cn/figures/refresh-220616.png" /></a>.</p>
 <h2 id="receiver_configuration">Receiver configuration<a class="headerlink" href="#receiver_configuration" title="Permanent link">&para;</a></h2>
 <p>Alerts can be configured to send notifications to receivers. You can set the email address of the receiver who receives alert notifications. You can also view your Webhook URL and whether the webhook is enabled or not. For more information about the Webhook, see <a href="../../system-settings/notification-endpoint/">Notification Endpoint</a>.</p>
 <ol>
@@ -5869,7 +5861,7 @@
   <small>
     
       Last update:
-      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">April 25, 2023</span>
+      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">September 11, 2023</span>
       
     
   </small>
@@ -5959,5 +5951,5 @@
         <script src="https://www-cdn.nebula-graph.io/nebula-docs/nebula-docs.7e772ed81c779cacbefc.js"></script>
       
     
-  </body>
+  <script>document$.subscribe(() => {const lightbox = GLightbox({"touchNavigation": true, "loop": false, "zoomable": true, "draggable": true, "openEffect": "zoom", "closeEffect": "zoom", "slideEffect": "slide"});})</script></body>
 </html>

@@ -19,7 +19,7 @@
     
     
       
-        <title>Operate Edge types - NebulaGraph Database Manual</title>
+        <title>Manage edge types - NebulaGraph Database Manual</title>
       
     
     
@@ -70,7 +70,18 @@
     
     
     
-  </head>
+   <link href="../../../assets/stylesheets/glightbox.min.css" rel="stylesheet"/><style>
+        html.glightbox-open { overflow: initial; height: 100%; }
+        .gslide-title { margin-top: 0px; user-select: text; }
+        .gslide-desc { color: #666; user-select: text; }
+        .gslide-image img { background: white; }
+        
+            .gscrollbar-fixer { padding-right: 15px; }
+            .gdesc-inner { font-size: 0.75rem; }
+            body[data-md-color-scheme="slate"] .gdesc-inner { background: var(--md-default-bg-color);}
+            body[data-md-color-scheme="slate"] .gslide-title { color: var(--md-default-fg-color);}
+            body[data-md-color-scheme="slate"] .gslide-desc { color: var(--md-default-fg-color);}
+            </style> <script src="../../../assets/javascripts/glightbox.min.js"></script></head>
   
   
     
@@ -92,7 +103,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#operate_edge_types" class="md-skip">
+        <a href="#manage_edge_types" class="md-skip">
           Skip to content
         </a>
       
@@ -126,7 +137,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Operate Edge types
+              Manage edge types
             
           </span>
         </div>
@@ -507,46 +518,6 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../2.quick-start/1.quick-start-workflow/" class="md-nav__link">
-        Deploy NebulaGraph using Docker
-      </a>
-    </li>
-  
-
-            
-          
-            
-              
-  
-  
-  
-    
-    <li class="md-nav__item md-nav__item--nested">
-      
-      
-        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_3_2" type="checkbox" id="__nav_3_2" >
-      
-      
-      
-      
-        <label class="md-nav__link" for="__nav_3_2">
-          Deploy NebulaGraph on-premise
-          <span class="md-nav__icon md-icon"></span>
-        </label>
-      
-      <nav class="md-nav" aria-label="Deploy NebulaGraph on-premise" data-md-level="2">
-        <label class="md-nav__title" for="__nav_3_2">
-          <span class="md-nav__icon md-icon"></span>
-          Deploy NebulaGraph on-premise
-        </label>
-        <ul class="md-nav__list" data-md-scrollfix>
-          
-            
-              
-  
-  
-  
-    <li class="md-nav__item">
       <a href="../../../2.quick-start/2.install-nebula-graph/" class="md-nav__link">
         Step 1 Install NebulaGraph
       </a>
@@ -606,13 +577,6 @@
       <a href="../../../2.quick-start/4.nebula-graph-crud/" class="md-nav__link">
         Step 5 Use nGQL (CRUD)
       </a>
-    </li>
-  
-
-            
-          
-        </ul>
-      </nav>
     </li>
   
 
@@ -3056,7 +3020,7 @@
   
     <li class="md-nav__item">
       <a href="../../../4.deployment-and-installation/manage-service/" class="md-nav__link">
-        Manage Service
+        Manage services
       </a>
     </li>
   
@@ -3070,7 +3034,7 @@
   
     <li class="md-nav__item">
       <a href="../../../4.deployment-and-installation/connect-to-nebula-graph/" class="md-nav__link">
-        Connect to Service
+        Connect to services
       </a>
     </li>
   
@@ -3084,7 +3048,7 @@
   
     <li class="md-nav__item">
       <a href="../../../4.deployment-and-installation/manage-storage-host/" class="md-nav__link">
-        Manage Storage host
+        Manage Storage hosts
       </a>
     </li>
   
@@ -3639,6 +3603,20 @@
           
         </ul>
       </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../backup-and-restore/3.manage-snapshot/" class="md-nav__link">
+        Manage snapshots
+      </a>
     </li>
   
 
@@ -4233,7 +4211,7 @@
   
     <li class="md-nav__item">
       <a href="../st-ug-crud-space/" class="md-nav__link">
-        Operate graph spaces
+        Manage graph spaces
       </a>
     </li>
   
@@ -4247,7 +4225,7 @@
   
     <li class="md-nav__item">
       <a href="../st-ug-crud-tag/" class="md-nav__link">
-        Operate Tags
+        Manage tags
       </a>
     </li>
   
@@ -4270,12 +4248,12 @@
       
       
         <label class="md-nav__link md-nav__link--active" for="__toc">
-          Operate Edge types
+          Manage edge types
           <span class="md-nav__icon md-icon"></span>
         </label>
       
       <a href="./" class="md-nav__link md-nav__link--active">
-        Operate Edge types
+        Manage edge types
       </a>
       
         
@@ -4344,7 +4322,7 @@
   
     <li class="md-nav__item">
       <a href="../st-ug-crud-index/" class="md-nav__link">
-        Operate Indexes
+        Manage indexes
       </a>
     </li>
   
@@ -4358,7 +4336,7 @@
   
     <li class="md-nav__item">
       <a href="../st-ug-view-schema/" class="md-nav__link">
-        View Schema
+        View schema
       </a>
     </li>
   
@@ -5321,6 +5299,20 @@
   
   
     <li class="md-nav__item">
+      <a href="../../../nebula-operator/10.backup-restore-using-operator/" class="md-nav__link">
+        Backup and restore
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
       <a href="../../../nebula-operator/5.operator-failover/" class="md-nav__link">
         Self-healing
       </a>
@@ -5774,7 +5766,7 @@
   </a>
 
 
-<h1 id="operate_edge_types">Operate edge types<a class="headerlink" href="#operate_edge_types" title="Permanent link">&para;</a></h1>
+<h1 id="manage_edge_types">Manage edge types<a class="headerlink" href="#manage_edge_types" title="Permanent link">&para;</a></h1>
 <p>After a graph space is created in NebulaGraph, you can create edge types. With Studio, you can choose to use the <strong>Console</strong> page or the <strong>Schema</strong> page to create, retrieve, update, or delete edge types. This topic introduces how to use the <strong>Schema</strong> page to operate edge types in a graph space only.</p>
 <h2 id="prerequisites">Prerequisites<a class="headerlink" href="#prerequisites" title="Permanent link">&para;</a></h2>
 <p>To operate an edge type on the <strong>Schema</strong> page of Studio, you must do a check of these:</p>
@@ -5831,7 +5823,7 @@
 </li>
 <li>
 <p>When the preceding settings are completed, in the <strong>Equivalent to the following nGQL statement</strong> panel, you can see the nGQL statement equivalent to these settings.</p>
-<p><img alt="Define properties of the action edge type" src="https://docs-cdn.nebula-graph.com.cn/figures/st-ug-004-en.png" title="Define an edge type" /></p>
+<p><a class="glightbox" href="https://docs-cdn.nebula-graph.com.cn/figures/st-ug-004-en.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="Define properties of the action edge type" src="https://docs-cdn.nebula-graph.com.cn/figures/st-ug-004-en.png" title="Define an edge type" /></a></p>
 </li>
 <li>
 <p>Confirm the settings and then click the <strong>+ Create</strong> button.</p>
@@ -5850,7 +5842,7 @@
 <p>In the <strong>Current Graph Space</strong> field, confirm the name of the graph space. If necessary, you can choose another name to change the graph space.</p>
 </li>
 <li>
-<p>Click the <strong>Edge Type</strong> tab, find an edge type and then click the button <img alt="Icon of edit" src="https://docs-cdn.nebula-graph.com.cn/figures/Setup.png" /> in the <strong>Operations</strong> column.</p>
+<p>Click the <strong>Edge Type</strong> tab, find an edge type and then click the button <a class="glightbox" href="https://docs-cdn.nebula-graph.com.cn/figures/Setup.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="Icon of edit" src="https://docs-cdn.nebula-graph.com.cn/figures/Setup.png" /></a> in the <strong>Operations</strong> column.</p>
 </li>
 <li>
 <p>On the <strong>Edit</strong> page, do these operations:</p>
@@ -5897,7 +5889,7 @@
 <p>In the <strong>Current Graph Space</strong> field, confirm the name of the graph space. If necessary, you can choose another name to change the graph space.</p>
 </li>
 <li>
-<p>Click the <strong>Edge Type</strong> tab, find an edge type and then click the button <img alt="Icon of deletion" src="https://docs-cdn.nebula-graph.com.cn/figures/alert-delete.png" /> in the <strong>Operations</strong> column.</p>
+<p>Click the <strong>Edge Type</strong> tab, find an edge type and then click the button <a class="glightbox" href="https://docs-cdn.nebula-graph.com.cn/figures/alert-delete.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="Icon of deletion" src="https://docs-cdn.nebula-graph.com.cn/figures/alert-delete.png" /></a> in the <strong>Operations</strong> column.</p>
 </li>
 <li>
 <p>Click <strong>OK</strong> to confirm in the pop-up dialog box.</p>
@@ -5911,7 +5903,7 @@
   <small>
     
       Last update:
-      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">August 11, 2022</span>
+      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">September 7, 2023</span>
       
     
   </small>
@@ -5945,7 +5937,7 @@
     <nav class="md-footer__inner md-grid" aria-label="Footer" >
       
         
-        <a href="../st-ug-crud-tag/" class="md-footer__link md-footer__link--prev" aria-label="Previous: Operate Tags" rel="prev">
+        <a href="../st-ug-crud-tag/" class="md-footer__link md-footer__link--prev" aria-label="Previous: Manage tags" rel="prev">
           <div class="md-footer__button md-icon">
             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
           </div>
@@ -5954,20 +5946,20 @@
               <span class="md-footer__direction">
                 Previous
               </span>
-              Operate Tags
+              Manage tags
             </div>
           </div>
         </a>
       
       
         
-        <a href="../st-ug-crud-index/" class="md-footer__link md-footer__link--next" aria-label="Next: Operate Indexes" rel="next">
+        <a href="../st-ug-crud-index/" class="md-footer__link md-footer__link--next" aria-label="Next: Manage indexes" rel="next">
           <div class="md-footer__title">
             <div class="md-ellipsis">
               <span class="md-footer__direction">
                 Next
               </span>
-              Operate Indexes
+              Manage indexes
             </div>
           </div>
           <div class="md-footer__button md-icon">
@@ -6037,5 +6029,5 @@
         <script src="https://www-cdn.nebula-graph.io/nebula-docs/nebula-docs.7e772ed81c779cacbefc.js"></script>
       
     
-  </body>
+  <script>document$.subscribe(() => {const lightbox = GLightbox({"touchNavigation": true, "loop": false, "zoomable": true, "draggable": true, "openEffect": "zoom", "closeEffect": "zoom", "slideEffect": "slide"});})</script></body>
 </html>
