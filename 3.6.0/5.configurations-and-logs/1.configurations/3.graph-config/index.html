@@ -6039,7 +6039,7 @@
 <tr>
 <td><code>accept_partial_success</code></td>
 <td><code>false</code></td>
-<td>When set to <code>false</code>, the process treats partial success as an error. This configuration only applies to read-only requests. Write requests always treat partial success as an error.</td>
+<td>When set to <code>false</code>, the process treats partial success as an error. This configuration only applies to read-only requests. Write requests always treat partial success as an error. A partial success query will prompt <code>Got partial result</code>.</td>
 <td>Yes</td>
 </tr>
 <tr>
@@ -6444,8 +6444,8 @@ For more information about audit log, see [Audit log](../2.log-management/audit-
 | Name                              | Default Value | Description                                                                                                                             | Runtime Dynamic Modification Supported |
 | :-------------------------------- | :------------ | :-------------------------------------------------------------------------------------------------------------------------------------- | :------------------------------------- |
 | `assigned_zone`                   | Empty         | When the Zone feature is enabled, set the Zone where the graphd to be located. See [Managing Zones](../../4.deployment-and-installation/5.zone.md) for details. | No                                    |
-| `prioritize_intra_zone_reading`   | `false`       | When set to `true`, prioritize to send queries to the Storage services in the same Zone. If reading fails, it depends on the value of `stick_to_intra_zone_on_failure` to determine whether to send requests to the leader partition replicas.<br/>When set to `false`, data is read from the leader partition replicas. | No                            |
-| `stick_to_intra_zone_on_failure`  | `false`       | When set to `true`, stick to intra-zone routing if unable to find the storaged hosting the requested partition replica in the same Zone. <br/>When set to `false`, sending requests to leader partition replicas. | No                            |                    
+| `prioritize_intra_zone_reading`   | `false`       | When set to `true`, prioritize to send queries to the Storage services in the same Zone. If reading fails, it depends on the value of `stick_to_intra_zone_on_failure` to determine whether to send requests to the leader partition replicas.<br/>When set to `false`, data is read from the leader partition replicas. | Yes                            |
+| `stick_to_intra_zone_on_failure`  | `false`       | When set to `true`, stick to intra-zone routing if unable to find the storaged hosting the requested partition replica in the same Zone. <br/>When set to `false`, sending requests to leader partition replicas. | Yes                            |                    
 
 -->
 
@@ -6454,7 +6454,7 @@ For more information about audit log, see [Audit log](../2.log-management/audit-
   <small>
     
       Last update:
-      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">October 13, 2023</span>
+      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">October 17, 2023</span>
       
     
   </small>
