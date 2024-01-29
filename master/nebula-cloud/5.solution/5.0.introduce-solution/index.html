@@ -1,3 +1,5 @@
+<!-- Overwrites main.html base mkdocs theme, taken from 
+https://github.com/mkdocs/mkdocs/blob/master/mkdocs/themes/mkdocs/main.html -->
 
 <!doctype html>
 <html lang="en" class="no-js">
@@ -43,8 +45,8 @@
         
         
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
-        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Noto+Sans:300,300i,400,400i,700,700i%7CSource+Code+Pro:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Noto Sans";--md-code-font:"Source Code Pro"}</style>
       
     
     
@@ -54,7 +56,7 @@
     
       <link rel="stylesheet" href="../../../stylesheets/extra.css">
     
-      <link rel="stylesheet" href="../../../css/version-select.css">
+      <link rel="stylesheet" href="../../../stylesheets/pdf.css">
     
     <script>__md_scope=new URL("../../..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
     
@@ -74,17 +76,15 @@
     
     
    <link href="../../../assets/stylesheets/glightbox.min.css" rel="stylesheet"/><style>
-        html.glightbox-open { overflow: initial; height: 100%; }
-        .gslide-title { margin-top: 0px; user-select: text; }
-        .gslide-desc { color: #666; user-select: text; }
-        .gslide-image img { background: white; }
-        
-            .gscrollbar-fixer { padding-right: 15px; }
-            .gdesc-inner { font-size: 0.75rem; }
-            body[data-md-color-scheme="slate"] .gdesc-inner { background: var(--md-default-bg-color);}
-            body[data-md-color-scheme="slate"] .gslide-title { color: var(--md-default-fg-color);}
-            body[data-md-color-scheme="slate"] .gslide-desc { color: var(--md-default-fg-color);}
-            </style> <script src="../../../assets/javascripts/glightbox.min.js"></script></head>
+    html.glightbox-open { overflow: initial; height: 100%; }
+    .gslide-title { margin-top: 0px; user-select: text; }
+    .gslide-desc { color: #666; user-select: text; }
+    .gslide-image img { background: white; }
+    .gscrollbar-fixer { padding-right: 15px; }
+    .gdesc-inner { font-size: 0.75rem; }
+    body[data-md-color-scheme="slate"] .gdesc-inner { background: var(--md-default-bg-color);}
+    body[data-md-color-scheme="slate"] .gslide-title { color: var(--md-default-fg-color);}
+    body[data-md-color-scheme="slate"] .gslide-desc { color: var(--md-default-fg-color);}</style> <script src="../../../assets/javascripts/glightbox.min.js"></script></head>
   
   
     
@@ -7763,25 +7763,25 @@ Document versions starting from 3.6.0 contain Community Edition features only. F
 <p>On the <strong>Solution</strong> page, the sidebars are different based on roles and privileges. For more information, see <a href="../../4.user-role-description/">Roles and privileges in Cloud</a>.</p>
 <h2 id="solution_info">Solution Info<a class="headerlink" href="#solution_info" title="Permanent link">&para;</a></h2>
 <p>On the homepage of Cloud, click on the Solution's name to enter the <strong>Solution Info</strong> page. The Solution Info page consists of the following parts: Basic Info, Instance Info, Price Info, Getting Started. You can view the information on this page in detail.</p>
-<p><a class="glightbox" href="https://docs-cdn.nebula-graph.com.cn/figures/cl-ug-001.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="Solution info" src="https://docs-cdn.nebula-graph.com.cn/figures/cl-ug-001.png" /></a></p>
+<p><a class="glightbox" href="https://docs-cdn.nebula-graph.com.cn/figures/cl-ug-001.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="Solution info" src="https://docs-cdn.nebula-graph.com.cn/figures/cl-ug-001.png" /></a></p>
 <h2 id="applications">Applications<a class="headerlink" href="#applications" title="Permanent link">&para;</a></h2>
 <p>In the sidebar, click <strong>Applications</strong> to enter the page of ecosystem tools(Dashboard/Studio/Explorer). Different roles see different ecosystem tools. For more information, see <a href="../5.1.supporting-application/">Accessory applications</a>.</p>
-<p><a class="glightbox" href="https://docs-cdn.nebula-graph.com.cn/figures/cl-ug-002.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="applications" src="https://docs-cdn.nebula-graph.com.cn/figures/cl-ug-002.png" /></a></p>
+<p><a class="glightbox" href="https://docs-cdn.nebula-graph.com.cn/figures/cl-ug-002.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="applications" src="https://docs-cdn.nebula-graph.com.cn/figures/cl-ug-002.png" /></a></p>
 <h2 id="connectivity">Connectivity<a class="headerlink" href="#connectivity" title="Permanent link">&para;</a></h2>
 <p>In the sidebar, click <strong>Connectivity</strong> to enter Private Link page. On this page, you can create a Private Link endpoint that enables you to access NebulaGraph databases through a private IP address in a virtual network. For more information, see <a href="../5.2.connection-configuration-and-use/">Private Link</a>.</p>
-<p><a class="glightbox" href="https://docs-cdn.nebula-graph.com.cn/figures/cl-ug-003.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="connectivity" src="https://docs-cdn.nebula-graph.com.cn/figures/cl-ug-003.png" /></a></p>
+<p><a class="glightbox" href="https://docs-cdn.nebula-graph.com.cn/figures/cl-ug-003.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="connectivity" src="https://docs-cdn.nebula-graph.com.cn/figures/cl-ug-003.png" /></a></p>
 <h2 id="root_management">Root Management<a class="headerlink" href="#root_management" title="Permanent link">&para;</a></h2>
 <p>In the sidebar, click <strong>Root Management</strong> to enter the root account management page. For more information, see <a href="../5.3.role-and-authority-management/">Role and User Management</a>.</p>
-<p><a class="glightbox" href="https://docs-cdn.nebula-graph.com.cn/figures/cl-ug-004.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="root management" src="https://docs-cdn.nebula-graph.com.cn/figures/cl-ug-004.png" /></a></p>
+<p><a class="glightbox" href="https://docs-cdn.nebula-graph.com.cn/figures/cl-ug-004.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="root management" src="https://docs-cdn.nebula-graph.com.cn/figures/cl-ug-004.png" /></a></p>
 <h2 id="user_management">User Management<a class="headerlink" href="#user_management" title="Permanent link">&para;</a></h2>
 <p>In the sidebar, click <strong>User Management</strong> to enter the user account management page. For more information, see <a href="../5.3.role-and-authority-management/">Role and User Management</a>.</p>
-<p><a class="glightbox" href="https://docs-cdn.nebula-graph.com.cn/figures/cl-ug-005.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="User Management" src="https://docs-cdn.nebula-graph.com.cn/figures/cl-ug-005.png" /></a></p>
+<p><a class="glightbox" href="https://docs-cdn.nebula-graph.com.cn/figures/cl-ug-005.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="User Management" src="https://docs-cdn.nebula-graph.com.cn/figures/cl-ug-005.png" /></a></p>
 <h2 id="audit_log">Audit Log<a class="headerlink" href="#audit_log" title="Permanent link">&para;</a></h2>
 <p>In the sidebar, click <strong>Audit Log</strong> to enter the operation history page. You can select the time period according to the operation information such as <code>Create Solution</code>, <code>Start Solution</code>, <code>Stop Solution</code>, and filter results by operator and operation record.</p>
-<p><a class="glightbox" href="https://docs-cdn.nebula-graph.com.cn/figures/cl-ug-006.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="Audit Log" src="https://docs-cdn.nebula-graph.com.cn/figures/cl-ug-006.png" /></a></p>
+<p><a class="glightbox" href="https://docs-cdn.nebula-graph.com.cn/figures/cl-ug-006.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="Audit Log" src="https://docs-cdn.nebula-graph.com.cn/figures/cl-ug-006.png" /></a></p>
 <h2 id="settings">Settings<a class="headerlink" href="#settings" title="Permanent link">&para;</a></h2>
 <p>In the sidebar, click <strong>Settings</strong> to enter the settings page, and you can <code>Stop Solution</code> or <code>Transfer Solution</code> in this page.</p>
-<p><a class="glightbox" href="https://docs-cdn.nebula-graph.com.cn/figures/cl-ug-007.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="Settings" src="https://docs-cdn.nebula-graph.com.cn/figures/cl-ug-007.png" /></a></p>
+<p><a class="glightbox" href="https://docs-cdn.nebula-graph.com.cn/figures/cl-ug-007.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="Settings" src="https://docs-cdn.nebula-graph.com.cn/figures/cl-ug-007.png" /></a></p>
 
   <hr>
 <div class="md-source-file">
@@ -7860,7 +7860,7 @@ Document versions starting from 3.6.0 contain Community Edition features only. F
     </div>
     
     
-    <script id="__config" type="application/json">{"base": "../../..", "features": ["navigation.top", "header.autohide", "content.tabs.link", "content.code.copy", "content.action.edit"], "search": "../../../assets/javascripts/workers/search.f886a092.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": {"method": "mike"}}</script>
+    <script id="__config" type="application/json">{"base": "../../..", "features": ["navigation.top", "header.autohide", "content.tabs.link", "content.action.edit", "content.code.copy"], "search": "../../../assets/javascripts/workers/search.f886a092.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": {"provider": "mike"}}</script>
     
     
       <script src="../../../assets/javascripts/bundle.aecac24b.min.js"></script>
@@ -7870,8 +7870,6 @@ Document versions starting from 3.6.0 contain Community Edition features only. F
         <script src="../../../js/search.js"></script>
       
         <script src="../../../js/config.js"></script>
-      
-        <script src="../../../js/version-select.js"></script>
       
         <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
       

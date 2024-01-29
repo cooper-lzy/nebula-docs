@@ -1,3 +1,5 @@
+<!-- Overwrites main.html base mkdocs theme, taken from 
+https://github.com/mkdocs/mkdocs/blob/master/mkdocs/themes/mkdocs/main.html -->
 
 <!doctype html>
 <html lang="en" class="no-js">
@@ -47,8 +49,8 @@
         
         
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
-        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Noto+Sans:300,300i,400,400i,700,700i%7CSource+Code+Pro:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Noto Sans";--md-code-font:"Source Code Pro"}</style>
       
     
     
@@ -58,7 +60,7 @@
     
       <link rel="stylesheet" href="../../../stylesheets/extra.css">
     
-      <link rel="stylesheet" href="../../../css/version-select.css">
+      <link rel="stylesheet" href="../../../stylesheets/pdf.css">
     
     <script>__md_scope=new URL("../../..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
     
@@ -78,17 +80,15 @@
     
     
    <link href="../../../assets/stylesheets/glightbox.min.css" rel="stylesheet"/><style>
-        html.glightbox-open { overflow: initial; height: 100%; }
-        .gslide-title { margin-top: 0px; user-select: text; }
-        .gslide-desc { color: #666; user-select: text; }
-        .gslide-image img { background: white; }
-        
-            .gscrollbar-fixer { padding-right: 15px; }
-            .gdesc-inner { font-size: 0.75rem; }
-            body[data-md-color-scheme="slate"] .gdesc-inner { background: var(--md-default-bg-color);}
-            body[data-md-color-scheme="slate"] .gslide-title { color: var(--md-default-fg-color);}
-            body[data-md-color-scheme="slate"] .gslide-desc { color: var(--md-default-fg-color);}
-            </style> <script src="../../../assets/javascripts/glightbox.min.js"></script></head>
+    html.glightbox-open { overflow: initial; height: 100%; }
+    .gslide-title { margin-top: 0px; user-select: text; }
+    .gslide-desc { color: #666; user-select: text; }
+    .gslide-image img { background: white; }
+    .gscrollbar-fixer { padding-right: 15px; }
+    .gdesc-inner { font-size: 0.75rem; }
+    body[data-md-color-scheme="slate"] .gdesc-inner { background: var(--md-default-bg-color);}
+    body[data-md-color-scheme="slate"] .gslide-title { color: var(--md-default-fg-color);}
+    body[data-md-color-scheme="slate"] .gslide-desc { color: var(--md-default-fg-color);}</style> <script src="../../../assets/javascripts/glightbox.min.js"></script></head>
   
   
     
@@ -8162,7 +8162,7 @@ Studio on Cloud can be used on NebulaGraph Cloud Service. When you create a Nebu
 <tr>
 <td><a href="https://oss-cdn.nebula-graph.io/nebula-graph-studio/3.8.0/nebula-graph-studio-3.8.0.x86_64.rpm">nebula-graph-studio-3.8.0.x86_64.rpm</a></td>
 <td><a href="https://oss-cdn.nebula-graph.io/nebula-graph-studio/3.8.0/nebula-graph-studio-3.8.0.x86_64.rpm.sha256">nebula-graph-studio-3.8.0.x86_64.rpm.sha256</a></td>
-<td>3.6.0</td>
+<td>master</td>
 </tr>
 </tbody>
 </table>
@@ -8184,7 +8184,7 @@ NebulaGraph<span class="w"> </span>Studio<span class="w"> </span>started<span cl
 <li>
 <p>When Studio is started, use <code>http://&lt;ip address&gt;:7001</code> to get access to Studio.</p>
 <p>If you can see the <strong>Config Server</strong> page on the browser, Studio is started successfully.</p>
-<p><a class="glightbox" href="https://docs-cdn.nebula-graph.com.cn/figures/std_login_230912_en.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img src="https://docs-cdn.nebula-graph.com.cn/figures/std_login_230912_en.png" width="1200" alt="A screenshot that shows the login UI of studio"></a></p>
+<p><a class="glightbox" href="https://docs-cdn.nebula-graph.com.cn/figures/std_login_230912_en.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img src="https://docs-cdn.nebula-graph.com.cn/figures/std_login_230912_en.png" width="1200" alt="A screenshot that shows the login UI of studio"></a></p>
 </li>
 </ol>
 <h3 id="uninstall">Uninstall<a class="headerlink" href="#uninstall" title="Permanent link">&para;</a></h3>
@@ -8266,7 +8266,7 @@ $<span class="w"> </span>systemctl<span class="w"> </span>restart<span class="w"
 <tr>
 <td><a href="https://oss-cdn.nebula-graph.io/nebula-graph-studio/3.8.0/nebula-graph-studio-3.8.0.x86_64.deb">nebula-graph-studio-3.8.0.x86_64.deb</a></td>
 <td><a href="https://oss-cdn.nebula-graph.io/nebula-graph-studio/3.8.0/nebula-graph-studio-3.8.0.x86_64.deb.sha256">nebula-graph-studio-3.8.0.x86_64.deb.sha256</a></td>
-<td>3.6.0</td>
+<td>master</td>
 </tr>
 </tbody>
 </table>
@@ -8280,7 +8280,7 @@ $<span class="w"> </span>systemctl<span class="w"> </span>restart<span class="w"
 <li>
 <p>When Studio is started, use <code>http://&lt;ip address&gt;:7001</code> to get access to Studio.</p>
 <p>If you can see the <strong>Config Server</strong> page on the browser, Studio is started successfully.</p>
-<p><a class="glightbox" href="https://docs-cdn.nebula-graph.com.cn/figures/std_login_230912_en.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img src="https://docs-cdn.nebula-graph.com.cn/figures/std_login_230912_en.png" width="1200" alt="A screenshot that shows the login UI of studio"></a></p>
+<p><a class="glightbox" href="https://docs-cdn.nebula-graph.com.cn/figures/std_login_230912_en.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img src="https://docs-cdn.nebula-graph.com.cn/figures/std_login_230912_en.png" width="1200" alt="A screenshot that shows the login UI of studio"></a></p>
 </li>
 </ol>
 <h3 id="uninstall_1">Uninstall<a class="headerlink" href="#uninstall_1" title="Permanent link">&para;</a></h3>
@@ -8345,7 +8345,7 @@ $<span class="w"> </span>./server
 <li>
 <p>When Studio is started, use <code>http://&lt;ip address&gt;:7001</code> to get access to Studio.</p>
 <p>If you can see the <strong>Config Server</strong> page on the browser, Studio is started successfully.</p>
-<p><a class="glightbox" href="https://docs-cdn.nebula-graph.com.cn/figures/std_login_230912_en.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img src="https://docs-cdn.nebula-graph.com.cn/figures/std_login_230912_en.png" width="1200" alt="A screenshot that shows the login UI of studio"></a></p>
+<p><a class="glightbox" href="https://docs-cdn.nebula-graph.com.cn/figures/std_login_230912_en.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img src="https://docs-cdn.nebula-graph.com.cn/figures/std_login_230912_en.png" width="1200" alt="A screenshot that shows the login UI of studio"></a></p>
 </li>
 </ol>
 <h3 id="stop_service">Stop Service<a class="headerlink" href="#stop_service" title="Permanent link">&para;</a></h3>
@@ -8381,7 +8381,7 @@ $<span class="w"> </span>./server
 </li>
 </ul>
 <h3 id="procedure">Procedure<a class="headerlink" href="#procedure" title="Permanent link">&para;</a></h3>
-<p>To deploy and start Docker-based Studio, run the following commands. Here we use NebulaGraph v3.6.0 for demonstration:</p>
+<p>To deploy and start Docker-based Studio, run the following commands. Here we use NebulaGraph vmaster for demonstration:</p>
 <ol>
 <li>
 <p>Download the configuration files for the deployment.</p>
@@ -8395,7 +8395,7 @@ $<span class="w"> </span>./server
 <tbody>
 <tr>
 <td><a href="https://oss-cdn.nebula-graph.io/nebula-graph-studio/3.8.0/nebula-graph-studio-3.8.0.tar.gz">nebula-graph-studio-3.8.0.tar.gz</a></td>
-<td>3.6.0</td>
+<td>master</td>
 </tr>
 </tbody>
 </table>
@@ -8430,7 +8430,7 @@ $<span class="w"> </span>./server
 <p>Run <code>ifconfig</code> or <code>ipconfig</code> to get the IP address of the machine where Docker-based Studio is running. On the machine running Docker-based Studio, you can use <code>http://localhost:7001</code> to get access to Studio.</p>
 </div>
 <p>If you can see the <strong>Config Server</strong> page on the browser, Docker-based Studio is started successfully.</p>
-<p><a class="glightbox" href="https://docs-cdn.nebula-graph.com.cn/figures/std_login_230912_en.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img src="https://docs-cdn.nebula-graph.com.cn/figures/std_login_230912_en.png" width="1200" alt="A screenshot that shows the login UI of studio"></a></p>
+<p><a class="glightbox" href="https://docs-cdn.nebula-graph.com.cn/figures/std_login_230912_en.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img src="https://docs-cdn.nebula-graph.com.cn/figures/std_login_230912_en.png" width="1200" alt="A screenshot that shows the login UI of studio"></a></p>
 </li>
 </ol>
 <h2 id="helm-based_studio">Helm-based Studio<a class="headerlink" href="#helm-based_studio" title="Permanent link">&para;</a></h2>
@@ -8532,7 +8532,7 @@ $<span class="w"> </span>./server
 <li>
 <p>When Studio is started, use <code>http://&lt;node_address&gt;:30070/</code> to get access to Studio.</p>
 <p>If you can see the <strong>Config Server</strong> page on the browser, Studio is started successfully.</p>
-<p><a class="glightbox" href="https://docs-cdn.nebula-graph.com.cn/figures/std_login_230912_en.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img src="https://docs-cdn.nebula-graph.com.cn/figures/std_login_230912_en.png" width="1200" alt="A screenshot that shows the login UI of studio"></a></p>
+<p><a class="glightbox" href="https://docs-cdn.nebula-graph.com.cn/figures/std_login_230912_en.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img src="https://docs-cdn.nebula-graph.com.cn/figures/std_login_230912_en.png" width="1200" alt="A screenshot that shows the login UI of studio"></a></p>
 </li>
 </ol>
 <h3 id="uninstall_2">Uninstall<a class="headerlink" href="#uninstall_2" title="Permanent link">&para;</a></h3>
@@ -8618,7 +8618,7 @@ $<span class="w"> </span>./server
     </div>
     
     
-    <script id="__config" type="application/json">{"base": "../../..", "features": ["navigation.top", "header.autohide", "content.tabs.link", "content.code.copy", "content.action.edit"], "search": "../../../assets/javascripts/workers/search.f886a092.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": {"method": "mike"}}</script>
+    <script id="__config" type="application/json">{"base": "../../..", "features": ["navigation.top", "header.autohide", "content.tabs.link", "content.action.edit", "content.code.copy"], "search": "../../../assets/javascripts/workers/search.f886a092.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": {"provider": "mike"}}</script>
     
     
       <script src="../../../assets/javascripts/bundle.aecac24b.min.js"></script>
@@ -8628,8 +8628,6 @@ $<span class="w"> </span>./server
         <script src="../../../js/search.js"></script>
       
         <script src="../../../js/config.js"></script>
-      
-        <script src="../../../js/version-select.js"></script>
       
         <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
       

@@ -1,3 +1,5 @@
+<!-- Overwrites main.html base mkdocs theme, taken from 
+https://github.com/mkdocs/mkdocs/blob/master/mkdocs/themes/mkdocs/main.html -->
 
 <!doctype html>
 <html lang="en" class="no-js">
@@ -47,8 +49,8 @@
         
         
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
-        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Noto+Sans:300,300i,400,400i,700,700i%7CSource+Code+Pro:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Noto Sans";--md-code-font:"Source Code Pro"}</style>
       
     
     
@@ -58,7 +60,7 @@
     
       <link rel="stylesheet" href="../../../stylesheets/extra.css">
     
-      <link rel="stylesheet" href="../../../css/version-select.css">
+      <link rel="stylesheet" href="../../../stylesheets/pdf.css">
     
     <script>__md_scope=new URL("../../..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
     
@@ -78,17 +80,15 @@
     
     
    <link href="../../../assets/stylesheets/glightbox.min.css" rel="stylesheet"/><style>
-        html.glightbox-open { overflow: initial; height: 100%; }
-        .gslide-title { margin-top: 0px; user-select: text; }
-        .gslide-desc { color: #666; user-select: text; }
-        .gslide-image img { background: white; }
-        
-            .gscrollbar-fixer { padding-right: 15px; }
-            .gdesc-inner { font-size: 0.75rem; }
-            body[data-md-color-scheme="slate"] .gdesc-inner { background: var(--md-default-bg-color);}
-            body[data-md-color-scheme="slate"] .gslide-title { color: var(--md-default-fg-color);}
-            body[data-md-color-scheme="slate"] .gslide-desc { color: var(--md-default-fg-color);}
-            </style> <script src="../../../assets/javascripts/glightbox.min.js"></script></head>
+    html.glightbox-open { overflow: initial; height: 100%; }
+    .gslide-title { margin-top: 0px; user-select: text; }
+    .gslide-desc { color: #666; user-select: text; }
+    .gslide-image img { background: white; }
+    .gscrollbar-fixer { padding-right: 15px; }
+    .gdesc-inner { font-size: 0.75rem; }
+    body[data-md-color-scheme="slate"] .gdesc-inner { background: var(--md-default-bg-color);}
+    body[data-md-color-scheme="slate"] .gslide-title { color: var(--md-default-fg-color);}
+    body[data-md-color-scheme="slate"] .gslide-desc { color: var(--md-default-fg-color);}</style> <script src="../../../assets/javascripts/glightbox.min.js"></script></head>
   
   
     
@@ -7952,7 +7952,7 @@ nebula&gt; GO FROM &quot;player100&quot; OVER follow REVERSELY \
 <li><code>1</code> in <code>LIMIT [1,2,4]</code> means that the system automatically selects 1 edge to continue traversal in the first step. <code>2</code> means to select 2 edges to continue traversal in the second step. <code>4</code> indicates that 4 edges are selected to continue traversal in the third step.</li>
 <li>Because <code>GO 1 TO 3 STEPS</code> means to return all the traversal results from the first to third steps, all the red edges and their source and destination vertices in the figure below will be matched by this <code>GO</code> statement. And the yellow edges represent there is no path selected when the GO statement traverses. If it is not <code>GO 1 TO 3 STEPS</code> but <code>GO 3 STEPS</code>, it will only match the red edges of the third step and the vertices at both ends.</li>
 </ul>
-<p><a class="glightbox" href="https://docs-cdn.nebula-graph.com.cn/figures/limit_in_go_1.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="LIMIT in GO" src="https://docs-cdn.nebula-graph.com.cn/figures/limit_in_go_1.png" /></a></p>
+<p><a class="glightbox" href="https://docs-cdn.nebula-graph.com.cn/figures/limit_in_go_1.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="LIMIT in GO" src="https://docs-cdn.nebula-graph.com.cn/figures/limit_in_go_1.png" /></a></p>
 <p>In the basketballplayer dataset, the example is as follows:</p>
 <div class="highlight"><pre><span></span><code>nebula&gt; GO 3 STEPS FROM &quot;player100&quot; \
         OVER * \
@@ -8052,7 +8052,7 @@ nebula&gt; MATCH (v:player{name:&quot;Tim Duncan&quot;}) --&gt; (v2) \
 <!--
 ## Performance tip
 
-NebulaGraph 3.6.0 does not implement the pushdown optimization of the storage layer of the `LIMIT` statement. Statements similar to `MATCH (n:T) RETURN n LIMIT 10` or `LOOKUP on i_T | LIMIT 10` will generate excessive resource occupancies in the graphd process. A graphd process will retrieve all T-type vertices from all storaged processes and then return 10 vertices. If the total amount of data is large, the graphd process will consume a lot of memory at this time and even cause OOM.
+NebulaGraph master does not implement the pushdown optimization of the storage layer of the `LIMIT` statement. Statements similar to `MATCH (n:T) RETURN n LIMIT 10` or `LOOKUP on i_T | LIMIT 10` will generate excessive resource occupancies in the graphd process. A graphd process will retrieve all T-type vertices from all storaged processes and then return 10 vertices. If the total amount of data is large, the graphd process will consume a lot of memory at this time and even cause OOM.
 -->
 
   <hr>
@@ -8132,7 +8132,7 @@ NebulaGraph 3.6.0 does not implement the pushdown optimization of the storage la
     </div>
     
     
-    <script id="__config" type="application/json">{"base": "../../..", "features": ["navigation.top", "header.autohide", "content.tabs.link", "content.code.copy", "content.action.edit"], "search": "../../../assets/javascripts/workers/search.f886a092.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": {"method": "mike"}}</script>
+    <script id="__config" type="application/json">{"base": "../../..", "features": ["navigation.top", "header.autohide", "content.tabs.link", "content.action.edit", "content.code.copy"], "search": "../../../assets/javascripts/workers/search.f886a092.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": {"provider": "mike"}}</script>
     
     
       <script src="../../../assets/javascripts/bundle.aecac24b.min.js"></script>
@@ -8142,8 +8142,6 @@ NebulaGraph 3.6.0 does not implement the pushdown optimization of the storage la
         <script src="../../../js/search.js"></script>
       
         <script src="../../../js/config.js"></script>
-      
-        <script src="../../../js/version-select.js"></script>
       
         <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
       

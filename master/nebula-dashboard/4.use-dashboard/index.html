@@ -1,3 +1,5 @@
+<!-- Overwrites main.html base mkdocs theme, taken from 
+https://github.com/mkdocs/mkdocs/blob/master/mkdocs/themes/mkdocs/main.html -->
 
 <!doctype html>
 <html lang="en" class="no-js">
@@ -47,8 +49,8 @@
         
         
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
-        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Noto+Sans:300,300i,400,400i,700,700i%7CSource+Code+Pro:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Noto Sans";--md-code-font:"Source Code Pro"}</style>
       
     
     
@@ -58,7 +60,7 @@
     
       <link rel="stylesheet" href="../../stylesheets/extra.css">
     
-      <link rel="stylesheet" href="../../css/version-select.css">
+      <link rel="stylesheet" href="../../stylesheets/pdf.css">
     
     <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
     
@@ -78,17 +80,15 @@
     
     
    <link href="../../assets/stylesheets/glightbox.min.css" rel="stylesheet"/><style>
-        html.glightbox-open { overflow: initial; height: 100%; }
-        .gslide-title { margin-top: 0px; user-select: text; }
-        .gslide-desc { color: #666; user-select: text; }
-        .gslide-image img { background: white; }
-        
-            .gscrollbar-fixer { padding-right: 15px; }
-            .gdesc-inner { font-size: 0.75rem; }
-            body[data-md-color-scheme="slate"] .gdesc-inner { background: var(--md-default-bg-color);}
-            body[data-md-color-scheme="slate"] .gslide-title { color: var(--md-default-fg-color);}
-            body[data-md-color-scheme="slate"] .gslide-desc { color: var(--md-default-fg-color);}
-            </style> <script src="../../assets/javascripts/glightbox.min.js"></script></head>
+    html.glightbox-open { overflow: initial; height: 100%; }
+    .gslide-title { margin-top: 0px; user-select: text; }
+    .gslide-desc { color: #666; user-select: text; }
+    .gslide-image img { background: white; }
+    .gscrollbar-fixer { padding-right: 15px; }
+    .gdesc-inner { font-size: 0.75rem; }
+    body[data-md-color-scheme="slate"] .gdesc-inner { background: var(--md-default-bg-color);}
+    body[data-md-color-scheme="slate"] .gslide-title { color: var(--md-default-fg-color);}
+    body[data-md-color-scheme="slate"] .gslide-desc { color: var(--md-default-fg-color);}</style> <script src="../../assets/javascripts/glightbox.min.js"></script></head>
   
   
     
@@ -7977,23 +7977,23 @@ Document versions starting from 3.6.0 contain Community Edition features only. F
 <h1 id="dashboard">Dashboard<a class="headerlink" href="#dashboard" title="Permanent link">&para;</a></h1>
 <p>NebulaGraph Dashboard consists of three parts: Machine, Service, and Management. This topic will describe them in detail.</p>
 <h2 id="overview">Overview<a class="headerlink" href="#overview" title="Permanent link">&para;</a></h2>
-<p><a class="glightbox" href="https://docs-cdn.nebula-graph.com.cn/figures/c_dash_overview_230912_en.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img src="https://docs-cdn.nebula-graph.com.cn/figures/c_dash_overview_230912_en.png" width="1200" alt="A screenshot that shows the overview of dashboard"></a></p>
+<p><a class="glightbox" href="https://docs-cdn.nebula-graph.com.cn/figures/c_dash_overview_230912_en.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img src="https://docs-cdn.nebula-graph.com.cn/figures/c_dash_overview_230912_en.png" width="1200" alt="A screenshot that shows the overview of dashboard"></a></p>
 <h2 id="machine">Machine<a class="headerlink" href="#machine" title="Permanent link">&para;</a></h2>
 <p>Click <strong>Machine</strong>-&gt;<strong>Overview</strong> to enter the machine overview page.</p>
 <p>On this page, you can view the variation of CPU, Memory, Load, Disk, and Network In/Out quickly.</p>
 <ul>
 <li>By default, you can view the monitoring data for a maximum of 14 days. You can also select a time range or quickly select the latest 1 hour, 6 hours, 12 hours, 1 day, 3 days, 7 days, or 14 days.</li>
 <li>By default, you can view the monitoring data of all the instances in clusters. You can select the instances you want to view in the <strong>instance</strong> box.</li>
-<li>By default, the monitoring information page will not be updated automatically. You can set the update frequency of the monitoring information page globally or click the <a class="glightbox" href="https://docs-cdn.nebula-graph.com.cn/figures/refresh-220616.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="setup" src="https://docs-cdn.nebula-graph.com.cn/figures/refresh-220616.png" /></a> button to update the page manually.</li>
-<li>To set a base line, click the <a class="glightbox" href="https://docs-cdn.nebula-graph.com.cn/figures/Setup.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="setup" src="https://docs-cdn.nebula-graph.com.cn/figures/Setup.png" /></a> button.</li>
+<li>By default, the monitoring information page will not be updated automatically. You can set the update frequency of the monitoring information page globally or click the <a class="glightbox" href="https://docs-cdn.nebula-graph.com.cn/figures/refresh-220616.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="setup" src="https://docs-cdn.nebula-graph.com.cn/figures/refresh-220616.png" /></a> button to update the page manually.</li>
+<li>To set a base line, click the <a class="glightbox" href="https://docs-cdn.nebula-graph.com.cn/figures/Setup.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="setup" src="https://docs-cdn.nebula-graph.com.cn/figures/Setup.png" /></a> button.</li>
 <li>
-<p>To view the detailed monitoring information, click the <a class="glightbox" href="https://docs-cdn.nebula-graph.com.cn/figures/watch.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="watch" src="https://docs-cdn.nebula-graph.com.cn/figures/watch.png" /></a> button. In this example, select <code>Load</code> for details. The figure is as follows.</p>
-<p><a class="glightbox" href="https://docs-cdn.nebula-graph.com.cn/figures/c_dash_load_230912_en.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img src="https://docs-cdn.nebula-graph.com.cn/figures/c_dash_load_230912_en.png" width="1000" alt="A screenshot that shows the load of dashboard"></a></p>
+<p>To view the detailed monitoring information, click the <a class="glightbox" href="https://docs-cdn.nebula-graph.com.cn/figures/watch.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="watch" src="https://docs-cdn.nebula-graph.com.cn/figures/watch.png" /></a> button. In this example, select <code>Load</code> for details. The figure is as follows.</p>
+<p><a class="glightbox" href="https://docs-cdn.nebula-graph.com.cn/figures/c_dash_load_230912_en.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img src="https://docs-cdn.nebula-graph.com.cn/figures/c_dash_load_230912_en.png" width="1000" alt="A screenshot that shows the load of dashboard"></a></p>
 <ul>
 <li>You can set the monitoring time range, instance, update frequency and base line.</li>
 <li>You can search for or select the target metric. For details about monitoring metrics, see <a href="../6.monitor-parameter/">Metrics</a>.</li>
 <li>You can temporarily hide nodes that you do not need to view.</li>
-<li>You can click the <a class="glightbox" href="https://docs-cdn.nebula-graph.com.cn/figures/watch.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="watch" src="https://docs-cdn.nebula-graph.com.cn/figures/watch.png" /></a> button to view the detailed monitoring information.</li>
+<li>You can click the <a class="glightbox" href="https://docs-cdn.nebula-graph.com.cn/figures/watch.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="watch" src="https://docs-cdn.nebula-graph.com.cn/figures/watch.png" /></a> button to view the detailed monitoring information.</li>
 </ul>
 </li>
 </ul>
@@ -8007,16 +8007,16 @@ Document versions starting from 3.6.0 contain Community Edition features only. F
 <ul>
 <li>By default, you can view the monitoring data for a maximum of 14 days. You can also select a time range or quickly select the latest 1 hour, 6 hours, 12 hours, 1 day, 3 days, 7 days, or 14 days.</li>
 <li>By default, you can view the monitoring data of all the instances in clusters. You can select the instances you want to view in the <strong>instance</strong> box.</li>
-<li>By default, the monitoring information page will not be updated automatically. You can set the update frequency of the monitoring information page globally or click the <a class="glightbox" href="https://docs-cdn.nebula-graph.com.cn/figures/refresh-220616.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="setup" src="https://docs-cdn.nebula-graph.com.cn/figures/refresh-220616.png" /></a> button to update the page manually.</li>
+<li>By default, the monitoring information page will not be updated automatically. You can set the update frequency of the monitoring information page globally or click the <a class="glightbox" href="https://docs-cdn.nebula-graph.com.cn/figures/refresh-220616.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="setup" src="https://docs-cdn.nebula-graph.com.cn/figures/refresh-220616.png" /></a> button to update the page manually.</li>
 <li>You can view the status of all the services in a cluster.</li>
 <li>
-<p>To view the detailed monitoring information, click the <a class="glightbox" href="https://docs-cdn.nebula-graph.com.cn/figures/watch.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="watch" src="https://docs-cdn.nebula-graph.com.cn/figures/watch.png" /></a> button. In this example, select <code>Graph</code> for details. The figure is as follows.</p>
-<p><a class="glightbox" href="https://docs-cdn.nebula-graph.com.cn/figures/c_dash_graph_230912_en.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img src="https://docs-cdn.nebula-graph.com.cn/figures/c_dash_graph_230912_en.png" width="1000" alt="A screenshot that shows the graph service of dashboard"></a></p>
+<p>To view the detailed monitoring information, click the <a class="glightbox" href="https://docs-cdn.nebula-graph.com.cn/figures/watch.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="watch" src="https://docs-cdn.nebula-graph.com.cn/figures/watch.png" /></a> button. In this example, select <code>Graph</code> for details. The figure is as follows.</p>
+<p><a class="glightbox" href="https://docs-cdn.nebula-graph.com.cn/figures/c_dash_graph_230912_en.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img src="https://docs-cdn.nebula-graph.com.cn/figures/c_dash_graph_230912_en.png" width="1000" alt="A screenshot that shows the graph service of dashboard"></a></p>
 <ul>
 <li>You can set the monitoring time range, instance, update frequency, period, aggregation and base line.</li>
 <li>You can search for or select the target metric. For details of monitoring metrics, see <a href="../6.monitor-parameter/">Monitor parameter</a>.</li>
 <li>You can temporarily hide nodes that you do not need to view.</li>
-<li>You can click the <a class="glightbox" href="https://docs-cdn.nebula-graph.com.cn/figures/watch.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="watch" src="https://docs-cdn.nebula-graph.com.cn/figures/watch.png" /></a> button to view the detailed monitoring information.</li>
+<li>You can click the <a class="glightbox" href="https://docs-cdn.nebula-graph.com.cn/figures/watch.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="watch" src="https://docs-cdn.nebula-graph.com.cn/figures/watch.png" /></a> button to view the detailed monitoring information.</li>
 <li>The Graph service supports a set of space-level metrics. For more information, see the following section <strong>Graph space</strong>.</li>
 </ul>
 </li>
@@ -8033,11 +8033,11 @@ Document versions starting from 3.6.0 contain Community Edition features only. F
 <p>The service monitoring page can also monitor graph space level metrics. <strong>Only when the behavior of a graph space metric is triggered, you can specify the graph space to view information about the corresponding graph space metric</strong>.</p>
 <p>Space graph metrics record the information of different graph spaces separately. Currently, only the Graph service supports a set of space-level metrics.</p>
 <p>For information about the space graph metrics, see <a href="../6.monitor-parameter/">Graph space</a>.</p>
-<p><a class="glightbox" href="https://docs-cdn.nebula-graph.com.cn/figures/space_level_metrics.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="graph-metrics" src="https://docs-cdn.nebula-graph.com.cn/figures/space_level_metrics.png" /></a></p>
+<p><a class="glightbox" href="https://docs-cdn.nebula-graph.com.cn/figures/space_level_metrics.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="graph-metrics" src="https://docs-cdn.nebula-graph.com.cn/figures/space_level_metrics.png" /></a></p>
 <h2 id="management">Management<a class="headerlink" href="#management" title="Permanent link">&para;</a></h2>
 <h3 id="overview_info">Overview info<a class="headerlink" href="#overview_info" title="Permanent link">&para;</a></h3>
 <p>On the <strong>Overview Info</strong> page, you can see the information of the NebulaGraph cluster, including Storage leader distribution, Storage service details, versions and hosts information of each NebulaGraph service, and partition distribution and details.</p>
-<p><a class="glightbox" href="https://docs-cdn.nebula-graph.com.cn/figures/c_dash_info_230912_en.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img src="https://docs-cdn.nebula-graph.com.cn/figures/c_dash_info_230912_en.png" width="1000" alt="A screenshot that shows the cluster information of dashboard"></a></p>
+<p><a class="glightbox" href="https://docs-cdn.nebula-graph.com.cn/figures/c_dash_info_230912_en.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img src="https://docs-cdn.nebula-graph.com.cn/figures/c_dash_info_230912_en.png" width="1000" alt="A screenshot that shows the cluster information of dashboard"></a></p>
 <h4 id="storage_leader_distribution">Storage Leader Distribution<a class="headerlink" href="#storage_leader_distribution" title="Permanent link">&para;</a></h4>
 <p>In this section, the number of Leaders and the Leader distribution will be shown.</p>
 <ul>
@@ -8218,7 +8218,7 @@ Document versions starting from 3.6.0 contain Community Edition features only. F
     </div>
     
     
-    <script id="__config" type="application/json">{"base": "../..", "features": ["navigation.top", "header.autohide", "content.tabs.link", "content.code.copy", "content.action.edit"], "search": "../../assets/javascripts/workers/search.f886a092.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": {"method": "mike"}}</script>
+    <script id="__config" type="application/json">{"base": "../..", "features": ["navigation.top", "header.autohide", "content.tabs.link", "content.action.edit", "content.code.copy"], "search": "../../assets/javascripts/workers/search.f886a092.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": {"provider": "mike"}}</script>
     
     
       <script src="../../assets/javascripts/bundle.aecac24b.min.js"></script>
@@ -8228,8 +8228,6 @@ Document versions starting from 3.6.0 contain Community Edition features only. F
         <script src="../../js/search.js"></script>
       
         <script src="../../js/config.js"></script>
-      
-        <script src="../../js/version-select.js"></script>
       
         <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
       

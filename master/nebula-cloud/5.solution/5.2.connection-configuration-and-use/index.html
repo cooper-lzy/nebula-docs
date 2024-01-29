@@ -1,3 +1,5 @@
+<!-- Overwrites main.html base mkdocs theme, taken from 
+https://github.com/mkdocs/mkdocs/blob/master/mkdocs/themes/mkdocs/main.html -->
 
 <!doctype html>
 <html lang="en" class="no-js">
@@ -43,8 +45,8 @@
         
         
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
-        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Noto+Sans:300,300i,400,400i,700,700i%7CSource+Code+Pro:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Noto Sans";--md-code-font:"Source Code Pro"}</style>
       
     
     
@@ -54,7 +56,7 @@
     
       <link rel="stylesheet" href="../../../stylesheets/extra.css">
     
-      <link rel="stylesheet" href="../../../css/version-select.css">
+      <link rel="stylesheet" href="../../../stylesheets/pdf.css">
     
     <script>__md_scope=new URL("../../..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
     
@@ -74,17 +76,15 @@
     
     
    <link href="../../../assets/stylesheets/glightbox.min.css" rel="stylesheet"/><style>
-        html.glightbox-open { overflow: initial; height: 100%; }
-        .gslide-title { margin-top: 0px; user-select: text; }
-        .gslide-desc { color: #666; user-select: text; }
-        .gslide-image img { background: white; }
-        
-            .gscrollbar-fixer { padding-right: 15px; }
-            .gdesc-inner { font-size: 0.75rem; }
-            body[data-md-color-scheme="slate"] .gdesc-inner { background: var(--md-default-bg-color);}
-            body[data-md-color-scheme="slate"] .gslide-title { color: var(--md-default-fg-color);}
-            body[data-md-color-scheme="slate"] .gslide-desc { color: var(--md-default-fg-color);}
-            </style> <script src="../../../assets/javascripts/glightbox.min.js"></script></head>
+    html.glightbox-open { overflow: initial; height: 100%; }
+    .gslide-title { margin-top: 0px; user-select: text; }
+    .gslide-desc { color: #666; user-select: text; }
+    .gslide-image img { background: white; }
+    .gscrollbar-fixer { padding-right: 15px; }
+    .gdesc-inner { font-size: 0.75rem; }
+    body[data-md-color-scheme="slate"] .gdesc-inner { background: var(--md-default-bg-color);}
+    body[data-md-color-scheme="slate"] .gslide-title { color: var(--md-default-fg-color);}
+    body[data-md-color-scheme="slate"] .gslide-desc { color: var(--md-default-fg-color);}</style> <script src="../../../assets/javascripts/glightbox.min.js"></script></head>
   
   
     
@@ -7730,7 +7730,7 @@ Document versions starting from 3.6.0 contain Community Edition features only. F
 <ol>
 <li>
 <p>Enter your subscription ID, click <strong>Create</strong>. The creation time takes about 2 minutes.</p>
-<p><a class="glightbox" href="https://docs-cdn.nebula-graph.com.cn/figures/cl-ug-008.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="connectivity" src="https://docs-cdn.nebula-graph.com.cn/figures/cl-ug-008.png" /></a></p>
+<p><a class="glightbox" href="https://docs-cdn.nebula-graph.com.cn/figures/cl-ug-008.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="connectivity" src="https://docs-cdn.nebula-graph.com.cn/figures/cl-ug-008.png" /></a></p>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
 <p>The subscription ID on the <strong>Subscription</strong> page of Azure Portal. You can click on the [Subscriptions] (https://portal.azure.com/?l=en.en-us#blade/Microsoft_Azure_Billing/SubscriptionsBlade) page for quick access.</p>
@@ -7742,7 +7742,7 @@ Document versions starting from 3.6.0 contain Community Edition features only. F
 <li>Navigate to the Azure portal. Search for Private Link and click <strong>Private endpoint</strong>.</li>
 <li>
 <p>Click <strong>+ add</strong>.</p>
-<p><a class="glightbox" href="https://docs-cdn.nebula-graph.com.cn/figures/cl-ug-009.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="Private endpoint" src="https://docs-cdn.nebula-graph.com.cn/figures/cl-ug-009.png" /></a></p>
+<p><a class="glightbox" href="https://docs-cdn.nebula-graph.com.cn/figures/cl-ug-009.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="Private endpoint" src="https://docs-cdn.nebula-graph.com.cn/figures/cl-ug-009.png" /></a></p>
 </li>
 <li>
 <p>In the <strong>Basics</strong> section, fill in the following plan details:</p>
@@ -7792,7 +7792,7 @@ Document versions starting from 3.6.0 contain Community Edition features only. F
 </table>
 </li>
 </ul>
-<p><a class="glightbox" href="https://docs-cdn.nebula-graph.com.cn/figures/cl-ug-010.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="Basics" src="https://docs-cdn.nebula-graph.com.cn/figures/cl-ug-010.png" /></a></p>
+<p><a class="glightbox" href="https://docs-cdn.nebula-graph.com.cn/figures/cl-ug-010.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="Basics" src="https://docs-cdn.nebula-graph.com.cn/figures/cl-ug-010.png" /></a></p>
 <div class="admonition caution">
 <p class="admonition-title">Caution</p>
 <p>The region of the database you select should be in the same area as that of your business to avoid performance and speed problems.</p>
@@ -7827,9 +7827,9 @@ Document versions starting from 3.6.0 contain Community Edition features only. F
 </table>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
-<p>The alias is on the <strong>Connectivity</strong> page of NebulaGraph Cloud, click <a class="glightbox" href="https://docs-cdn.nebula-graph.com.cn/figures/copy.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="copy" src="https://docs-cdn.nebula-graph.com.cn/figures/copy.png" /></a> to copy it.</p>
+<p>The alias is on the <strong>Connectivity</strong> page of NebulaGraph Cloud, click <a class="glightbox" href="https://docs-cdn.nebula-graph.com.cn/figures/copy.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="copy" src="https://docs-cdn.nebula-graph.com.cn/figures/copy.png" /></a> to copy it.</p>
 </div>
-<p><a class="glightbox" href="https://docs-cdn.nebula-graph.com.cn/figures/cl-ug-012.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="resource" src="https://docs-cdn.nebula-graph.com.cn/figures/cl-ug-012.png" /></a></p>
+<p><a class="glightbox" href="https://docs-cdn.nebula-graph.com.cn/figures/cl-ug-012.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="resource" src="https://docs-cdn.nebula-graph.com.cn/figures/cl-ug-012.png" /></a></p>
 </li>
 <li>
 <p>At the bottom of the <strong>Resource</strong> page, click <strong>Next: Configuration</strong>.</p>
@@ -7863,14 +7863,14 @@ Document versions starting from 3.6.0 contain Community Edition features only. F
 <p class="admonition-title">Note</p>
 <p>Private DNS integration is currently not supported.</p>
 </div>
-<p><a class="glightbox" href="https://docs-cdn.nebula-graph.com.cn/figures/cl-ug-013.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="configuration" src="https://docs-cdn.nebula-graph.com.cn/figures/cl-ug-013.png" /></a></p>
+<p><a class="glightbox" href="https://docs-cdn.nebula-graph.com.cn/figures/cl-ug-013.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="configuration" src="https://docs-cdn.nebula-graph.com.cn/figures/cl-ug-013.png" /></a></p>
 </li>
 <li>
 <p>At the bottom of the <strong>Configuration</strong> page, click <strong>Next: Tags</strong>.</p>
 </li>
 <li>
 <p>(optional)In the <strong>Tags</strong> section, enter <strong>Name:Values</strong>.</p>
-<p><a class="glightbox" href="https://docs-cdn.nebula-graph.com.cn/figures/cl-ug-014.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="Tag" src="https://docs-cdn.nebula-graph.com.cn/figures/cl-ug-014.png" /></a></p>
+<p><a class="glightbox" href="https://docs-cdn.nebula-graph.com.cn/figures/cl-ug-014.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="Tag" src="https://docs-cdn.nebula-graph.com.cn/figures/cl-ug-014.png" /></a></p>
 </li>
 <li>
 <p>At the bottom of the <strong>Tags</strong> page, click <strong>Next: Review + create</strong>.</p>
@@ -7882,7 +7882,7 @@ Document versions starting from 3.6.0 contain Community Edition features only. F
 <p>After creating the <strong>private endpoint</strong>, copy the <strong>Private IP address</strong> in <strong>Network interface</strong> to the <strong>Connectivity</strong> page in Cloud. Click the <strong>Create</strong>.</p>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
-<p>Private Link Endpoint IP information is stored in the Cloud, and you can click <a class="glightbox" href="https://docs-cdn.nebula-graph.com.cn/figures/edit.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="edit" src="https://docs-cdn.nebula-graph.com.cn/figures/edit.png" /></a> to modify.</p>
+<p>Private Link Endpoint IP information is stored in the Cloud, and you can click <a class="glightbox" href="https://docs-cdn.nebula-graph.com.cn/figures/edit.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="edit" src="https://docs-cdn.nebula-graph.com.cn/figures/edit.png" /></a> to modify.</p>
 </div>
 </li>
 </ol>
@@ -7966,7 +7966,7 @@ Document versions starting from 3.6.0 contain Community Edition features only. F
     </div>
     
     
-    <script id="__config" type="application/json">{"base": "../../..", "features": ["navigation.top", "header.autohide", "content.tabs.link", "content.code.copy", "content.action.edit"], "search": "../../../assets/javascripts/workers/search.f886a092.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": {"method": "mike"}}</script>
+    <script id="__config" type="application/json">{"base": "../../..", "features": ["navigation.top", "header.autohide", "content.tabs.link", "content.action.edit", "content.code.copy"], "search": "../../../assets/javascripts/workers/search.f886a092.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": {"provider": "mike"}}</script>
     
     
       <script src="../../../assets/javascripts/bundle.aecac24b.min.js"></script>
@@ -7976,8 +7976,6 @@ Document versions starting from 3.6.0 contain Community Edition features only. F
         <script src="../../../js/search.js"></script>
       
         <script src="../../../js/config.js"></script>
-      
-        <script src="../../../js/version-select.js"></script>
       
         <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
       

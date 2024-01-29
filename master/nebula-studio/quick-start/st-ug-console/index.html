@@ -1,3 +1,5 @@
+<!-- Overwrites main.html base mkdocs theme, taken from 
+https://github.com/mkdocs/mkdocs/blob/master/mkdocs/themes/mkdocs/main.html -->
 
 <!doctype html>
 <html lang="en" class="no-js">
@@ -47,8 +49,8 @@
         
         
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
-        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Noto+Sans:300,300i,400,400i,700,700i%7CSource+Code+Pro:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Noto Sans";--md-code-font:"Source Code Pro"}</style>
       
     
     
@@ -58,7 +60,7 @@
     
       <link rel="stylesheet" href="../../../stylesheets/extra.css">
     
-      <link rel="stylesheet" href="../../../css/version-select.css">
+      <link rel="stylesheet" href="../../../stylesheets/pdf.css">
     
     <script>__md_scope=new URL("../../..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
     
@@ -78,17 +80,15 @@
     
     
    <link href="../../../assets/stylesheets/glightbox.min.css" rel="stylesheet"/><style>
-        html.glightbox-open { overflow: initial; height: 100%; }
-        .gslide-title { margin-top: 0px; user-select: text; }
-        .gslide-desc { color: #666; user-select: text; }
-        .gslide-image img { background: white; }
-        
-            .gscrollbar-fixer { padding-right: 15px; }
-            .gdesc-inner { font-size: 0.75rem; }
-            body[data-md-color-scheme="slate"] .gdesc-inner { background: var(--md-default-bg-color);}
-            body[data-md-color-scheme="slate"] .gslide-title { color: var(--md-default-fg-color);}
-            body[data-md-color-scheme="slate"] .gslide-desc { color: var(--md-default-fg-color);}
-            </style> <script src="../../../assets/javascripts/glightbox.min.js"></script></head>
+    html.glightbox-open { overflow: initial; height: 100%; }
+    .gslide-title { margin-top: 0px; user-select: text; }
+    .gslide-desc { color: #666; user-select: text; }
+    .gslide-image img { background: white; }
+    .gscrollbar-fixer { padding-right: 15px; }
+    .gdesc-inner { font-size: 0.75rem; }
+    body[data-md-color-scheme="slate"] .gdesc-inner { background: var(--md-default-bg-color);}
+    body[data-md-color-scheme="slate"] .gslide-title { color: var(--md-default-fg-color);}
+    body[data-md-color-scheme="slate"] .gslide-desc { color: var(--md-default-fg-color);}</style> <script src="../../../assets/javascripts/glightbox.min.js"></script></head>
   
   
     
@@ -7722,7 +7722,7 @@ Document versions starting from 3.6.0 contain Community Edition features only. F
 
 <h1 id="console">Console<a class="headerlink" href="#console" title="Permanent link">&para;</a></h1>
 <p>Studio console interface is shown as follows.</p>
-<p><a class="glightbox" href="https://docs-cdn.nebula-graph.com.cn/figures/st-ug-015-en.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="console" src="https://docs-cdn.nebula-graph.com.cn/figures/st-ug-015-en.png" /></a></p>
+<p><a class="glightbox" href="https://docs-cdn.nebula-graph.com.cn/figures/st-ug-015-en.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="console" src="https://docs-cdn.nebula-graph.com.cn/figures/st-ug-015-en.png" /></a></p>
 <p>The following table lists various functions on the console interface.</p>
 <table>
 <thead>
@@ -7746,32 +7746,32 @@ Document versions starting from 3.6.0 contain Community Edition features only. F
 <tr>
 <td align="left">3</td>
 <td align="left">favorites</td>
-<td align="left">Click the <a class="glightbox" href="https://docs-cdn.nebula-graph.com.cn/figures/studio-btn-save.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="save" src="https://docs-cdn.nebula-graph.com.cn/figures/studio-btn-save.png" /></a> button to expand the favorites, click one of the statements, and the input box will automatically enter the statement.</td>
+<td align="left">Click the <a class="glightbox" href="https://docs-cdn.nebula-graph.com.cn/figures/studio-btn-save.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="save" src="https://docs-cdn.nebula-graph.com.cn/figures/studio-btn-save.png" /></a> button to expand the favorites, click one of the statements, and the input box will automatically enter the statement.</td>
 </tr>
 <tr>
 <td align="left">4</td>
 <td align="left">history list</td>
-<td align="left">Click <a class="glightbox" href="https://docs-cdn.nebula-graph.com.cn/figures/studio-btn-history.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="history" src="https://docs-cdn.nebula-graph.com.cn/figures/studio-btn-history.png" /></a> button representing the statement record. In the statement running record list, click one of the statements, and the statement will be automatically entered in the input box. The list provides the record of the last 15 statements.</td>
+<td align="left">Click <a class="glightbox" href="https://docs-cdn.nebula-graph.com.cn/figures/studio-btn-history.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="history" src="https://docs-cdn.nebula-graph.com.cn/figures/studio-btn-history.png" /></a> button representing the statement record. In the statement running record list, click one of the statements, and the statement will be automatically entered in the input box. The list provides the record of the last 15 statements.</td>
 </tr>
 <tr>
 <td align="left">5</td>
 <td align="left">clean input box</td>
-<td align="left">Click <a class="glightbox" href="https://docs-cdn.nebula-graph.com.cn/figures/studio-btn-clear.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="clean" src="https://docs-cdn.nebula-graph.com.cn/figures/studio-btn-clear.png" /></a> button to clear the content entered in the input box.</td>
+<td align="left">Click <a class="glightbox" href="https://docs-cdn.nebula-graph.com.cn/figures/studio-btn-clear.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="clean" src="https://docs-cdn.nebula-graph.com.cn/figures/studio-btn-clear.png" /></a> button to clear the content entered in the input box.</td>
 </tr>
 <tr>
 <td align="left">6</td>
 <td align="left">run</td>
-<td align="left">After inputting the nGQL statement in the input box, click <a class="glightbox" href="https://docs-cdn.nebula-graph.com.cn/figures/studio-btn-play.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="run" src="https://docs-cdn.nebula-graph.com.cn/figures/studio-btn-play.png" /></a> button to indicate the operation to start running the statement.</td>
+<td align="left">After inputting the nGQL statement in the input box, click <a class="glightbox" href="https://docs-cdn.nebula-graph.com.cn/figures/studio-btn-play.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="run" src="https://docs-cdn.nebula-graph.com.cn/figures/studio-btn-play.png" /></a> button to indicate the operation to start running the statement.</td>
 </tr>
 <tr>
 <td align="left">7</td>
 <td align="left">custom parameters display</td>
-<td align="left">Click the <a class="glightbox" href="https://docs-cdn.nebula-graph.com.cn/figures/down.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="Query" src="https://docs-cdn.nebula-graph.com.cn/figures/down.png" /></a> button to expand the custom parameters for parameterized query. For details, see <a href="../../../nebula-console/">Manage parameters</a>.</td>
+<td align="left">Click the <a class="glightbox" href="https://docs-cdn.nebula-graph.com.cn/figures/down.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="Query" src="https://docs-cdn.nebula-graph.com.cn/figures/down.png" /></a> button to expand the custom parameters for parameterized query. For details, see <a href="../../../nebula-console/">Manage parameters</a>.</td>
 </tr>
 <tr>
 <td align="left">8</td>
 <td align="left">input box</td>
-<td align="left">After inputting the nGQL statements, click the <a class="glightbox" href="https://docs-cdn.nebula-graph.com.cn/figures/studio-btn-play.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="run" src="https://docs-cdn.nebula-graph.com.cn/figures/studio-btn-play.png" /></a> button to run the statement. You can input multiple statements and run them at the same time by using the separator <code>;</code>, and also use the symbol <code>//</code> to add comments.</td>
+<td align="left">After inputting the nGQL statements, click the <a class="glightbox" href="https://docs-cdn.nebula-graph.com.cn/figures/studio-btn-play.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="run" src="https://docs-cdn.nebula-graph.com.cn/figures/studio-btn-play.png" /></a> button to run the statement. You can input multiple statements and run them at the same time by using the separator <code>;</code>, and also use the symbol <code>//</code> to add comments.</td>
 </tr>
 <tr>
 <td align="left">9</td>
@@ -7781,22 +7781,22 @@ Document versions starting from 3.6.0 contain Community Edition features only. F
 <tr>
 <td align="left">10</td>
 <td align="left">add to favorites</td>
-<td align="left">Click the <a class="glightbox" href="https://docs-cdn.nebula-graph.com.cn/figures/studio-btn-save.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="save" src="https://docs-cdn.nebula-graph.com.cn/figures/studio-btn-save.png" /></a> button to save the statement as a favorite, the button for the favorite statement is colored in yellow exhibit.</td>
+<td align="left">Click the <a class="glightbox" href="https://docs-cdn.nebula-graph.com.cn/figures/studio-btn-save.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="save" src="https://docs-cdn.nebula-graph.com.cn/figures/studio-btn-save.png" /></a> button to save the statement as a favorite, the button for the favorite statement is colored in yellow exhibit.</td>
 </tr>
 <tr>
 <td align="left">11</td>
 <td align="left">export CSV file or PNG file</td>
-<td align="left">After running the nGQL statement to return the result, when the result is in <strong>Table</strong> window, click the <a class="glightbox" href="https://docs-cdn.nebula-graph.com.cn/figures/studio-btn-download.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="download" src="https://docs-cdn.nebula-graph.com.cn/figures/studio-btn-download.png" /></a> button to export as a CSV file. Switch to the <strong>Graph</strong> window and click the <a class="glightbox" href="https://docs-cdn.nebula-graph.com.cn/figures/studio-btn-download.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="download" src="https://docs-cdn.nebula-graph.com.cn/figures/studio-btn-download.png" /></a> button to save the results as a CSV file or PNG image export.</td>
+<td align="left">After running the nGQL statement to return the result, when the result is in <strong>Table</strong> window, click the <a class="glightbox" href="https://docs-cdn.nebula-graph.com.cn/figures/studio-btn-download.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="download" src="https://docs-cdn.nebula-graph.com.cn/figures/studio-btn-download.png" /></a> button to export as a CSV file. Switch to the <strong>Graph</strong> window and click the <a class="glightbox" href="https://docs-cdn.nebula-graph.com.cn/figures/studio-btn-download.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="download" src="https://docs-cdn.nebula-graph.com.cn/figures/studio-btn-download.png" /></a> button to save the results as a CSV file or PNG image export.</td>
 </tr>
 <tr>
 <td align="left">12</td>
 <td align="left">expand/hide execution results</td>
-<td align="left">Click the <a class="glightbox" href="https://docs-cdn.nebula-graph.com.cn/figures/studio-btn-up.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="up" src="https://docs-cdn.nebula-graph.com.cn/figures/studio-btn-up.png" /></a> button to hide the result or click <a class="glightbox" href="https://docs-cdn.nebula-graph.com.cn/figures/studio-btn-down.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="down" src="https://docs-cdn.nebula-graph.com.cn/figures/studio-btn-down.png" /></a> button to expand the result.</td>
+<td align="left">Click the <a class="glightbox" href="https://docs-cdn.nebula-graph.com.cn/figures/studio-btn-up.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="up" src="https://docs-cdn.nebula-graph.com.cn/figures/studio-btn-up.png" /></a> button to hide the result or click <a class="glightbox" href="https://docs-cdn.nebula-graph.com.cn/figures/studio-btn-down.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="down" src="https://docs-cdn.nebula-graph.com.cn/figures/studio-btn-down.png" /></a> button to expand the result.</td>
 </tr>
 <tr>
 <td align="left">13</td>
 <td align="left">close execution results</td>
-<td align="left">Click the <a class="glightbox" href="https://docs-cdn.nebula-graph.com.cn/figures/studio-btn-close.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="close" src="https://docs-cdn.nebula-graph.com.cn/figures/studio-btn-close.png" /></a> button to close the result returned by this nGQL statement.</td>
+<td align="left">Click the <a class="glightbox" href="https://docs-cdn.nebula-graph.com.cn/figures/studio-btn-close.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="close" src="https://docs-cdn.nebula-graph.com.cn/figures/studio-btn-close.png" /></a> button to close the result returned by this nGQL statement.</td>
 </tr>
 <tr>
 <td align="left">14</td>
@@ -7806,7 +7806,7 @@ Document versions starting from 3.6.0 contain Community Edition features only. F
 <tr>
 <td align="left">15</td>
 <td align="left"><strong>Graph</strong> window</td>
-<td align="left">Display the result from running nGQL statement. If the statement returns the complete vertex-edge result, the window displays the result as a graph . Click the <a class="glightbox" href="https://docs-cdn.nebula-graph.com.cn/figures/studio-btn-back.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="expand" src="https://docs-cdn.nebula-graph.com.cn/figures/studio-btn-back.png" /></a> button on the right to view the overview panel.</td>
+<td align="left">Display the result from running nGQL statement. If the statement returns the complete vertex-edge result, the window displays the result as a graph . Click the <a class="glightbox" href="https://docs-cdn.nebula-graph.com.cn/figures/studio-btn-back.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="expand" src="https://docs-cdn.nebula-graph.com.cn/figures/studio-btn-back.png" /></a> button on the right to view the overview panel.</td>
 </tr>
 </tbody>
 </table>
@@ -7888,7 +7888,7 @@ Document versions starting from 3.6.0 contain Community Edition features only. F
     </div>
     
     
-    <script id="__config" type="application/json">{"base": "../../..", "features": ["navigation.top", "header.autohide", "content.tabs.link", "content.code.copy", "content.action.edit"], "search": "../../../assets/javascripts/workers/search.f886a092.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": {"method": "mike"}}</script>
+    <script id="__config" type="application/json">{"base": "../../..", "features": ["navigation.top", "header.autohide", "content.tabs.link", "content.action.edit", "content.code.copy"], "search": "../../../assets/javascripts/workers/search.f886a092.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": {"provider": "mike"}}</script>
     
     
       <script src="../../../assets/javascripts/bundle.aecac24b.min.js"></script>
@@ -7898,8 +7898,6 @@ Document versions starting from 3.6.0 contain Community Edition features only. F
         <script src="../../../js/search.js"></script>
       
         <script src="../../../js/config.js"></script>
-      
-        <script src="../../../js/version-select.js"></script>
       
         <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
       
