@@ -20,7 +20,7 @@ https://github.com/mkdocs/mkdocs/blob/master/mkdocs/themes/mkdocs/main.html -->
         <link rel="prev" href="../../4.5.logging/">
       
       
-        <link rel="next" href="../../4.8.ha-and-balancing/4.8.1.self-healing/">
+        <link rel="next" href="../4.7.3.config-deletion-protection/">
       
       
       <link rel="icon" href="https://docs-cdn.nebula-graph.com.cn/figures/favicon.ico">
@@ -71,9 +71,9 @@ https://github.com/mkdocs/mkdocs/blob/master/mkdocs/themes/mkdocs/main.html -->
   
   
 
-<script id="__analytics">function __md_analytics(){function n(){dataLayer.push(arguments)}window.dataLayer=window.dataLayer||[],n("js",new Date),n("config","G-377962831"),document.addEventListener("DOMContentLoaded",function(){document.forms.search&&document.forms.search.query.addEventListener("blur",function(){this.value&&n("event","search",{search_term:this.value})}),document$.subscribe(function(){var a=document.forms.feedback;if(void 0!==a)for(var e of a.querySelectorAll("[type=submit]"))e.addEventListener("click",function(e){e.preventDefault();var t=document.location.pathname,e=this.getAttribute("data-md-value");n("event","feedback",{page:t,data:e}),a.firstElementChild.disabled=!0;e=a.querySelector(".md-feedback__note [data-md-value='"+e+"']");e&&(e.hidden=!1)}),a.hidden=!1}),location$.subscribe(function(e){n("config","G-377962831",{page_path:e.pathname})})});var e=document.createElement("script");e.async=!0,e.src="https://www.googletagmanager.com/gtag/js?id=G-377962831",document.getElementById("__analytics").insertAdjacentElement("afterEnd",e)}</script>
+<script id="__analytics">function __md_analytics(){function n(){dataLayer.push(arguments)}window.dataLayer=window.dataLayer||[],n("js",new Date),n("config","G-7YZEG0W61R"),document.addEventListener("DOMContentLoaded",function(){document.forms.search&&document.forms.search.query.addEventListener("blur",function(){this.value&&n("event","search",{search_term:this.value})}),document$.subscribe(function(){var a=document.forms.feedback;if(void 0!==a)for(var e of a.querySelectorAll("[type=submit]"))e.addEventListener("click",function(e){e.preventDefault();var t=document.location.pathname,e=this.getAttribute("data-md-value");n("event","feedback",{page:t,data:e}),a.firstElementChild.disabled=!0;e=a.querySelector(".md-feedback__note [data-md-value='"+e+"']");e&&(e.hidden=!1)}),a.hidden=!1}),location$.subscribe(function(e){n("config","G-7YZEG0W61R",{page_path:e.pathname})})});var e=document.createElement("script");e.async=!0,e.src="https://www.googletagmanager.com/gtag/js?id=G-7YZEG0W61R",document.getElementById("__analytics").insertAdjacentElement("afterEnd",e)}</script>
   
-    <script>"undefined"!=typeof __md_analytics&&__md_analytics()</script>
+    <script>var consent;"undefined"==typeof __md_analytics||(consent=__md_get("__consent"))&&consent.analytics&&__md_analytics()</script>
   
 
     
@@ -7113,6 +7113,26 @@ Document versions starting from 3.6.0 contain Community Edition features only. F
   
   
     <li class="md-nav__item">
+      <a href="../../../3.operator-management/3.5.cluster-scope-config/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Manage specific clusters
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
       <a href="../../../3.operator-management/3.3.upgrade-operator/" class="md-nav__link">
         
   
@@ -7379,6 +7399,26 @@ Document versions starting from 3.6.0 contain Community Edition features only. F
   
   
     <li class="md-nav__item">
+      <a href="../../4.4.storage-management/4.4.1.use-local-pv/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Use local PV
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
       <a href="../../4.4.storage-management/4.4.3.configure-pv-reclaim/" class="md-nav__link">
         
   
@@ -7547,6 +7587,26 @@ Document versions starting from 3.6.0 contain Community Edition features only. F
 
               
             
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../4.7.3.config-deletion-protection/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Configure deletion protection
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
           </ul>
         </nav>
       
@@ -7666,6 +7726,26 @@ Document versions starting from 3.6.0 contain Community Edition features only. F
   
   <span class="md-ellipsis">
     Optimize leader transfer in rolling updates
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../4.9.advanced/4.9.2.restart-cluster/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Restart clusters
   </span>
   
 
@@ -8167,10 +8247,21 @@ Document versions starting from 3.6.0 contain Community Edition features only. F
 <h2 id="prerequisites">Prerequisites<a class="headerlink" href="#prerequisites" title="Permanent link">&para;</a></h2>
 <p>A NebulaGraph cluster is created with NebulaGrpah Operator. For detailed steps, see <a href="../../4.1.installation/4.1.1.cluster-install/">Create a NebulaGraph cluster</a>.</p>
 <h2 id="admission_control_rules">Admission control rules<a class="headerlink" href="#admission_control_rules" title="Permanent link">&para;</a></h2>
-<p>Kubernetes admission control allows you to insert custom logic or policies before Kubernetes API Server processes requests. This mechanism can be used to implement various security policies, such as restricting a Pod's resource consumption or limiting its access permissions. NebulaGraph Operator supports validation operations, which means it validates and intercepts requests without making changes. NebulaGraph Operator's default admission validation control rules include:</p>
+<p>Kubernetes admission control allows you to insert custom logic or policies before Kubernetes API Server processes requests. This mechanism can be used to implement various security policies, such as restricting a Pod's resource consumption or limiting its access permissions. NebulaGraph Operator supports validation operations, which means it validates and intercepts requests without making changes. </p>
+<p>After admission control is enabled, NebulaGraph Operator implements the following admission validation control rules by default. You cannot disable these rules:</p>
+<ul>
+<li>Forbid adding additional PVs to Storage service via <code>dataVolumeClaims</code>.</li>
+</ul>
+<ul>
+<li>Forbid shrinking the capacity of all service's PVCs, but allow expansion.</li>
+</ul>
+<ul>
+<li>Forbid any secondary operation during Storage service scale-in/scale-out.</li>
+</ul>
+<p>After admission control is enabled, NebulaGraph Operator allows you to add annotations to implement the following admission validation control rules:</p>
 <ul>
 <li>
-<p>Ensuring the minimum number of replicas in high availability mode:</p>
+<p>Clusters with the <code>ha-mode</code> annotation must have the minimum number of replicas as required by high availability mode:</p>
 <ul>
 <li>For Graph service: At least 2 replicas are required.</li>
 <li>For Meta service: At least 3 replicas are required.</li>
@@ -8183,13 +8274,7 @@ Document versions starting from 3.6.0 contain Community Edition features only. F
 </li>
 </ul>
 <ul>
-<li>Preventing additional PVs from being added to Storage service via <code>dataVolumeClaims</code>.</li>
-</ul>
-<ul>
-<li>Disallowing shrinking the capacity of all service's PVCs, but allowing expansion.</li>
-</ul>
-<ul>
-<li>Forbidding any secondary operation during Storage service scale-in/scale-out.</li>
+<li>Clusters with the <code>delete-protection</code> annotation cannot be deleted. For more information, see <a href="../4.7.3.config-deletion-protection/">Configure deletion protection</a>.        </li>
 </ul>
 <h2 id="tls_certificates_for_admission_webhooks">TLS certificates for admission webhooks<a class="headerlink" href="#tls_certificates_for_admission_webhooks" title="Permanent link">&para;</a></h2>
 <p>To ensure secure communication and data integrity between the K8s API server and the admission webhook, this communication is done over HTTPS by default. This means that TLS certificates are required for the admission webhook. <a href="https://cert-manager.io/docs/">cert-manager</a> is a Kubernetes certificate management controller that automates the issuance and renewal of certificates. NebulaGraph Operator uses cert-manager to manage certificates.</p>
@@ -8225,17 +8310,6 @@ helm<span class="w"> </span>upgrade<span class="w"> </span>nebula-operator<span 
 <p>Verify the control rules.</p>
 <ul>
 <li>
-<p>Verify the minimum number of replicas in high availability mode.</p>
-<div class="highlight"><pre><span></span><code><span class="c1"># Annotate the cluster to enable high availability mode.</span>
-$<span class="w"> </span>kubectl<span class="w"> </span>annotate<span class="w"> </span>nc<span class="w"> </span>nebula<span class="w"> </span>nebula-graph.io/ha-mode<span class="o">=</span><span class="nb">true</span>
-<span class="c1"># Verify the minimum number of the Graph service&#39;s replicas.</span>
-$<span class="w"> </span>kubectl<span class="w"> </span>patch<span class="w"> </span>nc<span class="w"> </span>nebula<span class="w"> </span>--type<span class="o">=</span><span class="s1">&#39;merge&#39;</span><span class="w"> </span>--patch<span class="w"> </span><span class="s1">&#39;{&quot;spec&quot;: {&quot;graphd&quot;: {&quot;replicas&quot;:1}}}&#39;</span>
-Error<span class="w"> </span>from<span class="w"> </span>server:<span class="w"> </span>admission<span class="w"> </span>webhook<span class="w"> </span><span class="s2">&quot;nebulaclustervalidating.nebula-graph.io&quot;</span><span class="w"> </span>denied<span class="w"> </span>the<span class="w"> </span>request:<span class="w"> </span>spec.graphd.replicas:<span class="w"> </span>Invalid<span class="w"> </span>value:<span class="w"> </span><span class="m">1</span>:<span class="w"> </span>should<span class="w"> </span>be<span class="w"> </span>at<span class="w"> </span>least<span class="w"> </span><span class="m">2</span><span class="w"> </span><span class="k">in</span><span class="w"> </span>HA<span class="w"> </span>mode
-</code></pre></div>
-</li>
-</ul>
-<ul>
-<li>
 <p>Verify preventing additional PVs from being added to Storage service.</p>
 <div class="highlight"><pre><span></span><code>$<span class="w"> </span>kubectl<span class="w"> </span>patch<span class="w"> </span>nc<span class="w"> </span>nebula<span class="w"> </span>--type<span class="o">=</span><span class="s1">&#39;merge&#39;</span><span class="w"> </span>--patch<span class="w"> </span><span class="s1">&#39;{&quot;spec&quot;: {&quot;storaged&quot;: {&quot;dataVolumeClaims&quot;:[{&quot;resources&quot;: {&quot;requests&quot;: {&quot;storage&quot;: &quot;2Gi&quot;}}, &quot;storageClassName&quot;: &quot;local-path&quot;},{&quot;resources&quot;: {&quot;requests&quot;: {&quot;storage&quot;: &quot;3Gi&quot;}}, &quot;storageClassName&quot;: &quot;fask-disks&quot;}]}}}&#39;</span>
 Error<span class="w"> </span>from<span class="w"> </span>server:<span class="w"> </span>admission<span class="w"> </span>webhook<span class="w"> </span><span class="s2">&quot;nebulaclustervalidating.nebula-graph.io&quot;</span><span class="w"> </span>deniedthe<span class="w"> </span>request:<span class="w"> </span>spec.storaged.dataVolumeClaims:<span class="w"> </span>Forbidden:<span class="w"> </span>storaged<span class="w"> </span>dataVolumeClaims<span class="w"> </span>is<span class="w"> </span>immutable
@@ -8260,6 +8334,20 @@ Error<span class="w"> </span>from<span class="w"> </span>server:<span class="w">
 </code></pre></div>
 </li>
 </ul>
+<ul>
+<li>
+<p>Verify the minimum number of replicas in high availability mode.</p>
+<div class="highlight"><pre><span></span><code><span class="c1"># Annotate the cluster to enable high availability mode.</span>
+$<span class="w"> </span>kubectl<span class="w"> </span>annotate<span class="w"> </span>nc<span class="w"> </span>nebula<span class="w"> </span>nebula-graph.io/ha-mode<span class="o">=</span><span class="nb">true</span>
+<span class="c1"># Verify the minimum number of the Graph service&#39;s replicas.</span>
+$<span class="w"> </span>kubectl<span class="w"> </span>patch<span class="w"> </span>nc<span class="w"> </span>nebula<span class="w"> </span>--type<span class="o">=</span><span class="s1">&#39;merge&#39;</span><span class="w"> </span>--patch<span class="w"> </span><span class="s1">&#39;{&quot;spec&quot;: {&quot;graphd&quot;: {&quot;replicas&quot;:1}}}&#39;</span>
+Error<span class="w"> </span>from<span class="w"> </span>server:<span class="w"> </span>admission<span class="w"> </span>webhook<span class="w"> </span><span class="s2">&quot;nebulaclustervalidating.nebula-graph.io&quot;</span><span class="w"> </span>denied<span class="w"> </span>the<span class="w"> </span>request:<span class="w"> </span>spec.graphd.replicas:<span class="w"> </span>Invalid<span class="w"> </span>value:<span class="w"> </span><span class="m">1</span>:<span class="w"> </span>should<span class="w"> </span>be<span class="w"> </span>at<span class="w"> </span>least<span class="w"> </span><span class="m">2</span><span class="w"> </span><span class="k">in</span><span class="w"> </span>HA<span class="w"> </span>mode
+</code></pre></div>
+</li>
+</ul>
+<ul>
+<li>Verify deletion protection. For more information, see <a href="../4.7.3.config-deletion-protection/">Configure deletion protection</a>.</li>
+</ul>
 </li>
 </ol>
 
@@ -8268,7 +8356,7 @@ Error<span class="w"> </span>from<span class="w"> </span>server:<span class="w">
   <small>
     
       Last update:
-      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">January 30, 2024</span>
+      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">March 7, 2024</span>
       
     
   </small>
@@ -8278,6 +8366,82 @@ Error<span class="w"> </span>from<span class="w"> </span>server:<span class="w">
   
 
 
+
+  <form class="md-feedback" name="feedback" hidden>
+    <fieldset>
+      <legend class="md-feedback__title">
+        Was this page helpful?
+      </legend>
+      <div class="md-feedback__inner">
+        <div class="md-feedback__list">
+          
+            <button class="md-feedback__icon md-icon" type="submit" title="The content did not provide the information I was looking for or lacked clarity." data-md-value="1">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 2C6.47 2 2 6.47 2 12s4.47 10 10 10a10 10 0 0 0 10-10c0-5.53-4.5-10-10-10m0 18a8 8 0 0 1-8-8 8 8 0 0 1 8-8 8 8 0 0 1 8 8 8 8 0 0 1-8 8m4.18-12.24-1.06 1.06-1.06-1.06L13 8.82l1.06 1.06L13 10.94 14.06 12l1.06-1.06L16.18 12l1.06-1.06-1.06-1.06 1.06-1.06-1.06-1.06M7.82 12l1.06-1.06L9.94 12 11 10.94 9.94 9.88 11 8.82 9.94 7.76 8.88 8.82 7.82 7.76 6.76 8.82l1.06 1.06-1.06 1.06L7.82 12M12 14c-2.33 0-4.31 1.46-5.11 3.5h10.22c-.8-2.04-2.78-3.5-5.11-3.5Z"/></svg>
+            </button>
+          
+            <button class="md-feedback__icon md-icon" type="submit" title="The content provided some information, but it did not fully answer my questions." data-md-value="2">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 12a8 8 0 0 0-8-8 8 8 0 0 0-8 8 8 8 0 0 0 8 8 8 8 0 0 0 8-8m2 0a10 10 0 0 1-10 10A10 10 0 0 1 2 12 10 10 0 0 1 12 2a10 10 0 0 1 10 10m-6.5-4c.8 0 1.5.7 1.5 1.5s-.7 1.5-1.5 1.5-1.5-.7-1.5-1.5.7-1.5 1.5-1.5M10 9.5c0 .8-.7 1.5-1.5 1.5S7 10.3 7 9.5 7.7 8 8.5 8s1.5.7 1.5 1.5m2 4.5c1.75 0 3.29.72 4.19 1.81l-1.42 1.42C14.32 16.5 13.25 16 12 16s-2.32.5-2.77 1.23l-1.42-1.42C8.71 14.72 10.25 14 12 14Z"/></svg>
+            </button>
+          
+            <button class="md-feedback__icon md-icon" type="submit" title="The content was adequate and provided the basic information I needed." data-md-value="3">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 2A10 10 0 0 0 2 12a10 10 0 0 0 10 10 10 10 0 0 0 10-10A10 10 0 0 0 12 2m0 18a8 8 0 0 1-8-8 8 8 0 0 1 8-8 8 8 0 0 1 8 8 8 8 0 0 1-8 8m-3.5-9A1.5 1.5 0 0 1 7 9.5 1.5 1.5 0 0 1 8.5 8 1.5 1.5 0 0 1 10 9.5 1.5 1.5 0 0 1 8.5 11M17 9.5a1.5 1.5 0 0 1-1.5 1.5A1.5 1.5 0 0 1 14 9.5 1.5 1.5 0 0 1 15.5 8 1.5 1.5 0 0 1 17 9.5M16 14v2H8v-2h8Z"/></svg>
+            </button>
+          
+            <button class="md-feedback__icon md-icon" type="submit" title="The content was useful and answered most of my questions." data-md-value="4">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 12a8 8 0 0 0-8-8 8 8 0 0 0-8 8 8 8 0 0 0 8 8 8 8 0 0 0 8-8m2 0a10 10 0 0 1-10 10A10 10 0 0 1 2 12 10 10 0 0 1 12 2a10 10 0 0 1 10 10M10 9.5c0 .8-.7 1.5-1.5 1.5S7 10.3 7 9.5 7.7 8 8.5 8s1.5.7 1.5 1.5m7 0c0 .8-.7 1.5-1.5 1.5S14 10.3 14 9.5 14.7 8 15.5 8s1.5.7 1.5 1.5m-5 7.73c-1.75 0-3.29-.73-4.19-1.81L9.23 14c.45.72 1.52 1.23 2.77 1.23s2.32-.51 2.77-1.23l1.42 1.42c-.9 1.08-2.44 1.81-4.19 1.81Z"/></svg>
+            </button>
+          
+            <button class="md-feedback__icon md-icon" type="submit" title="The content was excellent and thoroughly answered my questions." data-md-value="5">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 2C6.47 2 2 6.47 2 12s4.47 10 10 10a10 10 0 0 0 10-10c0-5.53-4.5-10-10-10m0 18a8 8 0 0 1-8-8 8 8 0 0 1 8-8 8 8 0 0 1 8 8 8 8 0 0 1-8 8m1-10.06L14.06 11l1.06-1.06L16.18 11l1.06-1.06-2.12-2.12L13 9.94m-4.12 0L9.94 11 11 9.94 8.88 7.82 6.76 9.94 7.82 11l1.06-1.06M12 17.5c2.33 0 4.31-1.46 5.11-3.5H6.89c.8 2.04 2.78 3.5 5.11 3.5Z"/></svg>
+            </button>
+          
+        </div>
+        <div class="md-feedback__note">
+          
+            <div data-md-value="1" hidden>
+              
+              
+                
+              
+              Thanks for your feedback! Help us improve this page by submitting a <a href="https://github.com/vesoft-inc/nebula-docs/issues/new/?title=[Feedback]+Enable%20admission%20control+-+/k8s-operator/4.cluster-administration/4.7.security/4.7.2.enable-admission-control/" target="_blank" rel="noopener">GitHub issue</a>.
+            </div>
+          
+            <div data-md-value="2" hidden>
+              
+              
+                
+              
+              Thanks for your feedback! Help us improve this page by submitting a <a href="https://github.com/vesoft-inc/nebula-docs/issues/new/?title=[Feedback]+Enable%20admission%20control+-+/k8s-operator/4.cluster-administration/4.7.security/4.7.2.enable-admission-control/" target="_blank" rel="noopener">GitHub issue</a>.
+            </div>
+          
+            <div data-md-value="3" hidden>
+              
+              
+                
+              
+              Thanks for your feedback! Help us improve this page by submitting a <a href="https://github.com/vesoft-inc/nebula-docs/issues/new/?title=[Feedback]+Enable%20admission%20control+-+/k8s-operator/4.cluster-administration/4.7.security/4.7.2.enable-admission-control/" target="_blank" rel="noopener">GitHub issue</a>.
+            </div>
+          
+            <div data-md-value="4" hidden>
+              
+              
+                
+              
+              Thanks for your feedback! Help us improve this page by submitting a <a href="https://github.com/vesoft-inc/nebula-docs/issues/new/?title=[Feedback]+Enable%20admission%20control+-+/k8s-operator/4.cluster-administration/4.7.security/4.7.2.enable-admission-control/" target="_blank" rel="noopener">GitHub issue</a>.        
+            </div>
+          
+            <div data-md-value="5" hidden>
+              
+              
+                
+              
+              Thanks for your feedback! 
+            </div>
+          
+        </div>
+      </div>
+    </fieldset>
+  </form>
 
 
                 
@@ -8304,7 +8468,8 @@ Error<span class="w"> </span>from<span class="w"> </span>server:<span class="w">
       <div class="md-copyright">
   
     <div class="md-copyright__highlight">
-      Copyright &copy; 2023 NebulaGraph
+      Copyright &copy; 2018 - 2024 NebulaGraph -  <a href="#__consent">Change cookie settings</a>
+
     </div>
   
   
@@ -8339,6 +8504,80 @@ Error<span class="w"> </span>from<span class="w"> </span>server:<span class="w">
       <div class="md-dialog__inner md-typeset"></div>
     </div>
     
+    
+      <div class="md-consent" data-md-component="consent" id="__consent" hidden>
+        <div class="md-consent__overlay"></div>
+        <aside class="md-consent__inner">
+          <form class="md-consent__form md-grid md-typeset" name="consent">
+            
+
+  
+
+
+  
+
+
+
+
+  
+
+<h4>Cookie consent</h4>
+<p>We use cookies to recognize your repeated visits and preferences, as well as to measure the effectiveness of our documentation and whether users find what they're searching for. With your consent, you're helping us make our documentation better.       </p>
+<input class="md-toggle" type="checkbox" id="__settings" checked>
+<div class="md-consent__settings">
+  <ul class="task-list">
+    
+      
+      
+        
+        
+          
+        
+      
+      <li class="task-list-item">
+        <label class="task-list-control">
+          <input type="checkbox" name="github" checked>
+          <span class="task-list-indicator"></span>
+          GitHub
+        </label>
+      </li>
+    
+      
+      
+        
+        
+          
+        
+      
+      <li class="task-list-item">
+        <label class="task-list-control">
+          <input type="checkbox" name="analytics" checked>
+          <span class="task-list-indicator"></span>
+          Google Analytics
+        </label>
+      </li>
+    
+  </ul>
+</div>
+<div class="md-consent__controls">
+  
+    
+      <button class="md-button md-button--primary">Accept</button>
+    
+    
+    
+  
+    
+    
+      <button type="reset" class="md-button md-button--primary">Reject</button>
+    
+    
+  
+</div>
+          </form>
+        </aside>
+      </div>
+      <script>var consent=__md_get("__consent");if(consent)for(var input of document.forms.consent.elements)input.name&&(input.checked=consent[input.name]||!1);else"file:"!==location.protocol&&setTimeout(function(){document.querySelector("[data-md-component=consent]").hidden=!1},250);var action,form=document.forms.consent;for(action of["submit","reset"])form.addEventListener(action,function(e){if(e.preventDefault(),"reset"===e.type)for(var n of document.forms.consent.elements)n.name&&(n.checked=!1);__md_set("__consent",Object.fromEntries(Array.from(new FormData(form).keys()).map(function(e){return[e,!0]}))),location.hash="",location.reload()})</script>
     
     <script id="__config" type="application/json">{"base": "../../../..", "features": ["navigation.top", "header.autohide", "content.tabs.link", "content.action.edit", "content.code.copy", "announce.dismiss"], "search": "../../../../assets/javascripts/workers/search.f886a092.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": {"provider": "mike"}}</script>
     
